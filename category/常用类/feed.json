@@ -1,0 +1,18 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "雾都博客 • All posts by \"常用类\" category",
+    "description": "记录美食每刻",
+    "home_page_url": "http://example.com",
+    "items": [
+        {
+            "id": "http://example.com/2022/10/07/%E7%AC%AC10%E7%AB%A0_%E5%B8%B8%E7%94%A8%E7%B1%BB/",
+            "url": "http://example.com/2022/10/07/%E7%AC%AC10%E7%AB%A0_%E5%B8%B8%E7%94%A8%E7%B1%BB/",
+            "title": "第10章_常用类",
+            "date_published": "2022-10-06T16:00:00.000Z",
+            "content_html": "",
+            "tags": [
+                "JavaSE"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>雾都博客 • Posts by &#34;常用类&#34; category</title>
+        <link>http://example.com</link>
+        <description>记录美食每刻</description>
+        <language>zh-CN</language>
+        <pubDate>Fri, 07 Oct 2022 00:00:00 +0800</pubDate>
+        <lastBuildDate>Fri, 07 Oct 2022 00:00:00 +0800</lastBuildDate>
+        <category>分布式</category>
+        <category>Dubbo</category>
+        <category>博客</category>
+        <category>环境搭建</category>
+        <category>FastDFS</category>
+        <category>MySQL</category>
+        <category>数据库基础</category>
+        <category>数据库基本知识</category>
+        <category>数据库</category>
+        <category>框架</category>
+        <category>ORM</category>
+        <category>RPC</category>
+        <category>中间件</category>
+        <category>RabbitMQ</category>
+        <category>Redis基础</category>
+        <category>NoSQL数据库</category>
+        <category>Solr</category>
+        <category>快速搜索</category>
+        <category>Spring</category>
+        <category>SpringMVC</category>
+        <category>SpringBoot</category>
+        <category>JavaSE</category>
+        <category>SpringSecurity</category>
+        <category>-JavaSE</category>
+        <item>
+            <guid isPermalink="true">http://example.com/2022/10/07/%E7%AC%AC10%E7%AB%A0_%E5%B8%B8%E7%94%A8%E7%B1%BB/</guid>
+            <title>第10章_常用类</title>
+            <link>http://example.com/2022/10/07/%E7%AC%AC10%E7%AB%A0_%E5%B8%B8%E7%94%A8%E7%B1%BB/</link>
+            <category>JavaSE</category>
+            <pubDate>Fri, 07 Oct 2022 00:00:00 +0800</pubDate>
+            <description><![CDATA[  ]]></description>
+        </item>
+    </channel>
+</rss>
