@@ -1,0 +1,633 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>雾都博客 • Posts by &#34;框架&#34; tag</title>
+        <link>http://example.com</link>
+        <description>记录美食每刻</description>
+        <language>zh-CN</language>
+        <pubDate>Thu, 06 Oct 2022 14:50:57 +0800</pubDate>
+        <lastBuildDate>Thu, 06 Oct 2022 14:50:57 +0800</lastBuildDate>
+        <category>博客</category>
+        <category>框架</category>
+        <item>
+            <guid isPermalink="true">http://example.com/2022/10/06/hexo/</guid>
+            <title>hexo</title>
+            <link>http://example.com/2022/10/06/hexo/</link>
+            <category>博客</category>
+            <category>框架</category>
+            <pubDate>Thu, 06 Oct 2022 14:50:57 +0800</pubDate>
+            <description><![CDATA[ &lt;hr&gt;
+&lt;p&gt;title: hexo&lt;br&gt;date: 2022-10-06 14:53:52&lt;br&gt;categories:&lt;br&gt;    - 基础使用&lt;br&gt;tags:&lt;br&gt;    - 环境搭建&lt;br&gt;    - 博客&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;介绍&#34;&gt;&lt;a href=&#34;#介绍&#34; class=&#34;headerlink&#34; title=&#34;介绍&#34;&gt;&lt;/a&gt;介绍&lt;/h1&gt;&lt;p&gt;&lt;code&gt;hexo&lt;/code&gt;是一个基于nodejs的静态博客网站生成器，作者是来自台湾的&lt;code&gt;Tommy Chen&lt;/code&gt;，为许多技术博客的博主所青睐，主要有如下的一些优点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;支持Markdown语法，编辑简单，排版优美；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;能够快速生成静态html文件；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;部署容易，接口简单； 兼容于各大主流操作系统；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;社区主题、插件很多，遇到问题的时候能查到的参考材料也很多。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Hexo官方文档：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL3poLWNuL2RvY3Mv&#34;&gt;https://hexo.io/zh-cn/docs/&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Gitee Pages：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRlZS5jb20vaGVscC9hcnRpY2xlcy80MTM2I2FydGljbGUtaGVhZGVyMA==&#34;&gt;https://gitee.com/help/articles/4136#article-header0&lt;/span&gt;&lt;/p&gt;
+&lt;h1 id=&#34;环境配置&#34;&gt;&lt;a href=&#34;#环境配置&#34; class=&#34;headerlink&#34; title=&#34;环境配置&#34;&gt;&lt;/a&gt;环境配置&lt;/h1&gt;&lt;p&gt;搭建hexo首先需要有nodejs的环境，可以从官网直接下载。&lt;/p&gt;
+&lt;img data-src=&#34;/2022/10/06/hexo/2xKvaPTDoyZcFbp.png&#34; class=&#34;&#34; title=&#34;nodejs&#34;&gt;
+
+&lt;h1 id=&#34;生成博客&#34;&gt;&lt;a href=&#34;#生成博客&#34; class=&#34;headerlink&#34; title=&#34;生成博客&#34;&gt;&lt;/a&gt;生成博客&lt;/h1&gt;&lt;h2 id=&#34;安装&#34;&gt;&lt;a href=&#34;#安装&#34; class=&#34;headerlink&#34; title=&#34;安装&#34;&gt;&lt;/a&gt;安装&lt;/h2&gt;&lt;p&gt;有了npm包管理软件，安装hexo就很方便了，只需要一行命令：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;shell&#34;&gt;npm install node # homebrew安装nodejs
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;其中-g参数表示全局安装，没有这个参数就只在当前目录下安装，建议全局安装。&lt;/p&gt;
+&lt;h2 id=&#34;初始化&#34;&gt;&lt;a href=&#34;#初始化&#34; class=&#34;headerlink&#34; title=&#34;初始化&#34;&gt;&lt;/a&gt;初始化&lt;/h2&gt;&lt;p&gt;运行命令：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;shell&#34;&gt;hexo init
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;shell&#34;&gt;INFO  Cloning hexo-starter https://github.com/hexojs/hexo-starter.git
+INFO  Install dependencies
+# 一些可能的中间信息
+INFO  Start blogging with Hexo!
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;然后进入博客目录：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt; cd “博客目录”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;安装博客需要的其他支持：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;sh&#34;&gt;npm install # 安装的依赖项在package.json文件的dependencies字段中可以看到
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;博客项目目录结构介绍&#34;&gt;&lt;a href=&#34;#博客项目目录结构介绍&#34; class=&#34;headerlink&#34; title=&#34;博客项目目录结构介绍&#34;&gt;&lt;/a&gt;博客项目目录结构介绍&lt;/h2&gt;&lt;p&gt;查看目录结构：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;sh&#34;&gt;tree -L 1 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;结果如下：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;.&lt;br&gt;├── _config.landscape.yml&lt;br&gt;├── _config.yml&lt;br&gt;├── node_modules&lt;br&gt;├── package-lock.json&lt;br&gt;├── package.json&lt;br&gt;├── scaffolds&lt;br&gt;├── source&lt;br&gt;└── themes&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;各部分的含义：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;`_config.yml &amp;#96;&lt;ul&gt;
+&lt;li&gt;为全局配置文件，网站的很多信息都在这里配置，比如说网站名称，副标题，描述，作者，语言，主题等等。具体可以参考官方文档：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL3poLWNuL2RvY3MvY29uZmlndXJhdGlvbi5odG1sJUUzJTgwJTgy&#34;&gt;https://hexo.io/zh-cn/docs/configuration.html。&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;_scaffolds&lt;/code&gt;&lt;ul&gt;
+&lt;li&gt;骨架文件，是生成新页面或者新博客的模版。可以根据需求编辑，当&lt;code&gt;hexo&lt;/code&gt;生成新博客的时候，会用这里面的模版进行初始化。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;_source&lt;/code&gt;&lt;ul&gt;
+&lt;li&gt;这个文件夹下面存放的是网站的&lt;code&gt;markdown&lt;/code&gt;源文件，里面有一个&lt;code&gt;_post&lt;/code&gt;文件夹，所有的&lt;code&gt;.md&lt;/code&gt;博客文件都会存放在这个文件夹下。现在，你应该能看到里面有一个&lt;code&gt;hello-world.md&lt;/code&gt;文件。_&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;_themes&lt;/code&gt;&lt;ul&gt;
+&lt;li&gt;网站主题目录，&lt;code&gt;hexo&lt;/code&gt;有非常丰富的主题支持，主题目录会存放在这个目录下面。&lt;/li&gt;
+&lt;li&gt;我们后续会以默认主题来演示，更多的主题参见：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL3RoZW1lcy8=&#34;&gt;https://hexo.io/themes/&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;生成新文章&#34;&gt;&lt;a href=&#34;#生成新文章&#34; class=&#34;headerlink&#34; title=&#34;生成新文章&#34;&gt;&lt;/a&gt;生成新文章&lt;/h2&gt;&lt;pre&gt;&lt;code class=&#34;sh&#34;&gt;hexo new post &amp;quot;test&amp;quot; # 会在 source/_posts/ 目录下生成文件 ‘test.md’，打开编辑
+hexo generate        # 生成静态HTML文件到 /public 文件夹中
+hexo server          # 本地运行server服务预览，打开 http://localhost:4000 即可预览你的博客
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;本地预览效果：&lt;/strong&gt;&lt;/p&gt;
+&lt;img data-src=&#34;/2022/10/06/hexo/image-20221006120456734.png&#34; class=&#34;&#34; title=&#34;image-20221006120456734&#34;&gt;
+
+&lt;p&gt;这是hexo的默认主题，更多的主题可以从官网下载。&lt;/p&gt;
+&lt;p&gt;更详细的hexo命令可以查看文档：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL3poLWNuL2RvY3MvY29tbWFuZHM=&#34;&gt;https://hexo.io/zh-cn/docs/commands&lt;/span&gt;&lt;/p&gt;
+&lt;h1 id=&#34;Hexo配置并部署&#34;&gt;&lt;a href=&#34;#Hexo配置并部署&#34; class=&#34;headerlink&#34; title=&#34;Hexo配置并部署&#34;&gt;&lt;/a&gt;Hexo配置并部署&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;提前对要提交的仓库配置ssh&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;1-安装部署工具&#34;&gt;&lt;a href=&#34;#1-安装部署工具&#34; class=&#34;headerlink&#34; title=&#34;1.安装部署工具&#34;&gt;&lt;/a&gt;1.安装部署工具&lt;/h2&gt;&lt;pre&gt;&lt;code class=&#34;sh&#34;&gt;npm install hexo-deployer-git --save
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;2-配置部署信息&#34;&gt;&lt;a href=&#34;#2-配置部署信息&#34; class=&#34;headerlink&#34; title=&#34;2.配置部署信息&#34;&gt;&lt;/a&gt;2.配置部署信息&lt;/h2&gt;&lt;p&gt;站点配置文件_config.yml&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;yml&#34;&gt;deploy:
+  type: git
+  repo: &amp;lt;repository url&amp;gt; # 输入你的仓库地址
+  branch: [branch] # 输入分支
+  token:   #token
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;deploy:&lt;/p&gt;
+&lt;p&gt; type: git&lt;/p&gt;
+&lt;p&gt; repo: &lt;span class=&#34;exturl&#34; data-url=&#34;bWFpbHRvOiYjMTAzOyYjeDY5OyYjMTE2OyYjeDQwOyYjMTAzOyYjMTA1OyYjMTE2OyYjMTAxOyYjMTAxOyYjNDY7JiM5OTsmIzExMTsmIzEwOTs=&#34;&gt;&amp;#103;&amp;#x69;&amp;#116;&amp;#x40;&amp;#103;&amp;#105;&amp;#116;&amp;#101;&amp;#101;&amp;#46;&amp;#99;&amp;#111;&amp;#109;&lt;/span&gt;:cysheng&amp;#x2F;cysheng.git # 输入你的仓库地址&lt;/p&gt;
+&lt;p&gt; branch: master # 输入分支&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;3-部署&#34;&gt;&lt;a href=&#34;#3-部署&#34; class=&#34;headerlink&#34; title=&#34;3.部署&#34;&gt;&lt;/a&gt;3.部署&lt;/h2&gt;&lt;pre&gt;&lt;code class=&#34;sh&#34;&gt; hexo clean  
+ hexo g  
+ hexo d 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;hexo clean&lt;/p&gt;
+&lt;p&gt;清除缓存文件 (db.json) 和已生成的静态文件 (public)。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;hexo g&lt;/p&gt;
+&lt;p&gt;hexo解析站点文件夹，生成一个public文件夹（只包含浏览器可以解析的html、css、js），也就是我们需要部署的文件夹。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;hexo d&lt;/p&gt;
+&lt;p&gt;部署，即将我们的public文件夹推送到我们配置的仓库&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;4-开启Gitee-Pages服务&#34;&gt;&lt;a href=&#34;#4-开启Gitee-Pages服务&#34; class=&#34;headerlink&#34; title=&#34;4.开启Gitee Pages服务&#34;&gt;&lt;/a&gt;4.开启Gitee Pages服务&lt;/h2&gt;&lt;p&gt;找到新创建的仓库-&amp;gt;【服务】-&amp;gt;【Gitee Pages】  &lt;img data-src=&#34;/2022/10/06/hexo/image-20221006120734926.png&#34; class=&#34;&#34; title=&#34;hexo&amp;#x2F;image-20221006120734926&#34;&gt;&lt;/p&gt;
+&lt;p&gt;如图，选择部署分支，部署目录&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;部署分支，与本地hexo配置一致&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;部署目录，不填即整个仓库&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;强制使用https&lt;/p&gt;
+&lt;p&gt;一个是进行加密，还有一个是我在用next主题时使用http访问会有跨域问题导致图标显示不出来&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;点击启动&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;访问给出的网站地址（以我的为例：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9jeXNoZW5nLmdpdGVlLmlvKS8=&#34;&gt;https://cysheng.gitee.io）&lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;hexo-框架常用的指令：&#34;&gt;&lt;a href=&#34;#hexo-框架常用的指令：&#34; class=&#34;headerlink&#34; title=&#34;hexo 框架常用的指令：&#34;&gt;&lt;/a&gt;hexo 框架常用的指令：&lt;/h1&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;指令&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;code&gt;hexo clean &amp;amp;&amp;amp; hexo g&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;清除本地项目并重新生成 （重新部署时使用）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;code&gt;hexo g&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;重新生成&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;code&gt;Hexo s&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;开启本地预览&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;code&gt;Hexo d&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;推送到github&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;h1 id=&#34;功能设置&#34;&gt;&lt;a href=&#34;#功能设置&#34; class=&#34;headerlink&#34; title=&#34;功能设置&#34;&gt;&lt;/a&gt;功能设置&lt;/h1&gt;&lt;h2 id=&#34;标题和分类&#34;&gt;&lt;a href=&#34;#标题和分类&#34; class=&#34;headerlink&#34; title=&#34;标题和分类&#34;&gt;&lt;/a&gt;标题和分类&lt;/h2&gt;&lt;p&gt;在文章开头我们可以设置 FontMatter，例如&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;yml&#34;&gt;---
+title: jQuery对表单的操作及更多应用 # 标题
+date: 2022-01-07 22:53:43 # 创建时间
+categories: # 分类，级别递减
+- web前端 # 一级分类
+- web前端2 # 二级分类
+tags: # 标签，没有级别
+    - a1
+    - a2
+---
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;​	为了简化我们的操作，所以我们可以以设置模板，在 &lt;code&gt;/scaffolds&lt;/code&gt; 下的 &lt;code&gt;draft.md&lt;/code&gt; 、&lt;code&gt;page.md&lt;/code&gt; 、 &lt;code&gt;post.md&lt;/code&gt;  我们用来设置模板，例如我们最常使用的&lt;code&gt;post&lt;/code&gt; 目录下的文件，所以我们配置一下&lt;code&gt;post.md&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;yaml&#34;&gt;---
+title: &amp;#123;&amp;#123; title &amp;#125;&amp;#125;
+date: &amp;#123;&amp;#123; date &amp;#125;&amp;#125;
+comments:
+tags:
+---
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;问题&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;如果我们在没有找到 tags 、categories 、link 、about文件时，我们手动创建&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;sh&#34;&gt;hexo new page tags
+hexo new page categories 
+hexo new page link 
+hexo new page about
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;成功后，提示&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;sh&#34;&gt;INFO  Created: ~/Documents/blog/source/xxx/index.md
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;根据上面的路径，找到&lt;code&gt;index.md&lt;/code&gt;这个文件，打开后默认内容是这样的：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;yaml&#34;&gt;---
+title: 文章分类
+date: 2022-01-07 22:53:43
+type: &amp;quot;categories&amp;quot; # 哪个文件就是那个类型
+layout: &amp;quot;categories&amp;quot; # 哪个文件就是那个类型
+---
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;最后清除缓存，重新启动就行了 &lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;sh&#34;&gt;hexo cl &amp;amp;&amp;amp; hexo g &amp;amp;&amp;amp; hexo s
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;搜索&#34;&gt;&lt;a href=&#34;#搜索&#34; class=&#34;headerlink&#34; title=&#34;搜索&#34;&gt;&lt;/a&gt;搜索&lt;/h2&gt;&lt;h3 id=&#34;1、注册账号&#34;&gt;&lt;a href=&#34;#1、注册账号&#34; class=&#34;headerlink&#34; title=&#34;1、注册账号&#34;&gt;&lt;/a&gt;1、注册账号&lt;/h3&gt;&lt;p&gt;官网：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYWxnb2xpYS5jb20vdXNlcnMvc2lnbl9pbg==&#34;&gt;https://www.algolia.com/users/sign_in&lt;/span&gt;&lt;/p&gt;
+&lt;h3 id=&#34;2、之后在左侧导航栏中找到Search&#34;&gt;&lt;a href=&#34;#2、之后在左侧导航栏中找到Search&#34; class=&#34;headerlink&#34; title=&#34;2、之后在左侧导航栏中找到Search&#34;&gt;&lt;/a&gt;2、之后在左侧导航栏中找到Search&lt;/h3&gt;&lt;img data-src=&#34;/2022/10/06/hexo/image-20221007104401652.png&#34; class=&#34;&#34; title=&#34;image-20221007104401652&#34;&gt;
+
+&lt;h3 id=&#34;3、创建Index&#34;&gt;&lt;a href=&#34;#3、创建Index&#34; class=&#34;headerlink&#34; title=&#34;3、创建Index&#34;&gt;&lt;/a&gt;3、创建Index&lt;/h3&gt;&lt;img data-src=&#34;/2022/10/06/hexo/image-20221007104429043.png&#34; class=&#34;&#34; title=&#34;image-20221007104429043&#34;&gt;
+
+&lt;img data-src=&#34;/2022/10/06/hexo/image-20221007104449209.png&#34; class=&#34;&#34; title=&#34;image-20221007104449209&#34;&gt;
+
+&lt;p&gt;&lt;strong&gt;随便写&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;4、创建APPID&#34;&gt;&lt;a href=&#34;#4、创建APPID&#34; class=&#34;headerlink&#34; title=&#34;4、创建APPID&#34;&gt;&lt;/a&gt;4、创建APPID&lt;/h3&gt;&lt;img data-src=&#34;/2022/10/06/hexo/image-20221007105625601.png&#34; class=&#34;&#34; title=&#34;image-20221007105625601&#34;&gt;
+
+&lt;img data-src=&#34;/2022/10/06/hexo/image-20221007105704120.png&#34; class=&#34;&#34; title=&#34;image-20221007105704120&#34;&gt;
+
+&lt;p&gt;这两个后面有用&lt;/p&gt;
+&lt;img data-src=&#34;/2022/10/06/hexo/image-20221007105750168.png&#34; class=&#34;&#34; title=&#34;image-20221007105750168&#34;&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Indices 是我们上面创建 index &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;img data-src=&#34;/2022/10/06/hexo/20210516112405506.png&#34; class=&#34;&#34; title=&#34;在这里插入图片描述&#34;&gt;
+
+
+
+&lt;h3 id=&#34;5、到博客根目录下安装hexo-algolia&#34;&gt;&lt;a href=&#34;#5、到博客根目录下安装hexo-algolia&#34; class=&#34;headerlink&#34; title=&#34;5、到博客根目录下安装hexo-algolia&#34;&gt;&lt;/a&gt;5、到博客根目录下安装hexo-algolia&lt;/h3&gt;&lt;pre&gt;&lt;code class=&#34;sh&#34;&gt;npm install hexo-algolia --save
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;6、前往站点根目录打开-config-yml添加以下代码&#34;&gt;&lt;a href=&#34;#6、前往站点根目录打开-config-yml添加以下代码&#34; class=&#34;headerlink&#34; title=&#34;6、前往站点根目录打开_config.yml添加以下代码&#34;&gt;&lt;/a&gt;6、前往站点根目录打开_config.yml添加以下代码&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt;这是对全局的配置，所以是根目录的配置&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code class=&#34;sh&#34;&gt;algolia:
+  appId:  &amp;quot;***&amp;quot;  #上面的application ID
+  apiKey:  &amp;quot;****&amp;quot;  # 上面的 Search-Only API Key
+  adminApiKey:  &amp;quot;***&amp;quot;  #上面的 Admin API Keys
+  chunkSize:  5000
+  indexName:  &amp;quot;test001&amp;quot; # Indices的index
+  fields: # 要搜索的词条范围
+    - title #必须配置
+    - path #必须配置
+    - categories #推荐配置
+    - content:strip:truncate,0,2000
+    - tags
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;例如：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;yml&#34;&gt;algolia:
+  appId: &amp;quot;Z7A3XW4R2I&amp;quot;
+  apiKey: &amp;quot;12db1ad54372045549ef465881c17e743&amp;quot;
+  adminApiKey: &amp;quot;40321c7c207e7f73b63a19aa24c4761b&amp;quot;
+  chunkSize: 5000
+  indexName: &amp;quot;my-hexo-blog&amp;quot;
+  fields:
+    - content:strip:truncate,0,500
+    - excerpt:strip
+    - gallery
+    - permalink
+    - photos
+    - slug
+    - tags
+    - title
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;7、设置HEXO-ALGOLIA-INDEXING-KEY&#34;&gt;&lt;a href=&#34;#7、设置HEXO-ALGOLIA-INDEXING-KEY&#34; class=&#34;headerlink&#34; title=&#34;7、设置HEXO_ALGOLIA_INDEXING_KEY&#34;&gt;&lt;/a&gt;7、设置HEXO_ALGOLIA_INDEXING_KEY&lt;/h3&gt;&lt;p&gt;在博客根目录右击git bash&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;sh&#34;&gt;# export HEXO_ALGOLIA_INDEXING_KEY=&amp;quot;你刚才新创建的 APPKEY、appId、adminApiKey &amp;quot;一个试一下 
+export HEXO_ALGOLIA_INDEXING_KEY=&amp;quot;******&amp;quot; 
+# 将我们的信息上川岛algolia
+hexo algolia
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;8、修改主题内的-config-yml&#34;&gt;&lt;a href=&#34;#8、修改主题内的-config-yml&#34; class=&#34;headerlink&#34; title=&#34;8、修改主题内的_config.yml&#34;&gt;&lt;/a&gt;8、修改主题内的_config.yml&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt; 这是是对主题的配置&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code class=&#34;yml&#34;&gt;#Algolia Search
+algolia_search:
+  enable: true
+  hits:
+    per_page: 6
+  labels:
+    input_placeholder: Search for Posts !
+    hits_empty: &amp;#39;我们没有找到任何搜索结果：$&amp;#123;query&amp;#125;&amp;#39;
+    hits_stats: &amp;#39;找到约$&amp;#123;hits&amp;#125;条结果 (用时$&amp;#123;time&amp;#125;ms)&amp;#39;
+
+# local searach
+local_sreach:
+  enable : false
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;9、启动即可&#34;&gt;&lt;a href=&#34;#9、启动即可&#34; class=&#34;headerlink&#34; title=&#34;9、启动即可&#34;&gt;&lt;/a&gt;9、启动即可&lt;/h3&gt;&lt;pre&gt;&lt;code class=&#34;sh&#34;&gt;hexo s
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;10、测试&#34;&gt;&lt;a href=&#34;#10、测试&#34; class=&#34;headerlink&#34; title=&#34;10、测试&#34;&gt;&lt;/a&gt;10、测试&lt;/h3&gt;&lt;img data-src=&#34;/2022/10/06/hexo/image-20221007123724497.png&#34; class=&#34;&#34; title=&#34;image-20221007123724497&#34;&gt;
+
+&lt;p&gt;参考：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MTczNDA0L2FydGljbGUvZGV0YWlscy8xMjI4NjEzMjE=&#34;&gt;https://blog.csdn.net/qq_45173404/article/details/122861321&lt;/span&gt;&lt;/p&gt;
+&lt;h2 id=&#34;目录&#34;&gt;&lt;a href=&#34;#目录&#34; class=&#34;headerlink&#34; title=&#34;目录&#34;&gt;&lt;/a&gt;目录&lt;/h2&gt;&lt;p&gt;&amp;#x3D;&amp;#x3D;toc 插件是：添加生成文章目录的一个插件&amp;#x3D;&amp;#x3D;&lt;/p&gt;
+&lt;p&gt;一、安装(这里是hexo的路径下，也就是博客根目录下)&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;shell&#34;&gt;npm install hexo-toc --save
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;二、配置博客根目录下的_config.yml文件：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;yml&#34;&gt;toc:  
+  maxdepth: 3 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;在最后的空白处添加&lt;/p&gt;
+&lt;p&gt;三、在markdown里使用&lt;/p&gt;
+&lt;p&gt;在Markdown中需要显示文章目录的地方添加&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;shell&#34;&gt;&amp;lt;!-- toc --&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;然后就会将他&amp;#x3D;&amp;#x3D;后面&amp;#x3D;&amp;#x3D;的内容按照标题级别分层&lt;/p&gt;
+&lt;h2 id=&#34;图片显示&#34;&gt;&lt;a href=&#34;#图片显示&#34; class=&#34;headerlink&#34; title=&#34;图片显示&#34;&gt;&lt;/a&gt;图片显示&lt;/h2&gt;&lt;h3 id=&#34;方法一：&#34;&gt;&lt;a href=&#34;#方法一：&#34; class=&#34;headerlink&#34; title=&#34;方法一：&#34;&gt;&lt;/a&gt;方法一：&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;typroa设置&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;打开typora，选择：偏好设置 - 图像 - 插入图片时，做如下更改：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;复制到指定路径&lt;/p&gt;
+&lt;p&gt;.&amp;#x2F;${filename}&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;当插入图片时，会生成一个和文件名相同的文件夹，并将图片存入这个文件夹内。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Hexo 设置&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;安装 &lt;code&gt;hexo-renderer-marked&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code class=&#34;sh&#34;&gt;npm install hexo-renderer-marked --save
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;之后更改 _config.yml 配置&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code class=&#34;yml&#34;&gt;post_asset_folder: true 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;安装插件&lt;code&gt;hexo-image-link &lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;shell&#34;&gt;npm install hexo-image-link --save
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;此时，在typora 文件中正常显示的图片，在hexo发布后依旧能正常显示。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;NOTE：&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;如果想用插件 &lt;code&gt;Hexo-renderer-markdown-it &lt;/code&gt;（推荐）代替 &lt;code&gt;Hexo-renderer-marked &lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code class=&#34;sh&#34;&gt;npm uninstall hexo-renderer-marker --save  #卸载 marked 
+
+npm install hexo-renderer-markdown-it --save  #安装markdown-it
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;路径转换的解释&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;假设：&lt;br&gt;文件名: .&amp;#x2F;test.md&lt;/p&gt;
+&lt;p&gt;图片路径: .&amp;#x2F;test&amp;#x2F;image.jpg&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;当插入图片 image.jpg 到 test.md 中时，typora 的引用路径为
+ &amp;#123;% asset_img image.jpg  %&amp;#125; 
+
+Hexo 发布后的引用路径为
+![](image.jpg) 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;因此，typora的md文件引入hexo时，应转换路径。即删掉图片路径中的 “test&amp;#x2F;“部分；（此时md文件已不能正常显示图片，而 hexo server 可正常显示）&lt;/p&gt;
+&lt;p&gt;插件hexo-image-link帮助实现了这种路径转换。&lt;/p&gt;
+&lt;p&gt;安装后，typora 文件中正常显示的图片，在hexo发布后依旧能正常显示。&lt;/p&gt;
+&lt;h3 id=&#34;方法2：&#34;&gt;&lt;a href=&#34;#方法2：&#34; class=&#34;headerlink&#34; title=&#34;方法2：&#34;&gt;&lt;/a&gt;方法2：&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;同样的思路，相对路径，&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;下载插件&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;shell&#34;&gt;npm install hexo-asset-img --save
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;文件要求：&lt;/p&gt;
+&lt;p&gt;​	图片必须在 xx.md 同一级目录下的同名文件中存储，也就是在xx 文件夹下，所以md文档的图片路径就是	&amp;#x3D;&amp;#x3D;![图片注释](xx&amp;#x2F;图片名)&amp;#x3D;&amp;#x3D;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;每篇文章的log设置&#34;&gt;&lt;a href=&#34;#每篇文章的log设置&#34; class=&#34;headerlink&#34; title=&#34;每篇文章的log设置&#34;&gt;&lt;/a&gt;每篇文章的log设置&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;---
+***
+cover: 图床链接/图片路径
+---
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;主题&#34;&gt;&lt;a href=&#34;#主题&#34; class=&#34;headerlink&#34; title=&#34;主题&#34;&gt;&lt;/a&gt;主题&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9hdXJvcmEudHJpZGlhbW9uZC50ZWNoL3poL2d1aWRlL2dldHRpbmctc3RhcnRlZC5odG1sIyVFNCVCRSU5RCVFOCVCNSU5NiVFNyU4RSVBRiVFNSVBMiU4Mw==&#34;&gt;aurora&lt;/span&gt;    	（最推荐）&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zaG9rYS5sb3N0eXUubWUvY29tcHV0ZXItc2NpZW5jZS9ub3RlL3RoZW1lLXNob2thLWRvYy8=&#34;&gt;shoka&lt;/span&gt;        （好看，但是少东西，好多要自己配）&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL25leHQtdGhlbWUvaGV4by10aGVtZS1uZXh0&#34;&gt;next&lt;/span&gt;           （中等，但是好多人用，配东西好查的一批）&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2plcnJ5YzEyNy9oZXhvLXRoZW1lLWJ1dHRlcmZseQ==&#34;&gt;butterfly  &lt;/span&gt;（中等，要自己配一些）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;shoka&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code class=&#34;shell&#34;&gt;npm i  hexo-renderer-multi-markdown-it --save
+npm i  hexo-autoprefixer --save
+npm i  hexo-algoliasearch --save
+npm i  hexo-symbols-count-time --save
+npm i  hexo-feed --save
+npm un hexo-renderer-marked --save      #删除多余的库
+
+git clone https://github.com/amehime/hexo-theme-shoka.git ./themes/shoka
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;_config.yml&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;yaml&#34;&gt;# markdown渲染
+markdown:
+  render: # 渲染器设置
+    html: false # 过滤 HTML 标签
+    xhtmlOut: true # 使用 &amp;#39;/&amp;#39; 来闭合单标签 （比如 &amp;lt;br /&amp;gt;）。
+    breaks: true # 转换段落里的 &amp;#39;\n&amp;#39; 到 &amp;lt;br&amp;gt;。
+    linkify: true # 将类似 URL 的文本自动转换为链接。
+    typographer: 
+    quotes: &amp;#39;“”‘’&amp;#39;
+  plugins: # markdown-it 插件设置
+    - plugin:
+        name: markdown-it-toc-and-anchor
+        enable: true
+        options: # 文章目录以及锚点应用的 class 名称，shoka 主题必须设置成这样
+          tocClassName: &amp;#39;toc&amp;#39;
+          anchorClassName: &amp;#39;anchor&amp;#39;
+    - plugin:
+        name: markdown-it-multimd-table
+        enable: true
+        options:
+          multiline: true
+          rowspan: true
+          headerless: true
+    - plugin:
+        name: ./markdown-it-furigana
+        enable: true
+        options:
+          fallbackParens: &amp;quot;()&amp;quot;
+    - plugin:
+        name: ./markdown-it-spoiler
+        enable: true
+        options:
+          title: &amp;quot;你知道得太多了&amp;quot;
+
+# 压缩CSS/hTML
+minify:
+  html:
+    enable: true
+    exclude: # 排除 hexo-feed 用到的模板文件
+      - &amp;#39;**/json.ejs&amp;#39;
+      - &amp;#39;**/atom.ejs&amp;#39;
+      - &amp;#39;**/rss.ejs&amp;#39;
+  css:
+    enable: true
+    exclude:
+      - &amp;#39;**/*.min.css&amp;#39;
+  js:
+    enable: true
+    mangle:
+      toplevel: true
+    output:
+    compress:
+    exclude:
+      - &amp;#39;**/*.min.js&amp;#39;
+
+#css文件后缀
+autoprefixer:
+  exclude:
+    - &amp;#39;*.min.css&amp;#39;
+
+# 全文搜索
+algolia:
+  appId: #Your appId
+  apiKey: #Your apiKey
+  adminApiKey: #Your adminApiKey
+  chunkSize: 5000
+  indexName: #&amp;quot;shoka&amp;quot;
+  fields:
+    - title #必须配置
+    - path #必须配置
+    - categories #推荐配置
+    - content:strip:truncate,0,2000
+    - gallery
+    - photos
+    - tags
+    
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;未完成&#34;&gt;&lt;a href=&#34;#未完成&#34; class=&#34;headerlink&#34; title=&#34;未完成&#34;&gt;&lt;/a&gt;未完成&lt;/h2&gt;&lt;h1 id=&#34;Netlify部署&#34;&gt;&lt;a href=&#34;#Netlify部署&#34; class=&#34;headerlink&#34; title=&#34;Netlify部署&#34;&gt;&lt;/a&gt;Netlify部署&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;前提&lt;/strong&gt;：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1. 在github上建立一个仓库，权限无所谓
+2. 要注意一定是编译后的**全部文件上传** 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cubmV0bGlmeS5jb20v&#34;&gt;Netlify&lt;/span&gt; 账号注册&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;添加新的站点&lt;/p&gt;
+  &lt;img data-src=&#34;/2022/10/06/hexo/image-20221013222215469.png&#34; class=&#34;&#34; title=&#34;image-20221013222215469&#34;&gt;
+
+  &lt;img data-src=&#34;/2022/10/06/hexo/oSa6BOtIQ8WkZX1.png&#34; class=&#34;&#34; title=&#34;connect-github&#34;&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;选取一个仓库，作为我们的资源地址&lt;/p&gt;
+  &lt;img data-src=&#34;/2022/10/06/hexo/image-20221013222447157.png&#34; class=&#34;&#34; title=&#34;image-20221013222447157&#34;&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;一切默认，除了构建命令改成我们之前设置的&lt;code&gt;npm run netlify&lt;/code&gt; ，当然也可以不设置&lt;/p&gt;
+&lt;p&gt;  前提要在&lt;code&gt;package.json&lt;/code&gt; 里面添加一个 &lt;code&gt;netlify&lt;/code&gt; 命令 ，例如我们的：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;json&#34;&gt;&amp;quot;scripts&amp;quot;: &amp;#123;
+        &amp;quot;build&amp;quot;: &amp;quot;hexo generate&amp;quot;,
+        &amp;quot;clean&amp;quot;: &amp;quot;hexo clean&amp;quot;,
+        &amp;quot;deploy&amp;quot;: &amp;quot;hexo deploy&amp;quot;,
+        &amp;quot;server&amp;quot;: &amp;quot;hexo server&amp;quot;,
+        // 每次提交会清除内容，然后重新建立项目
+        &amp;quot;netlify&amp;quot;: &amp;quot;npm run clean &amp;amp;&amp;amp; npm run build&amp;quot; 
+  &amp;#125;,
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;img data-src=&#34;/2022/10/06/hexo/p3P2NJaQzuIZnYs.png&#34; class=&#34;&#34; title=&#34;site-config&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这里BaseDirectory为空表示项目目录是仓库目录的根目录。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;构建完成后我们就能够看到一个URL，打开网址就是我们的个人博客了&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img data-src=&#34;/2022/10/06/hexo/image-20221013223348730.png&#34; class=&#34;&#34; title=&#34;image-20221013223348730&#34;&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;修改地址前缀（&lt;strong&gt;因为后缀不能改&lt;/strong&gt;）&lt;/p&gt;
+&lt;p&gt;  网站设置—》常规—》更改站点名，完成后缀是固定的 &lt;code&gt; *.netlify.app&lt;/code&gt; ，要想改变就要买域名，然后配置域名的映射。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;配置域名映射&lt;/p&gt;
+  &lt;img data-src=&#34;/2022/10/06/hexo/image-20221013223414819.png&#34; class=&#34;&#34; title=&#34;image-20221013223414819&#34;&gt;
+
+&lt;ul&gt;
+&lt;li&gt;配置域名的前提自然是要购买域名了，从任意域名服务商处购买一个域名。&lt;/li&gt;
+&lt;/ul&gt;
+  &lt;img data-src=&#34;/2022/10/06/hexo/DFHYzywifpJTxqj.png&#34; class=&#34;&#34; title=&#34;domian-purchase&#34;&gt;
+
+&lt;ul&gt;
+&lt;li&gt;然后设置域名解析，类型为CNAME（DNS知识点参见计算机网络相关教程），内容为xxxxx.netlify.app，其中xxxxx为你自己设置的个性二级域名。&lt;/li&gt;
+&lt;/ul&gt;
+  &lt;img data-src=&#34;/2022/10/06/hexo/5OVcw9ypvRKQePJ.png&#34; class=&#34;&#34; title=&#34;domain-resolve&#34;&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;设置完毕之后需要等待一段时间，因为DNS服务器需要一段时间来进行同步。&lt;/p&gt;
+&lt;p&gt;  然后，我们还需要回到netlify中配置一下自己的用户域名，这样的话可以在国外获得netlify本身的CDN支持。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;在netlify设置用户域名。&lt;/p&gt;
+  &lt;img data-src=&#34;/2022/10/06/hexo/MDjxbIcWBEoLURA.png&#34; class=&#34;&#34; title=&#34;set-custom-domain&#34;&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;进行相关的配置，由于我们的域名本身已经配置了解析，这里会显示出来，不用再额外添加记录，只需要一路默认即可。&lt;/p&gt;
+  &lt;img data-src=&#34;/2022/10/06/hexo/cqwL9xF8Eov6yVa.png&#34; class=&#34;&#34; title=&#34;add-record&#34;&gt;
+
+  &lt;img data-src=&#34;/2022/10/06/hexo/RTLcjynQYXbW9vI.png&#34; class=&#34;&#34; title=&#34;activate-dns&#34;&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;设置一下netlify本身的对于国外CDN的支持。&lt;/p&gt;
+  &lt;img data-src=&#34;/2022/10/06/hexo/8v3ROjQc2WY9q7T.png&#34; class=&#34;&#34; title=&#34;netlify-cdn&#34;&gt;
+
+&lt;p&gt;  之后，我们就可以通过自己配置的域名访问自己的个人博客。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这里&lt;code&gt;https&lt;/code&gt;访问需要在&lt;code&gt;netlify&lt;/code&gt;中配置，否则应该只能&lt;code&gt;http&lt;/code&gt;访问。&lt;br&gt;&lt;a href=&#34;https://s2.loli.net/2022/09/05/f3q8hPbG5vsImeY.png&#34;&gt;&lt;img data-src=&#34;/2022/10/06/hexo/f3q8hPbG5vsImeY.png&#34; class=&#34;&#34; title=&#34;https-config&#34;&gt;&lt;/a&gt;&lt;br&gt;需要注意一下的是，此刻的https配置过程中的dns验证已经可以通过，但是证书检查会失败，等到后面clouldflare加速配置完成之后，这个问题 就可以解决了。所以暂时应该只能http访问。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;  &lt;strong&gt;但是，此刻我们的博客访问依然需要科学上网，因为我们还没有国内的CDN的支持，下面，我们来解决这个问题。&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;ClouldFlare加速&#34;&gt;&lt;a href=&#34;#ClouldFlare加速&#34; class=&#34;headerlink&#34; title=&#34;ClouldFlare加速&#34;&gt;&lt;/a&gt;ClouldFlare加速&lt;/h1&gt;&lt;h2 id=&#34;介绍-1&#34;&gt;&lt;a href=&#34;#介绍-1&#34; class=&#34;headerlink&#34; title=&#34;介绍&#34;&gt;&lt;/a&gt;介绍&lt;/h2&gt;&lt;p&gt;Netlify 虽然已经提供了 CDN 加速，但在使用过程中发现国内访问还是比较慢，Cloudflare 相对于国内的七牛云、阿里云等云服务商的 CDN 速度会慢一些，但是它有免费版本，而且最重要的是域名不用备案。&lt;/p&gt;
+&lt;h2 id=&#34;加速步骤&#34;&gt;&lt;a href=&#34;#加速步骤&#34; class=&#34;headerlink&#34; title=&#34;加速步骤&#34;&gt;&lt;/a&gt;加速步骤&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;注册&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuY2xvdWRmbGFyZS5jb20vemgtY24v&#34;&gt;Clouldflare&lt;/span&gt;并登陆&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;添加站点&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://s2.loli.net/2022/09/05/rqNObP5dzE6GY83.png&#34;&gt;&lt;img data-src=&#34;/2022/10/06/hexo/rqNObP5dzE6GY83.png&#34; class=&#34;&#34; title=&#34;add-site&#34;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://s2.loli.net/2022/09/05/Dk3Y4BrltQeCOHI.png&#34;&gt;&lt;img data-src=&#34;/2022/10/06/hexo/Dk3Y4BrltQeCOHI.png&#34; class=&#34;&#34; title=&#34;config-site&#34;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;选择免费套餐&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://s2.loli.net/2022/09/05/SrhEAvmGZeqn8Co.png&#34;&gt;&lt;img data-src=&#34;/2022/10/06/hexo/SrhEAvmGZeqn8Co.png&#34; class=&#34;&#34; title=&#34;choose-project&#34;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;添加 DNS 记录&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一般情况下 Cloudflare 会检测出来几条 DNS 记录，类型大多数是A，或者AAAA，由于我们是转发，所以应该是 CNAME 类型才对。有必要的话可能得手动配置一下。&lt;/li&gt;
+&lt;li&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://s2.loli.net/2022/09/05/fSsAGV5JCeZuF1w.png&#34;&gt;&lt;br&gt;&lt;img data-src=&#34;/2022/10/06/hexo/fSsAGV5JCeZuF1w.png&#34; class=&#34;&#34; title=&#34;update-record&#34;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;更改名称服务器&lt;ul&gt;
+&lt;li&gt;这个步骤Cloudflare会提供一个在线的教程，主要步骤是在你的域名服务商那里修改 dns 解析服务器为 cloudflare 提供的地址，修改完成后点击完成。&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://s2.loli.net/2022/09/05/vd2WxXGbJHmgAey.png&#34;&gt;&lt;img data-src=&#34;/2022/10/06/hexo/vd2WxXGbJHmgAey.png&#34; class=&#34;&#34; title=&#34;modify-server&#34;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;以阿里云为例，设置的步骤如下:&lt;ol&gt;
+&lt;li&gt;进入域名的配置界面&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://s2.loli.net/2022/09/05/ZfLiNUejRsCyhG3.png&#34;&gt;&lt;img data-src=&#34;/2022/10/06/hexo/ZfLiNUejRsCyhG3.png&#34; class=&#34;&#34; title=&#34;dns-manage&#34;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;将域名服务器从阿里云的默认服务器改成clouldflare的服务器&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://s2.loli.net/2022/09/05/juxWl7i9QaeLTGK.png&#34;&gt;&lt;img data-src=&#34;/2022/10/06/hexo/juxWl7i9QaeLTGK.png&#34; class=&#34;&#34; title=&#34;change-server&#34;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;配置完成后，clouldflare会有邮件通知(一般不会等太久)&lt;br&gt;  &lt;a href=&#34;https://s2.loli.net/2022/09/05/JbBvp18Trne37kC.png&#34;&gt;&lt;img data-src=&#34;/2022/10/06/hexo/JbBvp18Trne37kC.png&#34; class=&#34;&#34; title=&#34;mail-notice&#34;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;配置https&#34;&gt;&lt;a href=&#34;#配置https&#34; class=&#34;headerlink&#34; title=&#34;配置https&#34;&gt;&lt;/a&gt;配置https&lt;/h2&gt;&lt;p&gt; 在clouldflare配置完成之后，我们可以回到netlify去配置一下https访问。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;先确认一下dns解析&lt;/li&gt;
+&lt;li&gt;:&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://s2.loli.net/2022/09/05/r6iHKWLktnRap1j.png&#34;&gt;&lt;img data-src=&#34;/2022/10/06/hexo/r6iHKWLktnRap1j.png&#34; class=&#34;&#34; title=&#34;verify-dns&#34;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;然后自动安装证书:&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://s2.loli.net/2022/09/05/KvDupBFh8b9CScN.png&#34;&gt;&lt;img data-src=&#34;/2022/10/06/hexo/KvDupBFh8b9CScN.png&#34; class=&#34;&#34; title=&#34;certify&#34;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;最后看到如下的界面，就说明https配置完成了:&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://s2.loli.net/2022/09/05/f3q8hPbG5vsImeY.png&#34;&gt;&lt;img data-src=&#34;/2022/10/06/hexo/f3q8hPbG5vsImeY.png&#34; class=&#34;&#34; title=&#34;https-config&#34;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;测试站点&#34;&gt;&lt;a href=&#34;#测试站点&#34; class=&#34;headerlink&#34; title=&#34;测试站点&#34;&gt;&lt;/a&gt;测试站点&lt;/h1&gt;&lt;p&gt; 等待一段时间之后，我们可以试着用自己的浏览器去访问自己配置的域名地址，如果在不科学上网的情况下能够正常看到如下的默认页面，则我们的个人博客就配置成功了。&lt;/p&gt;
+&lt;p&gt; &lt;a href=&#34;https://s2.loli.net/2022/09/05/HESMpeXbUFT3rsR.png&#34;&gt;&lt;img data-src=&#34;/2022/10/06/hexo/HESMpeXbUFT3rsR.png&#34; class=&#34;&#34; title=&#34;default-page&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; 本机能够正常访问之后，我们可以用&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYm9jZS5jb20v&#34;&gt;拨测&lt;/span&gt;来检测一下域名解析与访问的速度。&lt;/p&gt;
+&lt;p&gt; &lt;a href=&#34;https://s2.loli.net/2022/09/05/7C496Ruof1rBknM.png&#34;&gt;&lt;img data-src=&#34;/2022/10/06/hexo/7C496Ruof1rBknM.png&#34; class=&#34;&#34; title=&#34;speed&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; 到此为止，我们的个人博客就彻底搭建完成啦。后续我们只需要修改博客的配置文件和博客本身的markdown源文件，然后push到github上，netlify会自动帮我们运行当初配置的建站脚本，然后将生成在public文件夹中的静态网页部署出去。&lt;/p&gt;
+&lt;p&gt; 关于hexo博客的&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL3poLWNuL2RvY3Mvd3JpdGluZw==&#34;&gt;写作方法&lt;/span&gt;与各种好看的&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL3RoZW1lcy8=&#34;&gt;主题的配置&lt;/span&gt;可以查看官方的文档，多尝试多摸索，配置自己的个性页面吧。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;上传时遇到的问题&#34;&gt;&lt;a href=&#34;#上传时遇到的问题&#34; class=&#34;headerlink&#34; title=&#34;上传时遇到的问题&#34;&gt;&lt;/a&gt;上传时遇到的问题&lt;/h1&gt;&lt;h2 id=&#34;文件过大&#34;&gt;&lt;a href=&#34;#文件过大&#34; class=&#34;headerlink&#34; title=&#34;文件过大&#34;&gt;&lt;/a&gt;文件过大&lt;/h2&gt;&lt;p&gt;下载一个git-lfs 插件&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXQtbGZzLmdpdGh1Yi5jb20v&#34;&gt;https://git-lfs.github.com/&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;安装路径一定要注意：你的本地 Git 目录下的 bin，以我为例：&lt;/p&gt;
+&lt;p&gt;D:_Porgram_IT\Git\bin\Git LFS&lt;/p&gt;
+&lt;img data-src=&#34;/2022/10/06/hexo/image-20221014122758398.png&#34; class=&#34;&#34; title=&#34;image-20221014122758398&#34;&gt;
+
+&lt;p&gt;完事之后我们在要上传大文件的本地仓库位置时，先做一下插件的初始化&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;sh&#34;&gt;git init #初始化仓库
+git lfs install # 初始化插件
+git lfs track * #监视整个文件，其他写法自己查
+git add .gitattributes
+git commit -m &amp;quot;第一次提交 .gitattributes&amp;quot;
+git remote -v # 查看是否创建了连接
+git remote add origin git@github.com:onlymarryu/bk3-net.git
+git push origin master #地址和分支自己选
+
+# 上面的操作一定是只上传 .gitattributes，而且每个仓库仅一次即可
+# 将你的大文件上传到你的本地仓库
+git add * #全部文件
+git commit -m &amp;quot;信息&amp;quot;
+git push origin master
+&lt;/code&gt;&lt;/pre&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>
