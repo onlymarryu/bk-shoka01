@@ -4,27 +4,27 @@
     <title>雾都博客 • Posts by &#34;常用类&#34; category</title>
     <link href="http://example.com" />
     <updated>2022-10-06T16:00:00.000Z</updated>
-    <category term="分布式" />
-    <category term="Dubbo" />
     <category term="博客" />
     <category term="环境搭建" />
+    <category term="分布式" />
     <category term="FastDFS" />
+    <category term="Dubbo" />
     <category term="MySQL" />
     <category term="数据库基础" />
     <category term="数据库基本知识" />
     <category term="数据库" />
     <category term="框架" />
     <category term="ORM" />
-    <category term="RPC" />
     <category term="中间件" />
     <category term="RabbitMQ" />
     <category term="Redis基础" />
     <category term="NoSQL数据库" />
+    <category term="RPC" />
+    <category term="Spring" />
+    <category term="SpringBoot" />
     <category term="Solr" />
     <category term="快速搜索" />
-    <category term="Spring" />
     <category term="SpringMVC" />
-    <category term="SpringBoot" />
     <category term="JavaSE" />
     <category term="SpringSecurity" />
     <category term="-JavaSE" />
