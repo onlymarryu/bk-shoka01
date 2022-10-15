@@ -21,10 +21,10 @@
         <category>RPC</category>
         <category>中间件</category>
         <category>RabbitMQ</category>
-        <category>Solr</category>
-        <category>快速搜索</category>
         <category>Redis基础</category>
         <category>NoSQL数据库</category>
+        <category>Solr</category>
+        <category>快速搜索</category>
         <category>Spring</category>
         <category>SpringBoot</category>
         <category>SpringMVC</category>

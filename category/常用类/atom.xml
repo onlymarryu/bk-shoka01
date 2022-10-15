@@ -18,10 +18,10 @@
     <category term="RPC" />
     <category term="中间件" />
     <category term="RabbitMQ" />
-    <category term="Solr" />
-    <category term="快速搜索" />
     <category term="Redis基础" />
     <category term="NoSQL数据库" />
+    <category term="Solr" />
+    <category term="快速搜索" />
     <category term="Spring" />
     <category term="SpringBoot" />
     <category term="SpringMVC" />
