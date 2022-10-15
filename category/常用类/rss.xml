@@ -10,26 +10,26 @@
         <category>博客</category>
         <category>环境搭建</category>
         <category>分布式</category>
-        <category>FastDFS</category>
         <category>Dubbo</category>
+        <category>FastDFS</category>
         <category>MySQL</category>
         <category>数据库基础</category>
         <category>数据库基本知识</category>
         <category>数据库</category>
         <category>框架</category>
         <category>ORM</category>
+        <category>RPC</category>
         <category>中间件</category>
         <category>RabbitMQ</category>
         <category>Redis基础</category>
         <category>NoSQL数据库</category>
-        <category>RPC</category>
-        <category>Spring</category>
-        <category>SpringBoot</category>
         <category>Solr</category>
         <category>快速搜索</category>
+        <category>Spring</category>
+        <category>SpringBoot</category>
         <category>SpringMVC</category>
-        <category>JavaSE</category>
         <category>SpringSecurity</category>
+        <category>JavaSE</category>
         <category>-JavaSE</category>
         <item>
             <guid isPermalink="true">http://example.com/2022/10/07/%E7%AC%AC10%E7%AB%A0_%E5%B8%B8%E7%94%A8%E7%B1%BB/</guid>

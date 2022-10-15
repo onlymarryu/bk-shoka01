@@ -7,187 +7,108 @@
     <category term="博客" />
     <category term="环境搭建" />
     <category term="分布式" />
-    <category term="FastDFS" />
     <category term="Dubbo" />
+    <category term="FastDFS" />
     <category term="MySQL" />
     <category term="数据库基础" />
     <category term="数据库基本知识" />
     <category term="数据库" />
     <category term="框架" />
     <category term="ORM" />
+    <category term="RPC" />
     <category term="中间件" />
     <category term="RabbitMQ" />
     <category term="Redis基础" />
     <category term="NoSQL数据库" />
-    <category term="RPC" />
-    <category term="Spring" />
-    <category term="SpringBoot" />
     <category term="Solr" />
     <category term="快速搜索" />
+    <category term="Spring" />
+    <category term="SpringBoot" />
     <category term="SpringMVC" />
-    <category term="JavaSE" />
     <category term="SpringSecurity" />
+    <category term="JavaSE" />
     <category term="-JavaSE" />
     <entry>
         <id>http://example.com/2022/10/14/Docsify/</id>
         <title>MySQL基础</title>
         <link rel="alternate" href="http://example.com/2022/10/14/Docsify/"/>
-        <content type="html">&lt;h1 id=&#34;Docsify搭建&#34;&gt;&lt;a href=&#34;#Docsify搭建&#34; class=&#34;headerlink&#34; title=&#34;Docsify搭建&#34;&gt;&lt;/a&gt;Docsify搭建&lt;/h1&gt;&lt;p&gt;官网：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzaWZ5LmpzLm9yZy8jL3poLWNuLw==&#34;&gt;https://docsify.js.org/#/zh-cn/&lt;/span&gt;&lt;/p&gt;
+        <content type="html">&lt;h1 id=&#34;docsify搭建&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#docsify搭建&#34;&gt;#&lt;/a&gt; Docsify 搭建&lt;/h1&gt;
+&lt;p&gt;官网：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzaWZ5LmpzLm9yZy8jL3poLWNuLw==&#34;&gt;https://docsify.js.org/#/zh-cn/&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;前提&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;要配置好 &lt;code&gt;nodeJs&lt;/code&gt; 、&lt;code&gt;npm&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;要配置好  &lt;code&gt;nodeJs&lt;/code&gt;  、 &lt;code&gt;npm&lt;/code&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&#34;安装-Docsify-插件&#34;&gt;&lt;a href=&#34;#安装-Docsify-插件&#34; class=&#34;headerlink&#34; title=&#34;安装 Docsify 插件&#34;&gt;&lt;/a&gt;安装 Docsify 插件&lt;/h2&gt;&lt;blockquote&gt;
+&lt;h2 id=&#34;安装-docsify-插件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装-docsify-插件&#34;&gt;#&lt;/a&gt; 安装 Docsify 插件&lt;/h2&gt;
+&lt;blockquote&gt;
 &lt;p&gt;自己创建一个要下载到本地的文件夹，然后在这里直接利用命令下载&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;推荐全局安装 &lt;code&gt;docsify-cli&lt;/code&gt; 工具，可以方便地创建及在本地预览生成的文档。&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;sh&#34;&gt;npm i docsify-cli -g
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;​	下载完成之后，进入 &lt;code&gt;./node_modules/.bin&lt;/code&gt; 使用终端查看安装是否成功 &lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;sh&#34;&gt;docsify -v
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/onlymarryu/typora-ims-test@master/img/image-20220507180321976.png&#34; alt=&#34;image-20220507180321976&#34;&gt;&lt;/p&gt;
+&lt;p&gt;推荐全局安装  &lt;code&gt;docsify-cli&lt;/code&gt;  工具，可以方便地创建及在本地预览生成的文档。&lt;/p&gt;
+&lt;figure class=&#34;highlight sh&#34;&gt;&lt;figcaption data-lang=&#34;sh&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;npm&lt;/span&gt; i docsify-cli &lt;span class=&#34;token parameter variable&#34;&gt;-g&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;​	下载完成之后，进入  &lt;code&gt;./node_modules/.bin&lt;/code&gt;  使用终端查看安装是否成功&lt;/p&gt;
+&lt;figure class=&#34;highlight sh&#34;&gt;&lt;figcaption data-lang=&#34;sh&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;docsify &lt;span class=&#34;token parameter variable&#34;&gt;-v&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/onlymarryu/typora-ims-test@master/img/image-20220507180321976.png&#34; alt=&#34;image-20220507180321976&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;出现版本号，表明安装成功，自己再将该路径定义为 &lt;strong&gt;系统环境变量&lt;/strong&gt;&lt;/p&gt;
-&lt;h2 id=&#34;初始化项目&#34;&gt;&lt;a href=&#34;#初始化项目&#34; class=&#34;headerlink&#34; title=&#34;初始化项目&#34;&gt;&lt;/a&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzaWZ5LmpzLm9yZy8jL3poLWNuL3F1aWNrc3RhcnQ/aWQ9JUU1JTg4JTlEJUU1JUE3JThCJUU1JThDJTk2JUU5JUExJUI5JUU3JTlCJUFF&#34;&gt;初始化项目&lt;/span&gt;&lt;/h2&gt;&lt;p&gt;如果想在项目的 &lt;code&gt;./docs&lt;/code&gt; 目录里写文档，直接通过 &lt;code&gt;init&lt;/code&gt; 初始化项目。&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;# init 初始化 + 初始化文件
-docsify init ./docs
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;初始化成功：&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/onlymarryu/typora-ims-test@master/img/image-20220507180556746.png&#34; alt=&#34;image-20220507180556746&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/onlymarryu/typora-ims-test@master/img/image-20220507180639225.png&#34; alt=&#34;image-20220507180639225&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;开始写文档&#34;&gt;&lt;a href=&#34;#开始写文档&#34; class=&#34;headerlink&#34; title=&#34;开始写文档&#34;&gt;&lt;/a&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzaWZ5LmpzLm9yZy8jL3poLWNuL3F1aWNrc3RhcnQ/aWQ9JUU1JUJDJTgwJUU1JUE3JThCJUU1JTg2JTk5JUU2JTk2JTg3JUU2JUExJUEz&#34;&gt;开始写文档&lt;/span&gt;&lt;/h2&gt;&lt;p&gt;初始化成功后，可以看到 &lt;code&gt;./docs&lt;/code&gt; 目录下创建的几个文件&lt;/p&gt;
+&lt;h2 id=&#34;初始化项目&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#初始化项目&#34;&gt;#&lt;/a&gt; &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzaWZ5LmpzLm9yZy8jL3poLWNuL3F1aWNrc3RhcnQ/aWQ9JUU1JTg4JTlEJUU1JUE3JThCJUU1JThDJTk2JUU5JUExJUI5JUU3JTlCJUFF&#34;&gt;初始化项目&lt;/span&gt;&lt;/h2&gt;
+&lt;p&gt;如果想在项目的  &lt;code&gt;./docs&lt;/code&gt;  目录里写文档，直接通过  &lt;code&gt;init&lt;/code&gt;  初始化项目。&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# init 初始化 + 初始化文件&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;docsify init ./docs&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;初始化成功：&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/onlymarryu/typora-ims-test@master/img/image-20220507180556746.png&#34; alt=&#34;image-20220507180556746&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/onlymarryu/typora-ims-test@master/img/image-20220507180639225.png&#34; alt=&#34;image-20220507180639225&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;开始写文档&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#开始写文档&#34;&gt;#&lt;/a&gt; &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzaWZ5LmpzLm9yZy8jL3poLWNuL3F1aWNrc3RhcnQ/aWQ9JUU1JUJDJTgwJUU1JUE3JThCJUU1JTg2JTk5JUU2JTk2JTg3JUU2JUExJUEz&#34;&gt;开始写文档&lt;/span&gt;&lt;/h2&gt;
+&lt;p&gt;初始化成功后，可以看到  &lt;code&gt;./docs&lt;/code&gt;  目录下创建的几个文件&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;index.html&lt;/code&gt; 入口文件&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;README.md&lt;/code&gt; 会做为主页内容渲染&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;.nojekyll&lt;/code&gt; 用于阻止 GitHub Pages 忽略掉下划线开头的文件&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;index.html&lt;/code&gt;  入口文件&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;README.md&lt;/code&gt;  会做为主页内容渲染&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.nojekyll&lt;/code&gt;  用于阻止 GitHub Pages 忽略掉下划线开头的文件&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;直接编辑 &lt;code&gt;docs/README.md&lt;/code&gt; 就能更新文档内容，当然也可以&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzaWZ5LmpzLm9yZy8jL3poLWNuL21vcmUtcGFnZXM=&#34;&gt;添加更多页面&lt;/span&gt;。&lt;/p&gt;
-&lt;h2 id=&#34;本地预览&#34;&gt;&lt;a href=&#34;#本地预览&#34; class=&#34;headerlink&#34; title=&#34;本地预览&#34;&gt;&lt;/a&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzaWZ5LmpzLm9yZy8jL3poLWNuL3F1aWNrc3RhcnQ/aWQ9JUU2JTlDJUFDJUU1JTlDJUIwJUU5JUEyJTg0JUU4JUE3JTg4&#34;&gt;本地预览&lt;/span&gt;&lt;/h2&gt;&lt;p&gt;​	通过运行 &lt;code&gt;docsify serve&lt;/code&gt; 启动一个本地服务器，可以方便地实时预览效果。&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;docsify serve docs
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;​	&lt;/p&gt;
+&lt;p&gt;直接编辑  &lt;code&gt;docs/README.md&lt;/code&gt;  就能更新文档内容，当然也可以&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzaWZ5LmpzLm9yZy8jL3poLWNuL21vcmUtcGFnZXM=&#34;&gt;添加更多页面&lt;/span&gt;。&lt;/p&gt;
+&lt;h2 id=&#34;本地预览&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#本地预览&#34;&gt;#&lt;/a&gt; &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzaWZ5LmpzLm9yZy8jL3poLWNuL3F1aWNrc3RhcnQ/aWQ9JUU2JTlDJUFDJUU1JTlDJUIwJUU5JUEyJTg0JUU4JUE3JTg4&#34;&gt;本地预览&lt;/span&gt;&lt;/h2&gt;
+&lt;p&gt;​	通过运行  &lt;code&gt;docsify serve&lt;/code&gt;  启动一个本地服务器，可以方便地实时预览效果。&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;docsify serve docs&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;​&lt;/p&gt;
 &lt;p&gt;​	&lt;strong&gt;默认访问地址：&lt;/strong&gt;   &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2xvY2FsaG9zdDozMDAwLw==&#34;&gt;http://localhost:3000&lt;/span&gt; 。&lt;/p&gt;
-&lt;p&gt;用 &lt;code&gt;IDE&lt;/code&gt; 有可能遇到的问题。&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/onlymarryu/typora-ims-test@master/img/image-20220507182733021.png&#34; alt=&#34;image-20220507182733021&#34;&gt;&lt;/p&gt;
+&lt;p&gt;用  &lt;code&gt;IDE&lt;/code&gt;  有可能遇到的问题。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/onlymarryu/typora-ims-test@master/img/image-20220507182733021.png&#34; alt=&#34;image-20220507182733021&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;解决办法：&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0JraG9sZS9hcnRpY2xlL2RldGFpbHMvMTI0NjM2OTE2&#34;&gt;https://blog.csdn.net/Bkhole/article/details/124636916&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;访问结果：&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/onlymarryu/typora-ims-test@master/img/image-20220507183235754.png&#34; alt=&#34;image-20220507183235754&#34;&gt;&lt;/p&gt;
-&lt;p&gt;和 &lt;code&gt;README.md&lt;/code&gt; 文件内容一致。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/onlymarryu/typora-ims-test@master/img/image-20220507183235754.png&#34; alt=&#34;image-20220507183235754&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;和  &lt;code&gt;README.md&lt;/code&gt;  文件内容一致。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;我们在开发的时候 所有内容都是动态更新的&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&#34;功能开发&#34;&gt;&lt;a href=&#34;#功能开发&#34; class=&#34;headerlink&#34; title=&#34;功能开发&#34;&gt;&lt;/a&gt;功能开发&lt;/h2&gt;&lt;blockquote&gt;
+&lt;h2 id=&#34;功能开发&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#功能开发&#34;&gt;#&lt;/a&gt; 功能开发&lt;/h2&gt;
+&lt;blockquote&gt;
 &lt;p&gt;主要内容还是参考 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzaWZ5LmpzLm9yZy8jL3poLWNuLw==&#34;&gt;官网 &lt;/span&gt;，这里只做简单描述。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h3 id=&#34;分页&#34;&gt;&lt;a href=&#34;#分页&#34; class=&#34;headerlink&#34; title=&#34;分页&#34;&gt;&lt;/a&gt;分页&lt;/h3&gt;&lt;p&gt;​	如果需要创建多个页面，或者需要多级路由的网站，在 docsify 里也能很容易的实现。例如创建一个 &lt;code&gt;guide.md&lt;/code&gt; 文件，那么对应的路由就是 &lt;code&gt;/#/guide&lt;/code&gt;。&lt;/p&gt;
+&lt;h3 id=&#34;分页&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#分页&#34;&gt;#&lt;/a&gt; 分页&lt;/h3&gt;
+&lt;p&gt;​	如果需要创建多个页面，或者需要多级路由的网站，在 docsify 里也能很容易的实现。例如创建一个  &lt;code&gt;guide.md&lt;/code&gt;  文件，那么对应的路由就是  &lt;code&gt;/#/guide&lt;/code&gt; 。&lt;/p&gt;
 &lt;p&gt;假设你的目录结构如下：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;text&#34;&gt;.
-└── docs
-    ├── README.md
-    ├── guide.md
-    └── zh-cn
-        ├── README.md
-        └── guide.md
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;那么对应的访问页面将是&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;text&#34;&gt;docs/README.md        =&amp;gt; http://domain.com
-docs/guide.md         =&amp;gt; http://domain.com/guide
-docs/zh-cn/README.md  =&amp;gt; http://domain.com/zh-cn/
-docs/zh-cn/guide.md   =&amp;gt; http://domain.com/zh-cn/guide
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;定制侧边栏&#34;&gt;&lt;a href=&#34;#定制侧边栏&#34; class=&#34;headerlink&#34; title=&#34;定制侧边栏&#34;&gt;&lt;/a&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzaWZ5LmpzLm9yZy8jL3poLWNuL21vcmUtcGFnZXM/aWQ9JUU1JUFFJTlBJUU1JTg4JUI2JUU0JUJFJUE3JUU4JUJFJUI5JUU2JUEwJThG&#34;&gt;定制侧边栏&lt;/span&gt;&lt;/h3&gt;&lt;p&gt;为了获得侧边栏，您需要创建自己的 &lt;code&gt;_sidebar.md&lt;/code&gt;，你也可以自定义加载的文件名。默认情况下侧边栏会通过 Markdown 文件自动生成，效果如当前的文档的侧边栏。&lt;/p&gt;
-&lt;p&gt;首先配置 &lt;code&gt;loadSidebar&lt;/code&gt; 选项，具体配置规则见&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzaWZ5LmpzLm9yZy8jL3poLWNuL2NvbmZpZ3VyYXRpb24/aWQ9bG9hZHNpZGViYXI=&#34;&gt;配置项#loadSidebar&lt;/span&gt;。&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;!-- index.html --&amp;gt;
-
-&amp;lt;script&amp;gt;
-  window.$docsify = &amp;#123;
-      &amp;lt;!-- 打开配置 --&amp;gt;
-    loadSidebar: true
-  &amp;#125;
-&amp;lt;/script&amp;gt;
-&amp;lt;script src=&amp;quot;//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;接着创建 &lt;code&gt;_sidebar.md&lt;/code&gt; 文件，内容如下&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;markdown&#34;&gt;&amp;lt;!-- docs/_sidebar.md --&amp;gt;
-
-* [首页](zh-cn/)
-* [指南](zh-cn/guide)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;注：&lt;/p&gt;
+&lt;figure class=&#34;highlight text&#34;&gt;&lt;figcaption data-lang=&#34;text&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;.&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;└── docs&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    ├── README.md&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    ├── guide.md&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    └── zh-cn&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        ├── README.md&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        └── guide.md&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;那么对应的访问页面将是&lt;/p&gt;
+&lt;figure class=&#34;highlight text&#34;&gt;&lt;figcaption data-lang=&#34;text&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;docs/README.md        =&gt; http://domain.com&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;docs/guide.md         =&gt; http://domain.com/guide&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;docs/zh-cn/README.md  =&gt; http://domain.com/zh-cn/&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;docs/zh-cn/guide.md   =&gt; http://domain.com/zh-cn/guide&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;定制侧边栏&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#定制侧边栏&#34;&gt;#&lt;/a&gt; &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzaWZ5LmpzLm9yZy8jL3poLWNuL21vcmUtcGFnZXM/aWQ9JUU1JUFFJTlBJUU1JTg4JUI2JUU0JUJFJUE3JUU4JUJFJUI5JUU2JUEwJThG&#34;&gt;定制侧边栏&lt;/span&gt;&lt;/h3&gt;
+&lt;p&gt;为了获得侧边栏，您需要创建自己的  &lt;code&gt;_sidebar.md&lt;/code&gt; ，你也可以自定义加载的文件名。默认情况下侧边栏会通过 Markdown 文件自动生成，效果如当前的文档的侧边栏。&lt;/p&gt;
+&lt;p&gt;首先配置  &lt;code&gt;loadSidebar&lt;/code&gt;  选项，具体配置规则见&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzaWZ5LmpzLm9yZy8jL3poLWNuL2NvbmZpZ3VyYXRpb24/aWQ9bG9hZHNpZGViYXI=&#34;&gt;配置项 #loadSidebar&lt;/span&gt;。&lt;/p&gt;
+&lt;figure class=&#34;highlight html&#34;&gt;&lt;figcaption data-lang=&#34;HTML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;&amp;lt;!-- index.html --&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;script&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token script&#34;&gt;&lt;span class=&#34;token language-javascript&#34;&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  window&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;$docsify &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;--&lt;/span&gt; 打开配置 &lt;span class=&#34;token operator&#34;&gt;--&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token literal-property property&#34;&gt;loadSidebar&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token boolean&#34;&gt;true&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;script&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;script&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;src&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token script&#34;&gt;&lt;/span&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;script&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;接着创建  &lt;code&gt;_sidebar.md&lt;/code&gt;  文件，内容如下&lt;/p&gt;
+&lt;figure class=&#34;highlight markdown&#34;&gt;&lt;figcaption data-lang=&#34;markdown&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;&amp;lt;!-- docs/_sidebar.md --&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token list punctuation&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;token url&#34;&gt;[&lt;span class=&#34;token content&#34;&gt;首页&lt;/span&gt;](&lt;span class=&#34;token url&#34;&gt;zh-cn/&lt;/span&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token list punctuation&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;token url&#34;&gt;[&lt;span class=&#34;token content&#34;&gt;指南&lt;/span&gt;](&lt;span class=&#34;token url&#34;&gt;zh-cn/guide&lt;/span&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;注：&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;需要在 &lt;code&gt;./docs&lt;/code&gt; 目录创建 &lt;code&gt;.nojekyll&lt;/code&gt; 命名的空文件，阻止 GitHub Pages 忽略命名是下划线开头的文件。&lt;/p&gt;
+&lt;p&gt;需要在  &lt;code&gt;./docs&lt;/code&gt;  目录创建  &lt;code&gt;.nojekyll&lt;/code&gt;  命名的空文件，阻止 GitHub Pages 忽略命名是下划线开头的文件。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;###&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzaWZ5LmpzLm9yZy8jL3poLWNuL21vcmUtcGFnZXM/aWQ9JUU2JTk4JUJFJUU3JUE0JUJBJUU3JTlCJUFFJUU1JUJEJTk1&#34;&gt;显示目录&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;自定义侧边栏同时也可以开启目录功能。设置 &lt;code&gt;subMaxLevel&lt;/code&gt; 配置项，具体介绍见 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzaWZ5LmpzLm9yZy8jL3poLWNuL2NvbmZpZ3VyYXRpb24/aWQ9c3VibWF4bGV2ZWw=&#34;&gt;配置项#subMaxLevel&lt;/span&gt;。&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;!-- index.html --&amp;gt;
-
-&amp;lt;script&amp;gt;
-  window.$docsify = &amp;#123;
-    loadSidebar: true,
-    subMaxLevel: 2
-  &amp;#125;
-&amp;lt;/script&amp;gt;
-&amp;lt;script src=&amp;quot;//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;自定义导航栏&#34;&gt;&lt;a href=&#34;#自定义导航栏&#34; class=&#34;headerlink&#34; title=&#34;自定义导航栏&#34;&gt;&lt;/a&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzaWZ5LmpzLm9yZy8jL3poLWNuL2N1c3RvbS1uYXZiYXI/aWQ9JUU4JTg3JUFBJUU1JUFFJTlBJUU0JUI5JTg5JUU1JUFGJUJDJUU4JTg4JUFBJUU2JUEwJThG&#34;&gt;自定义导航栏&lt;/span&gt;&lt;/h3&gt;&lt;h4 id=&#34;HTML&#34;&gt;&lt;a href=&#34;#HTML&#34; class=&#34;headerlink&#34; title=&#34;HTML&#34;&gt;&lt;/a&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzaWZ5LmpzLm9yZy8jL3poLWNuL2N1c3RvbS1uYXZiYXI/aWQ9aHRtbA==&#34;&gt;HTML&lt;/span&gt;&lt;/h4&gt;&lt;p&gt;如果你需要定制导航栏，可以用 HTML 创建一个导航栏。&lt;/p&gt;
-&lt;p&gt;注意：文档的链接都要以 &lt;code&gt;#/&lt;/code&gt; 开头。&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;!-- index.html --&amp;gt;
-
-&amp;lt;body&amp;gt;
-  &amp;lt;nav&amp;gt;
-    &amp;lt;a href=&amp;quot;#/&amp;quot;&amp;gt;EN&amp;lt;/a&amp;gt;
-    &amp;lt;a href=&amp;quot;#/zh-cn/&amp;quot;&amp;gt;中文&amp;lt;/a&amp;gt;
-  &amp;lt;/nav&amp;gt;
-  &amp;lt;div id=&amp;quot;app&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
-&amp;lt;/body&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;配置文件&#34;&gt;&lt;a href=&#34;#配置文件&#34; class=&#34;headerlink&#34; title=&#34;配置文件&#34;&gt;&lt;/a&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzaWZ5LmpzLm9yZy8jL3poLWNuL2N1c3RvbS1uYXZiYXI/aWQ9JUU5JTg1JThEJUU3JUJEJUFFJUU2JTk2JTg3JUU0JUJCJUI2&#34;&gt;配置文件&lt;/span&gt;&lt;/h3&gt;&lt;p&gt;那我们可以通过 Markdown 文件来配置导航。首先配置 &lt;code&gt;loadNavbar&lt;/code&gt;，默认加载的文件为 &lt;code&gt;_navbar.md&lt;/code&gt;。具体配置规则见&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzaWZ5LmpzLm9yZy8jL2NvbmZpZ3VyYXRpb24/aWQ9bG9hZG5hdmJhcg==&#34;&gt;配置项#loadNavbar&lt;/span&gt;。&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;!-- index.html --&amp;gt;
-
-&amp;lt;script&amp;gt;
-  window.$docsify = &amp;#123;
-    loadNavbar: true
-  &amp;#125;
-&amp;lt;/script&amp;gt;
-&amp;lt;script src=&amp;quot;//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
-&amp;lt;!-- _navbar.md --&amp;gt;
-
-* [En](/)
-* [中文](/zh-cn/)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;注：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;自定义侧边栏同时也可以开启目录功能。设置  &lt;code&gt;subMaxLevel&lt;/code&gt;  配置项，具体介绍见 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzaWZ5LmpzLm9yZy8jL3poLWNuL2NvbmZpZ3VyYXRpb24/aWQ9c3VibWF4bGV2ZWw=&#34;&gt;配置项 #subMaxLevel&lt;/span&gt;。&lt;/p&gt;
+&lt;figure class=&#34;highlight html&#34;&gt;&lt;figcaption data-lang=&#34;HTML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;&amp;lt;!-- index.html --&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;script&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token script&#34;&gt;&lt;span class=&#34;token language-javascript&#34;&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  window&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;$docsify &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token literal-property property&#34;&gt;loadSidebar&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token boolean&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token literal-property property&#34;&gt;subMaxLevel&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;script&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;script&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;src&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token script&#34;&gt;&lt;/span&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;script&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;自定义导航栏&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#自定义导航栏&#34;&gt;#&lt;/a&gt; &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzaWZ5LmpzLm9yZy8jL3poLWNuL2N1c3RvbS1uYXZiYXI/aWQ9JUU4JTg3JUFBJUU1JUFFJTlBJUU0JUI5JTg5JUU1JUFGJUJDJUU4JTg4JUFBJUU2JUEwJThG&#34;&gt;自定义导航栏&lt;/span&gt;&lt;/h3&gt;
+&lt;h4 id=&#34;html&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#html&#34;&gt;#&lt;/a&gt; &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzaWZ5LmpzLm9yZy8jL3poLWNuL2N1c3RvbS1uYXZiYXI/aWQ9aHRtbA==&#34;&gt;HTML&lt;/span&gt;&lt;/h4&gt;
+&lt;p&gt;如果你需要定制导航栏，可以用 HTML 创建一个导航栏。&lt;/p&gt;
+&lt;p&gt;注意：文档的链接都要以  &lt;code&gt;#/&lt;/code&gt;  开头。&lt;/p&gt;
+&lt;figure class=&#34;highlight html&#34;&gt;&lt;figcaption data-lang=&#34;HTML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;&amp;lt;!-- index.html --&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;body&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;nav&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;a&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;href&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;#/&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;EN&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;a&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;a&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;href&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;#/zh-cn/&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;中文&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;a&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;nav&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;app&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;body&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;配置文件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#配置文件&#34;&gt;#&lt;/a&gt; &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzaWZ5LmpzLm9yZy8jL3poLWNuL2N1c3RvbS1uYXZiYXI/aWQ9JUU5JTg1JThEJUU3JUJEJUFFJUU2JTk2JTg3JUU0JUJCJUI2&#34;&gt;配置文件&lt;/span&gt;&lt;/h3&gt;
+&lt;p&gt;那我们可以通过 Markdown 文件来配置导航。首先配置  &lt;code&gt;loadNavbar&lt;/code&gt; ，默认加载的文件为  &lt;code&gt;_navbar.md&lt;/code&gt; 。具体配置规则见&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzaWZ5LmpzLm9yZy8jL2NvbmZpZ3VyYXRpb24/aWQ9bG9hZG5hdmJhcg==&#34;&gt;配置项 #loadNavbar&lt;/span&gt;。&lt;/p&gt;
+&lt;figure class=&#34;highlight html&#34;&gt;&lt;figcaption data-lang=&#34;HTML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;&amp;lt;!-- index.html --&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;script&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token script&#34;&gt;&lt;span class=&#34;token language-javascript&#34;&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  window&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;$docsify &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token literal-property property&#34;&gt;loadNavbar&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token boolean&#34;&gt;true&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;script&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;script&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;src&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token script&#34;&gt;&lt;/span&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;script&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;&amp;lt;!-- _navbar.md --&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;* [En](/)&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;* [中文](/zh-cn/)&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;strong&gt;注：&lt;/strong&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;你需要在 &lt;code&gt;./docs&lt;/code&gt; 目录下创建一个 &lt;code&gt;.nojekyll&lt;/code&gt; 文件，以防止 GitHub Pages 忽略下划线开头的文件。&lt;/p&gt;
+&lt;p&gt;你需要在  &lt;code&gt;./docs&lt;/code&gt;  目录下创建一个  &lt;code&gt;.nojekyll&lt;/code&gt;  文件，以防止 GitHub Pages 忽略下划线开头的文件。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;code&gt;_navbar.md&lt;/code&gt; 加载逻辑和 &lt;code&gt;sidebar&lt;/code&gt; 文件一致，从每层目录下获取。例如当前路由为 &lt;code&gt;/zh-cn/custom-navbar&lt;/code&gt; 那么是从 &lt;code&gt;/zh-cn/_navbar.md&lt;/code&gt; 获取导航栏。&lt;/p&gt;
-&lt;h3 id=&#34;封面&#34;&gt;&lt;a href=&#34;#封面&#34; class=&#34;headerlink&#34; title=&#34;封面&#34;&gt;&lt;/a&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzaWZ5LmpzLm9yZy8jL3poLWNuL2NvdmVyP2lkPSVFNSVCMCU4MSVFOSU5RCVBMg==&#34;&gt;封面&lt;/span&gt;&lt;/h3&gt;&lt;p&gt;通过设置 &lt;code&gt;coverpage&lt;/code&gt; 参数，可以开启渲染封面的功能。具体用法见&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzaWZ5LmpzLm9yZy8jL2NvbmZpZ3VyYXRpb24/aWQ9Y292ZXJwYWdl&#34;&gt;配置项#coverpage&lt;/span&gt;。&lt;/p&gt;
-&lt;h4 id=&#34;基本用法&#34;&gt;&lt;a href=&#34;#基本用法&#34; class=&#34;headerlink&#34; title=&#34;基本用法&#34;&gt;&lt;/a&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzaWZ5LmpzLm9yZy8jL3poLWNuL2NvdmVyP2lkPSVFNSU5RiVCQSVFNiU5QyVBQyVFNyU5NCVBOCVFNiVCMyU5NQ==&#34;&gt;基本用法&lt;/span&gt;&lt;/h4&gt;&lt;p&gt;封面的生成同样是从 markdown 文件渲染来的。开启渲染封面功能后在文档根目录创建 &lt;code&gt;_coverpage.md&lt;/code&gt; 文件。渲染效果如本文档。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;_navbar.md&lt;/code&gt;  加载逻辑和  &lt;code&gt;sidebar&lt;/code&gt;  文件一致，从每层目录下获取。例如当前路由为  &lt;code&gt;/zh-cn/custom-navbar&lt;/code&gt;  那么是从  &lt;code&gt;/zh-cn/_navbar.md&lt;/code&gt;  获取导航栏。&lt;/p&gt;
+&lt;h3 id=&#34;封面&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#封面&#34;&gt;#&lt;/a&gt; &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzaWZ5LmpzLm9yZy8jL3poLWNuL2NvdmVyP2lkPSVFNSVCMCU4MSVFOSU5RCVBMg==&#34;&gt;封面&lt;/span&gt;&lt;/h3&gt;
+&lt;p&gt;通过设置  &lt;code&gt;coverpage&lt;/code&gt;  参数，可以开启渲染封面的功能。具体用法见&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzaWZ5LmpzLm9yZy8jL2NvbmZpZ3VyYXRpb24/aWQ9Y292ZXJwYWdl&#34;&gt;配置项 #coverpage&lt;/span&gt;。&lt;/p&gt;
+&lt;h4 id=&#34;基本用法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#基本用法&#34;&gt;#&lt;/a&gt; &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzaWZ5LmpzLm9yZy8jL3poLWNuL2NvdmVyP2lkPSVFNSU5RiVCQSVFNiU5QyVBQyVFNyU5NCVBOCVFNiVCMyU5NQ==&#34;&gt;基本用法&lt;/span&gt;&lt;/h4&gt;
+&lt;p&gt;封面的生成同样是从 markdown 文件渲染来的。开启渲染封面功能后在文档根目录创建  &lt;code&gt;_coverpage.md&lt;/code&gt;  文件。渲染效果如本文档。&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;index.html&lt;/em&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;html&#34;&gt;&amp;lt;!-- index.html --&amp;gt;
-
-&amp;lt;script&amp;gt;
-  window.$docsify = &amp;#123;
-    coverpage: true
-  &amp;#125;
-&amp;lt;/script&amp;gt;
-&amp;lt;script src=&amp;quot;//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
-&amp;lt;!-- techPage.md --&amp;gt;
-
-&amp;#123;% asset_img icon.svg logo %&amp;#125;
-
-# docsify &amp;lt;small&amp;gt;3.5&amp;lt;/small&amp;gt;
-
-&amp;gt; 一个神奇的文档网站生成器。
-
-- 简单、轻便 (压缩后 ~21kB)
-- 无需生成 html 文件
-- 众多主题
-
-[GitHub](https://github.com/docsifyjs/docsify/)
-[Get Started](#docsify)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&#34;自定义背景&#34;&gt;&lt;a href=&#34;#自定义背景&#34; class=&#34;headerlink&#34; title=&#34;自定义背景&#34;&gt;&lt;/a&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzaWZ5LmpzLm9yZy8jL3poLWNuL2NvdmVyP2lkPSVFOCU4NyVBQSVFNSVBRSU5QSVFNCVCOSU4OSVFOCU4MyU4QyVFNiU5OSVBRg==&#34;&gt;自定义背景&lt;/span&gt;&lt;/h4&gt;&lt;p&gt;目前的背景是随机生成的渐变色，我们自定义背景色或者背景图。在文档末尾用添加图片的 Markdown 语法设置背景。&lt;/p&gt;
+&lt;figure class=&#34;highlight html&#34;&gt;&lt;figcaption data-lang=&#34;HTML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;&amp;lt;!-- index.html --&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;script&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token script&#34;&gt;&lt;span class=&#34;token language-javascript&#34;&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  window&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;$docsify &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token literal-property property&#34;&gt;coverpage&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token boolean&#34;&gt;true&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;script&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;script&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;src&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token script&#34;&gt;&lt;/span&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;script&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;&amp;lt;!-- techPage.md --&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;# docsify &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;small&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;3.5&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;small&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&gt; 一个神奇的文档网站生成器。&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;17&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;- 简单、轻便 (压缩后 ~21kB)&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;18&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;- 无需生成 html 文件&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;19&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;- 众多主题&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;20&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;21&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;[GitHub](https://github.com/docsifyjs/docsify/)&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;22&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;[Get Started](#docsify)&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h4 id=&#34;自定义背景&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#自定义背景&#34;&gt;#&lt;/a&gt; &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzaWZ5LmpzLm9yZy8jL3poLWNuL2NvdmVyP2lkPSVFOCU4NyVBQSVFNSVBRSU5QSVFNCVCOSU4OSVFOCU4MyU4QyVFNiU5OSVBRg==&#34;&gt;自定义背景&lt;/span&gt;&lt;/h4&gt;
+&lt;p&gt;目前的背景是随机生成的渐变色，我们自定义背景色或者背景图。在文档末尾用添加图片的 Markdown 语法设置背景。&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;_coverpage.md
 &amp;lt;!-- _coverpage.md --&amp;gt;
 
@@ -204,16 +125,20 @@ docs/zh-cn/guide.md   =&amp;gt; http://domain.com/zh-cn/guide
 
 ![color](#f0f0f0)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&#34;封面作为首页&#34;&gt;&lt;a href=&#34;#封面作为首页&#34; class=&#34;headerlink&#34; title=&#34;封面作为首页&#34;&gt;&lt;/a&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzaWZ5LmpzLm9yZy8jL3poLWNuL2NvdmVyP2lkPSVFNSVCMCU4MSVFOSU5RCVBMiVFNCVCRCU5QyVFNCVCOCVCQSVFOSVBNiU5NiVFOSVBMSVCNQ==&#34;&gt;封面作为首页&lt;/span&gt;&lt;/h4&gt;&lt;p&gt;通常封面和首页是同时出现的，当然你也是当封面独立出来通过设置&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzaWZ5LmpzLm9yZy8jL3poLWNuL2NvbmZpZ3VyYXRpb24/aWQ9b25seWNvdmVy&#34;&gt;onlyCover 选项&lt;/span&gt;。&lt;/p&gt;
-&lt;h3 id=&#34;部署&#34;&gt;&lt;a href=&#34;#部署&#34; class=&#34;headerlink&#34; title=&#34;部署&#34;&gt;&lt;/a&gt;部署&lt;/h3&gt;&lt;p&gt;和 GitBook 生成的文档一样，我们可以直接把文档网站部署到 GitHub Pages 或者 VPS 上。&lt;/p&gt;
-&lt;h4 id=&#34;GitHub-Pages&#34;&gt;&lt;a href=&#34;#GitHub-Pages&#34; class=&#34;headerlink&#34; title=&#34;GitHub Pages&#34;&gt;&lt;/a&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzaWZ5LmpzLm9yZy8jL3poLWNuL2RlcGxveT9pZD1naXRodWItcGFnZXM=&#34;&gt;GitHub Pages&lt;/span&gt;&lt;/h4&gt;&lt;p&gt;GitHub Pages 支持从三个地方读取文件&lt;/p&gt;
+&lt;h4 id=&#34;封面作为首页&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#封面作为首页&#34;&gt;#&lt;/a&gt; &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzaWZ5LmpzLm9yZy8jL3poLWNuL2NvdmVyP2lkPSVFNSVCMCU4MSVFOSU5RCVBMiVFNCVCRCU5QyVFNCVCOCVCQSVFOSVBNiU5NiVFOSVBMSVCNQ==&#34;&gt;封面作为首页&lt;/span&gt;&lt;/h4&gt;
+&lt;p&gt;通常封面和首页是同时出现的，当然你也是当封面独立出来通过设置&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzaWZ5LmpzLm9yZy8jL3poLWNuL2NvbmZpZ3VyYXRpb24/aWQ9b25seWNvdmVy&#34;&gt; onlyCover 选项&lt;/span&gt;。&lt;/p&gt;
+&lt;h3 id=&#34;部署&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#部署&#34;&gt;#&lt;/a&gt; 部署&lt;/h3&gt;
+&lt;p&gt;和 GitBook 生成的文档一样，我们可以直接把文档网站部署到 GitHub Pages 或者 VPS 上。&lt;/p&gt;
+&lt;h4 id=&#34;github-pages&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#github-pages&#34;&gt;#&lt;/a&gt; &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzaWZ5LmpzLm9yZy8jL3poLWNuL2RlcGxveT9pZD1naXRodWItcGFnZXM=&#34;&gt;GitHub Pages&lt;/span&gt;&lt;/h4&gt;
+&lt;p&gt;GitHub Pages 支持从三个地方读取文件&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;docs/&lt;/code&gt; 目录&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;docs/&lt;/code&gt;  目录&lt;/li&gt;
 &lt;li&gt;master 分支&lt;/li&gt;
 &lt;li&gt;gh-pages 分支&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;我们推荐直接将文档放在 &lt;code&gt;docs/&lt;/code&gt; 目录下，在设置页面开启 &lt;strong&gt;GitHub Pages&lt;/strong&gt; 功能并选择 &lt;code&gt;master branch /docs folder&lt;/code&gt; 选项。&lt;/p&gt;
-&lt;h4 id=&#34;配置过程&#34;&gt;&lt;a href=&#34;#配置过程&#34; class=&#34;headerlink&#34; title=&#34;配置过程&#34;&gt;&lt;/a&gt;配置过程&lt;/h4&gt;&lt;p&gt;1、创建一个GitHub仓库&lt;/p&gt;
+&lt;p&gt;我们推荐直接将文档放在  &lt;code&gt;docs/&lt;/code&gt;  目录下，在设置页面开启 &lt;strong&gt;GitHub Pages&lt;/strong&gt; 功能并选择  &lt;code&gt;master branch /docs folder&lt;/code&gt;  选项。&lt;/p&gt;
+&lt;h4 id=&#34;配置过程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#配置过程&#34;&gt;#&lt;/a&gt; 配置过程&lt;/h4&gt;
+&lt;p&gt;1、创建一个 GitHub 仓库&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;要求：&lt;/p&gt;
 &lt;p&gt;1、仓库名格式必须符合：github_username.github.io&lt;/p&gt;
@@ -222,31 +147,25 @@ docs/zh-cn/guide.md   =&amp;gt; http://domain.com/zh-cn/guide
 &lt;blockquote&gt;
 &lt;p&gt;随便选一个主题，毕竟我们也不用&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/onlymarryu/typora-ims-test@master/img/image-20220507185116977.png&#34; alt=&#34;image-20220507185116977&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/onlymarryu/typora-ims-test@master/img/image-20220507185152734.png&#34; alt=&#34;image-20220507185152734&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/onlymarryu/typora-ims-test@master/img/image-20220507185320819.png&#34; alt=&#34;image-20220507185320819&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/onlymarryu/typora-ims-test@master/img/image-20220507185336250.png&#34; alt=&#34;image-20220507185336250&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/onlymarryu/typora-ims-test@master/img/image-20220507185116977.png&#34; alt=&#34;image-20220507185116977&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/onlymarryu/typora-ims-test@master/img/image-20220507185152734.png&#34; alt=&#34;image-20220507185152734&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/onlymarryu/typora-ims-test@master/img/image-20220507185320819.png&#34; alt=&#34;image-20220507185320819&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/onlymarryu/typora-ims-test@master/img/image-20220507185336250.png&#34; alt=&#34;image-20220507185336250&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;3、上传项目&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;直接将我们的项目上传到这个库中即可。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;–考虑到是保姆级教程我们将上传步骤也写一下&lt;/p&gt;
+&lt;p&gt;-- 考虑到是保姆级教程我们将上传步骤也写一下&lt;/p&gt;
 &lt;p&gt;（1）首先我们将仓库中的信息拉取下来&lt;/p&gt;
-&lt;p&gt;​	这是第二步配置结束之后会产生&lt;code&gt;GitHubPage&lt;/code&gt;的配置文件&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/onlymarryu/typora-ims-test@master/img/image-20220507185418951.png&#34; alt=&#34;image-20220507185418951&#34;&gt;&lt;/p&gt;
-&lt;p&gt;（2）将配置文件与我们的docs文件一起重新提交到仓库中&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;git&#34;&gt;git add xx
-
-git commit xx -m&amp;quot;注释&amp;quot;
-
-git push xx 仓库地址 分支
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;我这里直接使用工具 &lt;code&gt;Sourcetree&lt;/code&gt; 提交。&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/onlymarryu/typora-ims-test@master/img/image-20220507190045839.png&#34; alt=&#34;image-20220507190045839&#34;&gt;&lt;/p&gt;
+&lt;p&gt;​	这是第二步配置结束之后会产生 &lt;code&gt;GitHubPage&lt;/code&gt;  的配置文件&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/onlymarryu/typora-ims-test@master/img/image-20220507185418951.png&#34; alt=&#34;image-20220507185418951&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;（2）将配置文件与我们的 docs 文件一起重新提交到仓库中&lt;/p&gt;
+&lt;figure class=&#34;highlight git&#34;&gt;&lt;figcaption data-lang=&#34;git&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;git add xx&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;git commit xx -m&lt;span class=&#34;token string&#34;&gt;&#34;注释&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;git push xx 仓库地址 分支&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;我这里直接使用工具  &lt;code&gt;Sourcetree&lt;/code&gt;  提交。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/onlymarryu/typora-ims-test@master/img/image-20220507190045839.png&#34; alt=&#34;image-20220507190045839&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;4、上传成功，部署成功&lt;/p&gt;
 &lt;p&gt;直接访问：&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9vbmx5bWFycnl1LmdpdGh1Yi5pby8jLw==&#34;&gt;https://onlymarryu.github.io/#/&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/onlymarryu/typora-ims-test@master/img/image-20220507184626485.png&#34; alt=&#34;image-20220507184626485&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/onlymarryu/typora-ims-test@master/img/image-20220507184626485.png&#34; alt=&#34;image-20220507184626485&#34; /&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;​	如果刷新不是想要的结果，只要确认之前所有本地测试结果正取，只是部署之后结果不对，这就是部署时间的问题，我们等一会刷新即可。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -259,352 +178,271 @@ git push xx 仓库地址 分支
         <id>http://example.com/2022/10/06/hexo/</id>
         <title>hexo</title>
         <link rel="alternate" href="http://example.com/2022/10/06/hexo/"/>
-        <content type="html">&lt;hr&gt;
-&lt;p&gt;title: hexo&lt;br&gt;date: 2022-10-06 14:53:52&lt;br&gt;categories:&lt;br&gt;    - 基础使用&lt;br&gt;tags:&lt;br&gt;    - 环境搭建&lt;br&gt;    - 博客&lt;/p&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;介绍&#34;&gt;&lt;a href=&#34;#介绍&#34; class=&#34;headerlink&#34; title=&#34;介绍&#34;&gt;&lt;/a&gt;介绍&lt;/h1&gt;&lt;p&gt;&lt;code&gt;hexo&lt;/code&gt;是一个基于nodejs的静态博客网站生成器，作者是来自台湾的&lt;code&gt;Tommy Chen&lt;/code&gt;，为许多技术博客的博主所青睐，主要有如下的一些优点：&lt;/p&gt;
+        <content type="html">&lt;hr /&gt;
+&lt;p&gt;title: hexo&lt;br /&gt;
+date: 2022-10-06 14:53:52&lt;br /&gt;
+categories:&lt;br /&gt;
+- 基础使用&lt;br /&gt;
+ tags:&lt;br /&gt;
+- 环境搭建&lt;br /&gt;
+ - 博客&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h1 id=&#34;介绍&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#介绍&#34;&gt;#&lt;/a&gt; 介绍&lt;/h1&gt;
+&lt;p&gt;&lt;code&gt;hexo&lt;/code&gt;  是一个基于 nodejs 的静态博客网站生成器，作者是来自台湾的 &lt;code&gt;Tommy Chen&lt;/code&gt; ，为许多技术博客的博主所青睐，主要有如下的一些优点：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;支持Markdown语法，编辑简单，排版优美；&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;支持 Markdown 语法，编辑简单，排版优美；&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;能够快速生成静态html文件；&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;能够快速生成静态 html 文件；&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;部署容易，接口简单； 兼容于各大主流操作系统；&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;部署容易，接口简单； 兼容于各大主流操作系统；&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;社区主题、插件很多，遇到问题的时候能查到的参考材料也很多。&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;社区主题、插件很多，遇到问题的时候能查到的参考材料也很多。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Hexo官方文档：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL3poLWNuL2RvY3Mv&#34;&gt;https://hexo.io/zh-cn/docs/&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Hexo 官方文档：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL3poLWNuL2RvY3Mv&#34;&gt;https://hexo.io/zh-cn/docs/&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Gitee Pages：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRlZS5jb20vaGVscC9hcnRpY2xlcy80MTM2I2FydGljbGUtaGVhZGVyMA==&#34;&gt;https://gitee.com/help/articles/4136#article-header0&lt;/span&gt;&lt;/p&gt;
-&lt;h1 id=&#34;环境配置&#34;&gt;&lt;a href=&#34;#环境配置&#34; class=&#34;headerlink&#34; title=&#34;环境配置&#34;&gt;&lt;/a&gt;环境配置&lt;/h1&gt;&lt;p&gt;搭建hexo首先需要有nodejs的环境，可以从官网直接下载。&lt;/p&gt;
-&lt;img data-src=&#34;/2022/10/06/hexo/2xKvaPTDoyZcFbp.png&#34; class=&#34;&#34; title=&#34;nodejs&#34;&gt;
-
-&lt;h1 id=&#34;生成博客&#34;&gt;&lt;a href=&#34;#生成博客&#34; class=&#34;headerlink&#34; title=&#34;生成博客&#34;&gt;&lt;/a&gt;生成博客&lt;/h1&gt;&lt;h2 id=&#34;安装&#34;&gt;&lt;a href=&#34;#安装&#34; class=&#34;headerlink&#34; title=&#34;安装&#34;&gt;&lt;/a&gt;安装&lt;/h2&gt;&lt;p&gt;有了npm包管理软件，安装hexo就很方便了，只需要一行命令：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;shell&#34;&gt;npm install node # homebrew安装nodejs
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;其中-g参数表示全局安装，没有这个参数就只在当前目录下安装，建议全局安装。&lt;/p&gt;
-&lt;h2 id=&#34;初始化&#34;&gt;&lt;a href=&#34;#初始化&#34; class=&#34;headerlink&#34; title=&#34;初始化&#34;&gt;&lt;/a&gt;初始化&lt;/h2&gt;&lt;p&gt;运行命令：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;shell&#34;&gt;hexo init
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code class=&#34;shell&#34;&gt;INFO  Cloning hexo-starter https://github.com/hexojs/hexo-starter.git
-INFO  Install dependencies
-# 一些可能的中间信息
-INFO  Start blogging with Hexo!
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;然后进入博客目录：&lt;/p&gt;
+&lt;h1 id=&#34;环境配置&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#环境配置&#34;&gt;#&lt;/a&gt; 环境配置&lt;/h1&gt;
+&lt;p&gt;搭建 hexo 首先需要有 nodejs 的环境，可以从官网直接下载。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/2022/10/06/hexo/2xKvaPTDoyZcFbp.png&#34; class=&#34;&#34; title=&#34;nodejs&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;生成博客&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#生成博客&#34;&gt;#&lt;/a&gt; 生成博客&lt;/h1&gt;
+&lt;h2 id=&#34;安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装&#34;&gt;#&lt;/a&gt; 安装&lt;/h2&gt;
+&lt;p&gt;有了 npm 包管理软件，安装 hexo 就很方便了，只需要一行命令：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;npm&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;install&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;node&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# homebrew 安装 nodejs&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;其中 - g 参数表示全局安装，没有这个参数就只在当前目录下安装，建议全局安装。&lt;/p&gt;
+&lt;h2 id=&#34;初始化&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#初始化&#34;&gt;#&lt;/a&gt; 初始化&lt;/h2&gt;
+&lt;p&gt;运行命令：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;hexo init&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;INFO  Cloning hexo-starter https://github.com/hexojs/hexo-starter.git&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;INFO  Install dependencies&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 一些可能的中间信息&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;INFO  Start blogging with Hexo&lt;span class=&#34;token operator&#34;&gt;!&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;然后进入博客目录：&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt; cd “博客目录”&lt;/p&gt;
+&lt;p&gt;cd &amp;quot;博客目录&amp;quot;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;安装博客需要的其他支持：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;sh&#34;&gt;npm install # 安装的依赖项在package.json文件的dependencies字段中可以看到
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;博客项目目录结构介绍&#34;&gt;&lt;a href=&#34;#博客项目目录结构介绍&#34; class=&#34;headerlink&#34; title=&#34;博客项目目录结构介绍&#34;&gt;&lt;/a&gt;博客项目目录结构介绍&lt;/h2&gt;&lt;p&gt;查看目录结构：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;sh&#34;&gt;tree -L 1 
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;结果如下：&lt;/p&gt;
+&lt;figure class=&#34;highlight sh&#34;&gt;&lt;figcaption data-lang=&#34;sh&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;npm&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;install&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# 安装的依赖项在 package.json 文件的 dependencies 字段中可以看到&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h2 id=&#34;博客项目目录结构介绍&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#博客项目目录结构介绍&#34;&gt;#&lt;/a&gt; 博客项目目录结构介绍&lt;/h2&gt;
+&lt;p&gt;查看目录结构：&lt;/p&gt;
+&lt;figure class=&#34;highlight sh&#34;&gt;&lt;figcaption data-lang=&#34;sh&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;tree &lt;span class=&#34;token parameter variable&#34;&gt;-L&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;结果如下：&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;.&lt;br&gt;├── _config.landscape.yml&lt;br&gt;├── _config.yml&lt;br&gt;├── node_modules&lt;br&gt;├── package-lock.json&lt;br&gt;├── package.json&lt;br&gt;├── scaffolds&lt;br&gt;├── source&lt;br&gt;└── themes&lt;/p&gt;
+&lt;p&gt;.&lt;br /&gt;
+├── _config.landscape.yml&lt;br /&gt;
+├── _config.yml&lt;br /&gt;
+├── node_modules&lt;br /&gt;
+├── package-lock.json&lt;br /&gt;
+├── package.json&lt;br /&gt;
+├── scaffolds&lt;br /&gt;
+├── source&lt;br /&gt;
+└── themes&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;各部分的含义：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;`_config.yml &amp;#96;&lt;ul&gt;
+&lt;li&gt;`_config.yml `
+&lt;ul&gt;
 &lt;li&gt;为全局配置文件，网站的很多信息都在这里配置，比如说网站名称，副标题，描述，作者，语言，主题等等。具体可以参考官方文档：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL3poLWNuL2RvY3MvY29uZmlndXJhdGlvbi5odG1sJUUzJTgwJTgy&#34;&gt;https://hexo.io/zh-cn/docs/configuration.html。&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;code&gt;_scaffolds&lt;/code&gt;&lt;ul&gt;
-&lt;li&gt;骨架文件，是生成新页面或者新博客的模版。可以根据需求编辑，当&lt;code&gt;hexo&lt;/code&gt;生成新博客的时候，会用这里面的模版进行初始化。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;_scaffolds&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;骨架文件，是生成新页面或者新博客的模版。可以根据需求编辑，当 &lt;code&gt;hexo&lt;/code&gt;  生成新博客的时候，会用这里面的模版进行初始化。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;code&gt;_source&lt;/code&gt;&lt;ul&gt;
-&lt;li&gt;这个文件夹下面存放的是网站的&lt;code&gt;markdown&lt;/code&gt;源文件，里面有一个&lt;code&gt;_post&lt;/code&gt;文件夹，所有的&lt;code&gt;.md&lt;/code&gt;博客文件都会存放在这个文件夹下。现在，你应该能看到里面有一个&lt;code&gt;hello-world.md&lt;/code&gt;文件。_&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;_source&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;这个文件夹下面存放的是网站的 &lt;code&gt;markdown&lt;/code&gt;  源文件，里面有一个 &lt;code&gt;_post&lt;/code&gt;  文件夹，所有的 &lt;code&gt;.md&lt;/code&gt;  博客文件都会存放在这个文件夹下。现在，你应该能看到里面有一个 &lt;code&gt;hello-world.md&lt;/code&gt;  文件。_&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;code&gt;_themes&lt;/code&gt;&lt;ul&gt;
-&lt;li&gt;网站主题目录，&lt;code&gt;hexo&lt;/code&gt;有非常丰富的主题支持，主题目录会存放在这个目录下面。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;_themes&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;网站主题目录， &lt;code&gt;hexo&lt;/code&gt;  有非常丰富的主题支持，主题目录会存放在这个目录下面。&lt;/li&gt;
 &lt;li&gt;我们后续会以默认主题来演示，更多的主题参见：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL3RoZW1lcy8=&#34;&gt;https://hexo.io/themes/&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;生成新文章&#34;&gt;&lt;a href=&#34;#生成新文章&#34; class=&#34;headerlink&#34; title=&#34;生成新文章&#34;&gt;&lt;/a&gt;生成新文章&lt;/h2&gt;&lt;pre&gt;&lt;code class=&#34;sh&#34;&gt;hexo new post &amp;quot;test&amp;quot; # 会在 source/_posts/ 目录下生成文件 ‘test.md’，打开编辑
-hexo generate        # 生成静态HTML文件到 /public 文件夹中
-hexo server          # 本地运行server服务预览，打开 http://localhost:4000 即可预览你的博客
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;本地预览效果：&lt;/strong&gt;&lt;/p&gt;
-&lt;img data-src=&#34;/2022/10/06/hexo/image-20221006120456734.png&#34; class=&#34;&#34; title=&#34;image-20221006120456734&#34;&gt;
-
-&lt;p&gt;这是hexo的默认主题，更多的主题可以从官网下载。&lt;/p&gt;
-&lt;p&gt;更详细的hexo命令可以查看文档：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL3poLWNuL2RvY3MvY29tbWFuZHM=&#34;&gt;https://hexo.io/zh-cn/docs/commands&lt;/span&gt;&lt;/p&gt;
-&lt;h1 id=&#34;Hexo配置并部署&#34;&gt;&lt;a href=&#34;#Hexo配置并部署&#34; class=&#34;headerlink&#34; title=&#34;Hexo配置并部署&#34;&gt;&lt;/a&gt;Hexo配置并部署&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;提前对要提交的仓库配置ssh&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;1-安装部署工具&#34;&gt;&lt;a href=&#34;#1-安装部署工具&#34; class=&#34;headerlink&#34; title=&#34;1.安装部署工具&#34;&gt;&lt;/a&gt;1.安装部署工具&lt;/h2&gt;&lt;pre&gt;&lt;code class=&#34;sh&#34;&gt;npm install hexo-deployer-git --save
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;2-配置部署信息&#34;&gt;&lt;a href=&#34;#2-配置部署信息&#34; class=&#34;headerlink&#34; title=&#34;2.配置部署信息&#34;&gt;&lt;/a&gt;2.配置部署信息&lt;/h2&gt;&lt;p&gt;站点配置文件_config.yml&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;yml&#34;&gt;deploy:
-  type: git
-  repo: &amp;lt;repository url&amp;gt; # 输入你的仓库地址
-  branch: [branch] # 输入分支
-  token:   #token
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;生成新文章&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#生成新文章&#34;&gt;#&lt;/a&gt; 生成新文章&lt;/h2&gt;
+&lt;figure class=&#34;highlight sh&#34;&gt;&lt;figcaption data-lang=&#34;sh&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;hexo new post &lt;span class=&#34;token string&#34;&gt;&#34;test&#34;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# 会在 source/_posts/ 目录下生成文件 ‘test.md’，打开编辑&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;hexo generate        &lt;span class=&#34;token comment&#34;&gt;# 生成静态 HTML 文件到 /public 文件夹中&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;hexo server          &lt;span class=&#34;token comment&#34;&gt;# 本地运行 server 服务预览，打开 http://localhost:4000 即可预览你的博客&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;strong&gt;本地预览效果：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/2022/10/06/hexo/image-20221006120456734.png&#34; class=&#34;&#34; title=&#34;image-20221006120456734&#34;&gt;&lt;/p&gt;
+&lt;p&gt;这是 hexo 的默认主题，更多的主题可以从官网下载。&lt;/p&gt;
+&lt;p&gt;更详细的 hexo 命令可以查看文档：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL3poLWNuL2RvY3MvY29tbWFuZHM=&#34;&gt;https://hexo.io/zh-cn/docs/commands&lt;/span&gt;&lt;/p&gt;
+&lt;h1 id=&#34;hexo配置并部署&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#hexo配置并部署&#34;&gt;#&lt;/a&gt; Hexo 配置并部署&lt;/h1&gt;
 &lt;blockquote&gt;
-&lt;p&gt;deploy:&lt;/p&gt;
-&lt;p&gt; type: git&lt;/p&gt;
-&lt;p&gt; repo: &lt;span class=&#34;exturl&#34; data-url=&#34;bWFpbHRvOiYjeDY3OyYjeDY5OyYjeDc0OyYjNjQ7JiMxMDM7JiN4Njk7JiMxMTY7JiN4NjU7JiN4NjU7JiM0NjsmI3g2MzsmIzExMTsmIzEwOTs=&#34;&gt;&amp;#x67;&amp;#x69;&amp;#x74;&amp;#64;&amp;#103;&amp;#x69;&amp;#116;&amp;#x65;&amp;#x65;&amp;#46;&amp;#x63;&amp;#111;&amp;#109;&lt;/span&gt;:cysheng&amp;#x2F;cysheng.git # 输入你的仓库地址&lt;/p&gt;
-&lt;p&gt; branch: master # 输入分支&lt;/p&gt;
+&lt;p&gt;提前对要提交的仓库配置 ssh&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&#34;3-部署&#34;&gt;&lt;a href=&#34;#3-部署&#34; class=&#34;headerlink&#34; title=&#34;3.部署&#34;&gt;&lt;/a&gt;3.部署&lt;/h2&gt;&lt;pre&gt;&lt;code class=&#34;sh&#34;&gt; hexo clean  
- hexo g  
- hexo d 
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;hexo clean&lt;/p&gt;
+&lt;h2 id=&#34;1安装部署工具&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1安装部署工具&#34;&gt;#&lt;/a&gt; 1. 安装部署工具&lt;/h2&gt;
+&lt;figure class=&#34;highlight sh&#34;&gt;&lt;figcaption data-lang=&#34;sh&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;npm&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;install&lt;/span&gt; hexo-deployer-git &lt;span class=&#34;token parameter variable&#34;&gt;--save&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h2 id=&#34;2配置部署信息&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2配置部署信息&#34;&gt;#&lt;/a&gt; 2. 配置部署信息&lt;/h2&gt;
+&lt;p&gt;站点配置文件_config.yml&lt;/p&gt;
+&lt;figure class=&#34;highlight yml&#34;&gt;&lt;figcaption data-lang=&#34;YAML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key atrule&#34;&gt;deploy&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;type&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; git&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;repo&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &amp;lt;repository url&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# 输入你的仓库地址&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;branch&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;branch&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# 输入分支&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;token&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;   &lt;span class=&#34;token comment&#34;&gt;#token&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;blockquote&gt;
+&lt;p&gt;deploy:&lt;/p&gt;
+&lt;p&gt;type: git&lt;/p&gt;
+&lt;p&gt;repo: &lt;span class=&#34;exturl&#34; data-url=&#34;bWFpbHRvOmdpdEBnaXRlZS5jb20=&#34;&gt;git@gitee.com&lt;/span&gt;:cysheng/cysheng.git # 输入你的仓库地址&lt;/p&gt;
+&lt;p&gt;branch: master # 输入分支&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;3部署&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3部署&#34;&gt;#&lt;/a&gt; 3. 部署&lt;/h2&gt;
+&lt;figure class=&#34;highlight sh&#34;&gt;&lt;figcaption data-lang=&#34;sh&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;hexo clean  &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; hexo g  &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; hexo d&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;hexo clean&lt;/p&gt;
 &lt;p&gt;清除缓存文件 (db.json) 和已生成的静态文件 (public)。&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;hexo g&lt;/p&gt;
-&lt;p&gt;hexo解析站点文件夹，生成一个public文件夹（只包含浏览器可以解析的html、css、js），也就是我们需要部署的文件夹。&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;hexo g&lt;/p&gt;
+&lt;p&gt;hexo 解析站点文件夹，生成一个 public 文件夹（只包含浏览器可以解析的 html、css、js），也就是我们需要部署的文件夹。&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;hexo d&lt;/p&gt;
-&lt;p&gt;部署，即将我们的public文件夹推送到我们配置的仓库&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;hexo d&lt;/p&gt;
+&lt;p&gt;部署，即将我们的 public 文件夹推送到我们配置的仓库&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;4-开启Gitee-Pages服务&#34;&gt;&lt;a href=&#34;#4-开启Gitee-Pages服务&#34; class=&#34;headerlink&#34; title=&#34;4.开启Gitee Pages服务&#34;&gt;&lt;/a&gt;4.开启Gitee Pages服务&lt;/h2&gt;&lt;p&gt;找到新创建的仓库-&amp;gt;【服务】-&amp;gt;【Gitee Pages】  &lt;img data-src=&#34;/2022/10/06/hexo/image-20221006120734926.png&#34; class=&#34;&#34; title=&#34;hexo&amp;#x2F;image-20221006120734926&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;4开启gitee-pages服务&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#4开启gitee-pages服务&#34;&gt;#&lt;/a&gt; 4. 开启 Gitee Pages 服务&lt;/h2&gt;
+&lt;p&gt;找到新创建的仓库 -&amp;gt;【服务】-&amp;gt;【Gitee Pages】  &lt;img data-src=&#34;/2022/10/06/hexo/image-20221006120734926.png&#34; class=&#34;&#34; title=&#34;hexo&amp;#x2F;image-20221006120734926&#34;&gt;&lt;/p&gt;
 &lt;p&gt;如图，选择部署分支，部署目录&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;部署分支，与本地hexo配置一致&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;部署分支，与本地 hexo 配置一致&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;部署目录，不填即整个仓库&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;部署目录，不填即整个仓库&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;强制使用https&lt;/p&gt;
-&lt;p&gt;一个是进行加密，还有一个是我在用next主题时使用http访问会有跨域问题导致图标显示不出来&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;强制使用 https&lt;/p&gt;
+&lt;p&gt;一个是进行加密，还有一个是我在用 next 主题时使用 http 访问会有跨域问题导致图标显示不出来&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;点击启动&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;点击启动&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;访问给出的网站地址（以我的为例：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9jeXNoZW5nLmdpdGVlLmlvKS8=&#34;&gt;https://cysheng.gitee.io）&lt;/span&gt;&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;访问给出的网站地址（以我的为例：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9jeXNoZW5nLmdpdGVlLmlv&#34;&gt;https://cysheng.gitee.io&lt;/span&gt;）&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id=&#34;hexo-框架常用的指令：&#34;&gt;&lt;a href=&#34;#hexo-框架常用的指令：&#34; class=&#34;headerlink&#34; title=&#34;hexo 框架常用的指令：&#34;&gt;&lt;/a&gt;hexo 框架常用的指令：&lt;/h1&gt;&lt;table&gt;
+&lt;h1 id=&#34;hexo-框架常用的指令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#hexo-框架常用的指令&#34;&gt;#&lt;/a&gt; hexo 框架常用的指令：&lt;/h1&gt;
+&lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th align=&#34;left&#34;&gt;指令&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;说明&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;指令&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;说明&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
-&lt;tbody&gt;&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;code&gt;hexo clean &amp;amp;&amp;amp; hexo g&lt;/code&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;清除本地项目并重新生成 （重新部署时使用）&lt;/td&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;hexo clean &amp;amp;&amp;amp; hexo g&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;清除本地项目并重新生成 （重新部署时使用）&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;code&gt;hexo g&lt;/code&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;重新生成&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;hexo g&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;重新生成&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;code&gt;Hexo s&lt;/code&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;开启本地预览&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;Hexo s&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;开启本地预览&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;code&gt;Hexo d&lt;/code&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;推送到github&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;Hexo d&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;推送到 github&lt;/td&gt;
 &lt;/tr&gt;
-&lt;/tbody&gt;&lt;/table&gt;
-&lt;h1 id=&#34;功能设置&#34;&gt;&lt;a href=&#34;#功能设置&#34; class=&#34;headerlink&#34; title=&#34;功能设置&#34;&gt;&lt;/a&gt;功能设置&lt;/h1&gt;&lt;h2 id=&#34;标题和分类&#34;&gt;&lt;a href=&#34;#标题和分类&#34; class=&#34;headerlink&#34; title=&#34;标题和分类&#34;&gt;&lt;/a&gt;标题和分类&lt;/h2&gt;&lt;p&gt;在文章开头我们可以设置 FontMatter，例如&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;yml&#34;&gt;---
-title: jQuery对表单的操作及更多应用 # 标题
-date: 2022-01-07 22:53:43 # 创建时间
-categories: # 分类，级别递减
-- web前端 # 一级分类
-- web前端2 # 二级分类
-tags: # 标签，没有级别
-    - a1
-    - a2
----
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;​	为了简化我们的操作，所以我们可以以设置模板，在 &lt;code&gt;/scaffolds&lt;/code&gt; 下的 &lt;code&gt;draft.md&lt;/code&gt; 、&lt;code&gt;page.md&lt;/code&gt; 、 &lt;code&gt;post.md&lt;/code&gt;  我们用来设置模板，例如我们最常使用的&lt;code&gt;post&lt;/code&gt; 目录下的文件，所以我们配置一下&lt;code&gt;post.md&lt;/code&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;yaml&#34;&gt;---
-title: &amp;#123;&amp;#123; title &amp;#125;&amp;#125;
-date: &amp;#123;&amp;#123; date &amp;#125;&amp;#125;
-comments:
-tags:
----
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;问题&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;如果我们在没有找到 tags 、categories 、link 、about文件时，我们手动创建&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;sh&#34;&gt;hexo new page tags
-hexo new page categories 
-hexo new page link 
-hexo new page about
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;成功后，提示&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;sh&#34;&gt;INFO  Created: ~/Documents/blog/source/xxx/index.md
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;根据上面的路径，找到&lt;code&gt;index.md&lt;/code&gt;这个文件，打开后默认内容是这样的：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;yaml&#34;&gt;---
-title: 文章分类
-date: 2022-01-07 22:53:43
-type: &amp;quot;categories&amp;quot; # 哪个文件就是那个类型
-layout: &amp;quot;categories&amp;quot; # 哪个文件就是那个类型
----
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;最后清除缓存，重新启动就行了 &lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;sh&#34;&gt;hexo cl &amp;amp;&amp;amp; hexo g &amp;amp;&amp;amp; hexo s
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;搜索&#34;&gt;&lt;a href=&#34;#搜索&#34; class=&#34;headerlink&#34; title=&#34;搜索&#34;&gt;&lt;/a&gt;搜索&lt;/h2&gt;&lt;h3 id=&#34;1、注册账号&#34;&gt;&lt;a href=&#34;#1、注册账号&#34; class=&#34;headerlink&#34; title=&#34;1、注册账号&#34;&gt;&lt;/a&gt;1、注册账号&lt;/h3&gt;&lt;p&gt;官网：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYWxnb2xpYS5jb20vdXNlcnMvc2lnbl9pbg==&#34;&gt;https://www.algolia.com/users/sign_in&lt;/span&gt;&lt;/p&gt;
-&lt;h3 id=&#34;2、之后在左侧导航栏中找到Search&#34;&gt;&lt;a href=&#34;#2、之后在左侧导航栏中找到Search&#34; class=&#34;headerlink&#34; title=&#34;2、之后在左侧导航栏中找到Search&#34;&gt;&lt;/a&gt;2、之后在左侧导航栏中找到Search&lt;/h3&gt;&lt;img data-src=&#34;/2022/10/06/hexo/image-20221007104401652.png&#34; class=&#34;&#34; title=&#34;image-20221007104401652&#34;&gt;
-
-&lt;h3 id=&#34;3、创建Index&#34;&gt;&lt;a href=&#34;#3、创建Index&#34; class=&#34;headerlink&#34; title=&#34;3、创建Index&#34;&gt;&lt;/a&gt;3、创建Index&lt;/h3&gt;&lt;img data-src=&#34;/2022/10/06/hexo/image-20221007104429043.png&#34; class=&#34;&#34; title=&#34;image-20221007104429043&#34;&gt;
-
-&lt;img data-src=&#34;/2022/10/06/hexo/image-20221007104449209.png&#34; class=&#34;&#34; title=&#34;image-20221007104449209&#34;&gt;
-
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h1 id=&#34;功能设置&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#功能设置&#34;&gt;#&lt;/a&gt; 功能设置&lt;/h1&gt;
+&lt;h2 id=&#34;标题和分类&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#标题和分类&#34;&gt;#&lt;/a&gt; 标题和分类&lt;/h2&gt;
+&lt;p&gt;在文章开头我们可以设置 FontMatter，例如&lt;/p&gt;
+&lt;figure class=&#34;highlight yml&#34;&gt;&lt;figcaption data-lang=&#34;YAML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;---&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key atrule&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; jQuery对表单的操作及更多应用 &lt;span class=&#34;token comment&#34;&gt;# 标题&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key atrule&#34;&gt;date&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token datetime number&#34;&gt;2022-01-07 22:53:43&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# 创建时间&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key atrule&#34;&gt;categories&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# 分类，级别递减&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; web前端 &lt;span class=&#34;token comment&#34;&gt;# 一级分类&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; web前端2 &lt;span class=&#34;token comment&#34;&gt;# 二级分类&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key atrule&#34;&gt;tags&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# 标签，没有级别&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; a1&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; a2&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;---&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;​	为了简化我们的操作，所以我们可以以设置模板，在  &lt;code&gt;/scaffolds&lt;/code&gt;  下的  &lt;code&gt;draft.md&lt;/code&gt;  、 &lt;code&gt;page.md&lt;/code&gt;  、  &lt;code&gt;post.md&lt;/code&gt;   我们用来设置模板，例如我们最常使用的 &lt;code&gt;post&lt;/code&gt;  目录下的文件，所以我们配置一下 &lt;code&gt;post.md&lt;/code&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight yaml&#34;&gt;&lt;figcaption data-lang=&#34;YAML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;---&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key atrule&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &amp;lt;&lt;span class=&#34;token tag&#34;&gt;!--swig&lt;/span&gt;￼3&lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key atrule&#34;&gt;date&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &amp;lt;&lt;span class=&#34;token tag&#34;&gt;!--swig&lt;/span&gt;￼4&lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key atrule&#34;&gt;comments&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key atrule&#34;&gt;tags&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;---&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;strong&gt;问题&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;如果我们在没有找到 tags 、categories 、link 、about 文件时，我们手动创建&lt;/p&gt;
+&lt;figure class=&#34;highlight sh&#34;&gt;&lt;figcaption data-lang=&#34;sh&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;hexo new page tags&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;hexo new page categories &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;hexo new page &lt;span class=&#34;token function&#34;&gt;link&lt;/span&gt; &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;hexo new page about&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;成功后，提示&lt;/p&gt;
+&lt;figure class=&#34;highlight sh&#34;&gt;&lt;figcaption data-lang=&#34;sh&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;INFO  Created: ~/Documents/blog/source/xxx/index.md&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;根据上面的路径，找到 &lt;code&gt;index.md&lt;/code&gt;  这个文件，打开后默认内容是这样的：&lt;/p&gt;
+&lt;figure class=&#34;highlight yaml&#34;&gt;&lt;figcaption data-lang=&#34;YAML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;---&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key atrule&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; 文章分类&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key atrule&#34;&gt;date&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token datetime number&#34;&gt;2022-01-07 22:53:43&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key atrule&#34;&gt;type&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;categories&#34;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# 哪个文件就是那个类型&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key atrule&#34;&gt;layout&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;categories&#34;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# 哪个文件就是那个类型&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;---&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;最后清除缓存，重新启动就行了&lt;/p&gt;
+&lt;figure class=&#34;highlight sh&#34;&gt;&lt;figcaption data-lang=&#34;sh&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;hexo cl &lt;span class=&#34;token operator&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; hexo g &lt;span class=&#34;token operator&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; hexo s&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h2 id=&#34;搜索&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#搜索&#34;&gt;#&lt;/a&gt; 搜索&lt;/h2&gt;
+&lt;h3 id=&#34;1-注册账号&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-注册账号&#34;&gt;#&lt;/a&gt; 1、注册账号&lt;/h3&gt;
+&lt;p&gt;官网：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYWxnb2xpYS5jb20vdXNlcnMvc2lnbl9pbg==&#34;&gt;https://www.algolia.com/users/sign_in&lt;/span&gt;&lt;/p&gt;
+&lt;h3 id=&#34;2-之后在左侧导航栏中找到search&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-之后在左侧导航栏中找到search&#34;&gt;#&lt;/a&gt; 2、之后在左侧导航栏中找到 Search&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;/2022/10/06/hexo/image-20221007104401652.png&#34; class=&#34;&#34; title=&#34;image-20221007104401652&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;3-创建index&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3-创建index&#34;&gt;#&lt;/a&gt; 3、创建 Index&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;/2022/10/06/hexo/image-20221007104429043.png&#34; class=&#34;&#34; title=&#34;image-20221007104429043&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/2022/10/06/hexo/image-20221007104449209.png&#34; class=&#34;&#34; title=&#34;image-20221007104449209&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;随便写&lt;/strong&gt;&lt;/p&gt;
-&lt;h3 id=&#34;4、创建APPID&#34;&gt;&lt;a href=&#34;#4、创建APPID&#34; class=&#34;headerlink&#34; title=&#34;4、创建APPID&#34;&gt;&lt;/a&gt;4、创建APPID&lt;/h3&gt;&lt;img data-src=&#34;/2022/10/06/hexo/image-20221007105625601.png&#34; class=&#34;&#34; title=&#34;image-20221007105625601&#34;&gt;
-
-&lt;img data-src=&#34;/2022/10/06/hexo/image-20221007105704120.png&#34; class=&#34;&#34; title=&#34;image-20221007105704120&#34;&gt;
-
+&lt;h3 id=&#34;4-创建appid&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#4-创建appid&#34;&gt;#&lt;/a&gt; 4、创建 APPID&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;/2022/10/06/hexo/image-20221007105625601.png&#34; class=&#34;&#34; title=&#34;image-20221007105625601&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/2022/10/06/hexo/image-20221007105704120.png&#34; class=&#34;&#34; title=&#34;image-20221007105704120&#34;&gt;&lt;/p&gt;
 &lt;p&gt;这两个后面有用&lt;/p&gt;
-&lt;img data-src=&#34;/2022/10/06/hexo/image-20221007105750168.png&#34; class=&#34;&#34; title=&#34;image-20221007105750168&#34;&gt;
-
+&lt;p&gt;&lt;img data-src=&#34;/2022/10/06/hexo/image-20221007105750168.png&#34; class=&#34;&#34; title=&#34;image-20221007105750168&#34;&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Indices 是我们上面创建 index &lt;/p&gt;
+&lt;p&gt;Indices 是我们上面创建 index&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;img data-src=&#34;/2022/10/06/hexo/20210516112405506.png&#34; class=&#34;&#34; title=&#34;在这里插入图片描述&#34;&gt;
-
-
-
-&lt;h3 id=&#34;5、到博客根目录下安装hexo-algolia&#34;&gt;&lt;a href=&#34;#5、到博客根目录下安装hexo-algolia&#34; class=&#34;headerlink&#34; title=&#34;5、到博客根目录下安装hexo-algolia&#34;&gt;&lt;/a&gt;5、到博客根目录下安装hexo-algolia&lt;/h3&gt;&lt;pre&gt;&lt;code class=&#34;sh&#34;&gt;npm install hexo-algolia --save
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;6、前往站点根目录打开-config-yml添加以下代码&#34;&gt;&lt;a href=&#34;#6、前往站点根目录打开-config-yml添加以下代码&#34; class=&#34;headerlink&#34; title=&#34;6、前往站点根目录打开_config.yml添加以下代码&#34;&gt;&lt;/a&gt;6、前往站点根目录打开_config.yml添加以下代码&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt;这是对全局的配置，所以是根目录的配置&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/2022/10/06/hexo/20210516112405506.png&#34; class=&#34;&#34; title=&#34;在这里插入图片描述&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;5-到博客根目录下安装hexo-algolia&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#5-到博客根目录下安装hexo-algolia&#34;&gt;#&lt;/a&gt; 5、到博客根目录下安装 hexo-algolia&lt;/h3&gt;
+&lt;figure class=&#34;highlight sh&#34;&gt;&lt;figcaption data-lang=&#34;sh&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;npm&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;install&lt;/span&gt; hexo-algolia &lt;span class=&#34;token parameter variable&#34;&gt;--save&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;6-前往站点根目录打开_configyml添加以下代码&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#6-前往站点根目录打开_configyml添加以下代码&#34;&gt;#&lt;/a&gt; 6、前往站点根目录打开_config.yml 添加以下代码&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;** 注意：** 这是对全局的配置，所以是根目录的配置&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;pre&gt;&lt;code class=&#34;sh&#34;&gt;algolia:
-  appId:  &amp;quot;***&amp;quot;  #上面的application ID
-  apiKey:  &amp;quot;****&amp;quot;  # 上面的 Search-Only API Key
-  adminApiKey:  &amp;quot;***&amp;quot;  #上面的 Admin API Keys
-  chunkSize:  5000
-  indexName:  &amp;quot;test001&amp;quot; # Indices的index
-  fields: # 要搜索的词条范围
-    - title #必须配置
-    - path #必须配置
-    - categories #推荐配置
-    - content:strip:truncate,0,2000
-    - tags
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;例如：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;yml&#34;&gt;algolia:
-  appId: &amp;quot;Z7A3XW4R2I&amp;quot;
-  apiKey: &amp;quot;12db1ad54372045549ef465881c17e743&amp;quot;
-  adminApiKey: &amp;quot;40321c7c207e7f73b63a19aa24c4761b&amp;quot;
-  chunkSize: 5000
-  indexName: &amp;quot;my-hexo-blog&amp;quot;
-  fields:
-    - content:strip:truncate,0,500
-    - excerpt:strip
-    - gallery
-    - permalink
-    - photos
-    - slug
-    - tags
-    - title
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;7、设置HEXO-ALGOLIA-INDEXING-KEY&#34;&gt;&lt;a href=&#34;#7、设置HEXO-ALGOLIA-INDEXING-KEY&#34; class=&#34;headerlink&#34; title=&#34;7、设置HEXO_ALGOLIA_INDEXING_KEY&#34;&gt;&lt;/a&gt;7、设置HEXO_ALGOLIA_INDEXING_KEY&lt;/h3&gt;&lt;p&gt;在博客根目录右击git bash&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;sh&#34;&gt;# export HEXO_ALGOLIA_INDEXING_KEY=&amp;quot;你刚才新创建的 APPKEY、appId、adminApiKey &amp;quot;一个试一下 
-export HEXO_ALGOLIA_INDEXING_KEY=&amp;quot;******&amp;quot; 
-# 将我们的信息上川岛algolia
-hexo algolia
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;8、修改主题内的-config-yml&#34;&gt;&lt;a href=&#34;#8、修改主题内的-config-yml&#34; class=&#34;headerlink&#34; title=&#34;8、修改主题内的_config.yml&#34;&gt;&lt;/a&gt;8、修改主题内的_config.yml&lt;/h3&gt;&lt;blockquote&gt;
+&lt;figure class=&#34;highlight sh&#34;&gt;&lt;figcaption data-lang=&#34;sh&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;algolia:&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  appId:  &lt;span class=&#34;token string&#34;&gt;&#34;***&#34;&lt;/span&gt;  &lt;span class=&#34;token comment&#34;&gt;#上面的 application ID&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  apiKey:  &lt;span class=&#34;token string&#34;&gt;&#34;****&#34;&lt;/span&gt;  &lt;span class=&#34;token comment&#34;&gt;# 上面的 Search-Only API Key&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  adminApiKey:  &lt;span class=&#34;token string&#34;&gt;&#34;***&#34;&lt;/span&gt;  &lt;span class=&#34;token comment&#34;&gt;#上面的 Admin API Keys&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  chunkSize:  &lt;span class=&#34;token number&#34;&gt;5000&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  indexName:  &lt;span class=&#34;token string&#34;&gt;&#34;test001&#34;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# Indices 的 index&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  fields: &lt;span class=&#34;token comment&#34;&gt;# 要搜索的词条范围&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    - title &lt;span class=&#34;token comment&#34;&gt;#必须配置&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    - path &lt;span class=&#34;token comment&#34;&gt;#必须配置&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    - categories &lt;span class=&#34;token comment&#34;&gt;#推荐配置&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    - content:strip:truncate,0,2000&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    - tags&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;例如：&lt;/p&gt;
+&lt;figure class=&#34;highlight yml&#34;&gt;&lt;figcaption data-lang=&#34;YAML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key atrule&#34;&gt;algolia&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;appId&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;Z7A3XW4R2I&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;apiKey&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;12db1ad54372045549ef465881c17e743&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;adminApiKey&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;40321c7c207e7f73b63a19aa24c4761b&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;chunkSize&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;5000&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;indexName&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;my-hexo-blog&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;fields&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; content&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;strip&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;truncate&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;500&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; excerpt&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;strip&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; gallery&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; permalink&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; photos&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; slug&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; tags&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; title&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;7-设置hexo_algolia_indexing_key&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#7-设置hexo_algolia_indexing_key&#34;&gt;#&lt;/a&gt; 7、设置 HEXO_ALGOLIA_INDEXING_KEY&lt;/h3&gt;
+&lt;p&gt;在博客根目录右击 git bash&lt;/p&gt;
+&lt;figure class=&#34;highlight sh&#34;&gt;&lt;figcaption data-lang=&#34;sh&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# export HEXO_ALGOLIA_INDEXING_KEY=&#34;你刚才新创建的 APPKEY、appId、adminApiKey&#34; 一个试一下 &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token builtin class-name&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;token assign-left variable&#34;&gt;HEXO_ALGOLIA_INDEXING_KEY&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;******&#34;&lt;/span&gt; &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 将我们的信息上川岛 algolia&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;hexo algolia&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;8-修改主题内的_configyml&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#8-修改主题内的_configyml&#34;&gt;#&lt;/a&gt; 8、修改主题内的_config.yml&lt;/h3&gt;
+&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt; 这是是对主题的配置&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;pre&gt;&lt;code class=&#34;yml&#34;&gt;#Algolia Search
-algolia_search:
-  enable: true
-  hits:
-    per_page: 6
-  labels:
-    input_placeholder: Search for Posts !
-    hits_empty: &amp;#39;我们没有找到任何搜索结果：$&amp;#123;query&amp;#125;&amp;#39;
-    hits_stats: &amp;#39;找到约$&amp;#123;hits&amp;#125;条结果 (用时$&amp;#123;time&amp;#125;ms)&amp;#39;
-
-# local searach
-local_sreach:
-  enable : false
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;9、启动即可&#34;&gt;&lt;a href=&#34;#9、启动即可&#34; class=&#34;headerlink&#34; title=&#34;9、启动即可&#34;&gt;&lt;/a&gt;9、启动即可&lt;/h3&gt;&lt;pre&gt;&lt;code class=&#34;sh&#34;&gt;hexo s
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;10、测试&#34;&gt;&lt;a href=&#34;#10、测试&#34; class=&#34;headerlink&#34; title=&#34;10、测试&#34;&gt;&lt;/a&gt;10、测试&lt;/h3&gt;&lt;img data-src=&#34;/2022/10/06/hexo/image-20221007123724497.png&#34; class=&#34;&#34; title=&#34;image-20221007123724497&#34;&gt;
-
+&lt;figure class=&#34;highlight yml&#34;&gt;&lt;figcaption data-lang=&#34;YAML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;#Algolia Search&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key atrule&#34;&gt;algolia_search&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;enable&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token boolean important&#34;&gt;true&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;hits&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token key atrule&#34;&gt;per_page&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;6&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;labels&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token key atrule&#34;&gt;input_placeholder&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; Search for Posts &lt;span class=&#34;token tag&#34;&gt;!&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token key atrule&#34;&gt;hits_empty&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#39;我们没有找到任何搜索结果：$&amp;#123;query&amp;#125;&#39;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token key atrule&#34;&gt;hits_stats&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#39;找到约$&amp;#123;hits&amp;#125;条结果 (用时$&amp;#123;time&amp;#125;ms)&#39;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# local searach&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key atrule&#34;&gt;local_sreach&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;enable&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token boolean important&#34;&gt;false&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;9-启动即可&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#9-启动即可&#34;&gt;#&lt;/a&gt; 9、启动即可&lt;/h3&gt;
+&lt;figure class=&#34;highlight sh&#34;&gt;&lt;figcaption data-lang=&#34;sh&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;hexo s&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;10-测试&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#10-测试&#34;&gt;#&lt;/a&gt; 10、测试&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;/2022/10/06/hexo/image-20221007123724497.png&#34; class=&#34;&#34; title=&#34;image-20221007123724497&#34;&gt;&lt;/p&gt;
 &lt;p&gt;参考：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1MTczNDA0L2FydGljbGUvZGV0YWlscy8xMjI4NjEzMjE=&#34;&gt;https://blog.csdn.net/qq_45173404/article/details/122861321&lt;/span&gt;&lt;/p&gt;
-&lt;h2 id=&#34;目录&#34;&gt;&lt;a href=&#34;#目录&#34; class=&#34;headerlink&#34; title=&#34;目录&#34;&gt;&lt;/a&gt;目录&lt;/h2&gt;&lt;p&gt;&amp;#x3D;&amp;#x3D;toc 插件是：添加生成文章目录的一个插件&amp;#x3D;&amp;#x3D;&lt;/p&gt;
-&lt;p&gt;一、安装(这里是hexo的路径下，也就是博客根目录下)&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;shell&#34;&gt;npm install hexo-toc --save
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;二、配置博客根目录下的_config.yml文件：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;yml&#34;&gt;toc:  
-  maxdepth: 3 
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;在最后的空白处添加&lt;/p&gt;
-&lt;p&gt;三、在markdown里使用&lt;/p&gt;
-&lt;p&gt;在Markdown中需要显示文章目录的地方添加&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;shell&#34;&gt;&amp;lt;!-- toc --&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;然后就会将他&amp;#x3D;&amp;#x3D;后面&amp;#x3D;&amp;#x3D;的内容按照标题级别分层&lt;/p&gt;
-&lt;h2 id=&#34;图片显示&#34;&gt;&lt;a href=&#34;#图片显示&#34; class=&#34;headerlink&#34; title=&#34;图片显示&#34;&gt;&lt;/a&gt;图片显示&lt;/h2&gt;&lt;h3 id=&#34;方法一：&#34;&gt;&lt;a href=&#34;#方法一：&#34; class=&#34;headerlink&#34; title=&#34;方法一：&#34;&gt;&lt;/a&gt;方法一：&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;typroa设置&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;打开typora，选择：偏好设置 - 图像 - 插入图片时，做如下更改：&lt;/p&gt;
-&lt;blockquote&gt;
+&lt;h2 id=&#34;目录&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#目录&#34;&gt;#&lt;/a&gt; 目录&lt;/h2&gt;
+&lt;p&gt;&lt;mark&gt;toc 插件是：添加生成文章目录的一个插件&lt;/mark&gt;&lt;/p&gt;
+&lt;p&gt;一、安装 (这里是 hexo 的路径下，也就是博客根目录下)&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;npm&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;install&lt;/span&gt; hexo-toc &lt;span class=&#34;token parameter variable&#34;&gt;--save&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;二、配置博客根目录下的_config.yml 文件：&lt;/p&gt;
+&lt;figure class=&#34;highlight yml&#34;&gt;&lt;figcaption data-lang=&#34;YAML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key atrule&#34;&gt;toc&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;  &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;maxdepth&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;3&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;在最后的空白处添加&lt;/p&gt;
+&lt;p&gt;三、在 markdown 里使用&lt;/p&gt;
+&lt;p&gt;在 Markdown 中需要显示文章目录的地方添加&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;!&lt;/span&gt;-- toc --&lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;然后就会将他&lt;mark&gt;后面&lt;/mark&gt;的内容按照标题级别分层&lt;/p&gt;
+&lt;h2 id=&#34;图片显示&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#图片显示&#34;&gt;#&lt;/a&gt; 图片显示&lt;/h2&gt;
+&lt;h3 id=&#34;方法一&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#方法一&#34;&gt;#&lt;/a&gt; 方法一：&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;typroa 设置&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;打开 typora，选择：偏好设置 - 图像 - 插入图片时，做如下更改：&lt;/p&gt;
+&lt;blockquote filename=&#34;&#34;&gt;
 &lt;p&gt;复制到指定路径&lt;/p&gt;
-&lt;p&gt;.&amp;#x2F;${filename}&lt;/p&gt;
+&lt;p&gt;./$&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;当插入图片时，会生成一个和文件名相同的文件夹，并将图片存入这个文件夹内。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Hexo 设置&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;安装 &lt;code&gt;hexo-renderer-marked&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;安装  &lt;code&gt;hexo-renderer-marked&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;pre&gt;&lt;code class=&#34;sh&#34;&gt;npm install hexo-renderer-marked --save
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ol start=&#34;2&#34;&gt;
+&lt;figure class=&#34;highlight sh&#34;&gt;&lt;figcaption data-lang=&#34;sh&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;npm&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;install&lt;/span&gt; hexo-renderer-marked &lt;span class=&#34;token parameter variable&#34;&gt;--save&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ol start=&#34;2&#34;&gt;
 &lt;li&gt;之后更改 _config.yml 配置&lt;/li&gt;
 &lt;/ol&gt;
-&lt;pre&gt;&lt;code class=&#34;yml&#34;&gt;post_asset_folder: true 
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;安装插件&lt;code&gt;hexo-image-link &lt;/code&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;shell&#34;&gt;npm install hexo-image-link --save
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;此时，在typora 文件中正常显示的图片，在hexo发布后依旧能正常显示。&lt;/p&gt;
+&lt;figure class=&#34;highlight yml&#34;&gt;&lt;figcaption data-lang=&#34;YAML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key atrule&#34;&gt;post_asset_folder&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token boolean important&#34;&gt;true&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;安装插件 &lt;code&gt;hexo-image-link &lt;/code&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;npm&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;install&lt;/span&gt; hexo-image-link &lt;span class=&#34;token parameter variable&#34;&gt;--save&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;此时，在 typora 文件中正常显示的图片，在 hexo 发布后依旧能正常显示。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;NOTE：&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;如果想用插件 &lt;code&gt;Hexo-renderer-markdown-it &lt;/code&gt;（推荐）代替 &lt;code&gt;Hexo-renderer-marked &lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;如果想用插件  &lt;code&gt;Hexo-renderer-markdown-it &lt;/code&gt; （推荐）代替  &lt;code&gt;Hexo-renderer-marked &lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;pre&gt;&lt;code class=&#34;sh&#34;&gt;npm uninstall hexo-renderer-marker --save  #卸载 marked 
-
-npm install hexo-renderer-markdown-it --save  #安装markdown-it
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ol start=&#34;2&#34;&gt;
+&lt;figure class=&#34;highlight sh&#34;&gt;&lt;figcaption data-lang=&#34;sh&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;npm&lt;/span&gt; uninstall hexo-renderer-marker &lt;span class=&#34;token parameter variable&#34;&gt;--save&lt;/span&gt;  &lt;span class=&#34;token comment&#34;&gt;#卸载 marked &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;npm&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;install&lt;/span&gt; hexo-renderer-markdown-it &lt;span class=&#34;token parameter variable&#34;&gt;--save&lt;/span&gt;  &lt;span class=&#34;token comment&#34;&gt;#安装 markdown-it&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ol start=&#34;2&#34;&gt;
 &lt;li&gt;路径转换的解释&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;假设：&lt;br&gt;文件名: .&amp;#x2F;test.md&lt;/p&gt;
-&lt;p&gt;图片路径: .&amp;#x2F;test&amp;#x2F;image.jpg&lt;/p&gt;
+&lt;p&gt;假设：&lt;br /&gt;
+文件名: ./test.md&lt;/p&gt;
+&lt;p&gt;图片路径: ./test/image.jpg&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;当插入图片 image.jpg 到 test.md 中时，typora 的引用路径为
  &amp;#123;% asset_img image.jpg  %&amp;#125; 
 
 Hexo 发布后的引用路径为
 ![](image.jpg) 
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;因此，typora的md文件引入hexo时，应转换路径。即删掉图片路径中的 “test&amp;#x2F;“部分；（此时md文件已不能正常显示图片，而 hexo server 可正常显示）&lt;/p&gt;
-&lt;p&gt;插件hexo-image-link帮助实现了这种路径转换。&lt;/p&gt;
-&lt;p&gt;安装后，typora 文件中正常显示的图片，在hexo发布后依旧能正常显示。&lt;/p&gt;
-&lt;h3 id=&#34;方法2：&#34;&gt;&lt;a href=&#34;#方法2：&#34; class=&#34;headerlink&#34; title=&#34;方法2：&#34;&gt;&lt;/a&gt;方法2：&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;因此，typora 的 md 文件引入 hexo 时，应转换路径。即删掉图片路径中的 &amp;quot;test/&amp;quot; 部分；（此时 md 文件已不能正常显示图片，而 hexo server 可正常显示）&lt;/p&gt;
+&lt;p&gt;插件 hexo-image-link 帮助实现了这种路径转换。&lt;/p&gt;
+&lt;p&gt;安装后，typora 文件中正常显示的图片，在 hexo 发布后依旧能正常显示。&lt;/p&gt;
+&lt;h3 id=&#34;方法2&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#方法2&#34;&gt;#&lt;/a&gt; 方法 2：&lt;/h3&gt;
+&lt;blockquote&gt;
 &lt;p&gt;同样的思路，相对路径，&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;下载插件&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;shell&#34;&gt;npm install hexo-asset-img --save
-&lt;/code&gt;&lt;/pre&gt;
-&lt;blockquote&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;npm&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;install&lt;/span&gt; hexo-asset-img &lt;span class=&#34;token parameter variable&#34;&gt;--save&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;blockquote&gt;
 &lt;p&gt;文件要求：&lt;/p&gt;
-&lt;p&gt;​	图片必须在 xx.md 同一级目录下的同名文件中存储，也就是在xx 文件夹下，所以md文档的图片路径就是	&amp;#x3D;&amp;#x3D;![图片注释](xx&amp;#x2F;图片名)&amp;#x3D;&amp;#x3D;&lt;/p&gt;
+&lt;p&gt;​	图片必须在 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3h4Lm1k&#34;&gt;xx.md&lt;/span&gt; 同一级目录下的同名文件中存储，也就是在 xx 文件夹下，所以 md 文档的图片路径就是	&lt;mark&gt;![图片注释](xx / 图片名)&lt;/mark&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&#34;每篇文章的log设置&#34;&gt;&lt;a href=&#34;#每篇文章的log设置&#34; class=&#34;headerlink&#34; title=&#34;每篇文章的log设置&#34;&gt;&lt;/a&gt;每篇文章的log设置&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;---
+&lt;h2 id=&#34;每篇文章的log设置&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#每篇文章的log设置&#34;&gt;#&lt;/a&gt; 每篇文章的 log 设置&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;---
 ***
 cover: 图床链接/图片路径
 ---
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h1 id=&#34;主题&#34;&gt;&lt;a href=&#34;#主题&#34; class=&#34;headerlink&#34; title=&#34;主题&#34;&gt;&lt;/a&gt;主题&lt;/h1&gt;&lt;ul&gt;
+&lt;h1 id=&#34;主题&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#主题&#34;&gt;#&lt;/a&gt; 主题&lt;/h1&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9hdXJvcmEudHJpZGlhbW9uZC50ZWNoL3poL2d1aWRlL2dldHRpbmctc3RhcnRlZC5odG1sIyVFNCVCRSU5RCVFOCVCNSU5NiVFNyU4RSVBRiVFNSVBMiU4Mw==&#34;&gt;aurora&lt;/span&gt;    	（最推荐）&lt;/li&gt;
 &lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zaG9rYS5sb3N0eXUubWUvY29tcHV0ZXItc2NpZW5jZS9ub3RlL3RoZW1lLXNob2thLWRvYy8=&#34;&gt;shoka&lt;/span&gt;        （好看，但是少东西，好多要自己配）&lt;/li&gt;
 &lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL25leHQtdGhlbWUvaGV4by10aGVtZS1uZXh0&#34;&gt;next&lt;/span&gt;           （中等，但是好多人用，配东西好查的一批）&lt;/li&gt;
@@ -613,166 +451,75 @@ cover: 图床链接/图片路径
 &lt;blockquote&gt;
 &lt;p&gt;shoka&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;pre&gt;&lt;code class=&#34;shell&#34;&gt;npm i  hexo-renderer-multi-markdown-it --save
-npm i  hexo-autoprefixer --save
-npm i  hexo-algoliasearch --save
-npm i  hexo-symbols-count-time --save
-npm i  hexo-feed --save
-npm un hexo-renderer-marked --save      #删除多余的库
-
-git clone https://github.com/amehime/hexo-theme-shoka.git ./themes/shoka
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;_config.yml&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;yaml&#34;&gt;# markdown渲染
-markdown:
-  render: # 渲染器设置
-    html: false # 过滤 HTML 标签
-    xhtmlOut: true # 使用 &amp;#39;/&amp;#39; 来闭合单标签 （比如 &amp;lt;br /&amp;gt;）。
-    breaks: true # 转换段落里的 &amp;#39;\n&amp;#39; 到 &amp;lt;br&amp;gt;。
-    linkify: true # 将类似 URL 的文本自动转换为链接。
-    typographer: 
-    quotes: &amp;#39;“”‘’&amp;#39;
-  plugins: # markdown-it 插件设置
-    - plugin:
-        name: markdown-it-toc-and-anchor
-        enable: true
-        options: # 文章目录以及锚点应用的 class 名称，shoka 主题必须设置成这样
-          tocClassName: &amp;#39;toc&amp;#39;
-          anchorClassName: &amp;#39;anchor&amp;#39;
-    - plugin:
-        name: markdown-it-multimd-table
-        enable: true
-        options:
-          multiline: true
-          rowspan: true
-          headerless: true
-    - plugin:
-        name: ./markdown-it-furigana
-        enable: true
-        options:
-          fallbackParens: &amp;quot;()&amp;quot;
-    - plugin:
-        name: ./markdown-it-spoiler
-        enable: true
-        options:
-          title: &amp;quot;你知道得太多了&amp;quot;
-
-# 压缩CSS/hTML
-minify:
-  html:
-    enable: true
-    exclude: # 排除 hexo-feed 用到的模板文件
-      - &amp;#39;**/json.ejs&amp;#39;
-      - &amp;#39;**/atom.ejs&amp;#39;
-      - &amp;#39;**/rss.ejs&amp;#39;
-  css:
-    enable: true
-    exclude:
-      - &amp;#39;**/*.min.css&amp;#39;
-  js:
-    enable: true
-    mangle:
-      toplevel: true
-    output:
-    compress:
-    exclude:
-      - &amp;#39;**/*.min.js&amp;#39;
-
-#css文件后缀
-autoprefixer:
-  exclude:
-    - &amp;#39;*.min.css&amp;#39;
-
-# 全文搜索
-algolia:
-  appId: #Your appId
-  apiKey: #Your apiKey
-  adminApiKey: #Your adminApiKey
-  chunkSize: 5000
-  indexName: #&amp;quot;shoka&amp;quot;
-  fields:
-    - title #必须配置
-    - path #必须配置
-    - categories #推荐配置
-    - content:strip:truncate,0,2000
-    - gallery
-    - photos
-    - tags
-    
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;未完成&#34;&gt;&lt;a href=&#34;#未完成&#34; class=&#34;headerlink&#34; title=&#34;未完成&#34;&gt;&lt;/a&gt;未完成&lt;/h2&gt;&lt;h1 id=&#34;Netlify部署&#34;&gt;&lt;a href=&#34;#Netlify部署&#34; class=&#34;headerlink&#34; title=&#34;Netlify部署&#34;&gt;&lt;/a&gt;Netlify部署&lt;/h1&gt;&lt;blockquote&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;npm&lt;/span&gt; i  hexo-renderer-multi-markdown-it &lt;span class=&#34;token parameter variable&#34;&gt;--save&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;npm&lt;/span&gt; i  hexo-autoprefixer &lt;span class=&#34;token parameter variable&#34;&gt;--save&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;npm&lt;/span&gt; i  hexo-algoliasearch &lt;span class=&#34;token parameter variable&#34;&gt;--save&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;npm&lt;/span&gt; i  hexo-symbols-count-time &lt;span class=&#34;token parameter variable&#34;&gt;--save&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;npm&lt;/span&gt; i  hexo-feed &lt;span class=&#34;token parameter variable&#34;&gt;--save&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;npm&lt;/span&gt; un hexo-renderer-marked &lt;span class=&#34;token parameter variable&#34;&gt;--save&lt;/span&gt;      &lt;span class=&#34;token comment&#34;&gt;#删除多余的库&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;git&lt;/span&gt; clone https://github.com/amehime/hexo-theme-shoka.git ./themes/shoka&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;_config.yml&lt;/p&gt;
+&lt;figure class=&#34;highlight yaml&#34;&gt;&lt;figcaption data-lang=&#34;YAML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# markdown 渲染&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key atrule&#34;&gt;markdown&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;render&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# 渲染器设置&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token key atrule&#34;&gt;html&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token boolean important&#34;&gt;false&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# 过滤 HTML 标签&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token key atrule&#34;&gt;xhtmlOut&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token boolean important&#34;&gt;true&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# 使用 &#39;/&#39; 来闭合单标签 （比如 &amp;lt;br /&gt;）。&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token key atrule&#34;&gt;breaks&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token boolean important&#34;&gt;true&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# 转换段落里的 &#39;\n&#39; 到 &amp;lt;br&gt;。&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token key atrule&#34;&gt;linkify&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token boolean important&#34;&gt;true&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# 将类似 URL 的文本自动转换为链接。&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token key atrule&#34;&gt;typographer&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token key atrule&#34;&gt;quotes&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#39;“”‘’&#39;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;plugins&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# markdown-it 插件设置&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;token key atrule&#34;&gt;plugin&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token key atrule&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; markdown&lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt;it&lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt;toc&lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt;and&lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt;anchor&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token key atrule&#34;&gt;enable&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token boolean important&#34;&gt;true&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token key atrule&#34;&gt;options&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# 文章目录以及锚点应用的 class 名称，shoka 主题必须设置成这样&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;          &lt;span class=&#34;token key atrule&#34;&gt;tocClassName&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#39;toc&#39;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;          &lt;span class=&#34;token key atrule&#34;&gt;anchorClassName&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#39;anchor&#39;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;17&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;token key atrule&#34;&gt;plugin&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;18&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token key atrule&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; markdown&lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt;it&lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt;multimd&lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt;table&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;19&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token key atrule&#34;&gt;enable&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token boolean important&#34;&gt;true&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;20&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token key atrule&#34;&gt;options&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;21&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;          &lt;span class=&#34;token key atrule&#34;&gt;multiline&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token boolean important&#34;&gt;true&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;22&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;          &lt;span class=&#34;token key atrule&#34;&gt;rowspan&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token boolean important&#34;&gt;true&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;23&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;          &lt;span class=&#34;token key atrule&#34;&gt;headerless&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token boolean important&#34;&gt;true&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;24&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;token key atrule&#34;&gt;plugin&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;25&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token key atrule&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; ./markdown&lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt;it&lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt;furigana&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;26&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token key atrule&#34;&gt;enable&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token boolean important&#34;&gt;true&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;27&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token key atrule&#34;&gt;options&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;28&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;          &lt;span class=&#34;token key atrule&#34;&gt;fallbackParens&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;()&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;29&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;token key atrule&#34;&gt;plugin&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;30&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token key atrule&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; ./markdown&lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt;it&lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt;spoiler&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;31&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token key atrule&#34;&gt;enable&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token boolean important&#34;&gt;true&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;32&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token key atrule&#34;&gt;options&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;33&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;          &lt;span class=&#34;token key atrule&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;你知道得太多了&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;34&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;35&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 压缩 CSS/hTML&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;36&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key atrule&#34;&gt;minify&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;37&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;html&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;38&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token key atrule&#34;&gt;enable&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token boolean important&#34;&gt;true&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;39&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token key atrule&#34;&gt;exclude&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# 排除 hexo-feed 用到的模板文件&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;40&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#39;**/json.ejs&#39;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;41&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#39;**/atom.ejs&#39;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;42&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#39;**/rss.ejs&#39;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;43&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;css&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;44&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token key atrule&#34;&gt;enable&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token boolean important&#34;&gt;true&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;45&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token key atrule&#34;&gt;exclude&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;46&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#39;**/*.min.css&#39;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;47&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;js&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;48&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token key atrule&#34;&gt;enable&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token boolean important&#34;&gt;true&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;49&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token key atrule&#34;&gt;mangle&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;50&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &lt;span class=&#34;token key atrule&#34;&gt;toplevel&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token boolean important&#34;&gt;true&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;51&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token key atrule&#34;&gt;output&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;52&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token key atrule&#34;&gt;compress&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;53&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token key atrule&#34;&gt;exclude&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;54&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#39;**/*.min.js&#39;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;55&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;56&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;#css 文件后缀&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;57&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key atrule&#34;&gt;autoprefixer&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;58&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;exclude&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;59&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#39;*.min.css&#39;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;60&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;61&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 全文搜索&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;62&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key atrule&#34;&gt;algolia&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;63&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;appId&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;#Your appId&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;64&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;apiKey&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;#Your apiKey&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;65&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;adminApiKey&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;#Your adminApiKey&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;66&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;chunkSize&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;5000&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;67&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;indexName&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;#&#34;shoka&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;68&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;fields&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;69&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; title &lt;span class=&#34;token comment&#34;&gt;#必须配置&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;70&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; path &lt;span class=&#34;token comment&#34;&gt;#必须配置&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;71&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; categories &lt;span class=&#34;token comment&#34;&gt;#推荐配置&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;72&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; content&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;strip&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;truncate&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;2000&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;73&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; gallery&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;74&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; photos&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;75&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; tags&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h2 id=&#34;未完成&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#未完成&#34;&gt;#&lt;/a&gt; 未完成&lt;/h2&gt;
+&lt;h1 id=&#34;netlify部署&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#netlify部署&#34;&gt;#&lt;/a&gt; Netlify 部署&lt;/h1&gt;
+&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;前提&lt;/strong&gt;：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;在github上建立一个仓库，权限无所谓
-上传也只需要传编译后的public文件就行了
-&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;在 github 上建立一个仓库，权限无所谓&lt;br /&gt;
+上传也只需要传编译后的 public 文件就行了&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cubmV0bGlmeS5jb20v&#34;&gt;Netlify&lt;/span&gt; 账号注册&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cubmV0bGlmeS5jb20v&#34;&gt;Netlify&lt;/span&gt; 账号注册&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;添加新的站点&lt;/p&gt;
-  &lt;img data-src=&#34;/2022/10/06/hexo/image-20221013222215469.png&#34; class=&#34;&#34; title=&#34;image-20221013222215469&#34;&gt;
-
-  &lt;img data-src=&#34;/2022/10/06/hexo/oSa6BOtIQ8WkZX1.png&#34; class=&#34;&#34; title=&#34;connect-github&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;添加新的站点&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/2022/10/06/hexo/image-20221013222215469.png&#34; class=&#34;&#34; title=&#34;image-20221013222215469&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/2022/10/06/hexo/oSa6BOtIQ8WkZX1.png&#34; class=&#34;&#34; title=&#34;connect-github&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;选取一个仓库，作为我们的资源地址&lt;/p&gt;
-  &lt;img data-src=&#34;/2022/10/06/hexo/image-20221013222447157.png&#34; class=&#34;&#34; title=&#34;image-20221013222447157&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;选取一个仓库，作为我们的资源地址&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/2022/10/06/hexo/image-20221013222447157.png&#34; class=&#34;&#34; title=&#34;image-20221013222447157&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;一切默认，除了构建命令改成我们之前设置的&lt;code&gt;npm run netlify&lt;/code&gt; ，当然也可以不设置&lt;/p&gt;
-&lt;p&gt;  前提要在&lt;code&gt;package.json&lt;/code&gt; 里面添加一个 &lt;code&gt;netlify&lt;/code&gt; 命令 ，例如我们的：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;json&#34;&gt;&amp;quot;scripts&amp;quot;: &amp;#123;
-        &amp;quot;build&amp;quot;: &amp;quot;hexo generate&amp;quot;,
-        &amp;quot;clean&amp;quot;: &amp;quot;hexo clean&amp;quot;,
-        &amp;quot;deploy&amp;quot;: &amp;quot;hexo deploy&amp;quot;,
-        &amp;quot;server&amp;quot;: &amp;quot;hexo server&amp;quot;,
-        // 每次提交会清除内容，然后重新建立项目，不要在项目中写这个注释，报错
-        &amp;quot;netlify&amp;quot;: &amp;quot;npm run clean &amp;amp;&amp;amp; npm run build&amp;quot; 
-  &amp;#125;,
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;  还要有将你的全部文件上传到github，才可以使用&lt;code&gt;npm&lt;/code&gt;&lt;/p&gt;
-  &lt;img data-src=&#34;/2022/10/06/hexo/p3P2NJaQzuIZnYs.png&#34; class=&#34;&#34; title=&#34;site-config&#34;&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;一切默认，除了构建命令改成我们之前设置的 &lt;code&gt;npm run netlify&lt;/code&gt;  ，当然也可以不设置&lt;/p&gt;
+&lt;p&gt;前提要在 &lt;code&gt;package.json&lt;/code&gt;  里面添加一个  &lt;code&gt;netlify&lt;/code&gt;  命令 ，例如我们的：&lt;/p&gt;
+&lt;figure class=&#34;highlight json&#34;&gt;&lt;figcaption data-lang=&#34;JSON&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token property&#34;&gt;&#34;scripts&#34;&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    	&lt;span class=&#34;token property&#34;&gt;&#34;build&#34;&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;hexo generate&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    	&lt;span class=&#34;token property&#34;&gt;&#34;clean&#34;&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;hexo clean&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    	&lt;span class=&#34;token property&#34;&gt;&#34;deploy&#34;&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;hexo deploy&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    	&lt;span class=&#34;token property&#34;&gt;&#34;server&#34;&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;hexo server&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    	&lt;span class=&#34;token comment&#34;&gt;// 每次提交会清除内容，然后重新建立项目，不要在项目中写这个注释，报错&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    	&lt;span class=&#34;token property&#34;&gt;&#34;netlify&#34;&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;npm run clean &amp;amp;&amp;amp; npm run build&#34;&lt;/span&gt; &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;还要有将你的全部文件上传到 github，才可以使用 &lt;code&gt;npm&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/2022/10/06/hexo/p3P2NJaQzuIZnYs.png&#34; class=&#34;&#34; title=&#34;site-config&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;blockquote&gt;
-&lt;p&gt;这里BaseDirectory为空表示项目目录是仓库目录的根目录。&lt;/p&gt;
+&lt;p&gt;这里 BaseDirectory 为空表示项目目录是仓库目录的根目录。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;ul&gt;
-&lt;li&gt;构建完成后我们就能够看到一个URL，打开网址就是我们的个人博客了&lt;/li&gt;
+&lt;li&gt;构建完成后我们就能够看到一个 URL，打开网址就是我们的个人博客了&lt;/li&gt;
 &lt;/ul&gt;
-&lt;img data-src=&#34;/2022/10/06/hexo/image-20221013223348730.png&#34; class=&#34;&#34; title=&#34;image-20221013223348730&#34;&gt;
-
+&lt;p&gt;&lt;img data-src=&#34;/2022/10/06/hexo/image-20221013223348730.png&#34; class=&#34;&#34; title=&#34;image-20221013223348730&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;修改地址前缀（&lt;strong&gt;因为后缀不能改&lt;/strong&gt;）&lt;/p&gt;
-&lt;p&gt;  网站设置—》常规—》更改站点名，完成后缀是固定的 &lt;code&gt; *.netlify.app&lt;/code&gt; ，要想改变就要买域名，然后配置域名的映射。&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;修改地址前缀（&lt;strong&gt;因为后缀不能改&lt;/strong&gt;）&lt;/p&gt;
+&lt;p&gt;网站设置 —》常规 —》更改站点名，完成后缀是固定的  &lt;code&gt; *.netlify.app&lt;/code&gt;  ，要想改变就要买域名，然后配置域名的映射。&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;配置域名映射&lt;/p&gt;
-  &lt;img data-src=&#34;/2022/10/06/hexo/image-20221013223414819.png&#34; class=&#34;&#34; title=&#34;image-20221013223414819&#34;&gt;
-
+&lt;li&gt;
+&lt;p&gt;配置域名映射&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/2022/10/06/hexo/image-20221013223414819.png&#34; class=&#34;&#34; title=&#34;image-20221013223414819&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;配置域名的前提自然是要购买域名了，从任意域名服务商处购买一个域名。&lt;/li&gt;
 &lt;/ul&gt;
-  &lt;img data-src=&#34;/2022/10/06/hexo/DFHYzywifpJTxqj.png&#34; class=&#34;&#34; title=&#34;domian-purchase&#34;&gt;
-
+&lt;p&gt;&lt;img data-src=&#34;/2022/10/06/hexo/DFHYzywifpJTxqj.png&#34; class=&#34;&#34; title=&#34;domian-purchase&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;然后设置域名解析，类型为CNAME（DNS知识点参见计算机网络相关教程），内容为xxxxx.netlify.app，其中xxxxx为你自己设置的个性二级域名。&lt;/li&gt;
+&lt;li&gt;然后设置域名解析，类型为 CNAME（DNS 知识点参见计算机网络相关教程），内容为 xxxxx.netlify.app，其中 xxxxx 为你自己设置的个性二级域名。&lt;/li&gt;
 &lt;/ul&gt;
-  &lt;img data-src=&#34;/2022/10/06/hexo/5OVcw9ypvRKQePJ.png&#34; class=&#34;&#34; title=&#34;domain-resolve&#34;&gt;
-
+&lt;p&gt;&lt;img data-src=&#34;/2022/10/06/hexo/5OVcw9ypvRKQePJ.png&#34; class=&#34;&#34; title=&#34;domain-resolve&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;设置完毕之后需要等待一段时间，因为DNS服务器需要一段时间来进行同步。&lt;/p&gt;
-&lt;p&gt;  然后，我们还需要回到netlify中配置一下自己的用户域名，这样的话可以在国外获得netlify本身的CDN支持。&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;设置完毕之后需要等待一段时间，因为 DNS 服务器需要一段时间来进行同步。&lt;/p&gt;
+&lt;p&gt;然后，我们还需要回到 netlify 中配置一下自己的用户域名，这样的话可以在国外获得 netlify 本身的 CDN 支持。&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;在netlify设置用户域名。&lt;/p&gt;
-  &lt;img data-src=&#34;/2022/10/06/hexo/MDjxbIcWBEoLURA.png&#34; class=&#34;&#34; title=&#34;set-custom-domain&#34;&gt;
-
+&lt;li&gt;
+&lt;p&gt;在 netlify 设置用户域名。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/2022/10/06/hexo/MDjxbIcWBEoLURA.png&#34; class=&#34;&#34; title=&#34;set-custom-domain&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;进行相关的配置，由于我们的域名本身已经配置了解析，这里会显示出来，不用再额外添加记录，只需要一路默认即可。&lt;/p&gt;
-  &lt;img data-src=&#34;/2022/10/06/hexo/cqwL9xF8Eov6yVa.png&#34; class=&#34;&#34; title=&#34;add-record&#34;&gt;
-
-  &lt;img data-src=&#34;/2022/10/06/hexo/RTLcjynQYXbW9vI.png&#34; class=&#34;&#34; title=&#34;activate-dns&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;进行相关的配置，由于我们的域名本身已经配置了解析，这里会显示出来，不用再额外添加记录，只需要一路默认即可。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/2022/10/06/hexo/cqwL9xF8Eov6yVa.png&#34; class=&#34;&#34; title=&#34;add-record&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/2022/10/06/hexo/RTLcjynQYXbW9vI.png&#34; class=&#34;&#34; title=&#34;activate-dns&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;设置一下netlify本身的对于国外CDN的支持。&lt;/p&gt;
-  &lt;img data-src=&#34;/2022/10/06/hexo/8v3ROjQc2WY9q7T.png&#34; class=&#34;&#34; title=&#34;netlify-cdn&#34;&gt;
-
-&lt;p&gt;  之后，我们就可以通过自己配置的域名访问自己的个人博客。&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;设置一下 netlify 本身的对于国外 CDN 的支持。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/2022/10/06/hexo/8v3ROjQc2WY9q7T.png&#34; class=&#34;&#34; title=&#34;netlify-cdn&#34;&gt;&lt;/p&gt;
+&lt;p&gt;之后，我们就可以通过自己配置的域名访问自己的个人博客。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -780,72 +527,93 @@ algolia:
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;blockquote&gt;
-&lt;p&gt;这里&lt;code&gt;https&lt;/code&gt;访问需要在&lt;code&gt;netlify&lt;/code&gt;中配置，否则应该只能&lt;code&gt;http&lt;/code&gt;访问。&lt;br&gt;&lt;a href=&#34;https://s2.loli.net/2022/09/05/f3q8hPbG5vsImeY.png&#34;&gt;&lt;img data-src=&#34;/2022/10/06/hexo/f3q8hPbG5vsImeY.png&#34; class=&#34;&#34; title=&#34;https-config&#34;&gt;&lt;/a&gt;&lt;br&gt;需要注意一下的是，此刻的https配置过程中的dns验证已经可以通过，但是证书检查会失败，等到后面clouldflare加速配置完成之后，这个问题 就可以解决了。所以暂时应该只能http访问。&lt;/p&gt;
+&lt;p&gt;这里 &lt;code&gt;https&lt;/code&gt;  访问需要在 &lt;code&gt;netlify&lt;/code&gt;  中配置，否则应该只能 &lt;code&gt;http&lt;/code&gt;  访问。&lt;br /&gt;
+&lt;a href=&#34;https://s2.loli.net/2022/09/05/f3q8hPbG5vsImeY.png&#34;&gt;&lt;img data-src=&#34;/2022/10/06/hexo/f3q8hPbG5vsImeY.png&#34; class=&#34;&#34; title=&#34;https-config&#34;&gt;&lt;/a&gt;&lt;br /&gt;
+ 需要注意一下的是，此刻的 https 配置过程中的 dns 验证已经可以通过，但是证书检查会失败，等到后面 clouldflare 加速配置完成之后，这个问题 就可以解决了。所以暂时应该只能 http 访问。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;  &lt;strong&gt;但是，此刻我们的博客访问依然需要科学上网，因为我们还没有国内的CDN的支持，下面，我们来解决这个问题。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;但是，此刻我们的博客访问依然需要科学上网，因为我们还没有国内的 CDN 的支持，下面，我们来解决这个问题。&lt;/strong&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id=&#34;ClouldFlare加速&#34;&gt;&lt;a href=&#34;#ClouldFlare加速&#34; class=&#34;headerlink&#34; title=&#34;ClouldFlare加速&#34;&gt;&lt;/a&gt;ClouldFlare加速&lt;/h1&gt;&lt;h2 id=&#34;介绍-1&#34;&gt;&lt;a href=&#34;#介绍-1&#34; class=&#34;headerlink&#34; title=&#34;介绍&#34;&gt;&lt;/a&gt;介绍&lt;/h2&gt;&lt;p&gt;Netlify 虽然已经提供了 CDN 加速，但在使用过程中发现国内访问还是比较慢，Cloudflare 相对于国内的七牛云、阿里云等云服务商的 CDN 速度会慢一些，但是它有免费版本，而且最重要的是域名不用备案。&lt;/p&gt;
-&lt;h2 id=&#34;加速步骤&#34;&gt;&lt;a href=&#34;#加速步骤&#34; class=&#34;headerlink&#34; title=&#34;加速步骤&#34;&gt;&lt;/a&gt;加速步骤&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;注册&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuY2xvdWRmbGFyZS5jb20vemgtY24v&#34;&gt;Clouldflare&lt;/span&gt;并登陆&lt;/p&gt;
+&lt;h1 id=&#34;clouldflare加速&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#clouldflare加速&#34;&gt;#&lt;/a&gt; ClouldFlare 加速&lt;/h1&gt;
+&lt;h2 id=&#34;介绍-2&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#介绍-2&#34;&gt;#&lt;/a&gt; 介绍&lt;/h2&gt;
+&lt;p&gt;Netlify 虽然已经提供了 CDN 加速，但在使用过程中发现国内访问还是比较慢，Cloudflare 相对于国内的七牛云、阿里云等云服务商的 CDN 速度会慢一些，但是它有免费版本，而且最重要的是域名不用备案。&lt;/p&gt;
+&lt;h2 id=&#34;加速步骤&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#加速步骤&#34;&gt;#&lt;/a&gt; 加速步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;注册&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuY2xvdWRmbGFyZS5jb20vemgtY24v&#34;&gt; Clouldflare&lt;/span&gt; 并登陆&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;添加站点&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;添加站点&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://s2.loli.net/2022/09/05/rqNObP5dzE6GY83.png&#34;&gt;&lt;img data-src=&#34;/2022/10/06/hexo/rqNObP5dzE6GY83.png&#34; class=&#34;&#34; title=&#34;add-site&#34;&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://s2.loli.net/2022/09/05/Dk3Y4BrltQeCOHI.png&#34;&gt;&lt;img data-src=&#34;/2022/10/06/hexo/Dk3Y4BrltQeCOHI.png&#34; class=&#34;&#34; title=&#34;config-site&#34;&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;选择免费套餐&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;选择免费套餐&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://s2.loli.net/2022/09/05/SrhEAvmGZeqn8Co.png&#34;&gt;&lt;img data-src=&#34;/2022/10/06/hexo/SrhEAvmGZeqn8Co.png&#34; class=&#34;&#34; title=&#34;choose-project&#34;&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;添加 DNS 记录&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;添加 DNS 记录&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;一般情况下 Cloudflare 会检测出来几条 DNS 记录，类型大多数是A，或者AAAA，由于我们是转发，所以应该是 CNAME 类型才对。有必要的话可能得手动配置一下。&lt;/p&gt;
-&lt;p&gt;  &lt;a href=&#34;https://s2.loli.net/2022/09/05/fSsAGV5JCeZuF1w.png&#34;&gt;&lt;br&gt;  &lt;img data-src=&#34;/2022/10/06/hexo/fSsAGV5JCeZuF1w.png&#34; class=&#34;&#34; title=&#34;update-record&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;一般情况下 Cloudflare 会检测出来几条 DNS 记录，类型大多数是 A，或者 AAAA，由于我们是转发，所以应该是 CNAME 类型才对。有必要的话可能得手动配置一下。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://s2.loli.net/2022/09/05/fSsAGV5JCeZuF1w.png&#34;&gt;&lt;br /&gt;
+&lt;img data-src=&#34;/2022/10/06/hexo/fSsAGV5JCeZuF1w.png&#34; class=&#34;&#34; title=&#34;update-record&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;更改名称服务器&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;更改名称服务器&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;这个步骤Cloudflare会提供一个在线的教程，主要步骤是在你的域名服务商那里修改 dns 解析服务器为 cloudflare 提供的地址，修改完成后点击完成。&lt;/li&gt;
+&lt;li&gt;这个步骤 Cloudflare 会提供一个在线的教程，主要步骤是在你的域名服务商那里修改 dns 解析服务器为 cloudflare 提供的地址，修改完成后点击完成。&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://s2.loli.net/2022/09/05/vd2WxXGbJHmgAey.png&#34;&gt;&lt;img data-src=&#34;/2022/10/06/hexo/vd2WxXGbJHmgAey.png&#34; class=&#34;&#34; title=&#34;modify-server&#34;&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;以阿里云为例，设置的步骤如下:&lt;ol&gt;
-&lt;li&gt;进入域名的配置界面&lt;ul&gt;
+&lt;li&gt;以阿里云为例，设置的步骤如下:
+&lt;ol&gt;
+&lt;li&gt;进入域名的配置界面
+&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://s2.loli.net/2022/09/05/ZfLiNUejRsCyhG3.png&#34;&gt;&lt;img data-src=&#34;/2022/10/06/hexo/ZfLiNUejRsCyhG3.png&#34; class=&#34;&#34; title=&#34;dns-manage&#34;&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;将域名服务器从阿里云的默认服务器改成clouldflare的服务器&lt;ul&gt;
+&lt;li&gt;将域名服务器从阿里云的默认服务器改成 clouldflare 的服务器
+&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://s2.loli.net/2022/09/05/juxWl7i9QaeLTGK.png&#34;&gt;&lt;img data-src=&#34;/2022/10/06/hexo/juxWl7i9QaeLTGK.png&#34; class=&#34;&#34; title=&#34;change-server&#34;&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/li&gt;
-&lt;li&gt;配置完成后，clouldflare会有邮件通知(一般不会等太久)&lt;br&gt;  &lt;a href=&#34;https://s2.loli.net/2022/09/05/JbBvp18Trne37kC.png&#34;&gt;&lt;img data-src=&#34;/2022/10/06/hexo/JbBvp18Trne37kC.png&#34; class=&#34;&#34; title=&#34;mail-notice&#34;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;配置完成后，clouldflare 会有邮件通知 (一般不会等太久)&lt;br /&gt;
+&lt;a href=&#34;https://s2.loli.net/2022/09/05/JbBvp18Trne37kC.png&#34;&gt;&lt;img data-src=&#34;/2022/10/06/hexo/JbBvp18Trne37kC.png&#34; class=&#34;&#34; title=&#34;mail-notice&#34;&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;配置https&#34;&gt;&lt;a href=&#34;#配置https&#34; class=&#34;headerlink&#34; title=&#34;配置https&#34;&gt;&lt;/a&gt;配置https&lt;/h2&gt;&lt;p&gt; 在clouldflare配置完成之后，我们可以回到netlify去配置一下https访问。&lt;/p&gt;
+&lt;h2 id=&#34;配置https&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#配置https&#34;&gt;#&lt;/a&gt; 配置 https&lt;/h2&gt;
+&lt;p&gt;在 clouldflare 配置完成之后，我们可以回到 netlify 去配置一下 https 访问。&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;先确认一下dns解析&lt;/li&gt;
-&lt;li&gt;:&lt;ul&gt;
+&lt;li&gt;先确认一下 dns 解析&lt;/li&gt;
+&lt;li&gt;:
+&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://s2.loli.net/2022/09/05/r6iHKWLktnRap1j.png&#34;&gt;&lt;img data-src=&#34;/2022/10/06/hexo/r6iHKWLktnRap1j.png&#34; class=&#34;&#34; title=&#34;verify-dns&#34;&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;然后自动安装证书:&lt;ul&gt;
+&lt;li&gt;然后自动安装证书:
+&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://s2.loli.net/2022/09/05/KvDupBFh8b9CScN.png&#34;&gt;&lt;img data-src=&#34;/2022/10/06/hexo/KvDupBFh8b9CScN.png&#34; class=&#34;&#34; title=&#34;certify&#34;&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;最后看到如下的界面，就说明https配置完成了&lt;ul&gt;
+&lt;li&gt;最后看到如下的界面，就说明 https 配置完成了
+&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://s2.loli.net/2022/09/05/f3q8hPbG5vsImeY.png&#34;&gt;&lt;img data-src=&#34;/2022/10/06/hexo/f3q8hPbG5vsImeY.png&#34; class=&#34;&#34; title=&#34;https-config&#34;&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h1 id=&#34;测试站点&#34;&gt;&lt;a href=&#34;#测试站点&#34; class=&#34;headerlink&#34; title=&#34;测试站点&#34;&gt;&lt;/a&gt;测试站点&lt;/h1&gt;&lt;p&gt; 等待一段时间之后，我们可以试着用自己的浏览器去访问自己配置的域名地址，如果在不科学上网的情况下能够正常看到如下的默认页面，则我们的个人博客就配置成功了。&lt;/p&gt;
-&lt;p&gt; &lt;a href=&#34;https://s2.loli.net/2022/09/05/HESMpeXbUFT3rsR.png&#34;&gt;&lt;img data-src=&#34;/2022/10/06/hexo/HESMpeXbUFT3rsR.png&#34; class=&#34;&#34; title=&#34;default-page&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt; 本机能够正常访问之后，我们可以用&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYm9jZS5jb20v&#34;&gt;拨测&lt;/span&gt;来检测一下域名解析与访问的速度。&lt;/p&gt;
-&lt;p&gt; &lt;a href=&#34;https://s2.loli.net/2022/09/05/7C496Ruof1rBknM.png&#34;&gt;&lt;img data-src=&#34;/2022/10/06/hexo/7C496Ruof1rBknM.png&#34; class=&#34;&#34; title=&#34;speed&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt; 到此为止，我们的个人博客就彻底搭建完成啦。后续我们只需要修改博客的配置文件和博客本身的markdown源文件，然后push到github上，netlify会自动帮我们运行当初配置的建站脚本，然后将生成在public文件夹中的静态网页部署出去。&lt;/p&gt;
-&lt;p&gt; 关于hexo博客的&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL3poLWNuL2RvY3Mvd3JpdGluZw==&#34;&gt;写作方法&lt;/span&gt;与各种好看的&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL3RoZW1lcy8=&#34;&gt;主题的配置&lt;/span&gt;可以查看官方的文档，多尝试多摸索，配置自己的个性页面吧。&lt;/p&gt;
+&lt;h1 id=&#34;测试站点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#测试站点&#34;&gt;#&lt;/a&gt; 测试站点&lt;/h1&gt;
+&lt;p&gt;等待一段时间之后，我们可以试着用自己的浏览器去访问自己配置的域名地址，如果在不科学上网的情况下能够正常看到如下的默认页面，则我们的个人博客就配置成功了。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://s2.loli.net/2022/09/05/HESMpeXbUFT3rsR.png&#34;&gt;&lt;img data-src=&#34;/2022/10/06/hexo/HESMpeXbUFT3rsR.png&#34; class=&#34;&#34; title=&#34;default-page&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;本机能够正常访问之后，我们可以用&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYm9jZS5jb20v&#34;&gt;拨测&lt;/span&gt;来检测一下域名解析与访问的速度。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://s2.loli.net/2022/09/05/7C496Ruof1rBknM.png&#34;&gt;&lt;img data-src=&#34;/2022/10/06/hexo/7C496Ruof1rBknM.png&#34; class=&#34;&#34; title=&#34;speed&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;到此为止，我们的个人博客就彻底搭建完成啦。后续我们只需要修改博客的配置文件和博客本身的 markdown 源文件，然后 push 到 github 上，netlify 会自动帮我们运行当初配置的建站脚本，然后将生成在 public 文件夹中的静态网页部署出去。&lt;/p&gt;
+&lt;p&gt;关于 hexo 博客的&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL3poLWNuL2RvY3Mvd3JpdGluZw==&#34;&gt;写作方法&lt;/span&gt;与各种好看的&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL3RoZW1lcy8=&#34;&gt;主题的配置&lt;/span&gt;可以查看官方的文档，多尝试多摸索，配置自己的个性页面吧。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 </content>
