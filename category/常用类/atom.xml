@@ -4,35 +4,40 @@
     <title>记录“美食”每刻 • Posts by &#34;常用类&#34; category</title>
     <link href="http://example.com" />
     <updated>2022-10-06T16:00:00.000Z</updated>
-    <category term="博客" />
-    <category term="环境搭建" />
     <category term="分布式" />
     <category term="Dubbo" />
     <category term="FastDFS" />
-    <category term="MySQL" />
-    <category term="数据库基础" />
-    <category term="数据库基本知识" />
-    <category term="数据库" />
-    <category term="框架" />
-    <category term="ORM" />
-    <category term="RPC" />
     <category term="中间件" />
     <category term="RabbitMQ" />
-    <category term="Redis基础" />
-    <category term="NoSQL数据库" />
     <category term="Solr" />
     <category term="快速搜索" />
+    <category term="RPC" />
+    <category term="JavaSE" />
+    <category term="-JavaSE" />
+    <category term="博客" />
+    <category term="环境搭建" />
+    <category term="框架" />
+    <category term="ORM" />
     <category term="Spring" />
     <category term="SpringBoot" />
     <category term="SpringMVC" />
     <category term="SpringSecurity" />
-    <category term="JavaSE" />
-    <category term="-JavaSE" />
+    <category term="Redis基础" />
+    <category term="NoSQL数据库" />
     <entry>
-        <id>http://example.com/2022/10/07/%E7%AC%AC10%E7%AB%A0_%E5%B8%B8%E7%94%A8%E7%B1%BB/</id>
+        <id>http://example.com/2022/10/07/Java/%E7%AC%AC10%E7%AB%A0_%E5%B8%B8%E7%94%A8%E7%B1%BB/</id>
         <title>第10章_常用类</title>
-        <link rel="alternate" href="http://example.com/2022/10/07/%E7%AC%AC10%E7%AB%A0_%E5%B8%B8%E7%94%A8%E7%B1%BB/"/>
-        <content type="html"></content>
+        <link rel="alternate" href="http://example.com/2022/10/07/Java/%E7%AC%AC10%E7%AB%A0_%E5%B8%B8%E7%94%A8%E7%B1%BB/"/>
+        <content type="html">
+&lt;div id=&#34;gitalk-container&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js&#34;&gt;&lt;/script&gt;&lt;link rel=&#34;stylesheet&#34; href=&#34;https://unpkg.com/gitalk/dist/gitalk.css&#34;&gt;&lt;script src=&#34;https://unpkg.com/gitalk/dist/gitalk.min.js&#34;&gt;&lt;/script&gt;
+
+		&lt;script&gt;
+		var gitalkConfig = {&#34;clientID&#34;:&#34;eda74f740080fa01d0b5&#34;,&#34;clientSecret&#34;:&#34;c994dd2162a1dadaefbf078fcab49361438a7aca&#34;,&#34;repo&#34;:&#34;comments001&#34;,&#34;owner&#34;:&#34;onlymarryu&#34;,&#34;admin&#34;:[&#34;onlymarryu&#34;],&#34;distractionFreeMode&#34;:false};
+	    gitalkConfig.id = md5(location.pathname);
+		var gitalk = new Gitalk(gitalkConfig);
+	    gitalk.render(&#34;gitalk-container&#34;);
+	    &lt;/script&gt;</content>
         <category term="JavaSE" />
         <updated>2022-10-06T16:00:00.000Z</updated>
     </entry>

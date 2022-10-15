@@ -7,34 +7,30 @@
         <language>zh-CN</language>
         <pubDate>Fri, 07 Oct 2022 23:52:00 +0800</pubDate>
         <lastBuildDate>Fri, 07 Oct 2022 23:52:00 +0800</lastBuildDate>
-        <category>博客</category>
-        <category>环境搭建</category>
         <category>分布式</category>
         <category>Dubbo</category>
         <category>FastDFS</category>
-        <category>MySQL</category>
-        <category>数据库基础</category>
-        <category>数据库基本知识</category>
-        <category>数据库</category>
-        <category>框架</category>
-        <category>ORM</category>
-        <category>RPC</category>
         <category>中间件</category>
         <category>RabbitMQ</category>
-        <category>Redis基础</category>
-        <category>NoSQL数据库</category>
         <category>Solr</category>
         <category>快速搜索</category>
+        <category>RPC</category>
+        <category>JavaSE</category>
+        <category>-JavaSE</category>
+        <category>博客</category>
+        <category>环境搭建</category>
+        <category>框架</category>
+        <category>ORM</category>
         <category>Spring</category>
         <category>SpringBoot</category>
         <category>SpringMVC</category>
         <category>SpringSecurity</category>
-        <category>JavaSE</category>
-        <category>-JavaSE</category>
+        <category>Redis基础</category>
+        <category>NoSQL数据库</category>
         <item>
-            <guid isPermalink="true">http://example.com/2022/10/07/DesignMode/</guid>
+            <guid isPermalink="true">http://example.com/2022/10/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/DesignMode/</guid>
             <title>设计模式</title>
-            <link>http://example.com/2022/10/07/DesignMode/</link>
+            <link>http://example.com/2022/10/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/DesignMode/</link>
             <pubDate>Fri, 07 Oct 2022 23:52:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;谈谈你对设计模式的理解&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#谈谈你对设计模式的理解&#34;&gt;#&lt;/a&gt; 谈谈你对设计模式的理解&lt;/h1&gt;
 &lt;p&gt;1. 首先谈设计模式的作用：经验的传承，提高了软件复用的水平，最终达到提高软件开发效率&lt;/p&gt;
@@ -460,7 +456,16 @@ proxy.doSome() = HELLO ...
 &lt;h2 id=&#34;11访问者模式&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#11访问者模式&#34;&gt;#&lt;/a&gt; 11. 访问者模式&lt;/h2&gt;
 &lt;p&gt;场景：有些集合对象中会有多种不同的元素，每种元素都有不同的访问者 和 处理方式。这种被处理的数据元素相对稳定，但是处理方式比较多样的情况，可以用访问者模式来处理。&lt;/p&gt;
 &lt;p&gt;访问者模式将数据结构中的各元素的操作分离出来，封装成独立的类，使其在不改变数据结构的前提下，可以添加作用于这些元素的新操作。为数据结构中的每个元素提供多种访问方式。&lt;/p&gt;
- ]]></description>
+
+&lt;div id=&#34;gitalk-container&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js&#34;&gt;&lt;/script&gt;&lt;link rel=&#34;stylesheet&#34; href=&#34;https://unpkg.com/gitalk/dist/gitalk.css&#34;&gt;&lt;script src=&#34;https://unpkg.com/gitalk/dist/gitalk.min.js&#34;&gt;&lt;/script&gt;
+
+		&lt;script&gt;
+		var gitalkConfig = {&#34;clientID&#34;:&#34;eda74f740080fa01d0b5&#34;,&#34;clientSecret&#34;:&#34;c994dd2162a1dadaefbf078fcab49361438a7aca&#34;,&#34;repo&#34;:&#34;comments001&#34;,&#34;owner&#34;:&#34;onlymarryu&#34;,&#34;admin&#34;:[&#34;onlymarryu&#34;],&#34;distractionFreeMode&#34;:false};
+	    gitalkConfig.id = md5(location.pathname);
+		var gitalk = new Gitalk(gitalkConfig);
+	    gitalk.render(&#34;gitalk-container&#34;);
+	    &lt;/script&gt; ]]></description>
         </item>
     </channel>
 </rss>

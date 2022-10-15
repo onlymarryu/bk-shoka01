@@ -7,34 +7,30 @@
         <language>zh-CN</language>
         <pubDate>Fri, 07 Oct 2022 00:00:00 +0800</pubDate>
         <lastBuildDate>Fri, 07 Oct 2022 00:00:00 +0800</lastBuildDate>
-        <category>博客</category>
-        <category>环境搭建</category>
         <category>分布式</category>
         <category>Dubbo</category>
         <category>FastDFS</category>
-        <category>MySQL</category>
-        <category>数据库基础</category>
-        <category>数据库基本知识</category>
-        <category>数据库</category>
-        <category>框架</category>
-        <category>ORM</category>
-        <category>RPC</category>
         <category>中间件</category>
         <category>RabbitMQ</category>
-        <category>Redis基础</category>
-        <category>NoSQL数据库</category>
         <category>Solr</category>
         <category>快速搜索</category>
+        <category>RPC</category>
+        <category>JavaSE</category>
+        <category>-JavaSE</category>
+        <category>博客</category>
+        <category>环境搭建</category>
+        <category>框架</category>
+        <category>ORM</category>
         <category>Spring</category>
         <category>SpringBoot</category>
         <category>SpringMVC</category>
         <category>SpringSecurity</category>
-        <category>JavaSE</category>
-        <category>-JavaSE</category>
+        <category>Redis基础</category>
+        <category>NoSQL数据库</category>
         <item>
-            <guid isPermalink="true">http://example.com/2022/10/07/RPC/</guid>
+            <guid isPermalink="true">http://example.com/2022/10/07/Distribution/RPC/</guid>
             <title>RPC</title>
-            <link>http://example.com/2022/10/07/RPC/</link>
+            <link>http://example.com/2022/10/07/Distribution/RPC/</link>
             <category>分布式</category>
             <category>RPC</category>
             <pubDate>Fri, 07 Oct 2022 00:00:00 +0800</pubDate>
@@ -123,7 +119,7 @@
 &lt;h5 id=&#34;11-架构图&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#11-架构图&#34;&gt;#&lt;/a&gt; 1.1   架构图&lt;/h5&gt;
 &lt;p&gt;​	单体架构就是一个项目里面包含这个项目中全部代码。一个应用搞定全部功能。&lt;/p&gt;
 &lt;p&gt;​	DNS 服务器可以是单映射，也可以配置多个映射。&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;/2022/10/07/RPC/rpc-01.png&#34; class=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/2022/10/07/Distribution/RPC/rpc-01.png&#34; class=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h5 id=&#34;12-软件代码结构&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#12-软件代码结构&#34;&gt;#&lt;/a&gt; 1.2   软件代码结构&lt;/h5&gt;
 &lt;p&gt;​	在单体架构项目中，团队都是通过包 (package) 进行区分每个模块。&lt;/p&gt;
 &lt;p&gt;​	总体包结构：com.msb.*. 分层包。&lt;/p&gt;
@@ -153,7 +149,7 @@
 &lt;h4 id=&#34;2-分布式架构&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-分布式架构&#34;&gt;#&lt;/a&gt; 2     分布式架构&lt;/h4&gt;
 &lt;h5 id=&#34;21-架构图简易版&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#21-架构图简易版&#34;&gt;#&lt;/a&gt; 2.1   架构图（简易版）&lt;/h5&gt;
 &lt;p&gt;​	分布式架构会把一个项目按照特定要求（多按照模块或功能）拆分成多个项目，每个项目分别部署到不同的服务器上。&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;/2022/10/07/RPC/rpc-02.png&#34; class=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/2022/10/07/Distribution/RPC/rpc-02.png&#34; class=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h5 id=&#34;22-软件代码结构&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#22-软件代码结构&#34;&gt;#&lt;/a&gt; 2.2   软件代码结构&lt;/h5&gt;
 &lt;pre&gt;&lt;code&gt;项目1：
   --com.msb.xxx
@@ -251,7 +247,7 @@
 &lt;p&gt;​	RMI 是从 JDK1.2 推出的功能，它可以实现在一个 Java 应用中可以像调用本地方法一样调用另一个服务器中 Java 应用（JVM）中的内容。&lt;/p&gt;
 &lt;p&gt;​	RMI 是 Java 语言的远程调用，无法实现跨语言。&lt;/p&gt;
 &lt;h4 id=&#34;2-执行流程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-执行流程&#34;&gt;#&lt;/a&gt; 2     执行流程&lt;/h4&gt;
-&lt;p&gt;&lt;img data-src=&#34;/2022/10/07/RPC/rpc-03.png&#34; class=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/2022/10/07/Distribution/RPC/rpc-03.png&#34; class=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;​	Registry (注册表) 是放置所有服务器对象的命名空间。 每次服务端创建一个对象时，它都会使用 bind () 或 rebind () 方法注册该对象。 这些是使用称为绑定名称的唯一名称注册的。&lt;/p&gt;
 &lt;p&gt;​	要调用远程对象，客户端需要该对象的引用。即通过服务端绑定的名称从注册表中获取对象 (lookup () 方法)。&lt;/p&gt;
 &lt;h4 id=&#34;3-api介绍&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3-api介绍&#34;&gt;#&lt;/a&gt; 3     API 介绍&lt;/h4&gt;
@@ -374,7 +370,7 @@
 &lt;p&gt;​	[-s] 详细信息&lt;/p&gt;
 &lt;p&gt;​	查看指定路径下内容。&lt;/p&gt;
 &lt;p&gt;​	例如： get -s /demo&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;/2022/10/07/RPC/rpc-04.png&#34; class=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/2022/10/07/Distribution/RPC/rpc-04.png&#34; class=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;​	null: 存放的数据&lt;/p&gt;
 &lt;p&gt;​	cZxid: 创建时 zxid (znode 每次改变时递增的事务 id)&lt;/p&gt;
 &lt;p&gt;​	ctime: 创建时间戳&lt;/p&gt;
@@ -441,7 +437,16 @@
 &lt;figure class=&#34;highlight java&#34;&gt;&lt;figcaption data-lang=&#34;java&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token annotation punctuation&#34;&gt;@SpringBootApplication&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;ConsumerApplication&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; args&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token class-name&#34;&gt;SpringApplication&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;run&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;ConsumerApplication&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;class&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;args&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h4 id=&#34;12-测试&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#12-测试&#34;&gt;#&lt;/a&gt; 12  测试&lt;/h4&gt;
 &lt;p&gt;​	在浏览器输入：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2xvY2FsaG9zdDo4MDgwL2RlbW8/cGFyYW09ZGVtbw==&#34;&gt;http://localhost:8080/demo?param=demo&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;​	观察结果是否是：demo123&lt;/p&gt;
- ]]></description>
+
+&lt;div id=&#34;gitalk-container&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js&#34;&gt;&lt;/script&gt;&lt;link rel=&#34;stylesheet&#34; href=&#34;https://unpkg.com/gitalk/dist/gitalk.css&#34;&gt;&lt;script src=&#34;https://unpkg.com/gitalk/dist/gitalk.min.js&#34;&gt;&lt;/script&gt;
+
+		&lt;script&gt;
+		var gitalkConfig = {&#34;clientID&#34;:&#34;eda74f740080fa01d0b5&#34;,&#34;clientSecret&#34;:&#34;c994dd2162a1dadaefbf078fcab49361438a7aca&#34;,&#34;repo&#34;:&#34;comments001&#34;,&#34;owner&#34;:&#34;onlymarryu&#34;,&#34;admin&#34;:[&#34;onlymarryu&#34;],&#34;distractionFreeMode&#34;:false};
+	    gitalkConfig.id = md5(location.pathname);
+		var gitalk = new Gitalk(gitalkConfig);
+	    gitalk.render(&#34;gitalk-container&#34;);
+	    &lt;/script&gt; ]]></description>
         </item>
     </channel>
 </rss>

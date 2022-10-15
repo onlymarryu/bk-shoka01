@@ -4,34 +4,30 @@
     <title>记录“美食”每刻 • Posts by &#34;solr&#34; tag</title>
     <link href="http://example.com" />
     <updated>2022-10-06T16:00:00.000Z</updated>
-    <category term="博客" />
-    <category term="环境搭建" />
     <category term="分布式" />
     <category term="Dubbo" />
     <category term="FastDFS" />
-    <category term="MySQL" />
-    <category term="数据库基础" />
-    <category term="数据库基本知识" />
-    <category term="数据库" />
-    <category term="框架" />
-    <category term="ORM" />
-    <category term="RPC" />
     <category term="中间件" />
     <category term="RabbitMQ" />
-    <category term="Redis基础" />
-    <category term="NoSQL数据库" />
     <category term="Solr" />
     <category term="快速搜索" />
+    <category term="RPC" />
+    <category term="JavaSE" />
+    <category term="-JavaSE" />
+    <category term="博客" />
+    <category term="环境搭建" />
+    <category term="框架" />
+    <category term="ORM" />
     <category term="Spring" />
     <category term="SpringBoot" />
     <category term="SpringMVC" />
     <category term="SpringSecurity" />
-    <category term="JavaSE" />
-    <category term="-JavaSE" />
+    <category term="Redis基础" />
+    <category term="NoSQL数据库" />
     <entry>
-        <id>http://example.com/2022/10/07/Solr/</id>
+        <id>http://example.com/2022/10/07/Distribution/Solr/</id>
         <title>Solr</title>
-        <link rel="alternate" href="http://example.com/2022/10/07/Solr/"/>
+        <link rel="alternate" href="http://example.com/2022/10/07/Distribution/Solr/"/>
         <content type="html">&lt;h1 id=&#34;solr&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#solr&#34;&gt;#&lt;/a&gt; Solr&lt;/h1&gt;
 &lt;h3 id=&#34;主要内容&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#主要内容&#34;&gt;#&lt;/a&gt; 主要内容&lt;/h3&gt;
 &lt;ol&gt;
@@ -165,7 +161,7 @@
 &lt;p&gt;​	Solr 能够提升检索效率的主要原因就是分词和索引（反向索引，通过）。&lt;/p&gt;
 &lt;p&gt;​	分词：会对搜索条件 / 存储内容进行分词，分成日常所使用的词语。&lt;/p&gt;
 &lt;p&gt;​	索引：存储在 Solr 中内容会按照程序员的要求来是否建立索引。如果要求建立索引会把存储内容中关键字（分词）建立索引。&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;/2022/10/07/Solr/solr-01.JPG&#34; class=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/2022/10/07/Distribution/Solr/solr-01.JPG&#34; class=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h4 id=&#34;2solr中数据存储说明&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2solr中数据存储说明&#34;&gt;#&lt;/a&gt; 2.Solr 中数据存储说明&lt;/h4&gt;
 &lt;p&gt;​	Solr 为了给内容建立索引，所以 Solr 就必须具备数据存储能力。所有需要被搜索的内容都需要存储在 Solr 中，在开发中需要把数据库中数据添加到 Solr 中进行初始化，每次修改数据库中数据还需要同步 Solr 中的数据。&lt;/p&gt;
 &lt;p&gt;​	Solr 中数据存储是存储在 Document 对象中，对象中可以包含的属性和属性类型都定义在 scheme.xml 中。如果需要自定义属性或自定义属性类型都需要修改 scheme.xml 配置文件。从 Solr5 开始 schema.xml 更改名称为 managed-scheme (没有扩展名)&lt;/p&gt;
@@ -185,7 +181,7 @@
 &lt;pre&gt;&lt;code&gt;# cd /usr/local/solr/bin
 # vim solr.in.sh
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img data-src=&#34;/2022/10/07/Solr/solr-02.jpg&#34; class=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/2022/10/07/Distribution/Solr/solr-02.jpg&#34; class=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h4 id=&#34;4启动solr&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#4启动solr&#34;&gt;#&lt;/a&gt; 4. 启动 Solr&lt;/h4&gt;
 &lt;p&gt;​	Solr 内嵌 Jetty，直接启动即可。监听 8983 端口。&lt;/p&gt;
 &lt;p&gt;​	solr 默认不推荐 root 账户启动，如果是 root 账户启动需要添加 - force 参数。&lt;/p&gt;
@@ -201,11 +197,11 @@
 &lt;p&gt;​	（4）Java Perperties：所有 Java 相关属性。&lt;/p&gt;
 &lt;p&gt;​	（5）Thread Dump：线程相关信息。&lt;/p&gt;
 &lt;p&gt;​	（6）如果有 Core，将显示在此处。&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;/2022/10/07/Solr/solr-03.JPG&#34; class=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/2022/10/07/Distribution/Solr/solr-03.JPG&#34; class=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;五-新建核心&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#五-新建核心&#34;&gt;#&lt;/a&gt; 五、新建核心&lt;/h3&gt;
 &lt;p&gt;​	Solr 安装完成后默认是没有核心的。需要手动配置。&lt;/p&gt;
 &lt;p&gt;​	需要在 solr/server/solr 下新建文件夹，并给定配置文件，否则无法建立。&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;/2022/10/07/Solr/solr-04.JPG&#34; class=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/2022/10/07/Distribution/Solr/solr-04.JPG&#34; class=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h4 id=&#34;1新建目录&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1新建目录&#34;&gt;#&lt;/a&gt; 1. 新建目录&lt;/h4&gt;
 &lt;p&gt;​	在 /usr/local/solr/server/solr 中新建自定义名称目录。此处示例名称为 testcore。&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;# cd /usr/local/solr/server/solr
@@ -217,15 +213,15 @@
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h4 id=&#34;3填写core信息&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3填写core信息&#34;&gt;#&lt;/a&gt; 3. 填写 Core 信息&lt;/h4&gt;
 &lt;p&gt;​	在可视化管理界面中 Core Admin 中编写信息后点击 Add Core 后，短暂延迟后 testcore 就会创建成功。schema 处不用更改。&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;/2022/10/07/Solr/solr-05.JPG&#34; class=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/2022/10/07/Distribution/Solr/solr-05.JPG&#34; class=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h4 id=&#34;4出现testcore&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#4出现testcore&#34;&gt;#&lt;/a&gt; 4. 出现 testcore&lt;/h4&gt;
 &lt;p&gt;​	在客户端管理界面中，选择新建的 Core 后，就可以按照自己项目的需求进行操作了。&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;/2022/10/07/Solr/solr-06.jpg&#34; class=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/2022/10/07/Distribution/Solr/solr-06.jpg&#34; class=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;六-分词analysis&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#六-分词analysis&#34;&gt;#&lt;/a&gt; 六、分词 Analysis&lt;/h3&gt;
 &lt;p&gt;​	在 Solr 可视化管理界面中，Core 的管理菜单项中都会有 Analysis。表示根据 Scheme.xml (managed-schema) 中配置要求进行解析。&lt;/p&gt;
 &lt;p&gt;​	对英文解析就比较简单了，只要按照空格把英文语句拆分成英文单词即可。&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;/2022/10/07/Solr/solr-07.jpg&#34; class=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;​	但是如果条件是中文时，把一句话按照字进行拆分就不是很合理了。正确的方式是按照合理的词组进行拆分。&lt;img data-src=&#34;/2022/10/07/Solr/solr-08.jpg&#34; class=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/2022/10/07/Distribution/Solr/solr-07.jpg&#34; class=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;​	但是如果条件是中文时，把一句话按照字进行拆分就不是很合理了。正确的方式是按照合理的词组进行拆分。&lt;img data-src=&#34;/2022/10/07/Distribution/Solr/solr-08.jpg&#34; class=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h4 id=&#34;1配置步骤&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1配置步骤&#34;&gt;#&lt;/a&gt; 1. 配置步骤&lt;/h4&gt;
 &lt;p&gt;​	上传 ik-analyzer.jar 到 webapps 中。&lt;/p&gt;
 &lt;p&gt;​	去 https://search.maven.org/search?q=com.github.magese 下载对应版本的 ik-analyzer。可以在资料中直接获取。&lt;/p&gt;
@@ -255,7 +251,7 @@
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h5 id=&#34;14验证&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#14验证&#34;&gt;#&lt;/a&gt; 1.4 验证&lt;/h5&gt;
 &lt;p&gt;​	可以在可视化管理界面中找到 myfield 属性进行验证。&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;/2022/10/07/Solr/solr-09.jpg&#34; class=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/2022/10/07/Distribution/Solr/solr-09.jpg&#34; class=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h4 id=&#34;2managed-schema配置说明&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2managed-schema配置说明&#34;&gt;#&lt;/a&gt; 2.managed-schema 配置说明&lt;/h4&gt;
 &lt;h5 id=&#34;21-fieldtype&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#21-fieldtype&#34;&gt;#&lt;/a&gt; 2.1&amp;lt; fieldType/&amp;gt;&lt;/h5&gt;
 &lt;p&gt;​	表示定义一个属性类型。在 Solr 中属性类型都是自定义的。在上面配置中 name=”text_ik” 为自定义类型。当某个属性取值为 text_ik 时 IK Analyzer 才能生效。&lt;/p&gt;
@@ -315,7 +311,7 @@
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h4 id=&#34;3添加jar&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3添加jar&#34;&gt;#&lt;/a&gt; 3. 添加 jar&lt;/h4&gt;
 &lt;p&gt;​	向 solr-webapp 中添加三个 jar。在 dist 中两个还有一个数据库驱动。&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;/2022/10/07/Solr/solr-10.jpg&#34; class=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/2022/10/07/Distribution/Solr/solr-10.jpg&#34; class=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h4 id=&#34;4操作&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#4操作&#34;&gt;#&lt;/a&gt; 4. 操作&lt;/h4&gt;
 &lt;p&gt;​	重启 solr 后，在可视化管理页面中进行数据导入。&lt;/p&gt;
 &lt;p&gt;​	注意：&lt;/p&gt;
@@ -681,7 +677,16 @@ Unable to find either secure or unsecure client port in any configs. Terminating
 &lt;pre&gt;&lt;code&gt; ./solr start -c -p 8983 -s ../example/cloud/node1/solr/ -force
  ./solr start -c -p 7574 -z localhost:9983 -s ../example/cloud/node2/solr/ -force
 &lt;/code&gt;&lt;/pre&gt;
-</content>
+
+&lt;div id=&#34;gitalk-container&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js&#34;&gt;&lt;/script&gt;&lt;link rel=&#34;stylesheet&#34; href=&#34;https://unpkg.com/gitalk/dist/gitalk.css&#34;&gt;&lt;script src=&#34;https://unpkg.com/gitalk/dist/gitalk.min.js&#34;&gt;&lt;/script&gt;
+
+		&lt;script&gt;
+		var gitalkConfig = {&#34;clientID&#34;:&#34;eda74f740080fa01d0b5&#34;,&#34;clientSecret&#34;:&#34;c994dd2162a1dadaefbf078fcab49361438a7aca&#34;,&#34;repo&#34;:&#34;comments001&#34;,&#34;owner&#34;:&#34;onlymarryu&#34;,&#34;admin&#34;:[&#34;onlymarryu&#34;],&#34;distractionFreeMode&#34;:false};
+	    gitalkConfig.id = md5(location.pathname);
+		var gitalk = new Gitalk(gitalkConfig);
+	    gitalk.render(&#34;gitalk-container&#34;);
+	    &lt;/script&gt;</content>
         <category term="分布式" />
         <category term="中间件" />
         <category term="Solr" />

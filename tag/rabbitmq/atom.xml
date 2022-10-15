@@ -4,34 +4,30 @@
     <title>记录“美食”每刻 • Posts by &#34;rabbitmq&#34; tag</title>
     <link href="http://example.com" />
     <updated>2022-10-06T16:00:00.000Z</updated>
-    <category term="博客" />
-    <category term="环境搭建" />
     <category term="分布式" />
     <category term="Dubbo" />
     <category term="FastDFS" />
-    <category term="MySQL" />
-    <category term="数据库基础" />
-    <category term="数据库基本知识" />
-    <category term="数据库" />
-    <category term="框架" />
-    <category term="ORM" />
-    <category term="RPC" />
     <category term="中间件" />
     <category term="RabbitMQ" />
-    <category term="Redis基础" />
-    <category term="NoSQL数据库" />
     <category term="Solr" />
     <category term="快速搜索" />
+    <category term="RPC" />
+    <category term="JavaSE" />
+    <category term="-JavaSE" />
+    <category term="博客" />
+    <category term="环境搭建" />
+    <category term="框架" />
+    <category term="ORM" />
     <category term="Spring" />
     <category term="SpringBoot" />
     <category term="SpringMVC" />
     <category term="SpringSecurity" />
-    <category term="JavaSE" />
-    <category term="-JavaSE" />
+    <category term="Redis基础" />
+    <category term="NoSQL数据库" />
     <entry>
-        <id>http://example.com/2022/10/07/RabbitMQ/</id>
+        <id>http://example.com/2022/10/07/Distribution/RabbitMQ/</id>
         <title>RabbitMQ</title>
-        <link rel="alternate" href="http://example.com/2022/10/07/RabbitMQ/"/>
+        <link rel="alternate" href="http://example.com/2022/10/07/Distribution/RabbitMQ/"/>
         <content type="html">&lt;h2 id=&#34;主要内容&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#主要内容&#34;&gt;#&lt;/a&gt; &lt;strong&gt;主要内容&lt;/strong&gt;&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;
@@ -100,7 +96,7 @@
 &lt;p&gt;​	AMQP (Advanced Message Queuing Protocol, 高级消息队列协议) 是进程之间传递异步消息的网络协议。&lt;/p&gt;
 &lt;h3 id=&#34;2-amqp工作过程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-amqp工作过程&#34;&gt;#&lt;/a&gt; 2 &lt;strong&gt;AMQP 工作过程&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;​	发布者 (Publisher) 发布消息 (Message), 经过交换机 (Exchange)，交换机根据路由规则将收到消息分发给交换机绑定的队列 (Queue)，最后 AMQP 代理会将消息投递给订阅了此队列的消费者，或者消费者按照需求自行获取。&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;/2022/10/07/RabbitMQ/RabbitMQ-01.jpg&#34; class=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/2022/10/07/Distribution/RabbitMQ/RabbitMQ-01.jpg&#34; class=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;3-队列&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3-队列&#34;&gt;#&lt;/a&gt; 3 &lt;strong&gt;队列&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;​	队列是数据结构中概念。数据存储在一个队列中，数据是有顺序的，先进的先出，后进后出。其中一侧负责进数据，另一侧负责出数据。&lt;/p&gt;
 &lt;p&gt;MQ（消息队列）很多功能都是基于此队列结构实现的！&lt;/p&gt;
@@ -109,9 +105,9 @@
 &lt;p&gt;​	RabbitMQ 是由 Erlang 语言编写的基于 AMQP 的消息中间件。而消息中间件作为分布式系统重要组件之一，可以解决应用耦合，异步消息，流量削峰等问题。&lt;/p&gt;
 &lt;h5 id=&#34;11-解决应用耦合&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#11-解决应用耦合&#34;&gt;#&lt;/a&gt; 1.1 &lt;strong&gt;解决应用耦合&lt;/strong&gt;&lt;/h5&gt;
 &lt;h6 id=&#34;111-不使用mq时&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#111-不使用mq时&#34;&gt;#&lt;/a&gt; 1.1.1 &lt;strong&gt;不使用 MQ 时&lt;/strong&gt;&lt;/h6&gt;
-&lt;p&gt;&lt;img data-src=&#34;/2022/10/07/RabbitMQ/RabbitMQ-03.jpg&#34; class=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/2022/10/07/Distribution/RabbitMQ/RabbitMQ-03.jpg&#34; class=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h6 id=&#34;112-使用mq解决耦合&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#112-使用mq解决耦合&#34;&gt;#&lt;/a&gt; 1.1.2 &lt;strong&gt;使用 MQ 解决耦合&lt;/strong&gt;&lt;/h6&gt;
-&lt;p&gt;&lt;img data-src=&#34;/2022/10/07/RabbitMQ/RabbitMQ-04.jpg&#34; class=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/2022/10/07/Distribution/RabbitMQ/RabbitMQ-04.jpg&#34; class=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h4 id=&#34;2-rabbitmq适用场景&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-rabbitmq适用场景&#34;&gt;#&lt;/a&gt; 2 &lt;strong&gt;RabbitMQ 适用场景&lt;/strong&gt;&lt;/h4&gt;
 &lt;p&gt;​	排队算法：使用消息队列特性&lt;/p&gt;
 &lt;p&gt;​	秒杀活动：使用消息队列特性&lt;/p&gt;
@@ -121,7 +117,7 @@
 &lt;p&gt;​	处理耗时任务：使用消息异步特性&lt;/p&gt;
 &lt;p&gt;​	流量销峰&lt;/p&gt;
 &lt;h3 id=&#34;三-rabbitmq原理&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#三-rabbitmq原理&#34;&gt;#&lt;/a&gt; 三、 &lt;strong&gt;RabbitMQ 原理&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;&lt;img data-src=&#34;/2022/10/07/RabbitMQ/RabbitMQ-05.jpg&#34; class=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/2022/10/07/Distribution/RabbitMQ/RabbitMQ-05.jpg&#34; class=&#34;&#34;&gt;&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -212,11 +208,11 @@
 &lt;p&gt;​	RabbitMQ 是通过主机名进行访问的，必须指定能访问的主机名。&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;  vim /etc/sysconfig/network
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img data-src=&#34;/2022/10/07/RabbitMQ/RabbitMQ-06.jpg&#34; class=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/2022/10/07/Distribution/RabbitMQ/RabbitMQ-06.jpg&#34; class=&#34;&#34;&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;  vim /etc/hosts
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;​	新添加了一行，前面为服务器 ip，空格后面添加计算机主机名&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;/2022/10/07/RabbitMQ/RabbitMQ-07.jpg&#34; class=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/2022/10/07/Distribution/RabbitMQ/RabbitMQ-07.jpg&#34; class=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h4 id=&#34;2-安装依赖&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-安装依赖&#34;&gt;#&lt;/a&gt; 2 &lt;strong&gt;安装依赖&lt;/strong&gt;&lt;/h4&gt;
 &lt;pre&gt;&lt;code&gt;  yum -y install make gcc gcc-c++ kernel-devel m4 ncurses-devel openssl-devel unixODBC unixODBC-devel
 &lt;/code&gt;&lt;/pre&gt;
@@ -257,7 +253,7 @@
 &lt;h4 id=&#34;7-查看配置是否成功&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#7-查看配置是否成功&#34;&gt;#&lt;/a&gt; 7 &lt;strong&gt;查看配置是否成功&lt;/strong&gt;&lt;/h4&gt;
 &lt;pre&gt;&lt;code&gt;  erl -version
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img data-src=&#34;/2022/10/07/RabbitMQ/RabbitMQ-08.jpg&#34; class=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/2022/10/07/Distribution/RabbitMQ/RabbitMQ-08.jpg&#34; class=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;五-安装rabbitmq&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#五-安装rabbitmq&#34;&gt;#&lt;/a&gt; 五、 &lt;strong&gt;安装 RabbitMQ&lt;/strong&gt;&lt;/h3&gt;
 &lt;h4 id=&#34;1-上传并解压&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-上传并解压&#34;&gt;#&lt;/a&gt; 1 &lt;strong&gt;上传并解压&lt;/strong&gt;&lt;/h4&gt;
 &lt;p&gt;​	上传 rabbitmq-server-generic-unix-3.7.18.tar.xz 到 /usr/loca/tmp 中&lt;/p&gt;
@@ -331,7 +327,7 @@
 &lt;p&gt;​	3.Topic Exchange：主题交换器&lt;/p&gt;
 &lt;p&gt;​	4.Header Exchange：首部交换器。&lt;/p&gt;
 &lt;p&gt;​	在 RabbitMq 的 Web 管理界面中 Exchanges 选项卡就可以看见这四个交换器。&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;/2022/10/07/RabbitMQ/RabbitMQ-09.jpg&#34; class=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/2022/10/07/Distribution/RabbitMQ/RabbitMQ-09.jpg&#34; class=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h4 id=&#34;1-direct交换器&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-direct交换器&#34;&gt;#&lt;/a&gt; 1 &lt;strong&gt;direct 交换器&lt;/strong&gt;&lt;/h4&gt;
 &lt;p&gt;​	direct 交换器是 RabbitMQ 默认交换器。默认会进行公平调度。所有接受者依次从消息队列中获取值。Publisher 给哪个队列发消息，就一定是给哪个队列发送消息。对交换器绑定的其他队列没有任何影响。&lt;/p&gt;
 &lt;p&gt;​	（代码演示）一个队列需要绑定多个消费者&lt;/p&gt;
@@ -532,7 +528,16 @@ public void demo10(String msg)&amp;#123;
     public static final long serialVersionUID=1L;
 &amp;#125;
 &lt;/code&gt;&lt;/pre&gt;
-</content>
+
+&lt;div id=&#34;gitalk-container&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js&#34;&gt;&lt;/script&gt;&lt;link rel=&#34;stylesheet&#34; href=&#34;https://unpkg.com/gitalk/dist/gitalk.css&#34;&gt;&lt;script src=&#34;https://unpkg.com/gitalk/dist/gitalk.min.js&#34;&gt;&lt;/script&gt;
+
+		&lt;script&gt;
+		var gitalkConfig = {&#34;clientID&#34;:&#34;eda74f740080fa01d0b5&#34;,&#34;clientSecret&#34;:&#34;c994dd2162a1dadaefbf078fcab49361438a7aca&#34;,&#34;repo&#34;:&#34;comments001&#34;,&#34;owner&#34;:&#34;onlymarryu&#34;,&#34;admin&#34;:[&#34;onlymarryu&#34;],&#34;distractionFreeMode&#34;:false};
+	    gitalkConfig.id = md5(location.pathname);
+		var gitalk = new Gitalk(gitalkConfig);
+	    gitalk.render(&#34;gitalk-container&#34;);
+	    &lt;/script&gt;</content>
         <category term="分布式" />
         <category term="中间件" />
         <category term="RabbitMQ" />
