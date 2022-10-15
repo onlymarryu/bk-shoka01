@@ -18,10 +18,10 @@
     <category term="RPC" />
     <category term="中间件" />
     <category term="RabbitMQ" />
-    <category term="Redis基础" />
-    <category term="NoSQL数据库" />
     <category term="Solr" />
     <category term="快速搜索" />
+    <category term="Redis基础" />
+    <category term="NoSQL数据库" />
     <category term="Spring" />
     <category term="SpringBoot" />
     <category term="SpringMVC" />
@@ -2996,7 +2996,7 @@ vim /etc/ssh/sshd_config
 &lt;p&gt;意外的是，发现root依然不能登录。最后研究sshd_config的每一行意义，发现坑在这里： &lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;注：有则看，无则跳&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt; &lt;img data-src=&#34;https://tools-all-blog.csdnimg.cn/2021071211252989.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1lhbmdfeWFuZ3lhbmc=,size_16,color_FFFFFF,t_70&#34; alt=&#34;在这里插入图片描述&#34;&gt; &lt;/p&gt;
-&lt;p&gt;文件的最后一行，有一行 ：AllowUsers &lt;span class=&#34;exturl&#34; data-url=&#34;bWFpbHRvOiYjeDc4OyYjeDc4OyYjMTIwOyYjeDQwOyYjeDMxOyYjNTc7JiN4MzI7JiN4MmU7JiN4MzE7JiN4MzY7JiN4Mzg7JiN4MmU7JiM0OTs=&#34;&gt;&amp;#x78;&amp;#x78;&amp;#120;&amp;#x40;&amp;#x31;&amp;#57;&amp;#x32;&amp;#x2e;&amp;#x31;&amp;#x36;&amp;#x38;&amp;#x2e;&amp;#49;&lt;/span&gt;.&lt;em&gt;。这是写死的了，即：能远程登录的 用户名、IP 信息。难怪，其他用户一直无法登录。&lt;br&gt;所以，在后面追加：&lt;span class=&#34;exturl&#34; data-url=&#34;bWFpbHRvOiYjMTE0OyYjeDZmOyYjMTExOyYjeDc0OyYjNjQ7JiM0OTsmI3gzOTsmIzUwOyYjNDY7JiM0OTsmIzU0OyYjNTY7JiN4MmU7JiN4MzE7&#34;&gt;&amp;#114;&amp;#x6f;&amp;#111;&amp;#x74;&amp;#64;&amp;#49;&amp;#x39;&amp;#50;&amp;#46;&amp;#49;&amp;#54;&amp;#56;&amp;#x2e;&amp;#x31;&lt;/span&gt;.&lt;/em&gt;&lt;br&gt;修改完的代码为：&lt;span class=&#34;exturl&#34; data-url=&#34;bWFpbHRvOiYjMTIwOyYjeDc4OyYjMTIwOyYjeDQwOyYjeDMxOyYjNTc7JiN4MzI7JiN4MmU7JiM0OTsmI3gzNjsmIzU2OyYjeDJlOyYjNDk7&#34;&gt;&amp;#120;&amp;#x78;&amp;#120;&amp;#x40;&amp;#x31;&amp;#57;&amp;#x32;&amp;#x2e;&amp;#49;&amp;#x36;&amp;#56;&amp;#x2e;&amp;#49;&lt;/span&gt;.* &lt;span class=&#34;exturl&#34; data-url=&#34;bWFpbHRvOiYjMTE0OyYjeDZmOyYjeDZmOyYjeDc0OyYjeDQwOyYjeDMxOyYjeDM5OyYjNTA7JiN4MmU7JiN4MzE7JiM1NDsmI3gzODsmI3gyZTsmI3gzMTs=&#34;&gt;&amp;#114;&amp;#x6f;&amp;#x6f;&amp;#x74;&amp;#x40;&amp;#x31;&amp;#x39;&amp;#50;&amp;#x2e;&amp;#x31;&amp;#54;&amp;#x38;&amp;#x2e;&amp;#x31;&lt;/span&gt;.*&lt;br&gt;然后再执行重启服务操作，然后发现root可以登录了！搞定！！！&lt;/p&gt;
+&lt;p&gt;文件的最后一行，有一行 ：AllowUsers &lt;span class=&#34;exturl&#34; data-url=&#34;bWFpbHRvOiYjeDc4OyYjeDc4OyYjeDc4OyYjeDQwOyYjNDk7JiN4Mzk7JiM1MDsmI3gyZTsmIzQ5OyYjNTQ7JiM1NjsmIzQ2OyYjNDk7&#34;&gt;&amp;#x78;&amp;#x78;&amp;#x78;&amp;#x40;&amp;#49;&amp;#x39;&amp;#50;&amp;#x2e;&amp;#49;&amp;#54;&amp;#56;&amp;#46;&amp;#49;&lt;/span&gt;.&lt;em&gt;。这是写死的了，即：能远程登录的 用户名、IP 信息。难怪，其他用户一直无法登录。&lt;br&gt;所以，在后面追加：&lt;span class=&#34;exturl&#34; data-url=&#34;bWFpbHRvOiYjMTE0OyYjeDZmOyYjMTExOyYjeDc0OyYjNjQ7JiN4MzE7JiN4Mzk7JiN4MzI7JiM0NjsmI3gzMTsmI3gzNjsmI3gzODsmI3gyZTsmIzQ5Ow==&#34;&gt;&amp;#114;&amp;#x6f;&amp;#111;&amp;#x74;&amp;#64;&amp;#x31;&amp;#x39;&amp;#x32;&amp;#46;&amp;#x31;&amp;#x36;&amp;#x38;&amp;#x2e;&amp;#49;&lt;/span&gt;.&lt;/em&gt;&lt;br&gt;修改完的代码为：&lt;span class=&#34;exturl&#34; data-url=&#34;bWFpbHRvOiYjMTIwOyYjMTIwOyYjeDc4OyYjNjQ7JiN4MzE7JiN4Mzk7JiN4MzI7JiM0NjsmI3gzMTsmIzU0OyYjeDM4OyYjeDJlOyYjNDk7&#34;&gt;&amp;#120;&amp;#120;&amp;#x78;&amp;#64;&amp;#x31;&amp;#x39;&amp;#x32;&amp;#46;&amp;#x31;&amp;#54;&amp;#x38;&amp;#x2e;&amp;#49;&lt;/span&gt;.* &lt;span class=&#34;exturl&#34; data-url=&#34;bWFpbHRvOiYjeDcyOyYjMTExOyYjeDZmOyYjMTE2OyYjeDQwOyYjNDk7JiN4Mzk7JiN4MzI7JiM0NjsmIzQ5OyYjNTQ7JiN4Mzg7JiM0NjsmIzQ5Ow==&#34;&gt;&amp;#x72;&amp;#111;&amp;#x6f;&amp;#116;&amp;#x40;&amp;#49;&amp;#x39;&amp;#x32;&amp;#46;&amp;#49;&amp;#54;&amp;#x38;&amp;#46;&amp;#49;&lt;/span&gt;.*&lt;br&gt;然后再执行重启服务操作，然后发现root可以登录了！搞定！！！&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;注意：&lt;code&gt;xxx@192.168.1.* root@192.168.1.*&lt;/code&gt; 之间要有空格。&lt;/p&gt;
 &lt;p&gt;或者直接将此行 代码直接注释掉，也可以。&lt;/p&gt;

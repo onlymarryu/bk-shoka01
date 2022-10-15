@@ -21,10 +21,10 @@
         <category>RPC</category>
         <category>中间件</category>
         <category>RabbitMQ</category>
-        <category>Redis基础</category>
-        <category>NoSQL数据库</category>
         <category>Solr</category>
         <category>快速搜索</category>
+        <category>Redis基础</category>
+        <category>NoSQL数据库</category>
         <category>Spring</category>
         <category>SpringBoot</category>
         <category>SpringMVC</category>
@@ -6510,7 +6510,7 @@ hexo server          # 本地运行server服务预览，打开 http://localhost:
 &lt;blockquote&gt;
 &lt;p&gt;deploy:&lt;/p&gt;
 &lt;p&gt; type: git&lt;/p&gt;
-&lt;p&gt; repo: &lt;span class=&#34;exturl&#34; data-url=&#34;bWFpbHRvOiYjMTAzOyYjMTA1OyYjMTE2OyYjNjQ7JiN4Njc7JiN4Njk7JiMxMTY7JiMxMDE7JiMxMDE7JiN4MmU7JiN4NjM7JiN4NmY7JiMxMDk7&#34;&gt;&amp;#103;&amp;#105;&amp;#116;&amp;#64;&amp;#x67;&amp;#x69;&amp;#116;&amp;#101;&amp;#101;&amp;#x2e;&amp;#x63;&amp;#x6f;&amp;#109;&lt;/span&gt;:cysheng&amp;#x2F;cysheng.git # 输入你的仓库地址&lt;/p&gt;
+&lt;p&gt; repo: &lt;span class=&#34;exturl&#34; data-url=&#34;bWFpbHRvOiYjeDY3OyYjMTA1OyYjMTE2OyYjNjQ7JiMxMDM7JiN4Njk7JiN4NzQ7JiMxMDE7JiMxMDE7JiN4MmU7JiM5OTsmI3g2ZjsmIzEwOTs=&#34;&gt;&amp;#x67;&amp;#105;&amp;#116;&amp;#64;&amp;#103;&amp;#x69;&amp;#x74;&amp;#101;&amp;#101;&amp;#x2e;&amp;#99;&amp;#x6f;&amp;#109;&lt;/span&gt;:cysheng&amp;#x2F;cysheng.git # 输入你的仓库地址&lt;/p&gt;
 &lt;p&gt; branch: master # 输入分支&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;3-部署&#34;&gt;&lt;a href=&#34;#3-部署&#34; class=&#34;headerlink&#34; title=&#34;3.部署&#34;&gt;&lt;/a&gt;3.部署&lt;/h2&gt;&lt;pre&gt;&lt;code class=&#34;sh&#34;&gt; hexo clean  
