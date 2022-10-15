@@ -23,8 +23,8 @@
     <category term="Solr" />
     <category term="快速搜索" />
     <category term="Spring" />
-    <category term="SpringMVC" />
     <category term="SpringBoot" />
+    <category term="SpringMVC" />
     <category term="SpringSecurity" />
     <category term="JavaSE" />
     <category term="-JavaSE" />
