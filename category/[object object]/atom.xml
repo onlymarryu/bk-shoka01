@@ -5,23 +5,23 @@
     <link href="http://example.com" />
     <updated>2022-10-15T04:52:38.136Z</updated>
     <category term="分布式" />
-    <category term="Dubbo" />
     <category term="FastDFS" />
+    <category term="Dubbo" />
     <category term="RPC" />
+    <category term="JavaSE" />
     <category term="中间件" />
     <category term="RabbitMQ" />
     <category term="Solr" />
     <category term="快速搜索" />
-    <category term="JavaSE" />
     <category term="-JavaSE" />
     <category term="Spring" />
     <category term="框架" />
     <category term="SpringBoot" />
-    <category term="SpringMVC" />
-    <category term="SpringSecurity" />
     <category term="ORM" />
+    <category term="SpringMVC" />
     <category term="博客" />
     <category term="环境搭建" />
+    <category term="SpringSecurity" />
     <category term="Redis基础" />
     <category term="NoSQL数据库" />
     <entry>
