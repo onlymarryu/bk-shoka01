@@ -10,21 +10,21 @@
         <category>分布式</category>
         <category>Dubbo</category>
         <category>FastDFS</category>
+        <category>RPC</category>
         <category>中间件</category>
         <category>RabbitMQ</category>
-        <category>RPC</category>
         <category>Solr</category>
         <category>快速搜索</category>
-        <category>框架</category>
-        <category>ORM</category>
+        <category>JavaSE</category>
+        <category>-JavaSE</category>
         <category>Spring</category>
+        <category>框架</category>
         <category>SpringBoot</category>
         <category>SpringMVC</category>
-        <category>JavaSE</category>
-        <category>SpringSecurity</category>
-        <category>-JavaSE</category>
         <category>博客</category>
         <category>环境搭建</category>
+        <category>SpringSecurity</category>
+        <category>ORM</category>
         <category>Redis基础</category>
         <category>NoSQL数据库</category>
         <item>
@@ -491,7 +491,7 @@ LinkedBlockingQueue：支持读写同时操作，并发情况下，效率高。�
 &lt;script src=&#34;https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js&#34;&gt;&lt;/script&gt;&lt;link rel=&#34;stylesheet&#34; href=&#34;https://unpkg.com/gitalk/dist/gitalk.css&#34;&gt;&lt;script src=&#34;https://unpkg.com/gitalk/dist/gitalk.min.js&#34;&gt;&lt;/script&gt;
 
 		&lt;script&gt;
-		var gitalkConfig = {&#34;clientID&#34;:&#34;eda74f740080fa01d0b5&#34;,&#34;clientSecret&#34;:&#34;c994dd2162a1dadaefbf078fcab49361438a7aca&#34;,&#34;repo&#34;:&#34;comments001&#34;,&#34;owner&#34;:&#34;onlymarryu&#34;,&#34;admin&#34;:[&#34;onlymarryu&#34;],&#34;distractionFreeMode&#34;:true,&#34;proxy&#34;:&#34;https://winter-rain-5b30.wudu-bk.workers.dev?https://github.com/login/oauth/access_token&#34;};
+		var gitalkConfig = {&#34;clientID&#34;:&#34;eda74f740080fa01d0b5&#34;,&#34;clientSecret&#34;:&#34;c994dd2162a1dadaefbf078fcab49361438a7aca&#34;,&#34;repo&#34;:&#34;comments001&#34;,&#34;owner&#34;:&#34;onlymarryu&#34;,&#34;admin&#34;:[&#34;onlymarryu&#34;],&#34;distractionFreeMode&#34;:true,&#34;proxy&#34;:&#34;https://winter-rain-5b30.wudu-bk.workers.dev/https://github.com/login/oauth/access_token&#34;};
 	    gitalkConfig.id = md5(location.pathname);
 		var gitalk = new Gitalk(gitalkConfig);
 	    gitalk.render(&#34;gitalk-container&#34;);
