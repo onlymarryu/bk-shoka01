@@ -7,20 +7,20 @@
     <category term="分布式" />
     <category term="Dubbo" />
     <category term="FastDFS" />
+    <category term="RPC" />
     <category term="中间件" />
     <category term="RabbitMQ" />
     <category term="Solr" />
     <category term="快速搜索" />
-    <category term="RPC" />
     <category term="JavaSE" />
     <category term="-JavaSE" />
-    <category term="博客" />
-    <category term="环境搭建" />
     <category term="框架" />
     <category term="ORM" />
     <category term="Spring" />
     <category term="SpringBoot" />
     <category term="SpringMVC" />
+    <category term="博客" />
+    <category term="环境搭建" />
     <category term="SpringSecurity" />
     <category term="Redis基础" />
     <category term="NoSQL数据库" />
@@ -28,54 +28,50 @@
         <id>http://example.com/2022/10/07/Distribution/Dubbo/</id>
         <title>Dubbo</title>
         <link rel="alternate" href="http://example.com/2022/10/07/Distribution/Dubbo/"/>
-        <content type="html">&lt;h1 id=&#34;dubbo&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#dubbo&#34;&gt;#&lt;/a&gt; Dubbo&lt;/h1&gt;
-&lt;h3 id=&#34;主要内容&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#主要内容&#34;&gt;#&lt;/a&gt; 主要内容&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;Dubbo 简介&lt;/li&gt;
-&lt;li&gt;Dubbo 架构讲解&lt;/li&gt;
-&lt;li&gt;Dubbo 支持的协议&lt;/li&gt;
-&lt;li&gt;Dubbo 支持的注册中心&lt;/li&gt;
-&lt;li&gt;第一个 Dubbo 的 Provider&lt;/li&gt;
-&lt;li&gt;Admin 管理界面搭建&lt;/li&gt;
-&lt;li&gt;成 Dubbo 的 Consumer&lt;/li&gt;
+        <content type="html">&lt;h1 id=&#34;Dubbo&#34;&gt;&lt;a href=&#34;#Dubbo&#34; class=&#34;headerlink&#34; title=&#34;Dubbo&#34;&gt;&lt;/a&gt;Dubbo&lt;/h1&gt;&lt;h3 id=&#34;主要内容&#34;&gt;&lt;a href=&#34;#主要内容&#34; class=&#34;headerlink&#34; title=&#34;主要内容&#34;&gt;&lt;/a&gt;主要内容&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;Dubbo简介&lt;/li&gt;
+&lt;li&gt;Dubbo架构讲解&lt;/li&gt;
+&lt;li&gt;Dubbo支持的协议&lt;/li&gt;
+&lt;li&gt;Dubbo支持的注册中心&lt;/li&gt;
+&lt;li&gt;第一个Dubbo的Provider&lt;/li&gt;
+&lt;li&gt;Admin管理界面搭建&lt;/li&gt;
+&lt;li&gt;成Dubbo的Consumer&lt;/li&gt;
 &lt;li&gt;负载均衡&lt;/li&gt;
-&lt;li&gt;完整 Dubbo 项目演示&lt;/li&gt;
+&lt;li&gt;完整Dubbo项目演示&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&#34;学习目标&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#学习目标&#34;&gt;#&lt;/a&gt; 学习目标&lt;/h3&gt;
-&lt;table&gt;
+&lt;h3 id=&#34;学习目标&#34;&gt;&lt;a href=&#34;#学习目标&#34; class=&#34;headerlink&#34; title=&#34;学习目标&#34;&gt;&lt;/a&gt;学习目标&lt;/h3&gt;&lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th&gt;知识点&lt;/th&gt;
 &lt;th&gt;要求&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Dubbo 简介&lt;/td&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;Dubbo简介&lt;/td&gt;
 &lt;td&gt;掌握&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;Dubbo 架构讲解&lt;/td&gt;
+&lt;td&gt;Dubbo架构讲解&lt;/td&gt;
 &lt;td&gt;精通&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;Dubbo 支持的协议&lt;/td&gt;
+&lt;td&gt;Dubbo支持的协议&lt;/td&gt;
 &lt;td&gt;掌握&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;Dubbo 支持的注册中心&lt;/td&gt;
+&lt;td&gt;Dubbo支持的注册中心&lt;/td&gt;
 &lt;td&gt;掌握&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;第一个 Dubbo 的 Provider&lt;/td&gt;
+&lt;td&gt;第一个Dubbo的Provider&lt;/td&gt;
 &lt;td&gt;掌握&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;Admin 管理界面搭建&lt;/td&gt;
+&lt;td&gt;Admin管理界面搭建&lt;/td&gt;
 &lt;td&gt;掌握&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;完成 Dubbo 的 Consumer&lt;/td&gt;
+&lt;td&gt;完成Dubbo的Consumer&lt;/td&gt;
 &lt;td&gt;掌握&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -83,104 +79,82 @@
 &lt;td&gt;掌握&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;完整 Dubbo 项目演示&lt;/td&gt;
+&lt;td&gt;完整Dubbo项目演示&lt;/td&gt;
 &lt;td&gt;掌握&lt;/td&gt;
 &lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h3 id=&#34;一-dubbo简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#一-dubbo简介&#34;&gt;#&lt;/a&gt; 一、Dubbo 简介&lt;/h3&gt;
-&lt;h4 id=&#34;1官方说明&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1官方说明&#34;&gt;#&lt;/a&gt; 1, 官方说明&lt;/h4&gt;
-&lt;p&gt;&lt;img data-src=&#34;/2022/10/07/Distribution/Dubbo/Dubbo-1.png&#34; class=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;​	Apache Dubbo 是一个高可用的，基于 Java 的开源 RPC 框架。&lt;/p&gt;
-&lt;p&gt;​	Dubbo 框架不仅仅是具备 RPC 访问功能，还包含服务治理功能。&lt;/p&gt;
-&lt;h4 id=&#34;2发展历史&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2发展历史&#34;&gt;#&lt;/a&gt; 2. 发展历史&lt;/h4&gt;
-&lt;p&gt;​	Dubbo 是最开始是阿里巴巴内部使用的 RPC 框架。&lt;/p&gt;
-&lt;p&gt;​	2011 年对外提供。&lt;/p&gt;
-&lt;p&gt;​	2012 年停止更新。&lt;/p&gt;
-&lt;p&gt;​	2017 年开始继续更新。&lt;/p&gt;
-&lt;p&gt;​	2019 年捐献给 Apache，由 Apache 维护 2.7 以上版本。&lt;/p&gt;
-&lt;h4 id=&#34;3dubbo架构讲解&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3dubbo架构讲解&#34;&gt;#&lt;/a&gt; 3.Dubbo 架构讲解&lt;/h4&gt;
-&lt;h5 id=&#34;31架构图&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#31架构图&#34;&gt;#&lt;/a&gt; 3.1 架构图&lt;/h5&gt;
-&lt;p&gt;&lt;img data-src=&#34;/2022/10/07/Distribution/Dubbo/Dubbo-2.png&#34; class=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h4 id=&#34;32架构说明&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#32架构说明&#34;&gt;#&lt;/a&gt; 3.2 架构说明&lt;/h4&gt;
-&lt;h5 id=&#34;321虚线&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#321虚线&#34;&gt;#&lt;/a&gt; 3.2.1 虚线&lt;/h5&gt;
-&lt;p&gt;​	虚线表示异步，实线表示同步。异步不阻塞线程性能高，同步阻塞线程必须等待响应结果才能继续执行，相对性能低。&lt;/p&gt;
-&lt;h5 id=&#34;322provider&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#322provider&#34;&gt;#&lt;/a&gt; 3.2.2Provider&lt;/h5&gt;
-&lt;p&gt;​	提供者。编写持久层和事务代码。&lt;/p&gt;
-&lt;h5 id=&#34;323container&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#323container&#34;&gt;#&lt;/a&gt; 3.2.3Container&lt;/h5&gt;
-&lt;p&gt;​	容器（Spring 容器），Dubbo 完全基于 Spring 实现的。&lt;/p&gt;
-&lt;h5 id=&#34;324registry&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#324registry&#34;&gt;#&lt;/a&gt; 3.2.4Registry&lt;/h5&gt;
-&lt;p&gt;​	注册中心。放置所有 Provider 对外提供的信息。包含 Provider 的 IP，访问端口，访问遵守的协议，对外提供的接口，接口中有哪些方法等相关信息。&lt;/p&gt;
-&lt;h5 id=&#34;325consumer&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#325consumer&#34;&gt;#&lt;/a&gt; 3.2.5Consumer&lt;/h5&gt;
-&lt;p&gt;​	消费者（RPC 调用者，SOA 调用服务的项目）开发中也是一个项目，编写 service 和 controller（还可以报页面等）。调用 XXXXServiceImpl 中的方法。&lt;/p&gt;
-&lt;h5 id=&#34;326monitor&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#326monitor&#34;&gt;#&lt;/a&gt; 3.2.6Monitor&lt;/h5&gt;
-&lt;p&gt;​	监控中心。监控 Provider 的压力情况等。每隔 2 分钟 Consumer 和 Provider 会把调用次数发送给 Monitor，由 Monitor 进行统计。&lt;/p&gt;
-&lt;h4 id=&#34;4执行流程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#4执行流程&#34;&gt;#&lt;/a&gt; 4. 执行流程&lt;/h4&gt;
-&lt;ol start=&#34;0&#34;&gt;
-&lt;li&gt;start：启动 Spring 容器时会把 Provider 启动。&lt;/li&gt;
-&lt;li&gt;register：把 Provider 相关信息注册到 Registry 里&lt;/li&gt;
-&lt;li&gt;subscribe：Consumer 从 Registry 中订阅 Provider 的信息&lt;/li&gt;
-&lt;li&gt;notify：通知给 Consumer&lt;/li&gt;
-&lt;li&gt;invoke：Consumer 根据 Registry 通知的信息进行调用 Provider 中方法。&lt;/li&gt;
-&lt;li&gt;count:Consumer 和 Provider 把调用次数信息异步发送给 Monitor 进行统计。&lt;/li&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;h3 id=&#34;一、Dubbo简介&#34;&gt;&lt;a href=&#34;#一、Dubbo简介&#34; class=&#34;headerlink&#34; title=&#34;一、Dubbo简介&#34;&gt;&lt;/a&gt;一、Dubbo简介&lt;/h3&gt;&lt;h4 id=&#34;1-官方说明&#34;&gt;&lt;a href=&#34;#1-官方说明&#34; class=&#34;headerlink&#34; title=&#34;1,官方说明&#34;&gt;&lt;/a&gt;1,官方说明&lt;/h4&gt;&lt;img data-src=&#34;/2022/10/07/Distribution/Dubbo/Dubbo-1.png&#34; class=&#34;&#34;&gt;
+
+
+&lt;p&gt;​	Apache Dubbo 是一个高可用的，基于Java的开源RPC框架。&lt;/p&gt;
+&lt;p&gt;​	Dubbo框架不仅仅是具备RPC访问功能，还包含服务治理功能。&lt;/p&gt;
+&lt;h4 id=&#34;2-发展历史&#34;&gt;&lt;a href=&#34;#2-发展历史&#34; class=&#34;headerlink&#34; title=&#34;2.发展历史&#34;&gt;&lt;/a&gt;2.发展历史&lt;/h4&gt;&lt;p&gt;​	Dubbo是最开始是阿里巴巴内部使用的RPC框架。&lt;/p&gt;
+&lt;p&gt;​	2011年对外提供。&lt;/p&gt;
+&lt;p&gt;​	2012年停止更新。&lt;/p&gt;
+&lt;p&gt;​	2017年开始继续更新。&lt;/p&gt;
+&lt;p&gt;​	2019年捐献给Apache，由Apache维护2.7以上版本。&lt;/p&gt;
+&lt;h4 id=&#34;3-Dubbo架构讲解&#34;&gt;&lt;a href=&#34;#3-Dubbo架构讲解&#34; class=&#34;headerlink&#34; title=&#34;3.Dubbo架构讲解&#34;&gt;&lt;/a&gt;3.Dubbo架构讲解&lt;/h4&gt;&lt;h5 id=&#34;3-1架构图&#34;&gt;&lt;a href=&#34;#3-1架构图&#34; class=&#34;headerlink&#34; title=&#34;3.1架构图&#34;&gt;&lt;/a&gt;3.1架构图&lt;/h5&gt;&lt;img data-src=&#34;/2022/10/07/Distribution/Dubbo/Dubbo-2.png&#34; class=&#34;&#34;&gt;
+
+
+&lt;h4 id=&#34;3-2架构说明&#34;&gt;&lt;a href=&#34;#3-2架构说明&#34; class=&#34;headerlink&#34; title=&#34;3.2架构说明&#34;&gt;&lt;/a&gt;3.2架构说明&lt;/h4&gt;&lt;h5 id=&#34;3-2-1虚线&#34;&gt;&lt;a href=&#34;#3-2-1虚线&#34; class=&#34;headerlink&#34; title=&#34;3.2.1虚线&#34;&gt;&lt;/a&gt;3.2.1虚线&lt;/h5&gt;&lt;p&gt;​	虚线表示异步，实线表示同步。异步不阻塞线程性能高，同步阻塞线程必须等待响应结果才能继续执行，相对性能低。&lt;/p&gt;
+&lt;h5 id=&#34;3-2-2Provider&#34;&gt;&lt;a href=&#34;#3-2-2Provider&#34; class=&#34;headerlink&#34; title=&#34;3.2.2Provider&#34;&gt;&lt;/a&gt;3.2.2Provider&lt;/h5&gt;&lt;p&gt;​	提供者。编写持久层和事务代码。&lt;/p&gt;
+&lt;h5 id=&#34;3-2-3Container&#34;&gt;&lt;a href=&#34;#3-2-3Container&#34; class=&#34;headerlink&#34; title=&#34;3.2.3Container&#34;&gt;&lt;/a&gt;3.2.3Container&lt;/h5&gt;&lt;p&gt;​	容器（Spring容器），Dubbo完全基于Spring实现的。&lt;/p&gt;
+&lt;h5 id=&#34;3-2-4Registry&#34;&gt;&lt;a href=&#34;#3-2-4Registry&#34; class=&#34;headerlink&#34; title=&#34;3.2.4Registry&#34;&gt;&lt;/a&gt;3.2.4Registry&lt;/h5&gt;&lt;p&gt;​	注册中心。放置所有Provider对外提供的信息。包含Provider的IP，访问端口，访问遵守的协议，对外提供的接口，接口中有哪些方法等相关信息。&lt;/p&gt;
+&lt;h5 id=&#34;3-2-5Consumer&#34;&gt;&lt;a href=&#34;#3-2-5Consumer&#34; class=&#34;headerlink&#34; title=&#34;3.2.5Consumer&#34;&gt;&lt;/a&gt;3.2.5Consumer&lt;/h5&gt;&lt;p&gt;​	消费者（RPC调用者，SOA调用服务的项目）开发中也是一个项目，编写service和controller（还可以报页面等）。调用XXXXServiceImpl中的方法。&lt;/p&gt;
+&lt;h5 id=&#34;3-2-6Monitor&#34;&gt;&lt;a href=&#34;#3-2-6Monitor&#34; class=&#34;headerlink&#34; title=&#34;3.2.6Monitor&#34;&gt;&lt;/a&gt;3.2.6Monitor&lt;/h5&gt;&lt;p&gt;​	监控中心。监控Provider的压力情况等。每隔2分钟Consumer和Provider会把调用次数发送给Monitor，由Monitor进行统计。&lt;/p&gt;
+&lt;h4 id=&#34;4-执行流程&#34;&gt;&lt;a href=&#34;#4-执行流程&#34; class=&#34;headerlink&#34; title=&#34;4.执行流程&#34;&gt;&lt;/a&gt;4.执行流程&lt;/h4&gt;&lt;ol start=&#34;0&#34;&gt;
+&lt;li&gt;start：启动Spring容器时会把Provider启动。 &lt;/li&gt;
+&lt;li&gt;register：把Provider相关信息注册到Registry里&lt;/li&gt;
+&lt;li&gt;subscribe：Consumer从Registry中订阅Provider的信息&lt;/li&gt;
+&lt;li&gt;notify：通知给Consumer&lt;/li&gt;
+&lt;li&gt;invoke：Consumer根据Registry通知的信息进行调用Provider中方法。&lt;/li&gt;
+&lt;li&gt;count:Consumer和Provider把调用次数信息异步发送给Monitor进行统计。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&#34;二-dubbo支持的协议&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#二-dubbo支持的协议&#34;&gt;#&lt;/a&gt; 二、Dubbo 支持的协议&lt;/h3&gt;
-&lt;h4 id=&#34;1dubbo协议官方推荐协议&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1dubbo协议官方推荐协议&#34;&gt;#&lt;/a&gt; 1.Dubbo 协议 (官方推荐协议)&lt;/h4&gt;
-&lt;p&gt;​	优点：&lt;/p&gt;
-&lt;p&gt;​		采用 NIO 复用单一长连接，并使用线程池并发处理请求，减少握手和加大并发效率，性能较好（推荐使用）&lt;/p&gt;
+&lt;h3 id=&#34;二、Dubbo支持的协议&#34;&gt;&lt;a href=&#34;#二、Dubbo支持的协议&#34; class=&#34;headerlink&#34; title=&#34;二、Dubbo支持的协议&#34;&gt;&lt;/a&gt;二、Dubbo支持的协议&lt;/h3&gt;&lt;h4 id=&#34;1-Dubbo协议-官方推荐协议&#34;&gt;&lt;a href=&#34;#1-Dubbo协议-官方推荐协议&#34; class=&#34;headerlink&#34; title=&#34;1.Dubbo协议(官方推荐协议)&#34;&gt;&lt;/a&gt;1.Dubbo协议(官方推荐协议)&lt;/h4&gt;&lt;p&gt;​	优点：&lt;/p&gt;
+&lt;p&gt;​		采用NIO复用单一长连接，并使用线程池并发处理请求，减少握手和加大并发效率，性能较好（推荐使用）&lt;/p&gt;
 &lt;p&gt;​	缺点：&lt;/p&gt;
-&lt;p&gt;​		大文件上传时，可能出现问题 (不使用 Dubbo 文件上传)&lt;/p&gt;
-&lt;h4 id=&#34;2rmiremote-method-invocation协议&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2rmiremote-method-invocation协议&#34;&gt;#&lt;/a&gt; 2.RMI (Remote Method Invocation) 协议&lt;/h4&gt;
-&lt;p&gt;​	优点:&lt;/p&gt;
-&lt;p&gt;​		JDK 自带的能力。&lt;/p&gt;
+&lt;p&gt;​		大文件上传时,可能出现问题(不使用Dubbo文件上传)&lt;/p&gt;
+&lt;h4 id=&#34;2-RMI-Remote-Method-Invocation-协议&#34;&gt;&lt;a href=&#34;#2-RMI-Remote-Method-Invocation-协议&#34; class=&#34;headerlink&#34; title=&#34;2.RMI(Remote Method Invocation)协议&#34;&gt;&lt;/a&gt;2.RMI(Remote Method Invocation)协议&lt;/h4&gt;&lt;p&gt;​	优点:&lt;/p&gt;
+&lt;p&gt;​		JDK自带的能力。&lt;/p&gt;
 &lt;p&gt;​	缺点:&lt;/p&gt;
 &lt;p&gt;​		偶尔连接失败.&lt;/p&gt;
-&lt;h4 id=&#34;3hessian协议&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3hessian协议&#34;&gt;#&lt;/a&gt; 3.Hessian 协议&lt;/h4&gt;
-&lt;p&gt;​	优点:&lt;/p&gt;
-&lt;p&gt;​		可与原生 Hessian 互操作，基于 HTTP 协议&lt;/p&gt;
+&lt;h4 id=&#34;3-Hessian协议&#34;&gt;&lt;a href=&#34;#3-Hessian协议&#34; class=&#34;headerlink&#34; title=&#34;3.Hessian协议&#34;&gt;&lt;/a&gt;3.Hessian协议&lt;/h4&gt;&lt;p&gt;​	优点:&lt;/p&gt;
+&lt;p&gt;​		可与原生Hessian互操作，基于HTTP协议&lt;/p&gt;
 &lt;p&gt;​	缺点:&lt;/p&gt;
-&lt;p&gt;​		需 hessian.jar 支持，http 短连接的开销大&lt;/p&gt;
-&lt;h3 id=&#34;三-dubbo支持的注册中心&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#三-dubbo支持的注册中心&#34;&gt;#&lt;/a&gt; 三、Dubbo 支持的注册中心&lt;/h3&gt;
-&lt;h4 id=&#34;1zookeeper官方推荐&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1zookeeper官方推荐&#34;&gt;#&lt;/a&gt; 1.Zookeeper (官方推荐)&lt;/h4&gt;
-&lt;p&gt;​	1) 优点:&lt;/p&gt;
-&lt;p&gt;​		支持分布式。很多周边产品.&lt;/p&gt;
+&lt;p&gt;​		需hessian.jar支持，http短连接的开销大&lt;/p&gt;
+&lt;h3 id=&#34;三、Dubbo支持的注册中心&#34;&gt;&lt;a href=&#34;#三、Dubbo支持的注册中心&#34; class=&#34;headerlink&#34; title=&#34;三、Dubbo支持的注册中心&#34;&gt;&lt;/a&gt;三、Dubbo支持的注册中心&lt;/h3&gt;&lt;h4 id=&#34;1-Zookeeper-官方推荐&#34;&gt;&lt;a href=&#34;#1-Zookeeper-官方推荐&#34; class=&#34;headerlink&#34; title=&#34;1.Zookeeper(官方推荐)&#34;&gt;&lt;/a&gt;1.Zookeeper(官方推荐)&lt;/h4&gt;&lt;p&gt;​	1) 优点:&lt;/p&gt;
+&lt;p&gt;​		支持分布式.很多周边产品.&lt;/p&gt;
+&lt;p&gt;​	2) 缺点: &lt;/p&gt;
+&lt;p&gt;​		受限于Zookeeper软件的稳定性.Zookeeper专门分布式辅助软件,稳定较优&lt;/p&gt;
+&lt;h4 id=&#34;2-Multicast&#34;&gt;&lt;a href=&#34;#2-Multicast&#34; class=&#34;headerlink&#34; title=&#34;2.Multicast&#34;&gt;&lt;/a&gt;2.Multicast&lt;/h4&gt;&lt;p&gt;​	1) 优点:&lt;/p&gt;
+&lt;p&gt;​		去中心化,不需要单独安装软件.&lt;/p&gt;
 &lt;p&gt;​	2) 缺点:&lt;/p&gt;
-&lt;p&gt;​		受限于 Zookeeper 软件的稳定性.Zookeeper 专门分布式辅助软件，稳定较优&lt;/p&gt;
-&lt;h4 id=&#34;2multicast&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2multicast&#34;&gt;#&lt;/a&gt; 2.Multicast&lt;/h4&gt;
-&lt;p&gt;​	1) 优点:&lt;/p&gt;
-&lt;p&gt;​		去中心化，不需要单独安装软件.&lt;/p&gt;
+&lt;p&gt;​		2.2.1 Provider和Consumer和Registry不能跨机房(路由)&lt;/p&gt;
+&lt;h4 id=&#34;3-Redis&#34;&gt;&lt;a href=&#34;#3-Redis&#34; class=&#34;headerlink&#34; title=&#34;3.Redis&#34;&gt;&lt;/a&gt;3.Redis&lt;/h4&gt;&lt;p&gt;​	1) 优点:&lt;/p&gt;
+&lt;p&gt;​		支持集群,性能高&lt;/p&gt;
 &lt;p&gt;​	2) 缺点:&lt;/p&gt;
-&lt;p&gt;​		2.2.1 Provider 和 Consumer 和 Registry 不能跨机房 (路由)&lt;/p&gt;
-&lt;h4 id=&#34;3redis&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3redis&#34;&gt;#&lt;/a&gt; 3.Redis&lt;/h4&gt;
-&lt;p&gt;​	1) 优点:&lt;/p&gt;
-&lt;p&gt;​		支持集群，性能高&lt;/p&gt;
-&lt;p&gt;​	2) 缺点:&lt;/p&gt;
-&lt;p&gt;​		要求服务器时间同步。否则可能出现集群失败问题.&lt;/p&gt;
-&lt;h4 id=&#34;4simple&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#4simple&#34;&gt;#&lt;/a&gt; 4.Simple&lt;/h4&gt;
-&lt;p&gt;​	1) 优点:&lt;/p&gt;
-&lt;p&gt;​		标准 RPC 服务。没有兼容问题&lt;/p&gt;
-&lt;p&gt;​	2) 缺点:&lt;/p&gt;
+&lt;p&gt;​		要求服务器时间同步.否则可能出现集群失败问题.&lt;/p&gt;
+&lt;h4 id=&#34;4-Simple&#34;&gt;&lt;a href=&#34;#4-Simple&#34; class=&#34;headerlink&#34; title=&#34;4.Simple&#34;&gt;&lt;/a&gt;4.Simple&lt;/h4&gt;&lt;p&gt;​	1) 优点: &lt;/p&gt;
+&lt;p&gt;​		标准RPC服务.没有兼容问题&lt;/p&gt;
+&lt;p&gt;​	2) 缺点: &lt;/p&gt;
 &lt;p&gt;​		不支持集群.&lt;/p&gt;
-&lt;h3 id=&#34;四-第一个dubbo的provider&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#四-第一个dubbo的provider&#34;&gt;#&lt;/a&gt; 四、第一个 Dubbo 的 Provider&lt;/h3&gt;
-&lt;p&gt;​	新建父项目 Parent1。最终结构如下：&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;/2022/10/07/Distribution/Dubbo/Dubbo-3.png&#34; class=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;​	编写 pom.xml 继承 SpringBoot 父项目。&lt;/p&gt;
+&lt;h3 id=&#34;四、第一个Dubbo的Provider&#34;&gt;&lt;a href=&#34;#四、第一个Dubbo的Provider&#34; class=&#34;headerlink&#34; title=&#34;四、第一个Dubbo的Provider&#34;&gt;&lt;/a&gt;四、第一个Dubbo的Provider&lt;/h3&gt;&lt;p&gt;​	新建父项目Parent1。最终结构如下：&lt;/p&gt;
+&lt;img data-src=&#34;/2022/10/07/Distribution/Dubbo/Dubbo-3.png&#34; class=&#34;&#34;&gt;
+
+
+&lt;p&gt;​	编写pom.xml继承SpringBoot父项目。&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;&amp;lt;parent&amp;gt;
     &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
     &amp;lt;artifactId&amp;gt;spring-boot-starter-parent&amp;lt;/artifactId&amp;gt;
     &amp;lt;version&amp;gt;2.1.10.RELEASE&amp;lt;/version&amp;gt;
 &amp;lt;/parent&amp;gt; 
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&#34;1新建api项目&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1新建api项目&#34;&gt;#&lt;/a&gt; 1. 新建 api 项目&lt;/h4&gt;
-&lt;h5 id=&#34;11创建接口&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#11创建接口&#34;&gt;#&lt;/a&gt; 1.1 创建接口&lt;/h5&gt;
-&lt;p&gt;​	创建 com.msb.&lt;strong&gt;dubbo&lt;/strong&gt;.service.Demo&lt;strong&gt;Dubbo&lt;/strong&gt;Service 接口&lt;/p&gt;
+&lt;h4 id=&#34;1-新建api项目&#34;&gt;&lt;a href=&#34;#1-新建api项目&#34; class=&#34;headerlink&#34; title=&#34;1.新建api项目&#34;&gt;&lt;/a&gt;1.新建api项目&lt;/h4&gt;&lt;h5 id=&#34;1-1创建接口&#34;&gt;&lt;a href=&#34;#1-1创建接口&#34; class=&#34;headerlink&#34; title=&#34;1.1创建接口&#34;&gt;&lt;/a&gt;1.1创建接口&lt;/h5&gt;&lt;p&gt;​	创建com.msb.&lt;strong&gt;dubbo&lt;/strong&gt;.service.Demo&lt;strong&gt;Dubbo&lt;/strong&gt;Service接口&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;public interface DemoDubboService &amp;#123;
     String demo();
 &amp;#125;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&#34;2新建provider项目&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2新建provider项目&#34;&gt;#&lt;/a&gt; 2. 新建 provider 项目&lt;/h4&gt;
-&lt;h5 id=&#34;21编写pomxml&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#21编写pomxml&#34;&gt;#&lt;/a&gt; 2.1 编写 pom.xml&lt;/h5&gt;
-&lt;p&gt;​	注意：不需要依赖 web，如果依赖 spring-boot-start-web 还需要考虑端口问题。&lt;/p&gt;
+&lt;h4 id=&#34;2-新建provider项目&#34;&gt;&lt;a href=&#34;#2-新建provider项目&#34; class=&#34;headerlink&#34; title=&#34;2.新建provider项目&#34;&gt;&lt;/a&gt;2.新建provider项目&lt;/h4&gt;&lt;h5 id=&#34;2-1编写pom-xml&#34;&gt;&lt;a href=&#34;#2-1编写pom-xml&#34; class=&#34;headerlink&#34; title=&#34;2.1编写pom.xml&#34;&gt;&lt;/a&gt;2.1编写pom.xml&lt;/h5&gt;&lt;p&gt;​	注意：不需要依赖web，如果依赖spring-boot-start-web还需要考虑端口问题。&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;&amp;lt;dependencies&amp;gt;
     &amp;lt;dependency&amp;gt;
         &amp;lt;artifactId&amp;gt;api&amp;lt;/artifactId&amp;gt;
@@ -209,17 +183,15 @@
     &amp;lt;/dependency&amp;gt;
 &amp;lt;/dependencies&amp;gt;   
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h5 id=&#34;22编写配置文件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#22编写配置文件&#34;&gt;#&lt;/a&gt; 2.2 编写配置文件&lt;/h5&gt;
-&lt;p&gt;​	新建 application.yml&lt;/p&gt;
+&lt;h5 id=&#34;2-2编写配置文件&#34;&gt;&lt;a href=&#34;#2-2编写配置文件&#34; class=&#34;headerlink&#34; title=&#34;2.2编写配置文件&#34;&gt;&lt;/a&gt;2.2编写配置文件&lt;/h5&gt;&lt;p&gt;​	新建application.yml&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;dubbo:
   application:
     name: dubbo-provider
   registry:
     address: zookeeper://192.168.32.128:2181
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h5 id=&#34;23新建实现类&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#23新建实现类&#34;&gt;#&lt;/a&gt; 2.3 新建实现类&lt;/h5&gt;
-&lt;p&gt;​	新建 com.msb.dubbo.service.impl.DemoDubboServiceImpl&lt;/p&gt;
-&lt;p&gt;​	注意：注解是 apache 的注解。&lt;/p&gt;
+&lt;h5 id=&#34;2-3新建实现类&#34;&gt;&lt;a href=&#34;#2-3新建实现类&#34; class=&#34;headerlink&#34; title=&#34;2.3新建实现类&#34;&gt;&lt;/a&gt;2.3新建实现类&lt;/h5&gt;&lt;p&gt;​	新建com.msb.dubbo.service.impl.DemoDubboServiceImpl&lt;/p&gt;
+&lt;p&gt;​	注意：注解是apache的注解。&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;import com.msb.dubbo.service.DemoDubboService;
 import org.apache.dubbo.config.annotation.Service;
 
@@ -232,9 +204,8 @@ public class DemoDubboServiceImpl implements DemoDubboService &amp;#123;
     &amp;#125;
 &amp;#125;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h5 id=&#34;24新建启动类&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#24新建启动类&#34;&gt;#&lt;/a&gt; 2.4 新建启动类&lt;/h5&gt;
-&lt;p&gt;​	新建 com.msb.ProviderApplication。&lt;/p&gt;
-&lt;p&gt;​	必须要有 @EnableDubbo 注解，否则 Dubbo 不生效。&lt;/p&gt;
+&lt;h5 id=&#34;2-4新建启动类&#34;&gt;&lt;a href=&#34;#2-4新建启动类&#34; class=&#34;headerlink&#34; title=&#34;2.4新建启动类&#34;&gt;&lt;/a&gt;2.4新建启动类&lt;/h5&gt;&lt;p&gt;​	新建com.msb.ProviderApplication。&lt;/p&gt;
+&lt;p&gt;​	必须要有@EnableDubbo注解，否则Dubbo不生效。&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;@SpringBootApplication
 @EnableDubbo
 public class ProviderApplication &amp;#123;
@@ -243,10 +214,8 @@ public class ProviderApplication &amp;#123;
     &amp;#125;
 &amp;#125;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;五-完成dubbo的consumer&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#五-完成dubbo的consumer&#34;&gt;#&lt;/a&gt; 五、完成 Dubbo 的 Consumer&lt;/h3&gt;
-&lt;p&gt;​	创建 consumer 项目&lt;/p&gt;
-&lt;h4 id=&#34;1编写pomxml&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1编写pomxml&#34;&gt;#&lt;/a&gt; 1. 编写 pom.xml&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;dependencies&amp;gt;
+&lt;h3 id=&#34;五、完成Dubbo的Consumer&#34;&gt;&lt;a href=&#34;#五、完成Dubbo的Consumer&#34; class=&#34;headerlink&#34; title=&#34;五、完成Dubbo的Consumer&#34;&gt;&lt;/a&gt;五、完成Dubbo的Consumer&lt;/h3&gt;&lt;p&gt;​	创建consumer项目&lt;/p&gt;
+&lt;h4 id=&#34;1-编写pom-xml&#34;&gt;&lt;a href=&#34;#1-编写pom-xml&#34; class=&#34;headerlink&#34; title=&#34;1.编写pom.xml&#34;&gt;&lt;/a&gt;1.编写pom.xml&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;dependencies&amp;gt;
     &amp;lt;dependency&amp;gt;
         &amp;lt;artifactId&amp;gt;api&amp;lt;/artifactId&amp;gt;
         &amp;lt;groupId&amp;gt;com.msb&amp;lt;/groupId&amp;gt;
@@ -274,18 +243,16 @@ public class ProviderApplication &amp;#123;
     &amp;lt;/dependency&amp;gt;
 &amp;lt;/dependencies&amp;gt;   
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&#34;2新建配置文件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2新建配置文件&#34;&gt;#&lt;/a&gt; 2. 新建配置文件&lt;/h4&gt;
-&lt;p&gt;​	新建 application.yml&lt;/p&gt;
+&lt;h4 id=&#34;2-新建配置文件&#34;&gt;&lt;a href=&#34;#2-新建配置文件&#34; class=&#34;headerlink&#34; title=&#34;2.新建配置文件&#34;&gt;&lt;/a&gt;2.新建配置文件&lt;/h4&gt;&lt;p&gt;​	新建application.yml&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;dubbo:
   application:
     name: dubbo-consumer
   registry:
     address: zookeeper://192.168.32.128:2181
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&#34;3新建service及实现类&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3新建service及实现类&#34;&gt;#&lt;/a&gt; 3. 新建 service 及实现类&lt;/h4&gt;
-&lt;p&gt;​	新建 com.msb.service.DemoService&lt;/p&gt;
-&lt;p&gt;​	新建 com.msb.service.impl.DemoServiceImpl&lt;/p&gt;
-&lt;p&gt;​	调用服务使用 @Reference 注解，不要倒错包了，有两个。&lt;/p&gt;
+&lt;h4 id=&#34;3-新建service及实现类&#34;&gt;&lt;a href=&#34;#3-新建service及实现类&#34; class=&#34;headerlink&#34; title=&#34;3.新建service及实现类&#34;&gt;&lt;/a&gt;3.新建service及实现类&lt;/h4&gt;&lt;p&gt;​	新建com.msb.service.DemoService&lt;/p&gt;
+&lt;p&gt;​	新建com.msb.service.impl.DemoServiceImpl&lt;/p&gt;
+&lt;p&gt;​	调用服务使用@Reference注解，不要倒错包了，有两个。&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;public interface DemoService &amp;#123;
     String consumerDemo();
 &amp;#125;
@@ -307,8 +274,7 @@ public class DemoServiceImpl implements DemoService &amp;#123;
     &amp;#125;
 &amp;#125;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&#34;4新建控制器&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#4新建控制器&#34;&gt;#&lt;/a&gt; 4. 新建控制器&lt;/h4&gt;
-&lt;p&gt;​	新建控制器 com.msb.controller.DemoController&lt;/p&gt;
+&lt;h4 id=&#34;4-新建控制器&#34;&gt;&lt;a href=&#34;#4-新建控制器&#34; class=&#34;headerlink&#34; title=&#34;4.新建控制器&#34;&gt;&lt;/a&gt;4.新建控制器&lt;/h4&gt;&lt;p&gt;​	新建控制器com.msb.controller.DemoController&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;@Controller
 public class DemoController &amp;#123;
     @Autowired
@@ -321,8 +287,7 @@ public class DemoController &amp;#123;
     &amp;#125;
 &amp;#125;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&#34;5新建启动器&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#5新建启动器&#34;&gt;#&lt;/a&gt; 5. 新建启动器&lt;/h4&gt;
-&lt;p&gt;​	新建 com.msb.ConsumerApplication&lt;/p&gt;
+&lt;h4 id=&#34;5-新建启动器&#34;&gt;&lt;a href=&#34;#5-新建启动器&#34; class=&#34;headerlink&#34; title=&#34;5.新建启动器&#34;&gt;&lt;/a&gt;5.新建启动器&lt;/h4&gt;&lt;p&gt;​	新建com.msb.ConsumerApplication&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;@SpringBootApplication
 @EnableDubbo
 public class ConsumerApplication &amp;#123;
@@ -331,44 +296,32 @@ public class ConsumerApplication &amp;#123;
     &amp;#125;
 &amp;#125;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;六-admin管理界面搭建&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#六-admin管理界面搭建&#34;&gt;#&lt;/a&gt; 六、Admin 管理界面搭建&lt;/h3&gt;
-&lt;p&gt;​	资料中把 dubbo-admin-0.2.0.jar\BOOT-INF\classes 中 application.properties 里面注册中心的 ip 设置正确&lt;/p&gt;
-&lt;p&gt;​	使用 java -jar dubbo-admin-0.2.0.jar 运行即可。&lt;/p&gt;
-&lt;p&gt;​	注意：占用 8080 端口，不要冲突了。&lt;/p&gt;
-&lt;h3 id=&#34;七-负载均衡&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#七-负载均衡&#34;&gt;#&lt;/a&gt; 七、负载均衡&lt;/h3&gt;
-&lt;p&gt;​	集群：一个内容，部署多次，形成的整体称为集群。集群中每个个体应该部署到不同的服务器上。&lt;/p&gt;
+&lt;h3 id=&#34;六、Admin管理界面搭建&#34;&gt;&lt;a href=&#34;#六、Admin管理界面搭建&#34; class=&#34;headerlink&#34; title=&#34;六、Admin管理界面搭建&#34;&gt;&lt;/a&gt;六、Admin管理界面搭建&lt;/h3&gt;&lt;p&gt;​	资料中把dubbo-admin-0.2.0.jar\BOOT-INF\classes 中application.properties里面注册中心的ip设置正确&lt;/p&gt;
+&lt;p&gt;​	使用java -jar dubbo-admin-0.2.0.jar运行即可。&lt;/p&gt;
+&lt;p&gt;​	注意：占用8080端口，不要冲突了。&lt;/p&gt;
+&lt;h3 id=&#34;七、负载均衡&#34;&gt;&lt;a href=&#34;#七、负载均衡&#34; class=&#34;headerlink&#34; title=&#34;七、负载均衡&#34;&gt;&lt;/a&gt;七、负载均衡&lt;/h3&gt;&lt;p&gt;​	集群：一个内容，部署多次，形成的整体称为集群。集群中每个个体应该部署到不同的服务器上。&lt;/p&gt;
 &lt;p&gt;​	伪集群：集群中内容部署到同一台服务器上，通过不同端口区分不同个体。&lt;/p&gt;
 &lt;p&gt;​	负载均衡是在集群前提下，当访问整个集群时，集群中每个节点被访问次数或频率的规则。&lt;/p&gt;
-&lt;p&gt;​	Dubbo 内置了四个负载均衡策略。默认为 Random&lt;/p&gt;
-&lt;h4 id=&#34;1内置策略&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1内置策略&#34;&gt;#&lt;/a&gt; 1. 内置策略&lt;/h4&gt;
-&lt;h5 id=&#34;11random&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#11random&#34;&gt;#&lt;/a&gt; 1.1Random&lt;/h5&gt;
-&lt;p&gt;​	随机。随机访问集群中节点。访问概率和权重有关。&lt;/p&gt;
-&lt;h5 id=&#34;12roundrobin&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#12roundrobin&#34;&gt;#&lt;/a&gt; 1.2RoundRobin&lt;/h5&gt;
-&lt;p&gt;​	轮询。访问频率和权重有关。&lt;/p&gt;
+&lt;p&gt;​	Dubbo 内置了四个负载均衡策略。默认为Random&lt;/p&gt;
+&lt;h4 id=&#34;1-内置策略&#34;&gt;&lt;a href=&#34;#1-内置策略&#34; class=&#34;headerlink&#34; title=&#34;1.内置策略&#34;&gt;&lt;/a&gt;1.内置策略&lt;/h4&gt;&lt;h5 id=&#34;1-1Random&#34;&gt;&lt;a href=&#34;#1-1Random&#34; class=&#34;headerlink&#34; title=&#34;1.1Random&#34;&gt;&lt;/a&gt;1.1Random&lt;/h5&gt;&lt;p&gt;​	随机。随机访问集群中节点。访问概率和权重有关。&lt;/p&gt;
+&lt;h5 id=&#34;1-2RoundRobin&#34;&gt;&lt;a href=&#34;#1-2RoundRobin&#34; class=&#34;headerlink&#34; title=&#34;1.2RoundRobin&#34;&gt;&lt;/a&gt;1.2RoundRobin&lt;/h5&gt;&lt;p&gt;​	轮询。访问频率和权重有关。&lt;/p&gt;
 &lt;p&gt;​	权重（weight）：占有比例。集群中每个项目部署的服务器的性能可能是不同，性能好的服务器权重应该高一些。&lt;/p&gt;
-&lt;h5 id=&#34;13leastactive&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#13leastactive&#34;&gt;#&lt;/a&gt; 1.3LeastActive&lt;/h5&gt;
-&lt;p&gt;​	活跃数相同的随机，不同的活跃数高的放前面。&lt;/p&gt;
-&lt;h5 id=&#34;14consistenthash&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#14consistenthash&#34;&gt;#&lt;/a&gt; 1.4ConsistentHash&lt;/h5&gt;
-&lt;p&gt;​	一致性 Hash。相同参数请求总是发到一个提供者。&lt;/p&gt;
-&lt;h4 id=&#34;2provider集群&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2provider集群&#34;&gt;#&lt;/a&gt; 2.Provider 集群&lt;/h4&gt;
-&lt;p&gt;​	新建四个启动类。&lt;/p&gt;
-&lt;p&gt;​	每次启动启动类修改配置文件 dubbo.protocal.port&lt;/p&gt;
-&lt;h4 id=&#34;3设置负载均衡&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3设置负载均衡&#34;&gt;#&lt;/a&gt; 3. 设置负载均衡&lt;/h4&gt;
-&lt;h5 id=&#34;31reference&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#31reference&#34;&gt;#&lt;/a&gt; 3.1@Reference&lt;/h5&gt;
-&lt;p&gt;​	调用的服务采用的负载均衡&lt;/p&gt;
+&lt;h5 id=&#34;1-3LeastActive&#34;&gt;&lt;a href=&#34;#1-3LeastActive&#34; class=&#34;headerlink&#34; title=&#34;1.3LeastActive&#34;&gt;&lt;/a&gt;1.3LeastActive&lt;/h5&gt;&lt;p&gt;​	活跃数相同的随机，不同的活跃数高的放前面。&lt;/p&gt;
+&lt;h5 id=&#34;1-4ConsistentHash&#34;&gt;&lt;a href=&#34;#1-4ConsistentHash&#34; class=&#34;headerlink&#34; title=&#34;1.4ConsistentHash&#34;&gt;&lt;/a&gt;1.4ConsistentHash&lt;/h5&gt;&lt;p&gt;​	一致性Hash。相同参数请求总是发到一个提供者。&lt;/p&gt;
+&lt;h4 id=&#34;2-Provider集群&#34;&gt;&lt;a href=&#34;#2-Provider集群&#34; class=&#34;headerlink&#34; title=&#34;2.Provider集群&#34;&gt;&lt;/a&gt;2.Provider集群&lt;/h4&gt;&lt;p&gt;​	新建四个启动类。&lt;/p&gt;
+&lt;p&gt;​	每次启动启动类修改配置文件dubbo.protocal.port&lt;/p&gt;
+&lt;h4 id=&#34;3-设置负载均衡&#34;&gt;&lt;a href=&#34;#3-设置负载均衡&#34; class=&#34;headerlink&#34; title=&#34;3.设置负载均衡&#34;&gt;&lt;/a&gt;3.设置负载均衡&lt;/h4&gt;&lt;h5 id=&#34;3-1-Reference&#34;&gt;&lt;a href=&#34;#3-1-Reference&#34; class=&#34;headerlink&#34; title=&#34;3.1@Reference&#34;&gt;&lt;/a&gt;3.1@Reference&lt;/h5&gt;&lt;p&gt;​	调用的服务采用的负载均衡&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;@Reference(loadbalance = &amp;quot;roundrobin&amp;quot;)
 private DemoDubboService demoDubboService;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h5 id=&#34;32-service&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#32-service&#34;&gt;#&lt;/a&gt; 3.2 @Service&lt;/h5&gt;
-&lt;p&gt;​	当前服务采用的负载均衡算法&lt;/p&gt;
+&lt;h5 id=&#34;3-2-Service&#34;&gt;&lt;a href=&#34;#3-2-Service&#34; class=&#34;headerlink&#34; title=&#34;3.2 @Service&#34;&gt;&lt;/a&gt;3.2 @Service&lt;/h5&gt;&lt;p&gt;​	当前服务采用的负载均衡算法&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;@Service(loadbalance = &amp;quot;random&amp;quot;)
 public class DemoDubboServiceImpl implements DemoDubboService &amp;#123;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;​	设置权重&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;@Service(weight = 4)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h5 id=&#34;33配置文件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#33配置文件&#34;&gt;#&lt;/a&gt; 3.3 配置文件&lt;/h5&gt;
-&lt;p&gt;​			全局设置所有 provider 和 consumer 的负载均衡效果。&lt;/p&gt;
+&lt;h5 id=&#34;3-3配置文件&#34;&gt;&lt;a href=&#34;#3-3配置文件&#34; class=&#34;headerlink&#34; title=&#34;3.3配置文件&#34;&gt;&lt;/a&gt;3.3配置文件&lt;/h5&gt;&lt;p&gt;​			全局设置所有provider和consumer的负载均衡效果。&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;dubbo:
   application:
     name: dubbo-provider
@@ -381,27 +334,36 @@ public class DemoDubboServiceImpl implements DemoDubboService &amp;#123;
   consumer:
     loadbalance: random
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;八-完整dubbo项目演示&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#八-完整dubbo项目演示&#34;&gt;#&lt;/a&gt; 八、完整 Dubbo 项目演示&lt;/h3&gt;
-&lt;h4 id=&#34;1原型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1原型&#34;&gt;#&lt;/a&gt; 1. 原型&lt;/h4&gt;
-&lt;h5 id=&#34;11部门显示&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#11部门显示&#34;&gt;#&lt;/a&gt; 1.1 部门显示&lt;/h5&gt;
-&lt;p&gt;​	显示全部部门信息&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;/2022/10/07/Distribution/Dubbo/Dubbo-4.png&#34; class=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h5 id=&#34;12员工新增&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#12员工新增&#34;&gt;#&lt;/a&gt; 1.2 员工新增&lt;/h5&gt;
-&lt;p&gt;&lt;img data-src=&#34;/2022/10/07/Distribution/Dubbo/Dubbo-5.png&#34; class=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h5 id=&#34;13查看部门员工&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#13查看部门员工&#34;&gt;#&lt;/a&gt; 1.3 查看部门员工&lt;/h5&gt;
-&lt;p&gt;&lt;img data-src=&#34;/2022/10/07/Distribution/Dubbo/Dubbo-6.png&#34; class=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h4 id=&#34;2按照分布式架构进行设计项目&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2按照分布式架构进行设计项目&#34;&gt;#&lt;/a&gt; 2. 按照分布式架构进行设计项目&lt;/h4&gt;
-&lt;p&gt;​		设定员工管理和部门管理不在同一个模块中，需要有一个员工管理项目和一个部门管理项目。&lt;/p&gt;
-&lt;p&gt;​	为了方便，不去每个项目使用一个窗口，而是使用聚合项目。&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;/2022/10/07/Distribution/Dubbo/Dubbo-7.png&#34; class=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h4 id=&#34;3创建数据库表&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3创建数据库表&#34;&gt;#&lt;/a&gt; 3. 创建数据库表&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;create table dept(
+&lt;h3 id=&#34;八、完整Dubbo项目演示&#34;&gt;&lt;a href=&#34;#八、完整Dubbo项目演示&#34; class=&#34;headerlink&#34; title=&#34;八、完整Dubbo项目演示&#34;&gt;&lt;/a&gt;八、完整Dubbo项目演示&lt;/h3&gt;&lt;h4 id=&#34;1-原型&#34;&gt;&lt;a href=&#34;#1-原型&#34; class=&#34;headerlink&#34; title=&#34;1.原型&#34;&gt;&lt;/a&gt;1.原型&lt;/h4&gt;&lt;h5 id=&#34;1-1部门显示&#34;&gt;&lt;a href=&#34;#1-1部门显示&#34; class=&#34;headerlink&#34; title=&#34;1.1部门显示&#34;&gt;&lt;/a&gt;1.1部门显示&lt;/h5&gt;&lt;p&gt;​	显示全部部门信息&lt;/p&gt;
+&lt;img data-src=&#34;/2022/10/07/Distribution/Dubbo/Dubbo-4.png&#34; class=&#34;&#34;&gt;
+
+
+
+
+&lt;h5 id=&#34;1-2员工新增&#34;&gt;&lt;a href=&#34;#1-2员工新增&#34; class=&#34;headerlink&#34; title=&#34;1.2员工新增&#34;&gt;&lt;/a&gt;1.2员工新增&lt;/h5&gt;&lt;img data-src=&#34;/2022/10/07/Distribution/Dubbo/Dubbo-5.png&#34; class=&#34;&#34;&gt;
+
+
+&lt;h5 id=&#34;1-3查看部门员工&#34;&gt;&lt;a href=&#34;#1-3查看部门员工&#34; class=&#34;headerlink&#34; title=&#34;1.3查看部门员工&#34;&gt;&lt;/a&gt;1.3查看部门员工&lt;/h5&gt;&lt;img data-src=&#34;/2022/10/07/Distribution/Dubbo/Dubbo-6.png&#34; class=&#34;&#34;&gt;
+
+
+&lt;h4 id=&#34;2-按照分布式架构进行设计项目&#34;&gt;&lt;a href=&#34;#2-按照分布式架构进行设计项目&#34; class=&#34;headerlink&#34; title=&#34;2.按照分布式架构进行设计项目&#34;&gt;&lt;/a&gt;2.按照分布式架构进行设计项目&lt;/h4&gt;&lt;p&gt;​		设定员工管理和部门管理不在同一个模块中，需要有一个员工管理项目和一个部门管理项目。&lt;/p&gt;
+&lt;p&gt;​	为了方便，不去每个项目使用一个窗口，而是使用聚合项目。      &lt;/p&gt;
+&lt;img data-src=&#34;/2022/10/07/Distribution/Dubbo/Dubbo-7.png&#34; class=&#34;&#34;&gt;
+
+
+
+
+
+
+
+
+&lt;h4 id=&#34;3-创建数据库表&#34;&gt;&lt;a href=&#34;#3-创建数据库表&#34; class=&#34;headerlink&#34; title=&#34;3.创建数据库表&#34;&gt;&lt;/a&gt;3.创建数据库表&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;create table dept(
 id int(11) primary key auto_increment,
 name varchar(20)
 );
 
-insert into dept values(default,&#39;开发部&#39;);
-insert into dept values(default,&#39;产品部&#39;);
+insert into dept values(default,&amp;#39;开发部&amp;#39;);
+insert into dept values(default,&amp;#39;产品部&amp;#39;);
 
 create table emp(
 id int(11) primary key auto_increment,
@@ -411,10 +373,13 @@ did int(11),
 CONSTRAINT fk_emp_dept FOREIGN key (did) REFERENCES dept(id)
 );
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&#34;4创建父项目&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#4创建父项目&#34;&gt;#&lt;/a&gt; 4. 创建父项目&lt;/h4&gt;
-&lt;p&gt;​	创建项目 parent。&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;/2022/10/07/Distribution/Dubbo/Dubbo-8.png&#34; class=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;编写 pom.xml&lt;/p&gt;
+&lt;h4 id=&#34;4-创建父项目&#34;&gt;&lt;a href=&#34;#4-创建父项目&#34; class=&#34;headerlink&#34; title=&#34;4.创建父项目&#34;&gt;&lt;/a&gt;4.创建父项目&lt;/h4&gt;&lt;p&gt;​	创建项目parent。&lt;/p&gt;
+&lt;img data-src=&#34;/2022/10/07/Distribution/Dubbo/Dubbo-8.png&#34; class=&#34;&#34;&gt;
+
+
+
+
+&lt;p&gt;编写pom.xml&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;&amp;lt;parent&amp;gt;
     &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
     &amp;lt;artifactId&amp;gt;spring-boot-starter-parent&amp;lt;/artifactId&amp;gt;
@@ -476,10 +441,7 @@ CONSTRAINT fk_emp_dept FOREIGN key (did) REFERENCES dept(id)
     &amp;lt;/dependencies&amp;gt;
 &amp;lt;/dependencyManagement&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&#34;5创建pojo项目&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#5创建pojo项目&#34;&gt;#&lt;/a&gt; 5. 创建 pojo 项目&lt;/h4&gt;
-&lt;h4 id=&#34;6创建mapper项目&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#6创建mapper项目&#34;&gt;#&lt;/a&gt; 6. 创建 mapper 项目&lt;/h4&gt;
-&lt;h5 id=&#34;61编写pomxml&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#61编写pomxml&#34;&gt;#&lt;/a&gt; 6.1 编写 pom.xml&lt;/h5&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;dependencies&amp;gt;
+&lt;h4 id=&#34;5-创建pojo项目&#34;&gt;&lt;a href=&#34;#5-创建pojo项目&#34; class=&#34;headerlink&#34; title=&#34;5.创建pojo项目&#34;&gt;&lt;/a&gt;5.创建pojo项目&lt;/h4&gt;&lt;h4 id=&#34;6-创建mapper项目&#34;&gt;&lt;a href=&#34;#6-创建mapper项目&#34; class=&#34;headerlink&#34; title=&#34;6.创建mapper项目&#34;&gt;&lt;/a&gt;6.创建mapper项目&lt;/h4&gt;&lt;h5 id=&#34;6-1编写pom-xml&#34;&gt;&lt;a href=&#34;#6-1编写pom-xml&#34; class=&#34;headerlink&#34; title=&#34;6.1编写pom.xml&#34;&gt;&lt;/a&gt;6.1编写pom.xml&lt;/h5&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;dependencies&amp;gt;
     &amp;lt;dependency&amp;gt;
         &amp;lt;artifactId&amp;gt;pojo&amp;lt;/artifactId&amp;gt;
         &amp;lt;groupId&amp;gt;com.msb&amp;lt;/groupId&amp;gt;
@@ -495,8 +457,7 @@ CONSTRAINT fk_emp_dept FOREIGN key (did) REFERENCES dept(id)
     &amp;lt;/dependency&amp;gt;
 &amp;lt;/dependencies&amp;gt;    
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h5 id=&#34;62新建配置文件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#62新建配置文件&#34;&gt;#&lt;/a&gt; 6.2 新建配置文件&lt;/h5&gt;
-&lt;p&gt;​	新建 application-mybatis.yml&lt;/p&gt;
+&lt;h5 id=&#34;6-2新建配置文件&#34;&gt;&lt;a href=&#34;#6-2新建配置文件&#34; class=&#34;headerlink&#34; title=&#34;6.2新建配置文件&#34;&gt;&lt;/a&gt;6.2新建配置文件&lt;/h5&gt;&lt;p&gt;​	新建application-mybatis.yml&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
@@ -508,9 +469,7 @@ mybatis:
   mapper-locations: classpath:mybatis/*.xml
   type-aliases-package: com.msb.pojo
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&#34;7新建api项目&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#7新建api项目&#34;&gt;#&lt;/a&gt; 7. 新建 api 项目&lt;/h4&gt;
-&lt;h5 id=&#34;71编写pomxml&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#71编写pomxml&#34;&gt;#&lt;/a&gt; 7.1 编写 pom.xml&lt;/h5&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;dependencies&amp;gt;
+&lt;h4 id=&#34;7-新建api项目&#34;&gt;&lt;a href=&#34;#7-新建api项目&#34; class=&#34;headerlink&#34; title=&#34;7.新建api项目&#34;&gt;&lt;/a&gt;7.新建api项目&lt;/h4&gt;&lt;h5 id=&#34;7-1编写pom-xml&#34;&gt;&lt;a href=&#34;#7-1编写pom-xml&#34; class=&#34;headerlink&#34; title=&#34;7.1编写pom.xml&#34;&gt;&lt;/a&gt;7.1编写pom.xml&lt;/h5&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;dependencies&amp;gt;
     &amp;lt;dependency&amp;gt;
         &amp;lt;artifactId&amp;gt;pojo&amp;lt;/artifactId&amp;gt;
         &amp;lt;groupId&amp;gt;com.bjsxt&amp;lt;/groupId&amp;gt;
@@ -518,9 +477,7 @@ mybatis:
     &amp;lt;/dependency&amp;gt;
 &amp;lt;/dependencies&amp;gt;    
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&#34;8新建provider&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#8新建provider&#34;&gt;#&lt;/a&gt; 8. 新建 provider&lt;/h4&gt;
-&lt;h5 id=&#34;81编写pomxml&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#81编写pomxml&#34;&gt;#&lt;/a&gt; 8.1 编写 pom.xml&lt;/h5&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;dependencies&amp;gt;
+&lt;h4 id=&#34;8-新建provider&#34;&gt;&lt;a href=&#34;#8-新建provider&#34; class=&#34;headerlink&#34; title=&#34;8.新建provider&#34;&gt;&lt;/a&gt;8.新建provider&lt;/h4&gt;&lt;h5 id=&#34;8-1编写pom-xml&#34;&gt;&lt;a href=&#34;#8-1编写pom-xml&#34; class=&#34;headerlink&#34; title=&#34;8.1编写pom.xml&#34;&gt;&lt;/a&gt;8.1编写pom.xml&lt;/h5&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;dependencies&amp;gt;
     &amp;lt;dependency&amp;gt;
         &amp;lt;artifactId&amp;gt;mapper&amp;lt;/artifactId&amp;gt;
         &amp;lt;groupId&amp;gt;com.msb&amp;lt;/groupId&amp;gt;
@@ -549,8 +506,7 @@ mybatis:
     &amp;lt;/dependency&amp;gt;
 &amp;lt;/dependencies&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h5 id=&#34;82新建配置文件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#82新建配置文件&#34;&gt;#&lt;/a&gt; 8.2 新建配置文件&lt;/h5&gt;
-&lt;p&gt;​	新建 application.yml&lt;/p&gt;
+&lt;h5 id=&#34;8-2新建配置文件&#34;&gt;&lt;a href=&#34;#8-2新建配置文件&#34; class=&#34;headerlink&#34; title=&#34;8.2新建配置文件&#34;&gt;&lt;/a&gt;8.2新建配置文件&lt;/h5&gt;&lt;p&gt;​	新建application.yml&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;dubbo:
   application:
     name: dubbo-provider
@@ -562,8 +518,7 @@ spring:
   profiles:
     active: mybatis
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h5 id=&#34;83新建启动类&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#83新建启动类&#34;&gt;#&lt;/a&gt; 8.3 新建启动类&lt;/h5&gt;
-&lt;p&gt;​	新建 com.msb.ProviderApplication&lt;/p&gt;
+&lt;h5 id=&#34;8-3新建启动类&#34;&gt;&lt;a href=&#34;#8-3新建启动类&#34; class=&#34;headerlink&#34; title=&#34;8.3新建启动类&#34;&gt;&lt;/a&gt;8.3新建启动类&lt;/h5&gt;&lt;p&gt;​	新建com.msb.ProviderApplication&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;@SpringBootApplication
 @EnableDubbo
 @MapperScan(&amp;quot;com.msb.mapper&amp;quot;)
@@ -573,15 +528,12 @@ public class ProviderApplication &amp;#123;
     &amp;#125;
 &amp;#125;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&#34;9完成dept查询功能&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#9完成dept查询功能&#34;&gt;#&lt;/a&gt; 9. 完成 Dept 查询功能&lt;/h4&gt;
-&lt;h5 id=&#34;91在api中新建接口&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#91在api中新建接口&#34;&gt;#&lt;/a&gt; 9.1 在 api 中新建接口&lt;/h5&gt;
-&lt;p&gt;​	com.msb.dubbo.service.DeptDubboService&lt;/p&gt;
+&lt;h4 id=&#34;9-完成Dept查询功能&#34;&gt;&lt;a href=&#34;#9-完成Dept查询功能&#34; class=&#34;headerlink&#34; title=&#34;9.完成Dept查询功能&#34;&gt;&lt;/a&gt;9.完成Dept查询功能&lt;/h4&gt;&lt;h5 id=&#34;9-1在api中新建接口&#34;&gt;&lt;a href=&#34;#9-1在api中新建接口&#34; class=&#34;headerlink&#34; title=&#34;9.1在api中新建接口&#34;&gt;&lt;/a&gt;9.1在api中新建接口&lt;/h5&gt;&lt;p&gt;​	com.msb.dubbo.service.DeptDubboService&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;public interface DeptDubboService &amp;#123;
     List&amp;lt;Dept&amp;gt; selectAll();
 &amp;#125;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h5 id=&#34;92在provider中新建实现类&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#92在provider中新建实现类&#34;&gt;#&lt;/a&gt; 9.2 在 provider 中新建实现类&lt;/h5&gt;
-&lt;p&gt;​	com.msb.dubbo.service.impl.DeptDubboServiceImpl&lt;/p&gt;
+&lt;h5 id=&#34;9-2在provider中新建实现类&#34;&gt;&lt;a href=&#34;#9-2在provider中新建实现类&#34; class=&#34;headerlink&#34; title=&#34;9.2在provider中新建实现类&#34;&gt;&lt;/a&gt;9.2在provider中新建实现类&lt;/h5&gt;&lt;p&gt;​	com.msb.dubbo.service.impl.DeptDubboServiceImpl&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;@Service
 public class DeptDubboServiceImpl implements DeptDubboService &amp;#123;
     @Autowired
@@ -592,9 +544,7 @@ public class DeptDubboServiceImpl implements DeptDubboService &amp;#123;
     &amp;#125;
 &amp;#125;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h5 id=&#34;93新建项目dept&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#93新建项目dept&#34;&gt;#&lt;/a&gt; 9.3 新建项目 dept&lt;/h5&gt;
-&lt;h6 id=&#34;931添加依赖&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#931添加依赖&#34;&gt;#&lt;/a&gt; 9.3.1 添加依赖&lt;/h6&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;dependencies&amp;gt;
+&lt;h5 id=&#34;9-3新建项目dept&#34;&gt;&lt;a href=&#34;#9-3新建项目dept&#34; class=&#34;headerlink&#34; title=&#34;9.3新建项目dept&#34;&gt;&lt;/a&gt;9.3新建项目dept&lt;/h5&gt;&lt;h6 id=&#34;9-3-1添加依赖&#34;&gt;&lt;a href=&#34;#9-3-1添加依赖&#34; class=&#34;headerlink&#34; title=&#34;9.3.1添加依赖&#34;&gt;&lt;/a&gt;9.3.1添加依赖&lt;/h6&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;dependencies&amp;gt;
     &amp;lt;dependency&amp;gt;
         &amp;lt;artifactId&amp;gt;api&amp;lt;/artifactId&amp;gt;
         &amp;lt;groupId&amp;gt;com.msb&amp;lt;/groupId&amp;gt;
@@ -622,16 +572,14 @@ public class DeptDubboServiceImpl implements DeptDubboService &amp;#123;
     &amp;lt;/dependency&amp;gt;
 &amp;lt;/dependencies&amp;gt;   
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h6 id=&#34;932编写配置文件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#932编写配置文件&#34;&gt;#&lt;/a&gt; 9.3.2 编写配置文件&lt;/h6&gt;
-&lt;p&gt;​	新建 application.yml&lt;/p&gt;
+&lt;h6 id=&#34;9-3-2编写配置文件&#34;&gt;&lt;a href=&#34;#9-3-2编写配置文件&#34; class=&#34;headerlink&#34; title=&#34;9.3.2编写配置文件&#34;&gt;&lt;/a&gt;9.3.2编写配置文件&lt;/h6&gt;&lt;p&gt;​	新建application.yml&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;dubbo:
   application:
     name: dubbo-dept-consumer
   registry:
     address: zookeeper://192.168.52.128:2181
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h6 id=&#34;933新建启动类&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#933新建启动类&#34;&gt;#&lt;/a&gt; 9.3.3 新建启动类&lt;/h6&gt;
-&lt;p&gt;​	com.msb.DeptApplication&lt;/p&gt;
+&lt;h6 id=&#34;9-3-3新建启动类&#34;&gt;&lt;a href=&#34;#9-3-3新建启动类&#34; class=&#34;headerlink&#34; title=&#34;9.3.3新建启动类&#34;&gt;&lt;/a&gt;9.3.3新建启动类&lt;/h6&gt;&lt;p&gt;​	com.msb.DeptApplication&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;@SpringBootApplication
 @EnableDubbo
 public class DeptApplication &amp;#123;
@@ -640,8 +588,7 @@ public class DeptApplication &amp;#123;
     &amp;#125;
 &amp;#125;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h6 id=&#34;934新建接口及实现类&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#934新建接口及实现类&#34;&gt;#&lt;/a&gt; 9.3.4 新建接口及实现类&lt;/h6&gt;
-&lt;p&gt;​	接口：com.msb.service.DeptService&lt;/p&gt;
+&lt;h6 id=&#34;9-3-4新建接口及实现类&#34;&gt;&lt;a href=&#34;#9-3-4新建接口及实现类&#34; class=&#34;headerlink&#34; title=&#34;9.3.4新建接口及实现类&#34;&gt;&lt;/a&gt;9.3.4新建接口及实现类&lt;/h6&gt;&lt;p&gt;​	接口：com.msb.service.DeptService&lt;/p&gt;
 &lt;p&gt;​	实现类：com.msb.service.impl.DeptServiceImpl&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;public interface DeptService &amp;#123;
     List&amp;lt;Dept&amp;gt; showAll();
@@ -657,8 +604,7 @@ public class DeptServiceImpl implements DeptService &amp;#123;
     &amp;#125;
 &amp;#125;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h6 id=&#34;935新建控制器&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#935新建控制器&#34;&gt;#&lt;/a&gt; 9.3.5 新建控制器&lt;/h6&gt;
-&lt;p&gt;​	com.msb.controller.DeptController&lt;/p&gt;
+&lt;h6 id=&#34;9-3-5新建控制器&#34;&gt;&lt;a href=&#34;#9-3-5新建控制器&#34; class=&#34;headerlink&#34; title=&#34;9.3.5新建控制器&#34;&gt;&lt;/a&gt;9.3.5新建控制器&lt;/h6&gt;&lt;p&gt;​	com.msb.controller.DeptController&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;@Controller
 public class DeptController &amp;#123;
 
@@ -672,8 +618,7 @@ public class DeptController &amp;#123;
     &amp;#125;
 &amp;#125;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h5 id=&#34;936-新建页面&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#936-新建页面&#34;&gt;#&lt;/a&gt; 9.3.6  新建页面&lt;/h5&gt;
-&lt;p&gt;​	在 resources /templates 新建 dept.html&lt;/p&gt;
+&lt;h5 id=&#34;9-3-6-新建页面&#34;&gt;&lt;a href=&#34;#9-3-6-新建页面&#34; class=&#34;headerlink&#34; title=&#34;9.3.6  新建页面&#34;&gt;&lt;/a&gt;9.3.6  新建页面&lt;/h5&gt;&lt;p&gt;​	在resources &amp;#x2F;templates新建dept.html&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;&amp;lt;!DOCTYPE html&amp;gt;
 &amp;lt;html lang=&amp;quot;en&amp;quot; xmlns:th=&amp;quot;http://www.thymeleaf.org&amp;quot;&amp;gt;
 &amp;lt;head&amp;gt;
@@ -701,7 +646,7 @@ public class DeptController &amp;#123;
 &lt;script src=&#34;https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js&#34;&gt;&lt;/script&gt;&lt;link rel=&#34;stylesheet&#34; href=&#34;https://unpkg.com/gitalk/dist/gitalk.css&#34;&gt;&lt;script src=&#34;https://unpkg.com/gitalk/dist/gitalk.min.js&#34;&gt;&lt;/script&gt;
 
 		&lt;script&gt;
-		var gitalkConfig = {&#34;clientID&#34;:&#34;eda74f740080fa01d0b5&#34;,&#34;clientSecret&#34;:&#34;c994dd2162a1dadaefbf078fcab49361438a7aca&#34;,&#34;repo&#34;:&#34;comments001&#34;,&#34;owner&#34;:&#34;onlymarryu&#34;,&#34;admin&#34;:[&#34;onlymarryu&#34;],&#34;distractionFreeMode&#34;:false};
+		var gitalkConfig = {&#34;clientID&#34;:&#34;eda74f740080fa01d0b5&#34;,&#34;clientSecret&#34;:&#34;c994dd2162a1dadaefbf078fcab49361438a7aca&#34;,&#34;repo&#34;:&#34;comments001&#34;,&#34;owner&#34;:&#34;onlymarryu&#34;,&#34;admin&#34;:[&#34;onlymarryu&#34;],&#34;distractionFreeMode&#34;:true,&#34;proxy&#34;:&#34;https://winter-rain-5b30.wudu-bk.workers.dev&#34;};
 	    gitalkConfig.id = md5(location.pathname);
 		var gitalk = new Gitalk(gitalkConfig);
 	    gitalk.render(&#34;gitalk-container&#34;);

@@ -7,20 +7,20 @@
     <category term="分布式" />
     <category term="Dubbo" />
     <category term="FastDFS" />
+    <category term="RPC" />
     <category term="中间件" />
     <category term="RabbitMQ" />
     <category term="Solr" />
     <category term="快速搜索" />
-    <category term="RPC" />
     <category term="JavaSE" />
     <category term="-JavaSE" />
-    <category term="博客" />
-    <category term="环境搭建" />
     <category term="框架" />
     <category term="ORM" />
     <category term="Spring" />
     <category term="SpringBoot" />
     <category term="SpringMVC" />
+    <category term="博客" />
+    <category term="环境搭建" />
     <category term="SpringSecurity" />
     <category term="Redis基础" />
     <category term="NoSQL数据库" />
@@ -28,292 +28,326 @@
         <id>http://example.com/2022/10/07/DataBase/Redis/Redis/</id>
         <title>Redis基础</title>
         <link rel="alternate" href="http://example.com/2022/10/07/DataBase/Redis/Redis/"/>
-        <content type="html">&lt;h1 id=&#34;redis&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#redis&#34;&gt;#&lt;/a&gt; Redis&lt;/h1&gt;
-&lt;h2 id=&#34;一redis简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#一redis简介&#34;&gt;#&lt;/a&gt; 一.Redis 简介&lt;/h2&gt;
-&lt;h3 id=&#34;1nosql简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1nosql简介&#34;&gt;#&lt;/a&gt; 1.NoSQL 简介&lt;/h3&gt;
-&lt;p&gt;​	目前市场主流数据存储都是使用关系型数据库。每次操作关系型数据库时都是 I/O 操作，I/O 操作是主要影响程序执行性能原因之一，连接数据库关闭数据库都是消耗性能的过程。尽量减少对数据库的操作，能够明显的提升程序运行效率。&lt;/p&gt;
-&lt;p&gt;​	针对上面的问题，市场上就出现了各种 NoSQL (Not Only SQL, 不仅仅可以使用关系型数据库) 数据库，它们的宣传口号：不是什么样的场景都必须使用关系型数据库，一些特定的场景使用 NoSQL 数据库更好。&lt;/p&gt;
-&lt;p&gt;常见 NoSQL 数据库：&lt;/p&gt;
+        <content type="html">&lt;h1 id=&#34;Redis&#34;&gt;&lt;a href=&#34;#Redis&#34; class=&#34;headerlink&#34; title=&#34;Redis&#34;&gt;&lt;/a&gt;Redis&lt;/h1&gt;&lt;h2 id=&#34;一-Redis简介&#34;&gt;&lt;a href=&#34;#一-Redis简介&#34; class=&#34;headerlink&#34; title=&#34;一.Redis简介&#34;&gt;&lt;/a&gt;一.Redis简介&lt;/h2&gt;&lt;h3 id=&#34;1-NoSQL简介&#34;&gt;&lt;a href=&#34;#1-NoSQL简介&#34; class=&#34;headerlink&#34; title=&#34;1.NoSQL简介&#34;&gt;&lt;/a&gt;1.NoSQL简介&lt;/h3&gt;&lt;p&gt;​	目前市场主流数据存储都是使用关系型数据库。每次操作关系型数据库时都是I&amp;#x2F;O操作，I&amp;#x2F;O操作是主要影响程序执行性能原因之一，连接数据库关闭数据库都是消耗性能的过程。尽量减少对数据库的操作，能够明显的提升程序运行效率。&lt;/p&gt;
+&lt;p&gt;​	针对上面的问题，市场上就出现了各种NoSQL(Not Only SQL,不仅仅可以使用关系型数据库)数据库，它们的宣传口号：不是什么样的场景都必须使用关系型数据库，一些特定的场景使用NoSQL数据库更好。&lt;/p&gt;
+&lt;p&gt;常见NoSQL数据库：&lt;/p&gt;
 &lt;p&gt;​	memcached ：键值对，内存型数据库，所有数据都在内存中。&lt;/p&gt;
-&lt;p&gt;​	Redis: 和 Memcached 类似，还具备持久化能力。&lt;/p&gt;
+&lt;p&gt;​	Redis:和Memcached类似，还具备持久化能力。&lt;/p&gt;
 &lt;p&gt;​	HBase：以列作为存储。&lt;/p&gt;
-&lt;p&gt;​	MongoDB：以 Document 做存储。&lt;/p&gt;
-&lt;h3 id=&#34;2redis简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2redis简介&#34;&gt;#&lt;/a&gt; 2.&lt;strong&gt;Redis 简介&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;​	Redis 是以 Key-Value 形式进行存储的 NoSQL 数据库。&lt;/p&gt;
-&lt;p&gt;​	Redis 是使用 C 语言进行编写的。&lt;/p&gt;
-&lt;p&gt;​	平时操作的数据都在内存中，效率特高，读的效率 110000/s，写 81000/s，所以多把 Redis 当做缓存工具使用。&lt;/p&gt;
-&lt;p&gt;​	Redis 以 solt（槽）作为数据存储单元，每个槽中可以存储 N 多个键值对。Redis 中固定具有 16384。理论上可以实现一个槽是一个 Redis。每个向 Redis 存储数据的 key 都会进行 crc16 算法得出一个值后对 16384 取余就是这个 key 存放的 solt 位置。&lt;/p&gt;
-&lt;p&gt;​	同时通过 Redis Sentinel 提供高可用，通过 Redis Cluster 提供自动分区。&lt;/p&gt;
-&lt;h2 id=&#34;二-redis单机版安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#二-redis单机版安装&#34;&gt;#&lt;/a&gt; 二. Redis 单机版安装&lt;/h2&gt;
-&lt;p&gt;​	1. 安装依赖 C 语言依赖&lt;/p&gt;
-&lt;p&gt;​	redis 使用 C 语言编写，所以需要安装 C 语言库&lt;/p&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;yum &lt;span class=&#34;token function&#34;&gt;install&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-y&lt;/span&gt; gcc-c++ automake autoconf libtool &lt;span class=&#34;token function&#34;&gt;make&lt;/span&gt; tcl&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;​	2. 上传并解压&lt;/p&gt;
-&lt;p&gt;​	把 redis-5.0.5.tar.gz 上传到 /usr/local/tmp 中&lt;/p&gt;
+&lt;p&gt;​	MongoDB：以Document做存储。&lt;/p&gt;
+&lt;h3 id=&#34;2-Redis简介&#34;&gt;&lt;a href=&#34;#2-Redis简介&#34; class=&#34;headerlink&#34; title=&#34;2.Redis简介&#34;&gt;&lt;/a&gt;2.&lt;strong&gt;Redis简介&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;​	Redis是以Key-Value形式进行存储的NoSQL数据库。&lt;/p&gt;
+&lt;p&gt;​	Redis是使用C语言进行编写的。&lt;/p&gt;
+&lt;p&gt;​	平时操作的数据都在内存中，效率特高，读的效率110000&amp;#x2F;s，写81000&amp;#x2F;s，所以多把Redis当做缓存工具使用。&lt;/p&gt;
+&lt;p&gt;​	Redis以solt（槽）作为数据存储单元，每个槽中可以存储N多个键值对。Redis中固定具有16384。理论上可以实现一个槽是一个Redis。每个向Redis存储数据的key都会进行crc16算法得出一个值后对16384取余就是这个key存放的solt位置。&lt;/p&gt;
+&lt;p&gt;​	同时通过Redis Sentinel提供高可用，通过Redis Cluster提供自动分区。&lt;/p&gt;
+&lt;h2 id=&#34;二-Redis单机版安装&#34;&gt;&lt;a href=&#34;#二-Redis单机版安装&#34; class=&#34;headerlink&#34; title=&#34;二. Redis单机版安装&#34;&gt;&lt;/a&gt;二. Redis单机版安装&lt;/h2&gt;&lt;p&gt;​	1.安装依赖C语言依赖&lt;/p&gt;
+&lt;p&gt;​	redis使用C语言编写，所以需要安装C语言库&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;shell&#34;&gt;
+yum install -y gcc-c++ automake autoconf libtool make tcl 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;​	2.上传并解压&lt;/p&gt;
+&lt;p&gt;​	把redis-5.0.5.tar.gz上传到&amp;#x2F;usr&amp;#x2F;local&amp;#x2F;tmp中&lt;/p&gt;
 &lt;p&gt;​	解压文件&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;# cd /usr/local/tmp
 
 # tar zxf redis-5.0.5.tar.gz
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;​	3. 编译并安装&lt;/p&gt;
+&lt;p&gt;​	3.编译并安装&lt;/p&gt;
 &lt;p&gt;​	进入解压文件夹&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;
 # cd /usr/local/tmp/redis-5.0.5/
-
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;​	编译&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;
 # make
-
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;​	安装&lt;/p&gt;
+&lt;p&gt;​	安装	&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;
 # make install PREFIX=/usr/local/redis
-
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;​	4. 开启守护进程&lt;/p&gt;
-&lt;p&gt;​	复制 cd /usr/local/tmp/redis-5.0.5 / 中 redis.conf 配置文件&lt;/p&gt;
+&lt;p&gt;​	4.开启守护进程&lt;/p&gt;
+&lt;p&gt;​	复制cd &amp;#x2F;usr&amp;#x2F;local&amp;#x2F;tmp&amp;#x2F;redis-5.0.5&amp;#x2F;中redis.conf配置文件	&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;
 # cp redis.conf /usr/local/redis/bin/
-
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;​	修改配置文件&lt;/p&gt;
+&lt;p&gt;​	修改配置文件	&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;# cd /usr/local/redis/bin/
 
 # vim redis.conf
-
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;​	把 daemonize 的值由 no 修改为 yes&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;/2022/10/07/DataBase/Redis/Redis/Redis-01.jpg&#34; class=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;​	5. 修改外部访问&lt;/p&gt;
-&lt;p&gt;​	在 redis5 中需要修改配置文件 redis.conf 允许外部访问。需要修改两处。&lt;/p&gt;
+&lt;p&gt;​	把daemonize的值由no修改为yes&lt;/p&gt;
+&lt;img data-src=&#34;/2022/10/07/DataBase/Redis/Redis/Redis-01.jpg&#34; class=&#34;&#34;&gt;
+
+
+&lt;p&gt;​	5.修改外部访问&lt;/p&gt;
+&lt;p&gt;​	在redis5中需要修改配置文件redis.conf允许外部访问。需要修改两处。&lt;/p&gt;
 &lt;p&gt;​	注释掉下面&lt;/p&gt;
 &lt;p&gt;​	bind 127.0.0.1&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;#bind 127.0.0.1
-
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;​	protected-mode yes 改成 no&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;/2022/10/07/DataBase/Redis/Redis/Redis-02.jpg&#34; class=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;​	6. 启动并测试&lt;/p&gt;
-&lt;p&gt;​	启动 redis&lt;/p&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;./redis-server redis.conf&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;​	重启 redis&lt;/p&gt;
+&lt;img data-src=&#34;/2022/10/07/DataBase/Redis/Redis/Redis-02.jpg&#34; class=&#34;&#34;&gt;
+
+
+&lt;p&gt;​	6.启动并测试&lt;/p&gt;
+&lt;p&gt;​	启动redis&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;shell&#34;&gt;
+./redis-server redis.conf
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;​	重启redis&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;./redis-cli shutdown
 
 ./redis-server redis.conf
-
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;​	启动客户端工具&lt;/p&gt;
-&lt;p&gt;​	在 redis5 中客户端工具对命令会有提供功能。&lt;/p&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;./redis-cli&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h2 id=&#34;二-docker安装redis&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#二-docker安装redis&#34;&gt;#&lt;/a&gt; 二.、docker 安装 Redis&lt;/h2&gt;
-&lt;p&gt;1、拉取镜像文件&lt;/p&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; pull redis&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;:&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;版本号&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;2、去 gitee 库中下载 redis 配置文件（docker 不自带配置文件）【也可不进行此步骤】&lt;/p&gt;
+&lt;p&gt;​	在redis5中客户端工具对命令会有提供功能。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;shell&#34;&gt;./redis-cli 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;二-、docker安装Redis&#34;&gt;&lt;a href=&#34;#二-、docker安装Redis&#34; class=&#34;headerlink&#34; title=&#34;二.、docker安装Redis&#34;&gt;&lt;/a&gt;二.、docker安装Redis&lt;/h2&gt;&lt;p&gt;1、拉取镜像文件&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;shell&#34;&gt;
+docker pull redis[:(版本号)]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;2、去gitee库中下载redis配置文件（docker不自带配置文件）【也可不进行此步骤】&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;建议看完，先别操作，再看三，看完三之后再决定如何操作&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;然后按照文章内容进行，忽略下载。&lt;/p&gt;
-&lt;p&gt;文章地址： &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuamI1MS5uZXQvYXJ0aWNsZS8yMDMyNzQuaHRt&#34;&gt;https://www.jb51.net/article/203274.htm&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;文章地址： &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuamI1MS5uZXQvYXJ0aWNsZS8yMDMyNzQuaHRt&#34;&gt;https://www.jb51.net/article/203274.htm&lt;/span&gt; &lt;/p&gt;
 &lt;p&gt;、&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;p&gt;3、创建一个 redis 服务容器&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;p&gt;3、创建一个redis 服务容器 &lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;第二步进行了的&lt;/strong&gt;&lt;/p&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; run &lt;span class=&#34;token parameter variable&#34;&gt;-p&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;6379&lt;/span&gt;:6379 &lt;span class=&#34;token parameter variable&#34;&gt;--name&lt;/span&gt; myredis &lt;span class=&#34;token parameter variable&#34;&gt;-v&lt;/span&gt; /usr/local/docker/redis.conf:/etc/redis/redis.conf &lt;span class=&#34;token parameter variable&#34;&gt;-v&lt;/span&gt; /usr/local/docker/data:/data &lt;span class=&#34;token parameter variable&#34;&gt;-d&lt;/span&gt; redis redis-server /etc/redis/redis.conf &lt;span class=&#34;token parameter variable&#34;&gt;--appendonly&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;yes&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;strong&gt;第二步没有进行的&lt;/strong&gt;&lt;/p&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; run &lt;span class=&#34;token parameter variable&#34;&gt;-p&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;6379&lt;/span&gt;:6379 &lt;span class=&#34;token parameter variable&#34;&gt;--name&lt;/span&gt; myredis &lt;span class=&#34;token parameter variable&#34;&gt;-v&lt;/span&gt; /root/myredis/data:/data &lt;span class=&#34;token parameter variable&#34;&gt;-v&lt;/span&gt; /root/myredis/conf/redis.conf:/usr/local/etc/redis/redis.conf &lt;span class=&#34;token parameter variable&#34;&gt;-d&lt;/span&gt; redis redis-server /usr/local/etc/redis/redis.conf &lt;span class=&#34;token parameter variable&#34;&gt;--appendonly&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;yes&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;strong&gt;区别：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;shell&#34;&gt;
+docker run -p 6379:6379 --name myredis -v /usr/local/docker/redis.conf:/etc/redis/redis.conf -v /usr/local/docker/data:/data -d redis redis-server /etc/redis/redis.conf --appendonly yes
+
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;第二步没有进行的&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;shell&#34;&gt;
+docker run -p 6379:6379 --name myredis -v /root/myredis/data:/data -v /root/myredis/conf/redis.conf:/usr/local/etc/redis/redis.conf -d redis redis-server /usr/local/etc/redis/redis.conf --appendonly yes
+
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;区别：&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;​	其实也没有什么区别，只是映射的文件不同，也可以将第二步的文件直接创建到第二种创建服务容器的配置文件地址中去，这样也可使用第二个创建方式。&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;h2 id=&#34;三redis常用的五大类型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#三redis常用的五大类型&#34;&gt;#&lt;/a&gt; 三.Redis 常用的五大类型&lt;/h2&gt;
-&lt;p&gt;​	 Redis 不仅仅支持简单的 k/v 类型的数据，同时还提供 list，set，zset，hash 等数据结构的存储，它还支持数据的备份，即 master-slave 模式的数据备份，同样 Redis 支持数据的持久化，可以将内存中的数据保持在磁盘中，重启的时候可以再次加载进行使用。&lt;/p&gt;
-&lt;p&gt;​        Redis 支持的五大数据类型包括 String（字符串  用法： 键  值），Hash（哈希 类似 Java 中的 map  用法： 键  键值对），List（列表  用法：键 集合 不可以重复），Set（集合 用法：键 集合 可以重复），Zset（sorted set 有序集合    用法： 键  值 值）&lt;/p&gt;
-&lt;h3 id=&#34;string字符串&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#string字符串&#34;&gt;#&lt;/a&gt; String（字符串）&lt;/h3&gt;
-&lt;p&gt;​	string 是 redis 最基本的类型，你可以理解成与 Memcached 一模一样的类型，一个 key 对应一个 value。string 类型是二进制安全的。意思是 redis 的 string 可以包含任何数据。比如 jpg 图片或者序列化的对象。string 类型是 Redis 最基本的数据类型，string 类型的值最大能存储 512MB。&lt;/p&gt;
-&lt;p&gt;应用场景：&lt;/p&gt;
-&lt;p&gt;​	String 是最常用的一种数据类型，普通的 key/value 存储都可以归为此类，value 其实不仅是 String，&lt;/p&gt;
-&lt;p&gt;也可以是数字：比如想知道什么时候封锁一个 IP 地址 (访问超过几次)。&lt;/p&gt;
-&lt;h3 id=&#34;hash哈希&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#hash哈希&#34;&gt;#&lt;/a&gt; Hash（哈希）&lt;/h3&gt;
-&lt;p&gt;​	Redis hash 是一个键值 (key=&amp;gt;value) 对集合。&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;h2 id=&#34;三-Redis常用的五大类型&#34;&gt;&lt;a href=&#34;#三-Redis常用的五大类型&#34; class=&#34;headerlink&#34; title=&#34;三.Redis常用的五大类型&#34;&gt;&lt;/a&gt;三.Redis常用的五大类型&lt;/h2&gt;&lt;p&gt;​	 Redis不仅仅支持简单的k&amp;#x2F;v类型的数据，同时还提供list，set，zset，hash等数据结构的存储，它还支持数据的备份，即master-slave模式的数据备份，同样Redis支持数据的持久化，可以将内存中的数据保持在磁盘中，重启的时候可以再次加载进行使用。&lt;/p&gt;
+&lt;p&gt;​        Redis支持的五大数据类型包括String（字符串  用法： 键  值），Hash（哈希 类似Java中的 map  用法： 键  键值对），List（列表  用法：键 集合 不可以重复），Set（集合 用法：键 集合 可以重复），Zset（sorted set 有序集合    用法： 键  值 值）&lt;/p&gt;
+&lt;h3 id=&#34;String（字符串）&#34;&gt;&lt;a href=&#34;#String（字符串）&#34; class=&#34;headerlink&#34; title=&#34;String（字符串）&#34;&gt;&lt;/a&gt;String（字符串）&lt;/h3&gt;&lt;p&gt;​	string 是 redis 最基本的类型，你可以理解成与 Memcached 一模一样的类型，一个 key 对应一个 value。string 类型是二进制安全的。意思是 redis 的 string 可以包含任何数据。比如jpg图片或者序列化的对象。string 类型是 Redis 最基本的数据类型，string 类型的值最大能存储 512MB。&lt;/p&gt;
+&lt;p&gt;应用场景：  &lt;/p&gt;
+&lt;p&gt;​	String是最常用的一种数据类型，普通的key&amp;#x2F;value存储都可以归为此类，value其实不仅是String，  &lt;/p&gt;
+&lt;p&gt;也可以是数字：比如想知道什么时候封锁一个IP地址(访问超过几次)。&lt;/p&gt;
+&lt;h3 id=&#34;Hash（哈希）&#34;&gt;&lt;a href=&#34;#Hash（哈希）&#34; class=&#34;headerlink&#34; title=&#34;Hash（哈希）&#34;&gt;&lt;/a&gt;Hash（哈希）&lt;/h3&gt;&lt;p&gt;​	Redis hash 是一个键值(key&amp;#x3D;&amp;gt;value)对集合。&lt;/p&gt;
 &lt;p&gt;​	Redis hash 是一个 string 类型的 field 和 value 的映射表，hash 特别适合用于存储对象。&lt;/p&gt;
 &lt;p&gt;​	使用场景：存储、读取、修改用户属性&lt;/p&gt;
-&lt;p&gt;​	我们简单举个实例来描述下 Hash 的应用场景，比如我们要存储一个用户信息对象数据，包含以下信息：    用户 ID，为查找的 key，&lt;/p&gt;
-&lt;p&gt;​    	存储的 value 用户对象包含姓名 name，年龄 age，生日 birthday 等信息，  如果用普通的 key/value 结构来存储，主要有以下 2 种存储方式：&lt;/p&gt;
-&lt;p&gt;​    	第一种方式将用户 ID 作为查找 key, 把其他信息封装成一个对象以序列化的方式存储，&lt;/p&gt;
-&lt;p&gt;​           如：set u001 &amp;quot;李三，18,20010101&amp;quot;&lt;/p&gt;
-&lt;p&gt;​     	这种方式的缺点是，增加了序列化 / 反序列化的开销，并且在需要修改其中一项信息时，需要把整个对象取回，并且修改操作需要对并发进行保护，引入 CAS 等复杂问题。&lt;/p&gt;
-&lt;p&gt;​     	第二种方法是这个用户信息对象有多少成员就存成多少个 key-value 对儿，用用户 ID + 对应属性的名称作为唯一标识来取得对应属性的值，&lt;/p&gt;
-&lt;p&gt;​       	如：mset user:001:name &amp;quot;李三&amp;quot;user:001:age18 user:001:birthday &amp;quot;20010101&amp;quot;  虽然省去了序列化开销和并发问题，但是用户 ID 为重复存储，如果存在大量这样的数据，内存浪费还是非常可观的。&lt;/p&gt;
-&lt;p&gt;​    	那么 Redis 提供的 Hash 很好的解决了这个问题。&lt;/p&gt;
-&lt;h3 id=&#34;list列表&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#list列表&#34;&gt;#&lt;/a&gt; List（列表）&lt;/h3&gt;
-&lt;p&gt;​	Redis 列表是简单的字符串列表，按照插入顺序排序。你可以添加一个元素到列表的头部（左边）或者尾部（右边）。&lt;/p&gt;
-&lt;p&gt;应用场景：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt; Redis list的应用场景非常多，也是Redis最重要的数据结构之一。  
+&lt;p&gt;​	我们简单举个实例来描述下Hash的应用场景，比如我们要存储一个用户信息对象数据，包含以下信息：    用户ID，为查找的key，  &lt;/p&gt;
+&lt;p&gt;​    	存储的value用户对象包含姓名name，年龄age，生日birthday 等信息，  如果用普通的key&amp;#x2F;value结构来存储，主要有以下2种存储方式：  &lt;/p&gt;
+&lt;p&gt;​    	第一种方式将用户ID作为查找key,把其他信息封装成一个对象以序列化的方式存储，  &lt;/p&gt;
+&lt;p&gt;​           如：set u001 “李三,18,20010101”  &lt;/p&gt;
+&lt;p&gt;​     	这种方式的缺点是，增加了序列化&amp;#x2F;反序列化的开销，并且在需要修改其中一项信息时，需要把整个对象取回，并且修改操作需要对并发进行保护，引入CAS等复杂问题。  &lt;/p&gt;
+&lt;p&gt;​     	第二种方法是这个用户信息对象有多少成员就存成多少个key-value对儿，用用户ID+对应属性的名称作为唯一标识来取得对应属性的值，  &lt;/p&gt;
+&lt;p&gt;​       	如：mset user:001:name “李三 “user:001:age18 user:001:birthday “20010101”  虽然省去了序列化开销和并发问题，但是用户ID为重复存储，如果存在大量这样的数据，内存浪费还是非常可观的。  &lt;/p&gt;
+&lt;p&gt;​    	那么Redis提供的Hash很好的解决了这个问题。&lt;/p&gt;
+&lt;h3 id=&#34;List（列表）&#34;&gt;&lt;a href=&#34;#List（列表）&#34; class=&#34;headerlink&#34; title=&#34;List（列表）&#34;&gt;&lt;/a&gt;List（列表）&lt;/h3&gt;&lt;p&gt;​	Redis 列表是简单的字符串列表，按照插入顺序排序。你可以添加一个元素到列表的头部（左边）或者尾部（右边）。&lt;/p&gt;
+&lt;p&gt;应用场景：  &lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    Redis list的应用场景非常多，也是Redis最重要的数据结构之一。  
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;​    	我们可以轻松地实现最新消息排行等功能。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt; Lists的另一个应用就是消息队列，可以利用Lists的PUSH操作，将任务存在Lists中，然后工作线程再用POP操作将任务取出进行执行。  
+&lt;p&gt;​    	我们可以轻松地实现最新消息排行等功能。  &lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;   Lists的另一个应用就是消息队列，可以利用Lists的PUSH操作，将任务存在Lists中，然后工作线程再用POP操作将任务取出进行执行。  
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;set集合&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#set集合&#34;&gt;#&lt;/a&gt; Set（集合）&lt;/h3&gt;
-&lt;p&gt;​	Redis 的 Set 是 string 类型的无序集合。&lt;/p&gt;
-&lt;p&gt;​	使用场景：1. 共同好友、二度好友&lt;/p&gt;
-&lt;p&gt;​			   2. 利用唯一性，可以统计访问网站的所有独立 IP&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt; Redis set对外提供的功能与list类似是一个列表的功能，特殊之处在于set是可以自动排重的，当你需要存储一个列表数据，又不希望出现重复数据时，set是一个很好的选择，并且set提供了判断某个成员是否在一个set集合内的重要接口，这个也是list所不能提供的。  
+&lt;h3 id=&#34;Set（集合）&#34;&gt;&lt;a href=&#34;#Set（集合）&#34; class=&#34;headerlink&#34; title=&#34;Set（集合）&#34;&gt;&lt;/a&gt;Set（集合）&lt;/h3&gt;&lt;p&gt;​	Redis的Set是string类型的无序集合。&lt;/p&gt;
+&lt;p&gt;​	使用场景：1.共同好友、二度好友 &lt;/p&gt;
+&lt;p&gt;​			   2. 利用唯一性，可以统计访问网站的所有独立 IP &lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;  Redis set对外提供的功能与list类似是一个列表的功能，特殊之处在于set是可以自动排重的，当你需要存储一个列表数据，又不希望出现重复数据时，set是一个很好的选择，并且set提供了判断某个成员是否在一个set集合内的重要接口，这个也是list所不能提供的。  
 
 
+ 
 
-
- 比如在微博应用中，每个人的好友存在一个集合（set）中，这样求两个人的共同好友的操作，可能就只需要用求交集命令即可。  
+  比如在微博应用中，每个人的好友存在一个集合（set）中，这样求两个人的共同好友的操作，可能就只需要用求交集命令即可。  
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;​    	Redis 还为集合提供了求交集、并集、差集等操作，可以非常方便的实&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;实现方式：  
+&lt;p&gt;​    	Redis还为集合提供了求交集、并集、差集等操作，可以非常方便的实  &lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;  实现方式：  
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;​    	set 的内部实现是一个 value 永远为 null 的 HashMap，实际就是通过计算 hash 的方式来快速排重的，这也是 set 能提供判断一个成员是否在集合内的原因。&lt;/p&gt;
-&lt;h3 id=&#34;zsetsorted-set有序集合&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#zsetsorted-set有序集合&#34;&gt;#&lt;/a&gt; zset (sorted set：有序集合)&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;Redis zset 和 set 一样也是string类型元素的集合,且不允许重复的成员。不同的是每个元素都会关联一个double类型的分数。redis正是通过分数来为集合中的成员进行从小到大的排序。zset的成员是唯一的,但分数(score)却可以重复。
+&lt;p&gt;​    	set 的内部实现是一个 value永远为null的HashMap，实际就是通过计算hash的方式来快速排重的，这也是set能提供判断一个成员是否在集合内的原因。 &lt;/p&gt;
+&lt;h3 id=&#34;zset-sorted-set：有序集合&#34;&gt;&lt;a href=&#34;#zset-sorted-set：有序集合&#34; class=&#34;headerlink&#34; title=&#34;zset(sorted set：有序集合)&#34;&gt;&lt;/a&gt;zset(sorted set：有序集合)&lt;/h3&gt;&lt;pre&gt;&lt;code&gt; Redis zset 和 set 一样也是string类型元素的集合,且不允许重复的成员。不同的是每个元素都会关联一个double类型的分数。redis正是通过分数来为集合中的成员进行从小到大的排序。zset的成员是唯一的,但分数(score)却可以重复。
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;使用场景：1. 带有权重的元素，比如一个游戏的用户得分排行榜&lt;/p&gt;
-&lt;p&gt;​		   2. 比较复杂的数据结构，一般用到的场景不算太多&lt;/p&gt;
-&lt;h2 id=&#34;四-redis常用命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#四-redis常用命令&#34;&gt;#&lt;/a&gt; 四. Redis 常用命令&lt;/h2&gt;
-&lt;p&gt;Redis 命令相关手册有很多，下面为其中比较好用的两个&lt;/p&gt;
-&lt;p&gt;1.&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cucmVkaXMubmV0LmNuL29yZGVyLw==&#34;&gt;https://www.redis.net.cn/order/&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;2.&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2RvYy5yZWRpc2ZhbnMuY29tL3RleHQtaW4=&#34;&gt;http://doc.redisfans.com/text-in&lt;/span&gt;&lt;/p&gt;
-&lt;h3 id=&#34;1-key操作&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-key操作&#34;&gt;#&lt;/a&gt; 1. Key 操作&lt;/h3&gt;
-&lt;h4 id=&#34;11-exists&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#11-exists&#34;&gt;#&lt;/a&gt; 1.1  exists&lt;/h4&gt;
-&lt;p&gt;​	判断 key 是否存在。&lt;/p&gt;
-&lt;p&gt;​	语法：exists key 名称&lt;/p&gt;
-&lt;p&gt;​	返回值：存在返回数字，不存在返回 0&lt;/p&gt;
-&lt;h4 id=&#34;12-expire&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#12-expire&#34;&gt;#&lt;/a&gt; 1.2 expire&lt;/h4&gt;
-&lt;p&gt;​	设置 key 的过期时间，单位秒&lt;/p&gt;
+&lt;p&gt;使用场景：1.带有权重的元素，比如一个游戏的用户得分排行榜 &lt;/p&gt;
+&lt;p&gt;​		   2.比较复杂的数据结构，一般用到的场景不算太多&lt;/p&gt;
+&lt;h2 id=&#34;四-Redis常用命令&#34;&gt;&lt;a href=&#34;#四-Redis常用命令&#34; class=&#34;headerlink&#34; title=&#34;四. Redis常用命令&#34;&gt;&lt;/a&gt;四. Redis常用命令&lt;/h2&gt;&lt;p&gt;Redis命令相关手册有很多，下面为其中比较好用的两个&lt;/p&gt;
+&lt;p&gt;  1.&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cucmVkaXMubmV0LmNuL29yZGVyLw==&#34;&gt;https://www.redis.net.cn/order/&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;  2.&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2RvYy5yZWRpc2ZhbnMuY29tL3RleHQtaW4=&#34;&gt;http://doc.redisfans.com/text-in&lt;/span&gt;&lt;/p&gt;
+&lt;h3 id=&#34;1-Key操作&#34;&gt;&lt;a href=&#34;#1-Key操作&#34; class=&#34;headerlink&#34; title=&#34;1. Key操作&#34;&gt;&lt;/a&gt;1. Key操作&lt;/h3&gt;&lt;h4 id=&#34;1-1-exists&#34;&gt;&lt;a href=&#34;#1-1-exists&#34; class=&#34;headerlink&#34; title=&#34;1.1  exists&#34;&gt;&lt;/a&gt;1.1  exists&lt;/h4&gt;&lt;p&gt;​	判断key是否存在。&lt;/p&gt;
+&lt;p&gt;​	语法：exists key名称&lt;/p&gt;
+&lt;p&gt;​	返回值：存在返回数字，不存在返回0&lt;/p&gt;
+&lt;h4 id=&#34;1-2-expire&#34;&gt;&lt;a href=&#34;#1-2-expire&#34; class=&#34;headerlink&#34; title=&#34;1.2 expire&#34;&gt;&lt;/a&gt;1.2 expire&lt;/h4&gt;&lt;p&gt;​	设置key的过期时间，单位秒&lt;/p&gt;
 &lt;p&gt;​	语法：expire key 秒数&lt;/p&gt;
-&lt;p&gt;​	返回值：成功返回 1，失败返回 0&lt;/p&gt;
-&lt;h4 id=&#34;13-ttl&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#13-ttl&#34;&gt;#&lt;/a&gt; 1.3 ttl&lt;/h4&gt;
-&lt;p&gt;​	查看 key 的剩余过期时间&lt;/p&gt;
+&lt;p&gt;​	返回值：成功返回1，失败返回0&lt;/p&gt;
+&lt;h4 id=&#34;1-3-ttl&#34;&gt;&lt;a href=&#34;#1-3-ttl&#34; class=&#34;headerlink&#34; title=&#34;1.3 ttl&#34;&gt;&lt;/a&gt;1.3 ttl&lt;/h4&gt;&lt;p&gt;​	查看key的剩余过期时间&lt;/p&gt;
 &lt;p&gt;​	语法：ttl key&lt;/p&gt;
-&lt;p&gt;​	返回值：返回剩余时间，如果不过期返回 - 1&lt;/p&gt;
-&lt;h4 id=&#34;14-del&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#14-del&#34;&gt;#&lt;/a&gt; 1.4 del&lt;/h4&gt;
-&lt;p&gt;​	根据 key 删除键值对。&lt;/p&gt;
+&lt;p&gt;​	返回值：返回剩余时间，如果不过期返回-1&lt;/p&gt;
+&lt;h4 id=&#34;1-4-del&#34;&gt;&lt;a href=&#34;#1-4-del&#34; class=&#34;headerlink&#34; title=&#34;1.4 del&#34;&gt;&lt;/a&gt;1.4 del&lt;/h4&gt;&lt;p&gt;​	根据key删除键值对。&lt;/p&gt;
 &lt;p&gt;​	语法：del key&lt;/p&gt;
-&lt;p&gt;​	返回值：被删除 key 的数量&lt;/p&gt;
-&lt;h3 id=&#34;2-字符串值string&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-字符串值string&#34;&gt;#&lt;/a&gt; 2. &lt;strong&gt;字符串值 (String)&lt;/strong&gt;&lt;/h3&gt;
-&lt;h4 id=&#34;21-set&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#21-set&#34;&gt;#&lt;/a&gt; 2.1 &lt;strong&gt;set&lt;/strong&gt;&lt;/h4&gt;
-&lt;p&gt;​	设置指定 key 的值&lt;/p&gt;
+&lt;p&gt;​	返回值：被删除key的数量&lt;/p&gt;
+&lt;h3 id=&#34;2-字符串值-String&#34;&gt;&lt;a href=&#34;#2-字符串值-String&#34; class=&#34;headerlink&#34; title=&#34;2. 字符串值(String)&#34;&gt;&lt;/a&gt;2. &lt;strong&gt;字符串值(String)&lt;/strong&gt;&lt;/h3&gt;&lt;h4 id=&#34;2-1-set&#34;&gt;&lt;a href=&#34;#2-1-set&#34; class=&#34;headerlink&#34; title=&#34;2.1 set&#34;&gt;&lt;/a&gt;2.1 &lt;strong&gt;set&lt;/strong&gt;&lt;/h4&gt;&lt;p&gt;​	设置指定key的值&lt;/p&gt;
 &lt;p&gt;​	语法：set key value&lt;/p&gt;
-&lt;p&gt;​	返回值：成功 OK&lt;/p&gt;
-&lt;h4 id=&#34;22-get&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#22-get&#34;&gt;#&lt;/a&gt; 2.2 &lt;strong&gt;get&lt;/strong&gt;&lt;/h4&gt;
-&lt;p&gt;​	获取指定 key 的值&lt;/p&gt;
+&lt;p&gt;​	返回值：成功OK&lt;/p&gt;
+&lt;h4 id=&#34;2-2-get&#34;&gt;&lt;a href=&#34;#2-2-get&#34; class=&#34;headerlink&#34; title=&#34;2.2 get&#34;&gt;&lt;/a&gt;2.2 &lt;strong&gt;get&lt;/strong&gt;&lt;/h4&gt;&lt;p&gt;​	获取指定key的值&lt;/p&gt;
 &lt;p&gt;​	语法：get key&lt;/p&gt;
-&lt;p&gt;​	返回值：key 的值。不存在返回 nil&lt;/p&gt;
-&lt;h4 id=&#34;23-setnx&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#23-setnx&#34;&gt;#&lt;/a&gt; 2.3 &lt;strong&gt;setnx&lt;/strong&gt;&lt;/h4&gt;
-&lt;p&gt;​	当且仅当 key 不存在时才新增。&lt;/p&gt;
+&lt;p&gt;​	返回值：key的值。不存在返回nil&lt;/p&gt;
+&lt;h4 id=&#34;2-3-setnx&#34;&gt;&lt;a href=&#34;#2-3-setnx&#34; class=&#34;headerlink&#34; title=&#34;2.3 setnx&#34;&gt;&lt;/a&gt;2.3 &lt;strong&gt;setnx&lt;/strong&gt;&lt;/h4&gt;&lt;p&gt;​	当且仅当key不存在时才新增。&lt;/p&gt;
 &lt;p&gt;​	语法：setnx key value&lt;/p&gt;
-&lt;p&gt;​	返回值：不存在时返回 1，存在返回 0&lt;/p&gt;
-&lt;h4 id=&#34;24-setex&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#24-setex&#34;&gt;#&lt;/a&gt; 2.4 &lt;strong&gt;setex&lt;/strong&gt;&lt;/h4&gt;
-&lt;p&gt;​	设置 key 的存活时间，无论是否存在指定 key 都能新增，如果存在 key 覆盖旧值。同时必须指定过期时间。&lt;/p&gt;
+&lt;p&gt;​	返回值：不存在时返回1，存在返回0&lt;/p&gt;
+&lt;h4 id=&#34;2-4-setex&#34;&gt;&lt;a href=&#34;#2-4-setex&#34; class=&#34;headerlink&#34; title=&#34;2.4 setex&#34;&gt;&lt;/a&gt;2.4 &lt;strong&gt;setex&lt;/strong&gt;&lt;/h4&gt;&lt;p&gt;​	设置key的存活时间，无论是否存在指定key都能新增，如果存在key覆盖旧值。同时必须指定过期时间。&lt;/p&gt;
 &lt;p&gt;​	语法：setex key seconds value&lt;/p&gt;
 &lt;p&gt;​	返回值：OK&lt;/p&gt;
-&lt;h3 id=&#34;3哈希表hash&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3哈希表hash&#34;&gt;#&lt;/a&gt; 3.&lt;strong&gt; 哈希表 (Hash)&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;​	Hash 类型的值中包含多组 field value。&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;/2022/10/07/DataBase/Redis/Redis/Redis-03.jpg&#34; class=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h4 id=&#34;31-hset&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#31-hset&#34;&gt;#&lt;/a&gt; 3.1 &lt;strong&gt;hset&lt;/strong&gt;&lt;/h4&gt;
-&lt;p&gt;​	给 key 中 field 设置值。&lt;/p&gt;
+&lt;h3 id=&#34;3-哈希表-Hash&#34;&gt;&lt;a href=&#34;#3-哈希表-Hash&#34; class=&#34;headerlink&#34; title=&#34;3.哈希表(Hash)&#34;&gt;&lt;/a&gt;3.&lt;strong&gt;哈希表(Hash)&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;​	Hash类型的值中包含多组field value。&lt;/p&gt;
+&lt;img data-src=&#34;/2022/10/07/DataBase/Redis/Redis/Redis-03.jpg&#34; class=&#34;&#34;&gt;
+
+
+
+
+&lt;h4 id=&#34;3-1-hset&#34;&gt;&lt;a href=&#34;#3-1-hset&#34; class=&#34;headerlink&#34; title=&#34;3.1 hset&#34;&gt;&lt;/a&gt;3.1 &lt;strong&gt;hset&lt;/strong&gt;&lt;/h4&gt;&lt;p&gt;​	给key中field设置值。&lt;/p&gt;
 &lt;p&gt;​	语法：hset key field value&lt;/p&gt;
-&lt;p&gt;​	返回值：成功 1，失败 0&lt;/p&gt;
-&lt;h4 id=&#34;32-hget&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#32-hget&#34;&gt;#&lt;/a&gt; 3.2 &lt;strong&gt;hget&lt;/strong&gt;&lt;/h4&gt;
-&lt;p&gt;​	获取 key 中某个 field 的值&lt;/p&gt;
-&lt;p&gt;​	语法：hget key field&lt;/p&gt;
-&lt;p&gt;​	返回值：返回 field 的内容&lt;/p&gt;
-&lt;h4 id=&#34;33-hmset&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#33-hmset&#34;&gt;#&lt;/a&gt; 3.3 &lt;strong&gt;hmset&lt;/strong&gt;&lt;/h4&gt;
-&lt;p&gt;​	给 key 中多个 filed 设置值&lt;/p&gt;
+&lt;p&gt;​	返回值：成功1，失败0&lt;/p&gt;
+&lt;h4 id=&#34;3-2-hget&#34;&gt;&lt;a href=&#34;#3-2-hget&#34; class=&#34;headerlink&#34; title=&#34;3.2 hget&#34;&gt;&lt;/a&gt;3.2 &lt;strong&gt;hget&lt;/strong&gt;&lt;/h4&gt;&lt;p&gt;​	获取key中某个field的值&lt;/p&gt;
+&lt;p&gt;​	语法：hget key field &lt;/p&gt;
+&lt;p&gt;​	返回值：返回field的内容&lt;/p&gt;
+&lt;h4 id=&#34;3-3-hmset&#34;&gt;&lt;a href=&#34;#3-3-hmset&#34; class=&#34;headerlink&#34; title=&#34;3.3 hmset&#34;&gt;&lt;/a&gt;3.3 &lt;strong&gt;hmset&lt;/strong&gt;&lt;/h4&gt;&lt;p&gt;​	给key中多个filed设置值&lt;/p&gt;
 &lt;p&gt;​	语法：hmset key field value field value&lt;/p&gt;
-&lt;p&gt;​	返回值：成功 OK&lt;/p&gt;
-&lt;h4 id=&#34;34-hmget&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#34-hmget&#34;&gt;#&lt;/a&gt; 3.4 &lt;strong&gt;hmget&lt;/strong&gt;&lt;/h4&gt;
-&lt;p&gt;​	一次获取 key 中多个 field 的值&lt;/p&gt;
+&lt;p&gt;​	返回值：成功OK&lt;/p&gt;
+&lt;h4 id=&#34;3-4-hmget&#34;&gt;&lt;a href=&#34;#3-4-hmget&#34; class=&#34;headerlink&#34; title=&#34;3.4 hmget&#34;&gt;&lt;/a&gt;3.4 &lt;strong&gt;hmget&lt;/strong&gt;&lt;/h4&gt;&lt;p&gt;​	一次获取key中多个field的值&lt;/p&gt;
 &lt;p&gt;​	语法：hmget key field field&lt;/p&gt;
-&lt;p&gt;​	返回值：value 列表&lt;/p&gt;
-&lt;h4 id=&#34;35-hvals&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#35-hvals&#34;&gt;#&lt;/a&gt; 3.5 &lt;strong&gt;hvals&lt;/strong&gt;&lt;/h4&gt;
-&lt;p&gt;​	获取 key 中所有 field 的值&lt;/p&gt;
+&lt;p&gt;​	返回值：value列表&lt;/p&gt;
+&lt;h4 id=&#34;3-5-hvals&#34;&gt;&lt;a href=&#34;#3-5-hvals&#34; class=&#34;headerlink&#34; title=&#34;3.5 hvals&#34;&gt;&lt;/a&gt;3.5 &lt;strong&gt;hvals&lt;/strong&gt;&lt;/h4&gt;&lt;p&gt;​	获取key中所有field的值&lt;/p&gt;
 &lt;p&gt;​	语法：hvals key&lt;/p&gt;
-&lt;p&gt;​	返回值：value 列表&lt;/p&gt;
-&lt;h4 id=&#34;36-hgetall&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#36-hgetall&#34;&gt;#&lt;/a&gt; 3.6 &lt;strong&gt;hgetall&lt;/strong&gt;&lt;/h4&gt;
-&lt;p&gt;​	获取所有 field 和 value&lt;/p&gt;
+&lt;p&gt;​	返回值：value列表&lt;/p&gt;
+&lt;h4 id=&#34;3-6-hgetall&#34;&gt;&lt;a href=&#34;#3-6-hgetall&#34; class=&#34;headerlink&#34; title=&#34;3.6 hgetall&#34;&gt;&lt;/a&gt;3.6 &lt;strong&gt;hgetall&lt;/strong&gt;&lt;/h4&gt;&lt;p&gt;​	获取所有field和value&lt;/p&gt;
 &lt;p&gt;​	语法：hgetall key&lt;/p&gt;
-&lt;p&gt;​	返回值：field 和 value 交替显示列表&lt;/p&gt;
-&lt;h4 id=&#34;37-hdel&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#37-hdel&#34;&gt;#&lt;/a&gt; 3.7 &lt;strong&gt;hdel&lt;/strong&gt;&lt;/h4&gt;
-&lt;p&gt;​	删除 key 中任意个 field&lt;/p&gt;
+&lt;p&gt;​	返回值：field和value交替显示列表&lt;/p&gt;
+&lt;h4 id=&#34;3-7-hdel&#34;&gt;&lt;a href=&#34;#3-7-hdel&#34; class=&#34;headerlink&#34; title=&#34;3.7 hdel&#34;&gt;&lt;/a&gt;3.7 &lt;strong&gt;hdel&lt;/strong&gt;&lt;/h4&gt;&lt;p&gt;​	删除key中任意个field&lt;/p&gt;
 &lt;p&gt;​	语法：hdel key field field&lt;/p&gt;
-&lt;p&gt;​	返回值：成功删除 field 的数量&lt;/p&gt;
-&lt;h3 id=&#34;4-列表list&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#4-列表list&#34;&gt;#&lt;/a&gt; 4. &lt;strong&gt;列表（List）&lt;/strong&gt;&lt;/h3&gt;
-&lt;h4 id=&#34;41-rpush&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#41-rpush&#34;&gt;#&lt;/a&gt; 4.1 &lt;strong&gt;Rpush&lt;/strong&gt;&lt;/h4&gt;
-&lt;p&gt;​	向列表末尾中插入一个或多个值&lt;/p&gt;
+&lt;p&gt;​	返回值：成功删除field的数量&lt;/p&gt;
+&lt;h3 id=&#34;4-列表（List）&#34;&gt;&lt;a href=&#34;#4-列表（List）&#34; class=&#34;headerlink&#34; title=&#34;4. 列表（List）&#34;&gt;&lt;/a&gt;4. &lt;strong&gt;列表（List）&lt;/strong&gt;&lt;/h3&gt;&lt;h4 id=&#34;4-1-Rpush&#34;&gt;&lt;a href=&#34;#4-1-Rpush&#34; class=&#34;headerlink&#34; title=&#34;4.1 Rpush&#34;&gt;&lt;/a&gt;4.1 &lt;strong&gt;Rpush&lt;/strong&gt;&lt;/h4&gt;&lt;p&gt;​	向列表末尾中插入一个或多个值&lt;/p&gt;
 &lt;p&gt;​	语法；rpush key value value&lt;/p&gt;
 &lt;p&gt;​	返回值：列表长度&lt;/p&gt;
-&lt;h4 id=&#34;42-lrange&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#42-lrange&#34;&gt;#&lt;/a&gt; 4.2 &lt;strong&gt;lrange&lt;/strong&gt;&lt;/h4&gt;
-&lt;p&gt;​	返回列表中指定区间内的值。可以使用 - 1 代表列表末尾&lt;/p&gt;
+&lt;h4 id=&#34;4-2-lrange&#34;&gt;&lt;a href=&#34;#4-2-lrange&#34; class=&#34;headerlink&#34; title=&#34;4.2 lrange&#34;&gt;&lt;/a&gt;4.2 &lt;strong&gt;lrange&lt;/strong&gt;&lt;/h4&gt;&lt;p&gt;​	返回列表中指定区间内的值。可以使用-1代表列表末尾&lt;/p&gt;
 &lt;p&gt;​	语法：lrange list 0 -1&lt;/p&gt;
 &lt;p&gt;​	返回值：查询到的值&lt;/p&gt;
-&lt;h4 id=&#34;43-lpush&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#43-lpush&#34;&gt;#&lt;/a&gt; 4.3 &lt;strong&gt;lpush&lt;/strong&gt;&lt;/h4&gt;
-&lt;p&gt;​	将一个或多个值插入到列表前面&lt;/p&gt;
+&lt;h4 id=&#34;4-3-lpush&#34;&gt;&lt;a href=&#34;#4-3-lpush&#34; class=&#34;headerlink&#34; title=&#34;4.3 lpush&#34;&gt;&lt;/a&gt;4.3 &lt;strong&gt;lpush&lt;/strong&gt;&lt;/h4&gt;&lt;p&gt;​	将一个或多个值插入到列表前面&lt;/p&gt;
 &lt;p&gt;​	语法：lpush key value value&lt;/p&gt;
 &lt;p&gt;​	返回值：列表长度&lt;/p&gt;
-&lt;h4 id=&#34;44-llen&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#44-llen&#34;&gt;#&lt;/a&gt; 4.4 &lt;strong&gt;llen&lt;/strong&gt;&lt;/h4&gt;
-&lt;p&gt;​	获取列表长度&lt;/p&gt;
+&lt;h4 id=&#34;4-4-llen&#34;&gt;&lt;a href=&#34;#4-4-llen&#34; class=&#34;headerlink&#34; title=&#34;4.4 llen&#34;&gt;&lt;/a&gt;4.4 &lt;strong&gt;llen&lt;/strong&gt;&lt;/h4&gt;&lt;p&gt;​	获取列表长度&lt;/p&gt;
 &lt;p&gt;​	语法：llen key&lt;/p&gt;
 &lt;p&gt;​	返回值：列表长度&lt;/p&gt;
-&lt;h4 id=&#34;45-lrem&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#45-lrem&#34;&gt;#&lt;/a&gt; 4.5 &lt;strong&gt;lrem&lt;/strong&gt;&lt;/h4&gt;
-&lt;p&gt;​	删除列表中元素。count 为正数表示从左往右删除的数量。负数从右往左删除的数量。&lt;/p&gt;
+&lt;h4 id=&#34;4-5-lrem&#34;&gt;&lt;a href=&#34;#4-5-lrem&#34; class=&#34;headerlink&#34; title=&#34;4.5 lrem&#34;&gt;&lt;/a&gt;4.5 &lt;strong&gt;lrem&lt;/strong&gt;&lt;/h4&gt;&lt;p&gt;​	删除列表中元素。count为正数表示从左往右删除的数量。负数从右往左删除的数量。&lt;/p&gt;
 &lt;p&gt;​	语法：lrem key count value&lt;/p&gt;
 &lt;p&gt;​	返回值：删除数量。&lt;/p&gt;
-&lt;h3 id=&#34;5-集合set&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#5-集合set&#34;&gt;#&lt;/a&gt; 5 &lt;strong&gt;集合 (Set)&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;​	set 和 java 中集合一样。&lt;/p&gt;
-&lt;h4 id=&#34;51-sadd&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#51-sadd&#34;&gt;#&lt;/a&gt; 5.1 &lt;strong&gt;sadd&lt;/strong&gt;&lt;/h4&gt;
-&lt;p&gt;​	向集合中添加内容。不允许重复。&lt;/p&gt;
+&lt;h3 id=&#34;5-集合-Set&#34;&gt;&lt;a href=&#34;#5-集合-Set&#34; class=&#34;headerlink&#34; title=&#34;5 集合(Set)&#34;&gt;&lt;/a&gt;5 &lt;strong&gt;集合(Set)&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;​	set和java中集合一样。&lt;/p&gt;
+&lt;h4 id=&#34;5-1-sadd&#34;&gt;&lt;a href=&#34;#5-1-sadd&#34; class=&#34;headerlink&#34; title=&#34;5.1 sadd&#34;&gt;&lt;/a&gt;5.1 &lt;strong&gt;sadd&lt;/strong&gt;&lt;/h4&gt;&lt;p&gt;​	向集合中添加内容。不允许重复。&lt;/p&gt;
 &lt;p&gt;​	语法：sadd key value value value&lt;/p&gt;
 &lt;p&gt;​	返回值：集合长度&lt;/p&gt;
-&lt;h4 id=&#34;52-scard&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#52-scard&#34;&gt;#&lt;/a&gt; 5.2 &lt;strong&gt;scard&lt;/strong&gt;&lt;/h4&gt;
-&lt;p&gt;​	返回集合元素数量&lt;/p&gt;
+&lt;h4 id=&#34;5-2-scard&#34;&gt;&lt;a href=&#34;#5-2-scard&#34; class=&#34;headerlink&#34; title=&#34;5.2 scard&#34;&gt;&lt;/a&gt;5.2 &lt;strong&gt;scard&lt;/strong&gt;&lt;/h4&gt;&lt;p&gt;​	返回集合元素数量&lt;/p&gt;
 &lt;p&gt;​	语法：scard key&lt;/p&gt;
 &lt;p&gt;​	返回值：集合长度&lt;/p&gt;
-&lt;h4 id=&#34;53-smembers&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#53-smembers&#34;&gt;#&lt;/a&gt; 5.3 **smembers **&lt;/h4&gt;
-&lt;p&gt;​	查看集合中元素内容&lt;/p&gt;
+&lt;h4 id=&#34;5-3-smembers&#34;&gt;&lt;a href=&#34;#5-3-smembers&#34; class=&#34;headerlink&#34; title=&#34;5.3 **smembers **&#34;&gt;&lt;/a&gt;5.3 **smembers **&lt;/h4&gt;&lt;p&gt;​	查看集合中元素内容&lt;/p&gt;
 &lt;p&gt;​	语法：smembers key&lt;/p&gt;
 &lt;p&gt;​	返回值：集合中元素&lt;/p&gt;
-&lt;h3 id=&#34;6-有序集合sorted-set&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#6-有序集合sorted-set&#34;&gt;#&lt;/a&gt; 6 .&lt;strong&gt; 有序集合（Sorted Set）&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;​	有序集合中每个 value 都有一个分数（score），根据分数进行排序。&lt;/p&gt;
-&lt;h4 id=&#34;61-zadd&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#61-zadd&#34;&gt;#&lt;/a&gt; 6.1 &lt;strong&gt;zadd&lt;/strong&gt;&lt;/h4&gt;
-&lt;p&gt;​	向有序集合中添加数据&lt;/p&gt;
+&lt;h3 id=&#34;6-有序集合（Sorted-Set）&#34;&gt;&lt;a href=&#34;#6-有序集合（Sorted-Set）&#34; class=&#34;headerlink&#34; title=&#34;6 .有序集合（Sorted Set）&#34;&gt;&lt;/a&gt;6 .&lt;strong&gt;有序集合（Sorted Set）&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;​	有序集合中每个value都有一个分数（score），根据分数进行排序。&lt;/p&gt;
+&lt;h4 id=&#34;6-1-zadd&#34;&gt;&lt;a href=&#34;#6-1-zadd&#34; class=&#34;headerlink&#34; title=&#34;6.1 zadd&#34;&gt;&lt;/a&gt;6.1 &lt;strong&gt;zadd&lt;/strong&gt;&lt;/h4&gt;&lt;p&gt;​	向有序集合中添加数据&lt;/p&gt;
 &lt;p&gt;​	语法：zadd key score value score value&lt;/p&gt;
 &lt;p&gt;​	返回值：长度&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;h4 id=&#34;62-zrange&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#62-zrange&#34;&gt;#&lt;/a&gt; 6.2 &lt;strong&gt;zrange&lt;/strong&gt;&lt;/h4&gt;
-&lt;p&gt;​	返回区间内容想・，withscores 表示带有分数&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+&lt;h4 id=&#34;6-2-zrange&#34;&gt;&lt;a href=&#34;#6-2-zrange&#34; class=&#34;headerlink&#34; title=&#34;6.2 zrange&#34;&gt;&lt;/a&gt;6.2 &lt;strong&gt;zrange&lt;/strong&gt;&lt;/h4&gt;&lt;p&gt;​	返回区间内容想·，withscores表示带有分数&lt;/p&gt;
 &lt;p&gt;​	语法：zrange key 区间 [withscores]&lt;/p&gt;
 &lt;p&gt;​	返回值：值列表&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;h2 id=&#34;五-redis持久化策略&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#五-redis持久化策略&#34;&gt;#&lt;/a&gt; 五、 &lt;strong&gt;Redis 持久化策略&lt;/strong&gt;&lt;/h2&gt;
-&lt;p&gt;​	Redis 不仅仅是一个内存型数据库，还具备持久化能力。&lt;/p&gt;
-&lt;h3 id=&#34;1-rdb&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-rdb&#34;&gt;#&lt;/a&gt; 1. &lt;strong&gt;RDB&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;​	rdb 模式是默认模式，可以在指定的时间间隔内生成数据快照（snapshot），默认保存到 dump.rdb 文件中。当 redis 重启后会自动加载 dump.rdb 文件中内容到内存中。&lt;/p&gt;
-&lt;p&gt;​	用户可以使用 SAVE（同步）或 BGSAVE（异步）手动保存数据。&lt;/p&gt;
-&lt;p&gt;​	可以设置服务器配置的 save 选项，让服务器每隔一段时间自动执行一次 BGSAVE 命令，可以通过 save 选项设置多个保存条件，但只要其中任意一个条件被满足，服务器就会执行 BGSAVE 命令。&lt;/p&gt;
-&lt;p&gt;例如：&lt;/p&gt;
-&lt;p&gt;save 900 1&lt;/p&gt;
-&lt;p&gt;save 300 10&lt;/p&gt;
-&lt;p&gt;save 60 10000&lt;/p&gt;
-&lt;p&gt;那么只要满足以下三个条件中的任意一个，BGSAVE 命令就会被执行&lt;/p&gt;
-&lt;p&gt;服务器在 900 秒之内，对数据库进行了至少 1 次修改&lt;/p&gt;
-&lt;p&gt;服务器在 300 秒之内，对数据库进行了至少 10 次修改&lt;/p&gt;
-&lt;p&gt;服务器在 60 秒之内，对数据库进行了至少 10000 次修改&lt;/p&gt;
-&lt;h4 id=&#34;11-优点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#11-优点&#34;&gt;#&lt;/a&gt; 1.1 &lt;strong&gt;优点&lt;/strong&gt;&lt;/h4&gt;
-&lt;p&gt;​	rdb 文件是一个紧凑文件，直接使用 rdb 文件就可以还原数据。&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;h2 id=&#34;五、-Redis持久化策略&#34;&gt;&lt;a href=&#34;#五、-Redis持久化策略&#34; class=&#34;headerlink&#34; title=&#34;五、 Redis持久化策略&#34;&gt;&lt;/a&gt;五、 &lt;strong&gt;Redis持久化策略&lt;/strong&gt;&lt;/h2&gt;&lt;p&gt;​	Redis不仅仅是一个内存型数据库，还具备持久化能力。&lt;/p&gt;
+&lt;h3 id=&#34;1-RDB&#34;&gt;&lt;a href=&#34;#1-RDB&#34; class=&#34;headerlink&#34; title=&#34;1. RDB&#34;&gt;&lt;/a&gt;1. &lt;strong&gt;RDB&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;​	rdb模式是默认模式，可以在指定的时间间隔内生成数据快照（snapshot），默认保存到dump.rdb文件中。当redis重启后会自动加载dump.rdb文件中内容到内存中。&lt;/p&gt;
+&lt;p&gt;​	用户可以使用SAVE（同步）或BGSAVE（异步）手动保存数据。&lt;/p&gt;
+&lt;p&gt;​	可以设置服务器配置的save选项，让服务器每隔一段时间自动执行一次BGSAVE命令，可以通过save选项设置多个保存条件，但只要其中任意一个条件被满足，服务器就会执行BGSAVE命令。&lt;/p&gt;
+&lt;p&gt;　　	例如：&lt;/p&gt;
+&lt;p&gt;　　	save 900 1&lt;/p&gt;
+&lt;p&gt;　　	save 300 10&lt;/p&gt;
+&lt;p&gt;　　	save 60 10000&lt;/p&gt;
+&lt;p&gt;　　那么只要满足以下三个条件中的任意一个，BGSAVE命令就会被执行&lt;/p&gt;
+&lt;p&gt;　　服务器在900秒之内，对数据库进行了至少1次修改&lt;/p&gt;
+&lt;p&gt;　　服务器在300秒之内，对数据库进行了至少10次修改&lt;/p&gt;
+&lt;p&gt;　　服务器在60秒之内，对数据库进行了至少10000次修改&lt;/p&gt;
+&lt;h4 id=&#34;1-1-优点&#34;&gt;&lt;a href=&#34;#1-1-优点&#34; class=&#34;headerlink&#34; title=&#34;1.1 优点&#34;&gt;&lt;/a&gt;1.1 &lt;strong&gt;优点&lt;/strong&gt;&lt;/h4&gt;&lt;p&gt;​	rdb文件是一个紧凑文件，直接使用rdb文件就可以还原数据。&lt;/p&gt;
 &lt;p&gt;​	数据保存会由一个子进程进行保存，不影响父进程。&lt;/p&gt;
-&lt;p&gt;​	恢复数据的效率要高于 aof&lt;/p&gt;
-&lt;h4 id=&#34;12-缺点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#12-缺点&#34;&gt;#&lt;/a&gt; 1.2 &lt;strong&gt;缺点&lt;/strong&gt;&lt;/h4&gt;
-&lt;p&gt;​	每次保存点之间导致 redis 不可意料的关闭，可能会丢失数据。&lt;/p&gt;
-&lt;p&gt;​	由于每次保存数据都需要 fork () 子进程，在数据量比较大时可能会比较耗费性能。&lt;/p&gt;
-&lt;h3 id=&#34;2-aof&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-aof&#34;&gt;#&lt;/a&gt; 2 &lt;strong&gt;AOF&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;​	AOF 默认是关闭的，需要在配置文件中开启 AOF。Redis 支持 AOF 和 RDB 同时生效，如果同时存在，AOF 优先级高于 RDB（Redis 重新启动时会使用 AOF 进行数据恢复）&lt;/p&gt;
+&lt;p&gt;​	恢复数据的效率要高于aof&lt;/p&gt;
+&lt;h4 id=&#34;1-2-缺点&#34;&gt;&lt;a href=&#34;#1-2-缺点&#34; class=&#34;headerlink&#34; title=&#34;1.2 缺点&#34;&gt;&lt;/a&gt;1.2 &lt;strong&gt;缺点&lt;/strong&gt;&lt;/h4&gt;&lt;p&gt;​	每次保存点之间导致redis不可意料的关闭，可能会丢失数据。&lt;/p&gt;
+&lt;p&gt;​	由于每次保存数据都需要fork()子进程，在数据量比较大时可能会比较耗费性能。&lt;/p&gt;
+&lt;h3 id=&#34;2-AOF&#34;&gt;&lt;a href=&#34;#2-AOF&#34; class=&#34;headerlink&#34; title=&#34;2 AOF&#34;&gt;&lt;/a&gt;2 &lt;strong&gt;AOF&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;​	AOF默认是关闭的，需要在配置文件中开启AOF。Redis支持AOF和RDB同时生效，如果同时存在，AOF优先级高于RDB（Redis重新启动时会使用AOF进行数据恢复）&lt;/p&gt;
 &lt;p&gt;​	监听执行的命令，如果发现执行了修改数据的操作，同时直接同步到数据库文件中。&lt;/p&gt;
-&lt;h4 id=&#34;21-优点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#21-优点&#34;&gt;#&lt;/a&gt; 2.1 &lt;strong&gt;优点&lt;/strong&gt;&lt;/h4&gt;
-&lt;p&gt;​	相对 RDB 数据更加安全。&lt;/p&gt;
-&lt;h4 id=&#34;22-缺点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#22-缺点&#34;&gt;#&lt;/a&gt; 2.2 &lt;strong&gt;缺点&lt;/strong&gt;&lt;/h4&gt;
-&lt;p&gt;​	相同数据集 AOF 要大于 RDB。&lt;/p&gt;
-&lt;p&gt;​	相对 RDB 可能会慢一些。&lt;/p&gt;
-&lt;h4 id=&#34;23-开启办法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#23-开启办法&#34;&gt;#&lt;/a&gt; 2.3 &lt;strong&gt;开启办法&lt;/strong&gt;&lt;/h4&gt;
-&lt;p&gt;​	修改 redis.conf 中&lt;/p&gt;
+&lt;h4 id=&#34;2-1-优点&#34;&gt;&lt;a href=&#34;#2-1-优点&#34; class=&#34;headerlink&#34; title=&#34;2.1 优点&#34;&gt;&lt;/a&gt;2.1 &lt;strong&gt;优点&lt;/strong&gt;&lt;/h4&gt;&lt;p&gt;​	相对RDB数据更加安全。&lt;/p&gt;
+&lt;h4 id=&#34;2-2-缺点&#34;&gt;&lt;a href=&#34;#2-2-缺点&#34; class=&#34;headerlink&#34; title=&#34;2.2 缺点&#34;&gt;&lt;/a&gt;2.2 &lt;strong&gt;缺点&lt;/strong&gt;&lt;/h4&gt;&lt;p&gt;​	相同数据集AOF要大于RDB。&lt;/p&gt;
+&lt;p&gt;​	相对RDB可能会慢一些。&lt;/p&gt;
+&lt;h4 id=&#34;2-3-开启办法&#34;&gt;&lt;a href=&#34;#2-3-开启办法&#34; class=&#34;headerlink&#34; title=&#34;2.3 开启办法&#34;&gt;&lt;/a&gt;2.3 &lt;strong&gt;开启办法&lt;/strong&gt;&lt;/h4&gt;&lt;p&gt;​	修改redis.conf中&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;
 # 默认no
 
@@ -322,75 +356,61 @@ appendonly yes
 # aof文件名
 
 appendfilename &amp;quot;appendonly.aof&amp;quot;
-
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;六-redis主从复制&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#六-redis主从复制&#34;&gt;#&lt;/a&gt; 六. &lt;strong&gt;Redis 主从复制&lt;/strong&gt;&lt;/h2&gt;
-&lt;p&gt;​	Redis 支持集群功能。为了保证单一节点可用性，redis 支持主从复制功能。每个节点有 N 个复制品（replica），其中一个复制品是主（master），另外 N-1 个复制品是从（Slave），也就是说 Redis 支持一主多从。&lt;/p&gt;
+&lt;h2 id=&#34;六-Redis主从复制&#34;&gt;&lt;a href=&#34;#六-Redis主从复制&#34; class=&#34;headerlink&#34; title=&#34;六. Redis主从复制&#34;&gt;&lt;/a&gt;六. &lt;strong&gt;Redis主从复制&lt;/strong&gt;&lt;/h2&gt;&lt;p&gt;​	Redis支持集群功能。为了保证单一节点可用性，redis支持主从复制功能。每个节点有N个复制品（replica），其中一个复制品是主（master），另外N-1个复制品是从（Slave），也就是说Redis支持一主多从。&lt;/p&gt;
 &lt;p&gt;​	一个主可有多个从，而一个从又可以看成主，它还可以有多个从。&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;/2022/10/07/DataBase/Redis/Redis/Redis-04.jpg&#34; class=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h3 id=&#34;1-主从优点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-主从优点&#34;&gt;#&lt;/a&gt; 1. &lt;strong&gt;主从优点&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;​	增加单一节点的健壮性，从而提升整个集群的稳定性。（Redis 中当超过 1/2 节点不可用时，整个集群不可用）&lt;/p&gt;
+&lt;img data-src=&#34;/2022/10/07/DataBase/Redis/Redis/Redis-04.jpg&#34; class=&#34;&#34;&gt;
+
+
+
+
+&lt;h3 id=&#34;1-主从优点&#34;&gt;&lt;a href=&#34;#1-主从优点&#34; class=&#34;headerlink&#34; title=&#34;1. 主从优点&#34;&gt;&lt;/a&gt;1. &lt;strong&gt;主从优点&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;​	增加单一节点的健壮性，从而提升整个集群的稳定性。（Redis中当超过1&amp;#x2F;2节点不可用时，整个集群不可用）&lt;/p&gt;
 &lt;p&gt;​	从节点可以对主节点数据备份，提升容灾能力。&lt;/p&gt;
-&lt;p&gt;​	读写分离。在 redis 主从中，主节点一般用作写（具备读的能力），从节点只能读，利用这个特性实现读写分离，写用主，读用从。&lt;/p&gt;
-&lt;h4 id=&#34;11-一主多从搭建&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#11-一主多从搭建&#34;&gt;#&lt;/a&gt; 1.1 &lt;strong&gt;一主多从搭建&lt;/strong&gt;&lt;/h4&gt;
-&lt;p&gt;​	在已经搭建的单机版 redis 基础上进行操作。&lt;/p&gt;
-&lt;p&gt;​	并且关闭 redis 单机版&lt;/p&gt;
+&lt;p&gt;​	读写分离。在redis主从中，主节点一般用作写（具备读的能力），从节点只能读，利用这个特性实现读写分离，写用主，读用从。&lt;/p&gt;
+&lt;h4 id=&#34;1-1-一主多从搭建&#34;&gt;&lt;a href=&#34;#1-1-一主多从搭建&#34; class=&#34;headerlink&#34; title=&#34;1.1 一主多从搭建&#34;&gt;&lt;/a&gt;1.1 &lt;strong&gt;一主多从搭建&lt;/strong&gt;&lt;/h4&gt;&lt;p&gt;​	在已经搭建的单机版redis基础上进行操作。&lt;/p&gt;
+&lt;p&gt;​	并且关闭redis单机版&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;
 ./redis-cli shutdown
-
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&#34;12-新建目录&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#12-新建目录&#34;&gt;#&lt;/a&gt; 1.2 &lt;strong&gt;新建目录&lt;/strong&gt;&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;
+&lt;h4 id=&#34;1-2-新建目录&#34;&gt;&lt;a href=&#34;#1-2-新建目录&#34; class=&#34;headerlink&#34; title=&#34;1.2 新建目录&#34;&gt;&lt;/a&gt;1.2 &lt;strong&gt;新建目录&lt;/strong&gt;&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;
 # mkdir /usr/local/replica
-
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&#34;13-复制目录&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#13-复制目录&#34;&gt;#&lt;/a&gt; 1.3 &lt;strong&gt;复制目录&lt;/strong&gt;&lt;/h4&gt;
-&lt;p&gt;​	把之前安装的 redis 单机版中 bin 目录复制三份，分别叫做：master、slave1、slave2&lt;/p&gt;
+&lt;h4 id=&#34;1-3-复制目录&#34;&gt;&lt;a href=&#34;#1-3-复制目录&#34; class=&#34;headerlink&#34; title=&#34;1.3 复制目录&#34;&gt;&lt;/a&gt;1.3 &lt;strong&gt;复制目录&lt;/strong&gt;&lt;/h4&gt;&lt;p&gt;​	把之前安装的redis单机版中bin目录复制三份，分别叫做：master、slave1、slave2&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;
 # cp -r /usr/local/redis/bin /usr/local/replica/master
 
 # cp -r /usr/local/redis/bin /usr/local/replica/slave1
 
 # cp -r /usr/local/redis/bin /usr/local/replica/slave2
-
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&#34;14-修改从的配置文件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#14-修改从的配置文件&#34;&gt;#&lt;/a&gt; 1.4 &lt;strong&gt;修改从的配置文件&lt;/strong&gt;&lt;/h4&gt;
-&lt;p&gt;​	修改 2 个从的 redis.conf，指定主节点 ip 和端口。并修改自身端口号防止和其他 redis 冲突。&lt;/p&gt;
+&lt;h4 id=&#34;1-4-修改从的配置文件&#34;&gt;&lt;a href=&#34;#1-4-修改从的配置文件&#34; class=&#34;headerlink&#34; title=&#34;1.4 修改从的配置文件&#34;&gt;&lt;/a&gt;1.4 &lt;strong&gt;修改从的配置文件&lt;/strong&gt;&lt;/h4&gt;&lt;p&gt;​	修改2个从的redis.conf，指定主节点ip和端口。并修改自身端口号防止和其他redis冲突。&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;
 # vim /usr/local/replica/slave1/redis.conf
-
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;​	指定主节点 ip 和端口&lt;/p&gt;
+&lt;p&gt;​	指定主节点ip和端口&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;
 replicaof 192.168.93.10 6379
-
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;​	修改自己端口&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;
 port 6380
-
 &lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;
 # vim /usr/local/replica/slave2/redis.conf
-
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;​	指定主节点 ip 和端口&lt;/p&gt;
+&lt;p&gt;​	指定主节点ip和端口&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;
 replicaof 192.168.93.10 6379
-
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;​	修改自己端口&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;
 port 6381
-
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&#34;15-启动三个redis实例&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#15-启动三个redis实例&#34;&gt;#&lt;/a&gt; 1.5 &lt;strong&gt;启动三个 redis 实例&lt;/strong&gt;&lt;/h4&gt;
-&lt;p&gt;​	注意：一定要关闭单机的 redis，否则端口冲突。&lt;/p&gt;
+&lt;h4 id=&#34;1-5-启动三个redis实例&#34;&gt;&lt;a href=&#34;#1-5-启动三个redis实例&#34; class=&#34;headerlink&#34; title=&#34;1.5 启动三个redis实例&#34;&gt;&lt;/a&gt;1.5 &lt;strong&gt;启动三个redis实例&lt;/strong&gt;&lt;/h4&gt;&lt;p&gt;​	注意：一定要关闭单机的redis，否则端口冲突。&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;
 # cd /usr/local/replica
 
 # vim startup.sh
-
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;​	在文件中添加下面内容&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;
@@ -405,84 +425,100 @@ cd /usr/local/replica/master/
   cd /usr/local/replica/slave2
 
 ./redis-server redis.conf
-
 &lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;赋予权限
+&lt;pre&gt;&lt;code&gt; 赋予权限
 &lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;
 # chmod a+x startup.sh
-
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;​	开启&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;
 # ./startup.sh
-
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&#34;16-查看启动状态&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#16-查看启动状态&#34;&gt;#&lt;/a&gt; 1.6 &lt;strong&gt;查看启动状态&lt;/strong&gt;&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;
+&lt;h4 id=&#34;1-6-查看启动状态&#34;&gt;&lt;a href=&#34;#1-6-查看启动状态&#34; class=&#34;headerlink&#34; title=&#34;1.6 查看启动状态&#34;&gt;&lt;/a&gt;1.6 &lt;strong&gt;查看启动状态&lt;/strong&gt;&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;
 # ps aux|grep redis
-
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img data-src=&#34;/2022/10/07/DataBase/Redis/Redis/Redis-05.jpg&#34; class=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h4 id=&#34;17-测试&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#17-测试&#34;&gt;#&lt;/a&gt; 1.7 &lt;strong&gt;测试&lt;/strong&gt; *&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;
+&lt;img data-src=&#34;/2022/10/07/DataBase/Redis/Redis/Redis-05.jpg&#34; class=&#34;&#34;&gt;
+
+
+
+
+&lt;h4 id=&#34;1-7-测试&#34;&gt;&lt;a href=&#34;#1-7-测试&#34; class=&#34;headerlink&#34; title=&#34;1.7 测试*&#34;&gt;&lt;/a&gt;1.7 &lt;strong&gt;测试&lt;/strong&gt;*&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;
 # cd /usr/local/replica/master/
 
 # ./redis-cli 
-
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img data-src=&#34;/2022/10/07/DataBase/Redis/Redis/Redis-06.jpg&#34; class=&#34;&#34;&gt;&lt;/p&gt;
+&lt;img data-src=&#34;/2022/10/07/DataBase/Redis/Redis/Redis-06.jpg&#34; class=&#34;&#34;&gt;
+
+
+
+
 &lt;p&gt;​	在客户端命令行模式下，添加一条数据：&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;/2022/10/07/DataBase/Redis/Redis/Redis-07.jpg&#34; class=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;​	进去 slave 查看数据是否同步。&lt;/p&gt;
+&lt;img data-src=&#34;/2022/10/07/DataBase/Redis/Redis/Redis-07.jpg&#34; class=&#34;&#34;&gt;
+
+
+
+
+&lt;p&gt;​	进去slave查看数据是否同步。&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;
 # cd /usr/local/replica/slave1
 
 # ./redis-cli -p 6380
-
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img data-src=&#34;/2022/10/07/DataBase/Redis/Redis/Redis-08.jpg&#34; class=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h3 id=&#34;2-docker下操作&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-docker下操作&#34;&gt;#&lt;/a&gt; 2、docker 下操作&lt;/h3&gt;
-&lt;p&gt;​	可以自定义&lt;strong&gt; redis.conf&lt;/strong&gt; 文件只写要修改的，不改的就别写，这里主要是要书写&lt;strong&gt;新的端口号&lt;/strong&gt;以及&lt;strong&gt;父节点&lt;/strong&gt;的&lt;strong&gt; ip 和端口&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;** 注意：** 所有修改必须在容器外，容器内修改无效，在退出重启的那一刻就已经还原了&lt;/p&gt;
+&lt;img data-src=&#34;/2022/10/07/DataBase/Redis/Redis/Redis-08.jpg&#34; class=&#34;&#34;&gt;
+
+
+
+
+&lt;h3 id=&#34;2、docker下操作&#34;&gt;&lt;a href=&#34;#2、docker下操作&#34; class=&#34;headerlink&#34; title=&#34;2、docker下操作&#34;&gt;&lt;/a&gt;2、docker下操作&lt;/h3&gt;&lt;p&gt;​	可以自定义&lt;strong&gt;redis.conf&lt;/strong&gt;文件只写要修改的，不改的就别写，这里主要是要书写&lt;strong&gt;新的端口号&lt;/strong&gt;以及&lt;strong&gt;父节点&lt;/strong&gt;的&lt;strong&gt;ip和端口&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt;所有修改必须在容器外，容器内修改无效，在退出重启的那一刻就已经还原了&lt;/p&gt;
 &lt;p&gt;我们通常使用  CP 来修改&lt;/p&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt;  &lt;span class=&#34;token function&#34;&gt;cp&lt;/span&gt;  本机文件路径   容器id: 容器内文件路径&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;#所有路径是所在文件夹路径，并不是文件的路径，简单来说就是写到文件夹所在路径即可，不需要指定特定文件&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h4 id=&#34;1-修改端口号&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-修改端口号&#34;&gt;#&lt;/a&gt; 1、修改端口号&lt;/h4&gt;
-&lt;p&gt;同上&lt;/p&gt;
-&lt;h4 id=&#34;2-指定父节点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-指定父节点&#34;&gt;#&lt;/a&gt; 2、指定父节点&lt;/h4&gt;
-&lt;p&gt;同上&lt;/p&gt;
-&lt;h4 id=&#34;3-重启&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3-重启&#34;&gt;#&lt;/a&gt; 3、重启&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;（如果在启动前修改不需要，这里是指已经启动了的容器，在修改之后的操作）&lt;/strong&gt;&lt;/p&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; restart 容器id&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h4 id=&#34;4-测试并查看&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#4-测试并查看&#34;&gt;#&lt;/a&gt; 4、测试并查看&lt;/h4&gt;
-&lt;p&gt;・同上&lt;/p&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;role&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;或者&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;info replication&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h2 id=&#34;七-哨兵sentinel&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#七-哨兵sentinel&#34;&gt;#&lt;/a&gt; 七.  &lt;strong&gt;哨兵（Sentinel）&lt;/strong&gt;&lt;/h2&gt;
-&lt;p&gt;​	在 redis 主从默认是只有主具备写的能力，而从只能读。如果主宕机，整个节点不具备写能力。但是如果这是让一个从变成主，整个节点就可以继续工作。即使之前的主恢复过来也当做这个节点的从即可。&lt;/p&gt;
-&lt;p&gt;​	Redis 的哨兵就是帮助监控整个节点的，当节点主宕机等情况下，帮助重新选取主。&lt;/p&gt;
-&lt;p&gt;​	Redis 中哨兵支持单哨兵和多哨兵。单哨兵是只要这个哨兵发现 master 宕机了，就直接选取另一个 master。而多哨兵是根据我们设定，达到一定数量哨兵认为 master 宕机后才会进行重新选取主。我们以多哨兵演示。&lt;/p&gt;
-&lt;h3 id=&#34;1-没有哨兵下主从效果&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-没有哨兵下主从效果&#34;&gt;#&lt;/a&gt; 1. &lt;strong&gt;没有哨兵下主从效果&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;​	只要杀掉主，整个节点无法在写数据，从身份不会变化，主的信息还是以前的信息。&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;/2022/10/07/DataBase/Redis/Redis/Redis-09.jpg&#34; class=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h3 id=&#34;2搭建多哨兵&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2搭建多哨兵&#34;&gt;#&lt;/a&gt; 2.&lt;strong&gt; 搭建多哨兵&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;​	前提：安装了单机的 redis&lt;/p&gt;
-&lt;h4 id=&#34;21-新建目录&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#21-新建目录&#34;&gt;#&lt;/a&gt; 2.1 &lt;strong&gt;新建目录&lt;/strong&gt;&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;
+&lt;pre&gt;&lt;code class=&#34;shell&#34;&gt;
+docker  cp  本机文件路径   容器id: 容器内文件路径
+
+#所有路径是所在文件夹路径，并不是文件的路径，简单来说就是写到文件夹所在路径即可，不需要指定特定文件
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;1、修改端口号&#34;&gt;&lt;a href=&#34;#1、修改端口号&#34; class=&#34;headerlink&#34; title=&#34;1、修改端口号&#34;&gt;&lt;/a&gt;1、修改端口号&lt;/h4&gt;&lt;p&gt;同上&lt;/p&gt;
+&lt;h4 id=&#34;2、指定父节点&#34;&gt;&lt;a href=&#34;#2、指定父节点&#34; class=&#34;headerlink&#34; title=&#34;2、指定父节点&#34;&gt;&lt;/a&gt;2、指定父节点&lt;/h4&gt;&lt;p&gt;同上&lt;/p&gt;
+&lt;h4 id=&#34;3、重启&#34;&gt;&lt;a href=&#34;#3、重启&#34; class=&#34;headerlink&#34; title=&#34;3、重启&#34;&gt;&lt;/a&gt;3、重启&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;（如果在启动前修改不需要，这里是指已经启动了的容器，在修改之后的操作）&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;shell&#34;&gt;
+docker restart 容器id
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;4、测试并查看&#34;&gt;&lt;a href=&#34;#4、测试并查看&#34; class=&#34;headerlink&#34; title=&#34;4、测试并查看&#34;&gt;&lt;/a&gt;4、测试并查看&lt;/h4&gt;&lt;p&gt;·同上&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;shell&#34;&gt;
+role
+
+
+
+或者
+
+
+
+info replication
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;七-哨兵（Sentinel）&#34;&gt;&lt;a href=&#34;#七-哨兵（Sentinel）&#34; class=&#34;headerlink&#34; title=&#34;七.  哨兵（Sentinel）&#34;&gt;&lt;/a&gt;七.  &lt;strong&gt;哨兵（Sentinel）&lt;/strong&gt;&lt;/h2&gt;&lt;p&gt;​	在redis主从默认是只有主具备写的能力，而从只能读。如果主宕机，整个节点不具备写能力。但是如果这是让一个从变成主，整个节点就可以继续工作。即使之前的主恢复过来也当做这个节点的从即可。&lt;/p&gt;
+&lt;p&gt;​	Redis的哨兵就是帮助监控整个节点的，当节点主宕机等情况下，帮助重新选取主。&lt;/p&gt;
+&lt;p&gt;​	Redis中哨兵支持单哨兵和多哨兵。单哨兵是只要这个哨兵发现master宕机了，就直接选取另一个master。而多哨兵是根据我们设定，达到一定数量哨兵认为master宕机后才会进行重新选取主。我们以多哨兵演示。&lt;/p&gt;
+&lt;h3 id=&#34;1-没有哨兵下主从效果&#34;&gt;&lt;a href=&#34;#1-没有哨兵下主从效果&#34; class=&#34;headerlink&#34; title=&#34;1. 没有哨兵下主从效果&#34;&gt;&lt;/a&gt;1. &lt;strong&gt;没有哨兵下主从效果&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;​	只要杀掉主，整个节点无法在写数据，从身份不会变化，主的信息还是以前的信息。&lt;/p&gt;
+&lt;img data-src=&#34;/2022/10/07/DataBase/Redis/Redis/Redis-09.jpg&#34; class=&#34;&#34;&gt;
+
+
+
+
+&lt;h3 id=&#34;2-搭建多哨兵&#34;&gt;&lt;a href=&#34;#2-搭建多哨兵&#34; class=&#34;headerlink&#34; title=&#34;2.搭建多哨兵&#34;&gt;&lt;/a&gt;2.&lt;strong&gt;搭建多哨兵&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;​	前提：安装了单机的redis&lt;/p&gt;
+&lt;h4 id=&#34;2-1-新建目录&#34;&gt;&lt;a href=&#34;#2-1-新建目录&#34; class=&#34;headerlink&#34; title=&#34;2.1 新建目录&#34;&gt;&lt;/a&gt;2.1 &lt;strong&gt;新建目录&lt;/strong&gt;&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;
 # mkdir /usr/local/sentinel
-
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&#34;22-复制redis&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#22-复制redis&#34;&gt;#&lt;/a&gt; 2.2 &lt;strong&gt;复制 redis&lt;/strong&gt;&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;
+&lt;h4 id=&#34;2-2-复制redis&#34;&gt;&lt;a href=&#34;#2-2-复制redis&#34; class=&#34;headerlink&#34; title=&#34;2.2 复制redis&#34;&gt;&lt;/a&gt;2.2 &lt;strong&gt;复制redis&lt;/strong&gt;&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;
 # cp -r /usr/local/redis/bin/* /usr/local/sentinel
-
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&#34;23-复制配置文件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#23-复制配置文件&#34;&gt;#&lt;/a&gt; 2.3 &lt;strong&gt;复制配置文件&lt;/strong&gt;&lt;/h4&gt;
-&lt;p&gt;​	从 redis 解压目录中复制 sentinel 配置文件&lt;/p&gt;
+&lt;h4 id=&#34;2-3-复制配置文件&#34;&gt;&lt;a href=&#34;#2-3-复制配置文件&#34; class=&#34;headerlink&#34; title=&#34;2.3 复制配置文件&#34;&gt;&lt;/a&gt;2.3 &lt;strong&gt;复制配置文件&lt;/strong&gt;&lt;/h4&gt;&lt;p&gt;​	从redis解压目录中复制sentinel配置文件&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;
 # cd /usr/local/tmp/redis-5.0.5/
 
 # cp sentinel.conf /usr/local/sentinel/
-
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&#34;24-修改配置文件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#24-修改配置文件&#34;&gt;#&lt;/a&gt; 2.4 &lt;strong&gt;修改配置文件&lt;/strong&gt;&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;
+&lt;h4 id=&#34;2-4-修改配置文件&#34;&gt;&lt;a href=&#34;#2-4-修改配置文件&#34; class=&#34;headerlink&#34; title=&#34;2.4 修改配置文件&#34;&gt;&lt;/a&gt;2.4 &lt;strong&gt;修改配置文件&lt;/strong&gt;&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;
 # cd /usr/local/sentinel
 
 # vim sentinel.conf
@@ -500,9 +536,8 @@ logfile “/usr/local/sentinel/26379.log”
 
 
 sentinel monitor mymaster 192.168.93.10 6379 2
-
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;​	复制 sentinel.conf，命名为 sentinel-26380.conf&lt;/p&gt;
+&lt;p&gt;​	复制sentinel.conf，命名为sentinel-26380.conf&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;
 # cp sentinel.conf sentinel-26380.conf
 
@@ -517,9 +552,8 @@ daemonize yes
 logfile “/usr/local/sentinel/26380.log”
 
 sentinel monitor mymaster 192.168.93.10 6379 2
-
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;复制 sentinel.conf，命名为 sentinel-26381.conf&lt;/p&gt;
+&lt;p&gt;复制sentinel.conf，命名为sentinel-26381.conf&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;
 # cp sentinel.conf sentinel-26381.conf
 
@@ -534,26 +568,21 @@ daemonize yes
 logfile “/usr/local/sentinel/26381.log”
 
 sentinel monitor mymaster 192.168.93.10 6379 2
-
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&#34;25-启动主从&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#25-启动主从&#34;&gt;#&lt;/a&gt; 2.5 &lt;strong&gt;启动主从&lt;/strong&gt;&lt;/h4&gt;
-&lt;p&gt;​	如果已经启动状态，忽略下面命令。如果启动部分，全部 kill 后重新启动。&lt;/p&gt;
-&lt;p&gt;​	使用 kill 杀死全部 redis&lt;/p&gt;
+&lt;h4 id=&#34;2-5-启动主从&#34;&gt;&lt;a href=&#34;#2-5-启动主从&#34; class=&#34;headerlink&#34; title=&#34;2.5 启动主从&#34;&gt;&lt;/a&gt;2.5 &lt;strong&gt;启动主从&lt;/strong&gt;&lt;/h4&gt;&lt;p&gt;​	如果已经启动状态，忽略下面命令。如果启动部分，全部kill后重新启动。&lt;/p&gt;
+&lt;p&gt;​	使用kill杀死全部redis&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;
 # ps aux|grep redis
 
 # kill -9 进程号
-
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;​	启动 redis 主从&lt;/p&gt;
+&lt;p&gt;​	启动redis主从&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;
 # cd /usr/local/replica
 
 # ./startup.sh
-
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&#34;26-启动三个哨兵&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#26-启动三个哨兵&#34;&gt;#&lt;/a&gt; 2.6 &lt;strong&gt;启动三个哨兵&lt;/strong&gt;&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;
+&lt;h4 id=&#34;2-6-启动三个哨兵&#34;&gt;&lt;a href=&#34;#2-6-启动三个哨兵&#34; class=&#34;headerlink&#34; title=&#34;2.6 启动三个哨兵&#34;&gt;&lt;/a&gt;2.6 &lt;strong&gt;启动三个哨兵&lt;/strong&gt;&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;
 # cd /usr/local/sentinel
 
 # ./redis-sentinel sentinel.conf
@@ -561,44 +590,32 @@ sentinel monitor mymaster 192.168.93.10 6379 2
 # ./redis-sentinel sentinel-26380.conf
 
 # ./redis-sentinel sentinel-26381.conf
-
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&#34;27-查看日志&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#27-查看日志&#34;&gt;#&lt;/a&gt; 2.7 &lt;strong&gt;查看日志&lt;/strong&gt;&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;
+&lt;h4 id=&#34;2-7-查看日志&#34;&gt;&lt;a href=&#34;#2-7-查看日志&#34; class=&#34;headerlink&#34; title=&#34;2.7 查看日志&#34;&gt;&lt;/a&gt;2.7 &lt;strong&gt;查看日志&lt;/strong&gt;&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;
 # cat 26379.log
-
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&#34;28-测试宕机&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#28-测试宕机&#34;&gt;#&lt;/a&gt; 2.8 &lt;strong&gt;测试宕机&lt;/strong&gt;&lt;/h4&gt;
-&lt;p&gt;​	查看 redis 进程号&lt;/p&gt;
+&lt;h4 id=&#34;2-8-测试宕机&#34;&gt;&lt;a href=&#34;#2-8-测试宕机&#34; class=&#34;headerlink&#34; title=&#34;2.8 测试宕机&#34;&gt;&lt;/a&gt;2.8 &lt;strong&gt;测试宕机&lt;/strong&gt;&lt;/h4&gt;&lt;p&gt;​	查看redis进程号&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;
 # ps aux|grep redis
-
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;​	杀死主进程号&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;
 # kill -9 进程号
-
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;​	查看日志，短暂延迟后会发现，出现新的主。&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;
 # cat 26379.log
-
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;八-集群cluster-nt-have-doc&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#八-集群cluster-nt-have-doc&#34;&gt;#&lt;/a&gt; 八。集群 (Cluster)--nt have doc&lt;/h2&gt;
-&lt;p&gt;​	前提：已经安装好 redis 单机版。&lt;/p&gt;
-&lt;p&gt;​	当集群中超过或等于 1/2 节点不可用时，整个集群不可用。为了搭建稳定集群，都采用奇数节点。&lt;/p&gt;
-&lt;h3 id=&#34;1-复制redis配置文件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-复制redis配置文件&#34;&gt;#&lt;/a&gt; 1 .&lt;strong&gt; 复制 redis 配置文件&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;​	从 /usr/local/redis/bin 下把 redis.conf 复制到当前目录中，命名为 redis-7001.conf&lt;/p&gt;
+&lt;h2 id=&#34;八-集群-Cluster-–nt-have-doc&#34;&gt;&lt;a href=&#34;#八-集群-Cluster-–nt-have-doc&#34; class=&#34;headerlink&#34; title=&#34;八. 集群(Cluster)–nt have doc&#34;&gt;&lt;/a&gt;八. 集群(Cluster)–nt have doc&lt;/h2&gt;&lt;p&gt;​	前提：已经安装好redis单机版。&lt;/p&gt;
+&lt;p&gt;​	当集群中超过或等于1&amp;#x2F;2节点不可用时，整个集群不可用。为了搭建稳定集群，都采用奇数节点。&lt;/p&gt;
+&lt;h3 id=&#34;1-复制redis配置文件&#34;&gt;&lt;a href=&#34;#1-复制redis配置文件&#34; class=&#34;headerlink&#34; title=&#34;1 .复制redis配置文件&#34;&gt;&lt;/a&gt;1 .&lt;strong&gt;复制redis配置文件&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;​	从&amp;#x2F;usr&amp;#x2F;local&amp;#x2F;redis&amp;#x2F;bin下把redis.conf复制到当前目录中，命名为redis-7001.conf&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;
 # cp /usr/local/redis/bin/redis.conf /usr/local/redis/bin/redis-7001.conf
-
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;2-修改redis-7001conf&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-修改redis-7001conf&#34;&gt;#&lt;/a&gt; 2. &lt;strong&gt;修改 redis-7001.conf&lt;/strong&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;
+&lt;h3 id=&#34;2-修改redis-7001-conf&#34;&gt;&lt;a href=&#34;#2-修改redis-7001-conf&#34; class=&#34;headerlink&#34; title=&#34;2. 修改redis-7001.conf&#34;&gt;&lt;/a&gt;2. &lt;strong&gt;修改redis-7001.conf&lt;/strong&gt;&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;
 # cd /usr/local/redis/bin
 
 # vim redis-7001.conf
-
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;​	需要修改如下&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;
@@ -617,10 +634,8 @@ daemonize yes
 protected-mode no
 
 pidfile /var/run/redis_7001.pid
-
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;3-复制配置文件并修改内容&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3-复制配置文件并修改内容&#34;&gt;#&lt;/a&gt; 3 .&lt;strong&gt; 复制配置文件，并修改内容&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;​	把 redis-7001.conf 复制 5 份，分别叫做 redis-7002.conf、redis-7003.conf、redis-7004.conf、redis-7005.conf、redis-7006.conf&lt;/p&gt;
+&lt;h3 id=&#34;3-复制配置文件，并修改内容&#34;&gt;&lt;a href=&#34;#3-复制配置文件，并修改内容&#34; class=&#34;headerlink&#34; title=&#34;3 .复制配置文件，并修改内容&#34;&gt;&lt;/a&gt;3 .&lt;strong&gt;复制配置文件，并修改内容&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;​	把redis-7001.conf 复制5份，分别叫做redis-7002.conf、redis-7003.conf、redis-7004.conf、redis-7005.conf、redis-7006.conf &lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;
 # cp redis-7001.conf redis-7002.conf
 
@@ -631,23 +646,20 @@ pidfile /var/run/redis_7001.pid
 # cp redis-7001.conf redis-7005.conf
 
 # cp redis-7001.conf redis-7006.conf
-
 &lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;新复制的5个配置文件都需要需改三处。
+&lt;pre&gt;&lt;code&gt; 新复制的5个配置文件都需要需改三处。
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;​	例如 nodes-7002.conf 中需要把所有 7001 都换成 7002。&lt;/p&gt;
-&lt;p&gt;​	可以使用 :% s/7001/7002/g 进行全局修改。&lt;/p&gt;
+&lt;p&gt;​	例如nodes-7002.conf中需要把所有7001都换成7002。&lt;/p&gt;
+&lt;p&gt;​	可以使用 :%s&amp;#x2F;7001&amp;#x2F;7002&amp;#x2F;g 进行全局修改。 &lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;
 port 7002
 
 cluster-config-file nodes-7002.conf
 
 pidfile /var/run/redis_7002.pid
-
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;4-启动6个redis&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#4-启动6个redis&#34;&gt;#&lt;/a&gt; 4 .&lt;strong&gt; 启动 6 个 redis&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;​	可以使用 redis-server 结合 6 个配置文件进行启动 6 个实例。&lt;/p&gt;
-&lt;p&gt;​	执行之前一定要先删除 dump.rdb&lt;/p&gt;
+&lt;h3 id=&#34;4-启动6个redis&#34;&gt;&lt;a href=&#34;#4-启动6个redis&#34; class=&#34;headerlink&#34; title=&#34;4 .启动6个redis&#34;&gt;&lt;/a&gt;4 .&lt;strong&gt;启动6个redis&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;​	可以使用redis-server结合6个配置文件进行启动6个实例。&lt;/p&gt;
+&lt;p&gt;​	执行之前一定要先删除dump.rdb&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;
 # rm -f dump.rdb
 
@@ -674,27 +686,24 @@ pidfile /var/run/redis_7002.pid
 # chmod a+x startup.sh
 
 # ./startup.sh
-
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;5-查看启动状态&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#5-查看启动状态&#34;&gt;#&lt;/a&gt; 5. &lt;strong&gt;查看启动状态&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;&lt;img data-src=&#34;/2022/10/07/DataBase/Redis/Redis/Redis-10.jpg&#34; class=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h3 id=&#34;6-建立集群&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#6-建立集群&#34;&gt;#&lt;/a&gt; 6. &lt;strong&gt;建立集群&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;​	在 redis3 的时候需要借助 ruby 脚本实现集群。在 redis5 中可以使用自带的 redis-cli 实现集群功能，比 redis3 的时候更加方便了。&lt;/p&gt;
-&lt;p&gt;​	建议配置静态 ip，ip 改变集群失效&lt;/p&gt;
+&lt;h3 id=&#34;5-查看启动状态&#34;&gt;&lt;a href=&#34;#5-查看启动状态&#34; class=&#34;headerlink&#34; title=&#34;5. 查看启动状态&#34;&gt;&lt;/a&gt;5. &lt;strong&gt;查看启动状态&lt;/strong&gt;&lt;/h3&gt;&lt;img data-src=&#34;/2022/10/07/DataBase/Redis/Redis/Redis-10.jpg&#34; class=&#34;&#34;&gt;
+
+
+
+
+&lt;h3 id=&#34;6-建立集群&#34;&gt;&lt;a href=&#34;#6-建立集群&#34; class=&#34;headerlink&#34; title=&#34;6. 建立集群&#34;&gt;&lt;/a&gt;6. &lt;strong&gt;建立集群&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;​	在redis3的时候需要借助ruby脚本实现集群。在redis5中可以使用自带的redis-cli实现集群功能，比redis3的时候更加方便了。&lt;/p&gt;
+&lt;p&gt;​	建议配置静态ip，ip改变集群失效&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;
 ./redis-cli --cluster create 192.168.93.10:7001 192.168.93.10:7002 192.168.93.10:7003 192.168.93.10:7004 192.168.93.10:7005 192.168.93.10:7006 --cluster-replicas 1
-
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;7-测试&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#7-测试&#34;&gt;#&lt;/a&gt; 7. &lt;strong&gt;测试&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;​	集群测试时，千万不要忘记最后一个 - c 参数。&lt;/p&gt;
+&lt;h3 id=&#34;7-测试&#34;&gt;&lt;a href=&#34;#7-测试&#34; class=&#34;headerlink&#34; title=&#34;7. 测试&#34;&gt;&lt;/a&gt;7. &lt;strong&gt;测试&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;​	集群测试时，千万不要忘记最后一个-c参数。&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;
 # ./redis-cli -p 7001 -c
 
 # set age 18
-
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;8-编写关闭脚本&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#8-编写关闭脚本&#34;&gt;#&lt;/a&gt; 8 .&lt;strong&gt; 编写关闭脚本&lt;/strong&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;
+&lt;h3 id=&#34;8-编写关闭脚本&#34;&gt;&lt;a href=&#34;#8-编写关闭脚本&#34; class=&#34;headerlink&#34; title=&#34;8 .编写关闭脚本&#34;&gt;&lt;/a&gt;8 .&lt;strong&gt;编写关闭脚本&lt;/strong&gt;&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;
 # vim stop.sh
 
 # chmod a+x stop.sh
@@ -712,18 +721,25 @@ pidfile /var/run/redis_7002.pid
 ./redis-cli -p 7005 shutdown
 
 ./redis-cli -p 7006 shutdown
-
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;八-集群cluster-pathdocker&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#八-集群cluster-pathdocker&#34;&gt;#&lt;/a&gt; 八。集群 (Cluster)-PATH:docker&lt;/h2&gt;
-&lt;p&gt;​	&lt;strong&gt;注：&lt;strong&gt;1. 如果是配置修改之前&lt;/strong&gt;已经创建过的集群时&lt;/strong&gt;，要先进行第七步操作。&lt;/p&gt;
-&lt;p&gt;​			2. 要是想重启集群可以省略第一步，但是得&lt;strong&gt;先删除已经创建的容器&lt;/strong&gt;，重新进行 2、3（合并也行）&lt;/p&gt;
-&lt;h3 id=&#34;0-创建网络&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0-创建网络&#34;&gt;#&lt;/a&gt; 0、创建网络&lt;/h3&gt;
-&lt;p&gt;** 目的：** 让宿主机可以访问到自身&lt;/p&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; network create net-redis &lt;span class=&#34;token parameter variable&#34;&gt;--subnet&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;172.38&lt;/span&gt;.0.0/16&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;补充：关于虚拟机的三种网路连接方式区别&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYmlmZW5nbWlhb3podWFuL2FydGljbGUvZGV0YWlscy83OTg4NzY5Mj9zcG09MTAwMS4yMTAxLjMwMDEuNjY2MS4xJmFtcDt1dG1fbWVkaXVtPWRpc3RyaWJ1dGUucGNfcmVsZXZhbnRfdDAubm9uZS10YXNrLWJsb2ctMg==&#34;&gt;http://blog.csdn.net/bifengmiaozhuan/article/details/79887692?spm=1001.2101.3001.6661.1&amp;amp;utm_medium=distribute.pc_relevant_t0.none-task-blog-2&lt;/span&gt;&lt;sub&gt;default&lt;/sub&gt;CTRLIST&lt;sub&gt;Rate-1.pc_relevant_default&amp;amp;depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2&lt;/sub&gt;default&lt;sub&gt;CTRLIST&lt;/sub&gt;Rate-1.pc_relevant_default&amp;amp;utm_relevant_index=1&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;h3 id=&#34;1-创建并修改配置文件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-创建并修改配置文件&#34;&gt;#&lt;/a&gt; 1、创建并修改配置文件&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;注：&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;八-集群-Cluster-PATH-docker&#34;&gt;&lt;a href=&#34;#八-集群-Cluster-PATH-docker&#34; class=&#34;headerlink&#34; title=&#34;八. 集群(Cluster)-PATH:docker&#34;&gt;&lt;/a&gt;八. 集群(Cluster)-PATH:docker&lt;/h2&gt;&lt;p&gt;​	&lt;strong&gt;注：&lt;/strong&gt;1.如果是配置修改之前&lt;strong&gt;已经创建过的集群时&lt;/strong&gt;，要先进行第七步操作。&lt;/p&gt;
+&lt;p&gt;​			2.要是想重启集群可以省略第一步，但是得&lt;strong&gt;先删除已经创建的容器&lt;/strong&gt;，重新进行2、3（合并也行）&lt;/p&gt;
+&lt;h3 id=&#34;0、创建网络&#34;&gt;&lt;a href=&#34;#0、创建网络&#34; class=&#34;headerlink&#34; title=&#34;0、创建网络&#34;&gt;&lt;/a&gt;0、创建网络&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;目的：&lt;/strong&gt;让宿主机可以访问到自身&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;shell&#34;&gt;
+docker network create net-redis --subnet 172.38.0.0/16
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;补充：关于虚拟机的三种网路连接方式区别&lt;/p&gt;
+&lt;p&gt; &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYmlmZW5nbWlhb3podWFuL2FydGljbGUvZGV0YWlscy83OTg4NzY5Mj9zcG09MTAwMS4yMTAxLjMwMDEuNjY2MS4xJmFtcDt1dG1fbWVkaXVtPWRpc3RyaWJ1dGUucGNfcmVsZXZhbnRfdDAubm9uZS10YXNrLWJsb2ctMn5kZWZhdWx0fkNUUkxJU1R+UmF0ZS0xLnBjX3JlbGV2YW50X2RlZmF1bHQmYW1wO2RlcHRoXzEtdXRtX3NvdXJjZT1kaXN0cmlidXRlLnBjX3JlbGV2YW50X3QwLm5vbmUtdGFzay1ibG9nLTJ+ZGVmYXVsdH5DVFJMSVNUflJhdGUtMS5wY19yZWxldmFudF9kZWZhdWx0JmFtcDt1dG1fcmVsZXZhbnRfaW5kZXg9MQ==&#34;&gt;http://blog.csdn.net/bifengmiaozhuan/article/details/79887692?spm=1001.2101.3001.6661.1&amp;amp;utm_medium=distribute.pc_relevant_t0.none-task-blog-2~default~CTRLIST~Rate-1.pc_relevant_default&amp;amp;depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2~default~CTRLIST~Rate-1.pc_relevant_default&amp;amp;utm_relevant_index=1&lt;/span&gt; &lt;/p&gt;
+
+
+
+
+
+
+
+
+
+&lt;h3 id=&#34;1、创建并修改配置文件&#34;&gt;&lt;a href=&#34;#1、创建并修改配置文件&#34; class=&#34;headerlink&#34; title=&#34;1、创建并修改配置文件&#34;&gt;&lt;/a&gt;1、创建并修改配置文件&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;注：&lt;/strong&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;
 In certain deployments, Redis Cluster nodes address discovery fails, because addresses are NAT-ted or because ports are forwarded (the typical case is Docker and other containers).
 
@@ -758,49 +774,149 @@ cluster-announce-port
 
 
 要在你的配置文件上加上上面的2个配置
-
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;** 方法一：** 参考上面的方法一样行。&lt;/p&gt;
-&lt;p&gt;** 方法二：** 使用脚本&lt;/p&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;#cat &amp;lt;&amp;lt;EOF EOF 在这里没有特殊的含义，你可以使用 FOE 或 000 等；&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;#表示以 cat &amp;lt;&amp;lt;EOF 开始输入以 EOF 结束结束输入&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;#cat &gt; 创建文件，并把标准输入输出到后面的 filename 文件&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; * cluster-announce-ip					&lt;span class=&#34;token number&#34;&gt;192.168&lt;/span&gt;.1.195	&lt;span class=&#34;token comment&#34;&gt;#* 群集 ip&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; * cluster-announce-port				&lt;span class=&#34;token number&#34;&gt;700&lt;/span&gt;&lt;span class=&#34;token variable&#34;&gt;$&amp;#123;port&amp;#125;&lt;/span&gt;		&lt;span class=&#34;token comment&#34;&gt;#* 群集总线端口&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; * cluster-announce-bus-port&lt;span class=&#34;token comment&#34;&gt;#* 群集 ip    1700$&amp;#123;port&amp;#125;	   #* 群集公布端口&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;17&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 集群 ip 是固定 + 10000&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;18&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;19&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;20&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;21&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 可以使用 :  % s/7001/7002/g     进行全局修改。 --- 将全局的 7001 修改成 7002&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;22&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;23&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;24&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;25&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;token for-or-select variable&#34;&gt;port&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;token variable&#34;&gt;&lt;span class=&#34;token variable&#34;&gt;$(&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;seq&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;6&lt;/span&gt;&lt;span class=&#34;token variable&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;\&lt;/span&gt; &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;26&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;27&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;do&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;\&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;28&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;29&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;mkdir&lt;/span&gt;  &lt;span class=&#34;token parameter variable&#34;&gt;-p&lt;/span&gt;  /root/myredis/conf700&lt;span class=&#34;token variable&#34;&gt;$&amp;#123;port&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;30&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;31&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;touch&lt;/span&gt;  /root/myredis/conf700&lt;span class=&#34;token variable&#34;&gt;$&amp;#123;port&amp;#125;&lt;/span&gt;/redis.conf&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;32&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;33&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;cat&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;TTT&lt;span class=&#34;token bash punctuation&#34;&gt; &lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt; /root/myredis/conf700&lt;span class=&#34;token variable&#34;&gt;$&amp;#123;port&amp;#125;&lt;/span&gt;/redis.conf port &lt;span class=&#34;token number&#34;&gt;6379&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;34&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;35&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;bind 0.0.0.0&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;36&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;37&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;port 700&lt;span class=&#34;token variable&#34;&gt;$&amp;#123;port&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;38&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;39&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;cluster-enabled yes&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;40&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;41&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;cluster-config-file nodes-700&lt;span class=&#34;token variable&#34;&gt;$&amp;#123;port&amp;#125;&lt;/span&gt;.conf&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;42&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;43&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;cluster-node-timeout 15000&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;44&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;45&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;protected-mode no&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;46&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;47&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;pidfile /var/run/redis_ 700&lt;span class=&#34;token variable&#34;&gt;$&amp;#123;port&amp;#125;&lt;/span&gt;.pid&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;48&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;49&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;cluster-announce-ip  192.168.1.195 &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;50&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;51&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;cluster-announce-port  700$&amp;#123;port) &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;52&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;53&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;cluster-announce-bus-port 1700$&amp;#123;port) &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;54&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;55&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;appendonly yes &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;56&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;57&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;TTT&lt;/span&gt; &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;58&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;59&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;done&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;2-创建容器&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-创建容器&#34;&gt;#&lt;/a&gt; 2、创建容器&lt;/h3&gt;
-&lt;p&gt;** 方法一：** 手动创建容器，并启动&lt;/p&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; run &lt;span class=&#34;token parameter variable&#34;&gt;-p&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;7001&lt;/span&gt;:7001   &lt;span class=&#34;token parameter variable&#34;&gt;-p&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;17001&lt;/span&gt;:17001  &lt;span class=&#34;token parameter variable&#34;&gt;--name&lt;/span&gt; redis7001  &lt;span class=&#34;token parameter variable&#34;&gt;-v&lt;/span&gt; /root/myredis/conf7001/redis.conf:/etc/redis/redis.conf &lt;span class=&#34;token parameter variable&#34;&gt;-v&lt;/span&gt; /root/myredis/data7001:/data &lt;span class=&#34;token parameter variable&#34;&gt;-d&lt;/span&gt; redis redis-server /etc/redis/redis.conf &lt;span class=&#34;token parameter variable&#34;&gt;--appendonly&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;yes&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;​	7002 ~~~7006 同上，自行修改参数&lt;/p&gt;
-&lt;p&gt;** 方法二：** 脚本一键启动，效果同上&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;方法一：&lt;/strong&gt;参考上面的方法一样行。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;方法二：&lt;/strong&gt;使用脚本&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;shell&#34;&gt;
+#cat &amp;lt;&amp;lt;EOF EOF在这里没有特殊的含义，你可以使用FOE或000等;
+
+#表示以cat &amp;lt;&amp;lt;EOF 开始输入以 EOF 结束结束输入
+
+#cat&amp;gt;创建文件，并把标准输入输出到后面的filename文件
+
+
+
+
+
+ * cluster-announce-ip					192.168.1.195	#*群集ip
+
+ * cluster-announce-port				700$&amp;#123;port&amp;#125;		#*群集总线端口
+
+ * cluster-announce-bus-port#*群集ip    1700$&amp;#123;port&amp;#125;	   #*群集公布端口
+
+# 集群 ip 是固定+10000
+
+
+
+# 可以使用 :  %s/7001/7002/g     进行全局修改。 ---将全局的7001修改成7002
+
+
+
+for port in $(seq 1 6); \ 
+
+do \
+
+mkdir  -p  /root/myredis/conf700$&amp;#123;port&amp;#125;
+
+touch  /root/myredis/conf700$&amp;#123;port&amp;#125;/redis.conf
+
+cat &amp;lt;&amp;lt;TTT &amp;gt; /root/myredis/conf700$&amp;#123;port&amp;#125;/redis.conf port 6379
+
+bind 0.0.0.0
+
+port 700$&amp;#123;port&amp;#125;
+
+cluster-enabled yes
+
+cluster-config-file nodes-700$&amp;#123;port&amp;#125;.conf
+
+cluster-node-timeout 15000
+
+protected-mode no
+
+pidfile /var/run/redis_ 700$&amp;#123;port&amp;#125;.pid
+
+cluster-announce-ip  192.168.1.195 
+
+cluster-announce-port  700$&amp;#123;port) 
+
+cluster-announce-bus-port 1700$&amp;#123;port) 
+
+appendonly yes 
+
+TTT 
+
+done
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;2、创建容器&#34;&gt;&lt;a href=&#34;#2、创建容器&#34; class=&#34;headerlink&#34; title=&#34;2、创建容器&#34;&gt;&lt;/a&gt;2、创建容器&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;方法一：&lt;/strong&gt;手动创建容器，并启动&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;shell&#34;&gt;
+docker run -p 7001:7001   -p 17001:17001  --name redis7001  -v /root/myredis/conf7001/redis.conf:/etc/redis/redis.conf -v /root/myredis/data7001:/data -d redis redis-server /etc/redis/redis.conf --appendonly yes
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;​	7002 ~~~7006同上，自行修改参数&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;方法二：&lt;/strong&gt;脚本一键启动，效果同上&lt;/p&gt;
 &lt;p&gt;​	&lt;strong&gt;注意：&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;其中要指定两个端口号 **-p 1700&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mrow&gt;&lt;mi&gt;p&lt;/mi&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;/mrow&gt;&lt;mo&gt;:&lt;/mo&gt;&lt;mn&gt;1700&lt;/mn&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;{port}:1700&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.80952em;vertical-align:-0.19444em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;o&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.02778em;&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;t&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mrel&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.64444em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;7&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;0&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; {port}** 不要忘记，否则会在创建几群的时候出现  **Waiting for the cluster to join   ** 。【具体原因，我还没查出来，后面补充】&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;其中要指定两个端口号**-p 1700${port}:1700${port}**不要忘记，否则会在创建几群的时候出现  **Waiting for the cluster to join   ** 。【具体原因，我还没查出来，后面补充】&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;在 docker 创建集群容器的时候，&lt;strong&gt;一定要&lt;/strong&gt; 指定  ip&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;在docker创建集群容器的时候，&lt;strong&gt;一定要&lt;/strong&gt; 指定  ip&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;补充：&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;那肯定是你端口没有开启，不要质疑，这里的端口不是 7000-7005，而是 17000-17005，因为 redis 设置集群的端口号是”redis 端口 + 10000“，这个非常重要。并且 7001:7006 也是必须打开的。&lt;/li&gt;
+&lt;li&gt;那肯定是你端口没有开启，不要质疑，这里的端口不是7000-7005，而是17000-17005，因为redis设置集群的端口号是”redis端口+10000“，这个非常重要。并且7001:7006也是必须打开的。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;token for-or-select variable&#34;&gt;port&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;token variable&#34;&gt;&lt;span class=&#34;token variable&#34;&gt;$(&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;seq&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;6&lt;/span&gt;&lt;span class=&#34;token variable&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;  &lt;span class=&#34;token punctuation&#34;&gt;\&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;do&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;\&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; run &lt;span class=&#34;token parameter variable&#34;&gt;-p&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;700&lt;/span&gt;&lt;span class=&#34;token variable&#34;&gt;$&amp;#123;port&amp;#125;&lt;/span&gt;:700&lt;span class=&#34;token variable&#34;&gt;$&amp;#123;port&amp;#125;&lt;/span&gt;   &lt;span class=&#34;token parameter variable&#34;&gt;-p&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1700&lt;/span&gt;&lt;span class=&#34;token variable&#34;&gt;$&amp;#123;port&amp;#125;&lt;/span&gt;:1700&lt;span class=&#34;token variable&#34;&gt;$&amp;#123;port&amp;#125;&lt;/span&gt;  &lt;span class=&#34;token parameter variable&#34;&gt;--name&lt;/span&gt; redis700&lt;span class=&#34;token variable&#34;&gt;$&amp;#123;port&amp;#125;&lt;/span&gt;  &lt;span class=&#34;token punctuation&#34;&gt;\&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token parameter variable&#34;&gt;-v&lt;/span&gt; /root/redis/redis700&lt;span class=&#34;token variable&#34;&gt;$&amp;#123;port&amp;#125;&lt;/span&gt;.conf:/etc/redis/redis.conf &lt;span class=&#34;token punctuation&#34;&gt;\&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token parameter variable&#34;&gt;-v&lt;/span&gt; /root/redis/data700&lt;span class=&#34;token variable&#34;&gt;$&amp;#123;port&amp;#125;&lt;/span&gt;:/data &lt;span class=&#34;token punctuation&#34;&gt;\&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token parameter variable&#34;&gt;-d&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;--ip&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;192.168&lt;/span&gt;.1.195 redis redis-server /etc/redis/redis.conf &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;done&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;3-进入容器&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3-进入容器&#34;&gt;#&lt;/a&gt; 3、进入容器&lt;/h3&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; &lt;span class=&#34;token builtin class-name&#34;&gt;exec&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-it&lt;/span&gt; redis7001 /bin/bash&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;4-创建集群&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#4-创建集群&#34;&gt;#&lt;/a&gt; 4、创建集群&lt;/h3&gt;
-&lt;p&gt;​	** 注：** 有一步操作，要自行进行确认，一定要输入 &lt;strong&gt;yes&lt;/strong&gt; 而不是 &lt;strong&gt;y&lt;/strong&gt; 或者其他之类的，除了 yes 一律视为 &lt;strong&gt;no&lt;/strong&gt; 。&lt;/p&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;redis-cli &lt;span class=&#34;token parameter variable&#34;&gt;--cluster&lt;/span&gt; create &lt;span class=&#34;token number&#34;&gt;192.168&lt;/span&gt;.1.195:7001 &lt;span class=&#34;token number&#34;&gt;192.168&lt;/span&gt;.1.195:7002 &lt;span class=&#34;token number&#34;&gt;192.168&lt;/span&gt;.1.195:7003 &lt;span class=&#34;token number&#34;&gt;192.168&lt;/span&gt;.1.195:7004 &lt;span class=&#34;token number&#34;&gt;192.168&lt;/span&gt;.1.195:7005 &lt;span class=&#34;token number&#34;&gt;192.168&lt;/span&gt;.1.195:7006 --cluster-replicas &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;5-测试&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#5-测试&#34;&gt;#&lt;/a&gt; 5、测试&lt;/h3&gt;
-&lt;p&gt;​	集群测试时，千万不要忘记最后一个 - c 参数。&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-shel&#34;&gt;
-redis-cli -p 7001 -c
+&lt;pre&gt;&lt;code class=&#34;shell&#34;&gt;
+for port in $(seq 1 6);  \
 
+do \
+
+docker run -p 700$&amp;#123;port&amp;#125;:700$&amp;#123;port&amp;#125;   -p 1700$&amp;#123;port&amp;#125;:1700$&amp;#123;port&amp;#125;  --name redis700$&amp;#123;port&amp;#125;  \
+
+-v /root/redis/redis700$&amp;#123;port&amp;#125;.conf:/etc/redis/redis.conf \
+
+-v /root/redis/data700$&amp;#123;port&amp;#125;:/data \
+
+-d --ip 192.168.1.195 redis redis-server /etc/redis/redis.conf 
+
+done
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;6-关闭集群&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#6-关闭集群&#34;&gt;#&lt;/a&gt; 6、关闭集群&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;方法一：&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;3、进入容器&#34;&gt;&lt;a href=&#34;#3、进入容器&#34; class=&#34;headerlink&#34; title=&#34;3、进入容器&#34;&gt;&lt;/a&gt;3、进入容器&lt;/h3&gt;&lt;pre&gt;&lt;code class=&#34;shell&#34;&gt;
+docker exec -it redis7001 /bin/bash
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;4、创建集群&#34;&gt;&lt;a href=&#34;#4、创建集群&#34; class=&#34;headerlink&#34; title=&#34;4、创建集群&#34;&gt;&lt;/a&gt;4、创建集群&lt;/h3&gt;&lt;p&gt;​	&lt;strong&gt;注：&lt;/strong&gt;有一步操作，要自行进行确认，一定要输入 &lt;strong&gt;yes&lt;/strong&gt; 而不是 &lt;strong&gt;y&lt;/strong&gt; 或者其他之类的，除了 yes一律视为 &lt;strong&gt;no&lt;/strong&gt; 。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;shell&#34;&gt;
+redis-cli --cluster create 192.168.1.195:7001 192.168.1.195:7002 192.168.1.195:7003 192.168.1.195:7004 192.168.1.195:7005 192.168.1.195:7006 --cluster-replicas 1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;5、测试&#34;&gt;&lt;a href=&#34;#5、测试&#34; class=&#34;headerlink&#34; title=&#34;5、测试&#34;&gt;&lt;/a&gt;5、测试&lt;/h3&gt;&lt;p&gt;​	集群测试时，千万不要忘记最后一个-c参数。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;shel&#34;&gt;
+redis-cli -p 7001 -c
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;6、关闭集群&#34;&gt;&lt;a href=&#34;#6、关闭集群&#34; class=&#34;headerlink&#34; title=&#34;6、关闭集群&#34;&gt;&lt;/a&gt;6、关闭集群&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;方法一：&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;​	自行手动一个一个停止，并且删除容器&lt;/p&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; stop redis7001 &lt;span class=&#34;token comment&#34;&gt;#7002 ~~~7006&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;rm&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-f&lt;/span&gt; redis7001&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;strong&gt;方法二：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;shell&#34;&gt;
+docker stop redis7001 #7002 ~~~7006
+
+
+
+docker rm -f redis7001
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;方法二：&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;​	脚本程序，一劳永逸&lt;/p&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;token for-or-select variable&#34;&gt;port&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;token variable&#34;&gt;&lt;span class=&#34;token variable&#34;&gt;$(&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;seq&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;6&lt;/span&gt;&lt;span class=&#34;token variable&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;  &lt;span class=&#34;token punctuation&#34;&gt;\&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;do&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;\&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; stop redis700&lt;span class=&#34;token variable&#34;&gt;$&amp;#123;port&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;rm&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-f&lt;/span&gt; redis700&lt;span class=&#34;token variable&#34;&gt;$&amp;#123;port&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;done&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;7-清空集群文件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#7-清空集群文件&#34;&gt;#&lt;/a&gt; 7、清空集群文件&lt;/h3&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;token for-or-select variable&#34;&gt;port&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;token variable&#34;&gt;&lt;span class=&#34;token variable&#34;&gt;$(&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;seq&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;6&lt;/span&gt;&lt;span class=&#34;token variable&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;  &lt;span class=&#34;token punctuation&#34;&gt;\&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;do&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;\&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;rm&lt;/span&gt;  &lt;span class=&#34;token parameter variable&#34;&gt;-rf&lt;/span&gt;  ./data700&lt;span class=&#34;token variable&#34;&gt;$&amp;#123;port&amp;#125;&lt;/span&gt;/* &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;done&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h2 id=&#34;九-jedis&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#九-jedis&#34;&gt;#&lt;/a&gt; 九. &lt;strong&gt;Jedis&lt;/strong&gt;&lt;/h2&gt;
-&lt;p&gt;​	Redis 给 Java 语言提供了客户端 API，称之为 Jedis。&lt;/p&gt;
-&lt;p&gt;​	Jedis API 和 Redis 命令几乎是一样的。&lt;/p&gt;
-&lt;p&gt;​	例如：Redis 对 String 值新增时 set 命令，Jedis 中也是 set 方法。所以本课程中没有重点把所有方法进行演示，重要演示 Jedis 如何使用。&lt;/p&gt;
-&lt;p&gt;​	Jedis API 特别简单，基本上都是创建对象调用方法即可。&lt;/p&gt;
-&lt;h3 id=&#34;1-单机版&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-单机版&#34;&gt;#&lt;/a&gt; 1. &lt;strong&gt;单机版&lt;/strong&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;
+&lt;pre&gt;&lt;code class=&#34;shell&#34;&gt;
+for port in $(seq 1 6);  \
+
+do \
+
+docker stop redis700$&amp;#123;port&amp;#125;
+
+docker rm -f redis700$&amp;#123;port&amp;#125;
+
+done
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;7、清空集群文件&#34;&gt;&lt;a href=&#34;#7、清空集群文件&#34; class=&#34;headerlink&#34; title=&#34;7、清空集群文件&#34;&gt;&lt;/a&gt;7、清空集群文件&lt;/h3&gt;&lt;pre&gt;&lt;code class=&#34;shell&#34;&gt;
+for port in $(seq 1 6);  \
+
+do \
+
+rm  -rf  ./data700$&amp;#123;port&amp;#125;/* 
+
+done
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;九-Jedis&#34;&gt;&lt;a href=&#34;#九-Jedis&#34; class=&#34;headerlink&#34; title=&#34;九. Jedis&#34;&gt;&lt;/a&gt;九. &lt;strong&gt;Jedis&lt;/strong&gt;&lt;/h2&gt;&lt;p&gt;​	Redis给Java语言提供了客户端API，称之为Jedis。&lt;/p&gt;
+&lt;p&gt;​	Jedis API和Redis 命令几乎是一样的。&lt;/p&gt;
+&lt;p&gt;​	例如：Redis对String值新增时set命令，Jedis中也是set方法。所以本课程中没有重点把所有方法进行演示，重要演示Jedis如何使用。&lt;/p&gt;
+&lt;p&gt;​	Jedis API特别简单，基本上都是创建对象调用方法即可。&lt;/p&gt;
+&lt;h3 id=&#34;1-单机版&#34;&gt;&lt;a href=&#34;#1-单机版&#34; class=&#34;headerlink&#34; title=&#34;1. 单机版&#34;&gt;&lt;/a&gt;1. &lt;strong&gt;单机版&lt;/strong&gt;&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;
 public void testStandalone()&amp;#123;
 
     Jedis jedis = new Jedis(&amp;quot;192.168.93.10&amp;quot;,6379);
@@ -812,10 +928,8 @@ public void testStandalone()&amp;#123;
     System.out.println(value);
 
 &amp;#125;
-
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;2-带有连接池&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-带有连接池&#34;&gt;#&lt;/a&gt; 2. &lt;strong&gt;带有连接池&lt;/strong&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;
+&lt;h3 id=&#34;2-带有连接池&#34;&gt;&lt;a href=&#34;#2-带有连接池&#34; class=&#34;headerlink&#34; title=&#34;2. 带有连接池&#34;&gt;&lt;/a&gt;2. &lt;strong&gt;带有连接池&lt;/strong&gt;&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;
 public void testPool()&amp;#123;
 
     JedisPoolConfig jedisPoolConfig = new JedisPoolConfig();
@@ -837,10 +951,8 @@ public void testPool()&amp;#123;
     System.out.println(value);
 
 &amp;#125;
-
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;3-集群&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3-集群&#34;&gt;#&lt;/a&gt; 3. &lt;strong&gt;集群&lt;/strong&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;
+&lt;h3 id=&#34;3-集群&#34;&gt;&lt;a href=&#34;#3-集群&#34; class=&#34;headerlink&#34; title=&#34;3. 集群&#34;&gt;&lt;/a&gt;3. &lt;strong&gt;集群&lt;/strong&gt;&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;
 public void testCluster()&amp;#123;
 
     Set&amp;lt;HostAndPort&amp;gt; set = new HashSet&amp;lt;&amp;gt;();
@@ -866,21 +978,18 @@ public void testCluster()&amp;#123;
     System.out.println(value);
 
 &amp;#125;
-
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;十-使用springboot整合springdataredis操作redis&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#十-使用springboot整合springdataredis操作redis&#34;&gt;#&lt;/a&gt; 十. &lt;strong&gt;使用 SpringBoot 整合 SpringDataRedis 操作 redis&lt;/strong&gt;&lt;/h2&gt;
-&lt;p&gt;​	Spring Data 是 Spring 公司的顶级项目，里面包含了 N 多个二级子项目，这些子项目都是相对独立的项目。每个子项目是对不同 API 的封装。&lt;/p&gt;
-&lt;p&gt;​	所有 Spring Boot 整合 Spring Data xxxx 的启动器都叫做 spring-boot-starter-data-xxxx&lt;/p&gt;
+&lt;h2 id=&#34;十-使用SpringBoot整合SpringDataRedis操作redis&#34;&gt;&lt;a href=&#34;#十-使用SpringBoot整合SpringDataRedis操作redis&#34; class=&#34;headerlink&#34; title=&#34;十. 使用SpringBoot整合SpringDataRedis操作redis&#34;&gt;&lt;/a&gt;十. &lt;strong&gt;使用SpringBoot整合SpringDataRedis操作redis&lt;/strong&gt;&lt;/h2&gt;&lt;p&gt;​	Spring Data是Spring公司的顶级项目，里面包含了N多个二级子项目，这些子项目都是相对独立的项目。每个子项目是对不同API的封装。&lt;/p&gt;
+&lt;p&gt;​	所有Spring Boot整合Spring Data xxxx的启动器都叫做spring-boot-starter-data-xxxx&lt;/p&gt;
 &lt;p&gt;​	Spring Data 好处很方便操作对象类型。&lt;/p&gt;
-&lt;p&gt;​	把 Redis 不同值得类型放到一个 opsForXXX 方法中。&lt;/p&gt;
-&lt;p&gt;​		opsForValue : String 值&lt;/p&gt;
-&lt;p&gt;​		opsForList : 列表 List&lt;/p&gt;
-&lt;p&gt;​		opsForHash: 哈希表 Hash&lt;/p&gt;
-&lt;p&gt;​		opsForZSet: 有序集合 Sorted Set&lt;/p&gt;
+&lt;p&gt;​	把Redis不同值得类型放到一个opsForXXX方法中。&lt;/p&gt;
+&lt;p&gt;​		opsForValue : String值&lt;/p&gt;
+&lt;p&gt;​		opsForList : 列表List&lt;/p&gt;
+&lt;p&gt;​		opsForHash: 哈希表Hash&lt;/p&gt;
+&lt;p&gt;​		opsForZSet: 有序集合Sorted Set&lt;/p&gt;
 &lt;p&gt;​		opsForSet : 集合&lt;/p&gt;
-&lt;h3 id=&#34;1-添加依赖&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-添加依赖&#34;&gt;#&lt;/a&gt; 1. &lt;strong&gt;添加依赖&lt;/strong&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;
- 	&amp;lt;parent&amp;gt;
+&lt;h3 id=&#34;1-添加依赖&#34;&gt;&lt;a href=&#34;#1-添加依赖&#34; class=&#34;headerlink&#34; title=&#34;1. 添加依赖&#34;&gt;&lt;/a&gt;1. &lt;strong&gt;添加依赖&lt;/strong&gt;&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;
+     &amp;lt;parent&amp;gt;
 
         &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
 
@@ -963,16 +1072,12 @@ public void testCluster()&amp;#123;
         &amp;lt;/dependency&amp;gt;
 
     &amp;lt;/dependencies&amp;gt;
-
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;2-配置配置文件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-配置配置文件&#34;&gt;#&lt;/a&gt; 2. &lt;strong&gt;配置配置文件&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;注：&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;2-配置配置文件&#34;&gt;&lt;a href=&#34;#2-配置配置文件&#34; class=&#34;headerlink&#34; title=&#34;2. 配置配置文件&#34;&gt;&lt;/a&gt;2. &lt;strong&gt;配置配置文件&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;注：&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;spring.redis.host=localhost 默认值&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;spring.redis.host&amp;#x3D;localhost 默认值&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;spring.redis.port=6379 端口号默认值&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;spring.redis.port&amp;#x3D;6379 端口号默认值&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;pre&gt;&lt;code&gt;
@@ -1001,10 +1106,8 @@ spring:
     cluster:
 
       nodes: 192.168.1.195:7001,192.168.1.195:7002,192.168.1.195:7003,192.168.1.195:7004,192.168.1.195:7005,192.168.1.195:7006
-
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;3编写配置类可直接复制&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3编写配置类可直接复制&#34;&gt;#&lt;/a&gt; 3.&lt;strong&gt; 编写配置类&lt;/strong&gt;（可直接复制）&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;
+&lt;h3 id=&#34;3-编写配置类（可直接复制）&#34;&gt;&lt;a href=&#34;#3-编写配置类（可直接复制）&#34; class=&#34;headerlink&#34; title=&#34;3.编写配置类（可直接复制）&#34;&gt;&lt;/a&gt;3.&lt;strong&gt;编写配置类&lt;/strong&gt;（可直接复制）&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;
 @Configuration
 
 public class RedisConfig &amp;#123;
@@ -1026,11 +1129,8 @@ public class RedisConfig &amp;#123;
     &amp;#125;
 
 &amp;#125;
-
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;4-编写代码&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#4-编写代码&#34;&gt;#&lt;/a&gt; 4. &lt;strong&gt;编写代码&lt;/strong&gt;&lt;/h3&gt;
-&lt;h4 id=&#34;41-编写对象新增&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#41-编写对象新增&#34;&gt;#&lt;/a&gt; 4.1 &lt;strong&gt;编写对象新增&lt;/strong&gt;&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;
+&lt;h3 id=&#34;4-编写代码&#34;&gt;&lt;a href=&#34;#4-编写代码&#34; class=&#34;headerlink&#34; title=&#34;4. 编写代码&#34;&gt;&lt;/a&gt;4. &lt;strong&gt;编写代码&lt;/strong&gt;&lt;/h3&gt;&lt;h4 id=&#34;4-1-编写对象新增&#34;&gt;&lt;a href=&#34;#4-1-编写对象新增&#34; class=&#34;headerlink&#34; title=&#34;4.1 编写对象新增&#34;&gt;&lt;/a&gt;4.1 &lt;strong&gt;编写对象新增&lt;/strong&gt;&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;
 @Autowired
 
 private RedisTemplate&amp;lt;String, Object&amp;gt; redisTemplate;
@@ -1046,10 +1146,8 @@ public void testString() &amp;#123;
     redisTemplate.opsForValue().set(&amp;quot;peo1&amp;quot;, peo);
 
 &amp;#125;
-
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&#34;42-编写对象获取&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#42-编写对象获取&#34;&gt;#&lt;/a&gt; 4.2 &lt;strong&gt;编写对象获取&lt;/strong&gt;&lt;/h4&gt;
-&lt;p&gt;此处必须编写值序列化器。不指定时返回类型为 LinkedHashMap&lt;/p&gt;
+&lt;h4 id=&#34;4-2-编写对象获取&#34;&gt;&lt;a href=&#34;#4-2-编写对象获取&#34; class=&#34;headerlink&#34; title=&#34;4.2 编写对象获取&#34;&gt;&lt;/a&gt;4.2 &lt;strong&gt;编写对象获取&lt;/strong&gt;&lt;/h4&gt;&lt;p&gt;此处必须编写值序列化器。不指定时返回类型为LinkedHashMap&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;
 @Test
 
@@ -1062,10 +1160,8 @@ public void testGetString() &amp;#123;
     System.out.println(peo);
 
 &amp;#125;
-
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&#34;43-编写list&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#43-编写list&#34;&gt;#&lt;/a&gt; 4.3 &lt;strong&gt;编写 List&lt;/strong&gt;&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;
+&lt;h4 id=&#34;4-3-编写List&#34;&gt;&lt;a href=&#34;#4-3-编写List&#34; class=&#34;headerlink&#34; title=&#34;4.3 编写List&#34;&gt;&lt;/a&gt;4.3 &lt;strong&gt;编写List&lt;/strong&gt;&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;
 @Test
 
 public void testList() &amp;#123;
@@ -1079,10 +1175,8 @@ public void testList() &amp;#123;
     redisTemplate.opsForValue().set(&amp;quot;list2&amp;quot;, list);
 
 &amp;#125;
-
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&#34;44-编写list取值&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#44-编写list取值&#34;&gt;#&lt;/a&gt; 4.4 &lt;strong&gt;编写 List 取值&lt;/strong&gt;&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;
+&lt;h4 id=&#34;4-4-编写List取值&#34;&gt;&lt;a href=&#34;#4-4-编写List取值&#34; class=&#34;headerlink&#34; title=&#34;4.4 编写List取值&#34;&gt;&lt;/a&gt;4.4 &lt;strong&gt;编写List取值&lt;/strong&gt;&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;
 @Test
 
 public void testGetList()&amp;#123;
@@ -1094,20 +1188,20 @@ public void testGetList()&amp;#123;
     System.out.println(list2);
 
 &amp;#125;
-
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;十一-使用redis效果&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#十一-使用redis效果&#34;&gt;#&lt;/a&gt; 十一. &lt;strong&gt;使用 Redis 效果&lt;/strong&gt;&lt;/h2&gt;
-&lt;p&gt;​	使用缓存流程&lt;/p&gt;
-&lt;p&gt;​	1. 先判断缓存中是否存在。如果存在直接从缓存中取出数据。不执行 2，3 步骤&lt;/p&gt;
-&lt;p&gt;​	2. 如果不存在，从 mysql 中获取数据&lt;/p&gt;
-&lt;p&gt;​	3. 获取数据后，把数据缓存到 redis 中&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;/2022/10/07/DataBase/Redis/Redis/Redis-11.jpg&#34; class=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;十一-使用Redis效果&#34;&gt;&lt;a href=&#34;#十一-使用Redis效果&#34; class=&#34;headerlink&#34; title=&#34;十一. 使用Redis效果&#34;&gt;&lt;/a&gt;十一. &lt;strong&gt;使用Redis效果&lt;/strong&gt;&lt;/h2&gt;&lt;p&gt;​	使用缓存流程&lt;/p&gt;
+&lt;p&gt;​	1. 先判断缓存中是否存在。如果存在直接从缓存中取出数据。不执行2，3步骤&lt;/p&gt;
+&lt;p&gt;​	2. 如果不存在，从mysql中获取数据&lt;/p&gt;
+&lt;p&gt;​	3. 获取数据后，把数据缓存到redis中&lt;/p&gt;
+&lt;img data-src=&#34;/2022/10/07/DataBase/Redis/Redis/Redis-11.jpg&#34; class=&#34;&#34;&gt;
+
+
 
 &lt;div id=&#34;gitalk-container&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js&#34;&gt;&lt;/script&gt;&lt;link rel=&#34;stylesheet&#34; href=&#34;https://unpkg.com/gitalk/dist/gitalk.css&#34;&gt;&lt;script src=&#34;https://unpkg.com/gitalk/dist/gitalk.min.js&#34;&gt;&lt;/script&gt;
 
 		&lt;script&gt;
-		var gitalkConfig = {&#34;clientID&#34;:&#34;eda74f740080fa01d0b5&#34;,&#34;clientSecret&#34;:&#34;c994dd2162a1dadaefbf078fcab49361438a7aca&#34;,&#34;repo&#34;:&#34;comments001&#34;,&#34;owner&#34;:&#34;onlymarryu&#34;,&#34;admin&#34;:[&#34;onlymarryu&#34;],&#34;distractionFreeMode&#34;:false};
+		var gitalkConfig = {&#34;clientID&#34;:&#34;eda74f740080fa01d0b5&#34;,&#34;clientSecret&#34;:&#34;c994dd2162a1dadaefbf078fcab49361438a7aca&#34;,&#34;repo&#34;:&#34;comments001&#34;,&#34;owner&#34;:&#34;onlymarryu&#34;,&#34;admin&#34;:[&#34;onlymarryu&#34;],&#34;distractionFreeMode&#34;:true,&#34;proxy&#34;:&#34;https://winter-rain-5b30.wudu-bk.workers.dev&#34;};
 	    gitalkConfig.id = md5(location.pathname);
 		var gitalk = new Gitalk(gitalkConfig);
 	    gitalk.render(&#34;gitalk-container&#34;);
