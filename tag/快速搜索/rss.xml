@@ -8,22 +8,22 @@
         <pubDate>Fri, 07 Oct 2022 00:00:00 +0800</pubDate>
         <lastBuildDate>Fri, 07 Oct 2022 00:00:00 +0800</lastBuildDate>
         <category>分布式</category>
-        <category>FastDFS</category>
         <category>Dubbo</category>
+        <category>FastDFS</category>
         <category>RPC</category>
-        <category>JavaSE</category>
         <category>中间件</category>
         <category>RabbitMQ</category>
         <category>Solr</category>
         <category>快速搜索</category>
+        <category>JavaSE</category>
         <category>-JavaSE</category>
-        <category>Spring</category>
         <category>框架</category>
-        <category>SpringBoot</category>
         <category>ORM</category>
-        <category>SpringMVC</category>
         <category>博客</category>
         <category>环境搭建</category>
+        <category>Spring</category>
+        <category>SpringBoot</category>
+        <category>SpringMVC</category>
         <category>SpringSecurity</category>
         <category>Redis基础</category>
         <category>NoSQL数据库</category>
@@ -36,59 +36,46 @@
             <category>Solr</category>
             <category>快速搜索</category>
             <pubDate>Fri, 07 Oct 2022 00:00:00 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;solr&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#solr&#34;&gt;#&lt;/a&gt; Solr&lt;/h1&gt;
-&lt;h3 id=&#34;主要内容&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#主要内容&#34;&gt;#&lt;/a&gt; 主要内容&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;Solr 简介&lt;/p&gt;
+            <description><![CDATA[ &lt;h1 id=&#34;Solr&#34;&gt;&lt;a href=&#34;#Solr&#34; class=&#34;headerlink&#34; title=&#34;Solr&#34;&gt;&lt;/a&gt;Solr&lt;/h1&gt;&lt;h3 id=&#34;主要内容&#34;&gt;&lt;a href=&#34;#主要内容&#34; class=&#34;headerlink&#34; title=&#34;主要内容&#34;&gt;&lt;/a&gt;主要内容&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Solr简介&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Solr 搜索原理&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;Solr搜索原理&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Solr 单机版安装&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;Solr单机版安装&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;可视化管理界面&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;可视化管理界面&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;新建核心&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;新建核心&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;分词&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;分词&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Dataimport&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;Dataimport&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;使用 SolrJ 操作 Solr&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;使用SolrJ操作Solr&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Spring Data for Apache Solr&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;Spring Data for Apache Solr&lt;/p&gt;
 &lt;ol start=&#34;10&#34;&gt;
 &lt;li&gt;SolrCloud&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&#34;学习目标&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#学习目标&#34;&gt;#&lt;/a&gt; 学习目标&lt;/h3&gt;
-&lt;table&gt;
+&lt;h3 id=&#34;学习目标&#34;&gt;&lt;a href=&#34;#学习目标&#34; class=&#34;headerlink&#34; title=&#34;学习目标&#34;&gt;&lt;/a&gt;学习目标&lt;/h3&gt;&lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th&gt;知识点&lt;/th&gt;
 &lt;th&gt;要求&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Solr 简介&lt;/td&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;Solr简介&lt;/td&gt;
 &lt;td&gt;掌握&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;Solr 搜索原理&lt;/td&gt;
+&lt;td&gt;Solr搜索原理&lt;/td&gt;
 &lt;td&gt;掌握&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;Solr 单机版安装&lt;/td&gt;
+&lt;td&gt;Solr单机版安装&lt;/td&gt;
 &lt;td&gt;掌握&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -108,7 +95,7 @@
 &lt;td&gt;掌握&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;使用 SolrJ 操作 Solr&lt;/td&gt;
+&lt;td&gt;使用SolrJ操作Solr&lt;/td&gt;
 &lt;td&gt;掌握&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -119,21 +106,15 @@
 &lt;td&gt;Spring Data for Apache Solr&lt;/td&gt;
 &lt;td&gt;掌握&lt;/td&gt;
 &lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h3 id=&#34;一-solr简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#一-solr简介&#34;&gt;#&lt;/a&gt; 一、Solr 简介&lt;/h3&gt;
-&lt;h4 id=&#34;1为什么使用solr&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1为什么使用solr&#34;&gt;#&lt;/a&gt; 1. 为什么使用 Solr&lt;/h4&gt;
-&lt;p&gt;​	在海量数据下，对 MySQL 或 Oracle 进行模糊查询或条件查询的效率是很低的。而搜索功能在绝大多数项目中都是必须的，如何提升搜索效率是很多互联网项目必须要考虑的问题。&lt;/p&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;h3 id=&#34;一、Solr简介&#34;&gt;&lt;a href=&#34;#一、Solr简介&#34; class=&#34;headerlink&#34; title=&#34;一、Solr简介&#34;&gt;&lt;/a&gt;一、Solr简介&lt;/h3&gt;&lt;h4 id=&#34;1-为什么使用Solr&#34;&gt;&lt;a href=&#34;#1-为什么使用Solr&#34; class=&#34;headerlink&#34; title=&#34;1.为什么使用Solr&#34;&gt;&lt;/a&gt;1.为什么使用Solr&lt;/h4&gt;&lt;p&gt;​	在海量数据下，对MySQL或Oracle进行模糊查询或条件查询的效率是很低的。而搜索功能在绝大多数项目中都是必须的，如何提升搜索效率是很多互联网项目必须要考虑的问题。&lt;/p&gt;
 &lt;p&gt;​	既然使用关系型数据库进行搜索效率比较低，最直接的解决方案就是使用专用搜索工具进行搜索，从而提升搜索效率。&lt;/p&gt;
-&lt;h4 id=&#34;2常见搜索解决方案&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2常见搜索解决方案&#34;&gt;#&lt;/a&gt; 2. 常见搜索解决方案&lt;/h4&gt;
-&lt;p&gt;​	基于 Apache Lucene（全文检索工具库）实现搜索。但是 Lucene 的使用对于绝大多数的程序员都是 “噩梦级” 的。&lt;/p&gt;
-&lt;p&gt;​	基于谷歌 API 实现搜索。&lt;/p&gt;
-&lt;p&gt;​	基于百度 API 实现搜索。&lt;/p&gt;
-&lt;h4 id=&#34;3solr简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3solr简介&#34;&gt;#&lt;/a&gt; 3.Solr 简介&lt;/h4&gt;
-&lt;p&gt;​	Solr 是基于 Apache Lucene 构建的用于搜索和分析的开源解决方案。可提供可扩展索引、搜索功能、高亮显示和文字解析功能。&lt;/p&gt;
-&lt;p&gt;​	Solr 本质就是一个 Java web 项目，且内嵌了 Jetty 服务器，所以安装起来非常方便。客户端操作 Solr 的过程和平时我们所写项目一样，就是请求 Solr 中控制器，处理完数据后把结果响应给客户端。&lt;/p&gt;
-&lt;h4 id=&#34;4正向索引和反向索引&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#4正向索引和反向索引&#34;&gt;#&lt;/a&gt; 4. 正向索引和反向索引&lt;/h4&gt;
-&lt;p&gt;​	只要讨论搜索就不得不提的两个概念：正向索引（forward index）和反向索引 (inverted index)。&lt;/p&gt;
+&lt;h4 id=&#34;2-常见搜索解决方案&#34;&gt;&lt;a href=&#34;#2-常见搜索解决方案&#34; class=&#34;headerlink&#34; title=&#34;2.常见搜索解决方案&#34;&gt;&lt;/a&gt;2.常见搜索解决方案&lt;/h4&gt;&lt;p&gt;​	基于Apache Lucene（全文检索工具库）实现搜索。但是Lucene的使用对于绝大多数的程序员都是“噩梦级”的。&lt;/p&gt;
+&lt;p&gt;​	基于谷歌API实现搜索。&lt;/p&gt;
+&lt;p&gt;​	基于百度API实现搜索。&lt;/p&gt;
+&lt;h4 id=&#34;3-Solr简介&#34;&gt;&lt;a href=&#34;#3-Solr简介&#34; class=&#34;headerlink&#34; title=&#34;3.Solr简介&#34;&gt;&lt;/a&gt;3.Solr简介&lt;/h4&gt;&lt;p&gt;​	Solr是基于Apache Lucene构建的用于搜索和分析的开源解决方案。可提供可扩展索引、搜索功能、高亮显示和文字解析功能。&lt;/p&gt;
+&lt;p&gt;​	Solr本质就是一个Java web 项目，且内嵌了Jetty服务器，所以安装起来非常方便。客户端操作Solr的过程和平时我们所写项目一样，就是请求Solr中控制器，处理完数据后把结果响应给客户端。&lt;/p&gt;
+&lt;h4 id=&#34;4-正向索引和反向索引&#34;&gt;&lt;a href=&#34;#4-正向索引和反向索引&#34; class=&#34;headerlink&#34; title=&#34;4.正向索引和反向索引&#34;&gt;&lt;/a&gt;4.正向索引和反向索引&lt;/h4&gt;&lt;p&gt;​	只要讨论搜索就不得不提的两个概念：正向索引（forward index）和反向索引(inverted index)。&lt;/p&gt;
 &lt;p&gt;​	正向索引：从文档内容到词组的过程。每次搜索的实收需要搜索所有文档，每个文档比较搜索条件和词组。&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -142,13 +123,11 @@
 &lt;th&gt;词组&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
+&lt;tbody&gt;&lt;tr&gt;
 &lt;td&gt;I am a chinese&lt;/td&gt;
 &lt;td&gt;I,am,a,chinese&lt;/td&gt;
 &lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
+&lt;/tbody&gt;&lt;/table&gt;
 &lt;p&gt;​	反向索引：是正向索引的逆向。建立词组和文档的映射关系。通过找到词组就能找到文档内容。（和新华字典找字很像）&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -157,89 +136,78 @@
 &lt;th&gt;文档&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
+&lt;tbody&gt;&lt;tr&gt;
 &lt;td&gt;I,am,a,chinese&lt;/td&gt;
 &lt;td&gt;I am a chinese&lt;/td&gt;
 &lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h3 id=&#34;二-solr搜索原理&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#二-solr搜索原理&#34;&gt;#&lt;/a&gt; 二、Solr 搜索原理&lt;/h3&gt;
-&lt;h4 id=&#34;1搜索原理&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1搜索原理&#34;&gt;#&lt;/a&gt; 1. 搜索原理&lt;/h4&gt;
-&lt;p&gt;​	Solr 能够提升检索效率的主要原因就是分词和索引（反向索引，通过）。&lt;/p&gt;
-&lt;p&gt;​	分词：会对搜索条件 / 存储内容进行分词，分成日常所使用的词语。&lt;/p&gt;
-&lt;p&gt;​	索引：存储在 Solr 中内容会按照程序员的要求来是否建立索引。如果要求建立索引会把存储内容中关键字（分词）建立索引。&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;/2022/10/07/Distribution/Solr/solr-01.JPG&#34; class=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h4 id=&#34;2solr中数据存储说明&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2solr中数据存储说明&#34;&gt;#&lt;/a&gt; 2.Solr 中数据存储说明&lt;/h4&gt;
-&lt;p&gt;​	Solr 为了给内容建立索引，所以 Solr 就必须具备数据存储能力。所有需要被搜索的内容都需要存储在 Solr 中，在开发中需要把数据库中数据添加到 Solr 中进行初始化，每次修改数据库中数据还需要同步 Solr 中的数据。&lt;/p&gt;
-&lt;p&gt;​	Solr 中数据存储是存储在 Document 对象中，对象中可以包含的属性和属性类型都定义在 scheme.xml 中。如果需要自定义属性或自定义属性类型都需要修改 scheme.xml 配置文件。从 Solr5 开始 schema.xml 更改名称为 managed-scheme (没有扩展名)&lt;/p&gt;
-&lt;h3 id=&#34;三-solr单机版安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#三-solr单机版安装&#34;&gt;#&lt;/a&gt; 三、Solr 单机版安装&lt;/h3&gt;
-&lt;p&gt;​	Solr 是使用 Java 编写，所以必选先安装 JDK。&lt;/p&gt;
-&lt;h4 id=&#34;1上传并解压&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1上传并解压&#34;&gt;#&lt;/a&gt; 1. 上传并解压&lt;/h4&gt;
-&lt;p&gt;​	上传压缩包 solr-7.7.2.tgz 到 /usr/local/tmp 中。&lt;/p&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;h3 id=&#34;二、Solr搜索原理&#34;&gt;&lt;a href=&#34;#二、Solr搜索原理&#34; class=&#34;headerlink&#34; title=&#34;二、Solr搜索原理&#34;&gt;&lt;/a&gt;二、Solr搜索原理&lt;/h3&gt;&lt;h4 id=&#34;1-搜索原理&#34;&gt;&lt;a href=&#34;#1-搜索原理&#34; class=&#34;headerlink&#34; title=&#34;1.搜索原理&#34;&gt;&lt;/a&gt;1.搜索原理&lt;/h4&gt;&lt;p&gt;​	Solr能够提升检索效率的主要原因就是分词和索引（反向索引，通过）。&lt;/p&gt;
+&lt;p&gt;​	分词：会对搜索条件&amp;#x2F;存储内容进行分词，分成日常所使用的词语。&lt;/p&gt;
+&lt;p&gt;​	索引：存储在Solr中内容会按照程序员的要求来是否建立索引。如果要求建立索引会把存储内容中关键字（分词）建立索引。&lt;/p&gt;
+&lt;img data-src=&#34;/2022/10/07/Distribution/Solr/solr-01.JPG&#34; class=&#34;&#34;&gt;
+
+&lt;h4 id=&#34;2-Solr中数据存储说明&#34;&gt;&lt;a href=&#34;#2-Solr中数据存储说明&#34; class=&#34;headerlink&#34; title=&#34;2.Solr中数据存储说明&#34;&gt;&lt;/a&gt;2.Solr中数据存储说明&lt;/h4&gt;&lt;p&gt;​	Solr为了给内容建立索引，所以Solr就必须具备数据存储能力。所有需要被搜索的内容都需要存储在Solr中，在开发中需要把数据库中数据添加到Solr中进行初始化，每次修改数据库中数据还需要同步Solr中的数据。&lt;/p&gt;
+&lt;p&gt;​	Solr中数据存储是存储在Document对象中，对象中可以包含的属性和属性类型都定义在scheme.xml中。如果需要自定义属性或自定义属性类型都需要修改scheme.xml配置文件。从Solr5开始schema.xml更改名称为managed-scheme(没有扩展名)&lt;/p&gt;
+&lt;h3 id=&#34;三、Solr单机版安装&#34;&gt;&lt;a href=&#34;#三、Solr单机版安装&#34; class=&#34;headerlink&#34; title=&#34;三、Solr单机版安装&#34;&gt;&lt;/a&gt;三、Solr单机版安装&lt;/h3&gt;&lt;p&gt;​	Solr是使用Java编写，所以必选先安装JDK。&lt;/p&gt;
+&lt;h4 id=&#34;1-上传并解压&#34;&gt;&lt;a href=&#34;#1-上传并解压&#34; class=&#34;headerlink&#34; title=&#34;1.上传并解压&#34;&gt;&lt;/a&gt;1.上传并解压&lt;/h4&gt;&lt;p&gt;​	上传压缩包solr-7.7.2.tgz到&amp;#x2F;usr&amp;#x2F;local&amp;#x2F;tmp中。&lt;/p&gt;
 &lt;p&gt;解压&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;# cd /usr/local/tmp
 # tar zxf solr-7.7.2.tgz
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&#34;2复制到usrlocal中&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2复制到usrlocal中&#34;&gt;#&lt;/a&gt; 2. 复制到 /usr/local 中&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;# cp -r solr-7.7.2 ../solr
+&lt;h4 id=&#34;2-复制到-x2F-usr-x2F-local中&#34;&gt;&lt;a href=&#34;#2-复制到-x2F-usr-x2F-local中&#34; class=&#34;headerlink&#34; title=&#34;2.复制到&amp;#x2F;usr&amp;#x2F;local中&#34;&gt;&lt;/a&gt;2.复制到&amp;#x2F;usr&amp;#x2F;local中&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;# cp -r solr-7.7.2 ../solr
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&#34;3修改启动参数&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3修改启动参数&#34;&gt;#&lt;/a&gt; 3. 修改启动参数&lt;/h4&gt;
-&lt;p&gt;​	修改启动参数，否则启动时报警告。提示设置 SOLR_ULIMIT_CHECKS=false&lt;/p&gt;
+&lt;h4 id=&#34;3-修改启动参数&#34;&gt;&lt;a href=&#34;#3-修改启动参数&#34; class=&#34;headerlink&#34; title=&#34;3.修改启动参数&#34;&gt;&lt;/a&gt;3.修改启动参数&lt;/h4&gt;&lt;p&gt;​	修改启动参数，否则启动时报警告。提示设置SOLR_ULIMIT_CHECKS&amp;#x3D;false&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;# cd /usr/local/solr/bin
 # vim solr.in.sh
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img data-src=&#34;/2022/10/07/Distribution/Solr/solr-02.jpg&#34; class=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h4 id=&#34;4启动solr&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#4启动solr&#34;&gt;#&lt;/a&gt; 4. 启动 Solr&lt;/h4&gt;
-&lt;p&gt;​	Solr 内嵌 Jetty，直接启动即可。监听 8983 端口。&lt;/p&gt;
-&lt;p&gt;​	solr 默认不推荐 root 账户启动，如果是 root 账户启动需要添加 - force 参数。&lt;/p&gt;
+&lt;img data-src=&#34;/2022/10/07/Distribution/Solr/solr-02.jpg&#34; class=&#34;&#34;&gt;
+
+&lt;h4 id=&#34;4-启动Solr&#34;&gt;&lt;a href=&#34;#4-启动Solr&#34; class=&#34;headerlink&#34; title=&#34;4.启动Solr&#34;&gt;&lt;/a&gt;4.启动Solr&lt;/h4&gt;&lt;p&gt;​	Solr内嵌Jetty，直接启动即可。监听8983端口。&lt;/p&gt;
+&lt;p&gt;​	solr默认不推荐root账户启动，如果是root账户启动需要添加-force参数。&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;# ./solr start -force
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;四-可视化管理界面&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#四-可视化管理界面&#34;&gt;#&lt;/a&gt; 四、可视化管理界面&lt;/h3&gt;
-&lt;p&gt;​	在关闭防火墙的前提下，可以在 windows 的浏览器中访问 Solr。&lt;/p&gt;
-&lt;p&gt;​	输入: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovLzE5Mi4xNjguOTMuMTA6ODk4Mw==&#34;&gt;http://192.168.93.10:8983&lt;/span&gt; 就可以访问 Solr 的可视化管理界面。&lt;/p&gt;
-&lt;p&gt;​	左侧有 5 个菜单。分别是：&lt;/p&gt;
-&lt;p&gt;​	（1）Dashboard：面板显示 Solr 的总体信息。&lt;/p&gt;
+&lt;h3 id=&#34;四、可视化管理界面&#34;&gt;&lt;a href=&#34;#四、可视化管理界面&#34; class=&#34;headerlink&#34; title=&#34;四、可视化管理界面&#34;&gt;&lt;/a&gt;四、可视化管理界面&lt;/h3&gt;&lt;p&gt;​	在关闭防火墙的前提下，可以在windows的浏览器中访问Solr。&lt;/p&gt;
+&lt;p&gt;​	输入: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovLzE5Mi4xNjguOTMuMTA6ODk4My8=&#34;&gt;http://192.168.93.10:8983&lt;/span&gt; 就可以访问Solr的可视化管理界面。&lt;/p&gt;
+&lt;p&gt;​	左侧有5个菜单。分别是：&lt;/p&gt;
+&lt;p&gt;​	（1）Dashboard：面板显示Solr的总体信息。&lt;/p&gt;
 &lt;p&gt;​	（2）Logging：日志&lt;/p&gt;
-&lt;p&gt;​	（3）Core Admin：Solr 的核心。类似于数据的 Database&lt;/p&gt;
-&lt;p&gt;​	（4）Java Perperties：所有 Java 相关属性。&lt;/p&gt;
+&lt;p&gt;​	（3）Core Admin：Solr的核心。类似于数据的Database&lt;/p&gt;
+&lt;p&gt;​	（4）Java Perperties：所有Java相关属性。&lt;/p&gt;
 &lt;p&gt;​	（5）Thread Dump：线程相关信息。&lt;/p&gt;
-&lt;p&gt;​	（6）如果有 Core，将显示在此处。&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;/2022/10/07/Distribution/Solr/solr-03.JPG&#34; class=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h3 id=&#34;五-新建核心&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#五-新建核心&#34;&gt;#&lt;/a&gt; 五、新建核心&lt;/h3&gt;
-&lt;p&gt;​	Solr 安装完成后默认是没有核心的。需要手动配置。&lt;/p&gt;
-&lt;p&gt;​	需要在 solr/server/solr 下新建文件夹，并给定配置文件，否则无法建立。&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;/2022/10/07/Distribution/Solr/solr-04.JPG&#34; class=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h4 id=&#34;1新建目录&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1新建目录&#34;&gt;#&lt;/a&gt; 1. 新建目录&lt;/h4&gt;
-&lt;p&gt;​	在 /usr/local/solr/server/solr 中新建自定义名称目录。此处示例名称为 testcore。&lt;/p&gt;
+&lt;p&gt;​	（6）如果有Core，将显示在此处。&lt;/p&gt;
+&lt;img data-src=&#34;/2022/10/07/Distribution/Solr/solr-03.JPG&#34; class=&#34;&#34;&gt;
+
+&lt;h3 id=&#34;五、新建核心&#34;&gt;&lt;a href=&#34;#五、新建核心&#34; class=&#34;headerlink&#34; title=&#34;五、新建核心&#34;&gt;&lt;/a&gt;五、新建核心&lt;/h3&gt;&lt;p&gt;​	Solr安装完成后默认是没有核心的。需要手动配置。&lt;/p&gt;
+&lt;p&gt;​	需要在solr&amp;#x2F;server&amp;#x2F;solr下新建文件夹，并给定配置文件，否则无法建立。&lt;/p&gt;
+&lt;img data-src=&#34;/2022/10/07/Distribution/Solr/solr-04.JPG&#34; class=&#34;&#34;&gt;
+
+&lt;h4 id=&#34;1-新建目录&#34;&gt;&lt;a href=&#34;#1-新建目录&#34; class=&#34;headerlink&#34; title=&#34;1.新建目录&#34;&gt;&lt;/a&gt;1.新建目录&lt;/h4&gt;&lt;p&gt;​	在&amp;#x2F;usr&amp;#x2F;local&amp;#x2F;solr&amp;#x2F;server&amp;#x2F;solr中新建自定义名称目录。此处示例名称为testcore。&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;# cd /usr/local/solr/server/solr
 # mkdir testcore
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&#34;2复制配置文件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2复制配置文件&#34;&gt;#&lt;/a&gt; 2. 复制配置文件&lt;/h4&gt;
-&lt;p&gt;​	在 configsets 里面包含了_default 和 sample_techproducts_configs。里面都是配置文件示例。_default 属于默认配置，较纯净。sample_techproducts_configs 是带有了一些配置示例。&lt;/p&gt;
+&lt;h4 id=&#34;2-复制配置文件&#34;&gt;&lt;a href=&#34;#2-复制配置文件&#34; class=&#34;headerlink&#34; title=&#34;2.复制配置文件&#34;&gt;&lt;/a&gt;2.复制配置文件&lt;/h4&gt;&lt;p&gt;​	在configsets里面包含了_default和sample_techproducts_configs。里面都是配置文件示例。_default属于默认配置，较纯净。sample_techproducts_configs是带有了一些配置示例。&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;# cp -r configsets/_default/conf/ testcore/
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&#34;3填写core信息&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3填写core信息&#34;&gt;#&lt;/a&gt; 3. 填写 Core 信息&lt;/h4&gt;
-&lt;p&gt;​	在可视化管理界面中 Core Admin 中编写信息后点击 Add Core 后，短暂延迟后 testcore 就会创建成功。schema 处不用更改。&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;/2022/10/07/Distribution/Solr/solr-05.JPG&#34; class=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h4 id=&#34;4出现testcore&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#4出现testcore&#34;&gt;#&lt;/a&gt; 4. 出现 testcore&lt;/h4&gt;
-&lt;p&gt;​	在客户端管理界面中，选择新建的 Core 后，就可以按照自己项目的需求进行操作了。&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;/2022/10/07/Distribution/Solr/solr-06.jpg&#34; class=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h3 id=&#34;六-分词analysis&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#六-分词analysis&#34;&gt;#&lt;/a&gt; 六、分词 Analysis&lt;/h3&gt;
-&lt;p&gt;​	在 Solr 可视化管理界面中，Core 的管理菜单项中都会有 Analysis。表示根据 Scheme.xml (managed-schema) 中配置要求进行解析。&lt;/p&gt;
+&lt;h4 id=&#34;3-填写Core信息&#34;&gt;&lt;a href=&#34;#3-填写Core信息&#34; class=&#34;headerlink&#34; title=&#34;3.填写Core信息&#34;&gt;&lt;/a&gt;3.填写Core信息&lt;/h4&gt;&lt;p&gt;​	在可视化管理界面中Core Admin中编写信息后点击Add Core后，短暂延迟后testcore就会创建成功。schema处不用更改。&lt;/p&gt;
+&lt;img data-src=&#34;/2022/10/07/Distribution/Solr/solr-05.JPG&#34; class=&#34;&#34;&gt;
+
+&lt;h4 id=&#34;4-出现testcore&#34;&gt;&lt;a href=&#34;#4-出现testcore&#34; class=&#34;headerlink&#34; title=&#34;4.出现testcore&#34;&gt;&lt;/a&gt;4.出现testcore&lt;/h4&gt;&lt;p&gt;​	在客户端管理界面中，选择新建的Core后，就可以按照自己项目的需求进行操作了。&lt;/p&gt;
+&lt;img data-src=&#34;/2022/10/07/Distribution/Solr/solr-06.jpg&#34; class=&#34;&#34;&gt;
+
+&lt;h3 id=&#34;六、分词Analysis&#34;&gt;&lt;a href=&#34;#六、分词Analysis&#34; class=&#34;headerlink&#34; title=&#34;六、分词Analysis&#34;&gt;&lt;/a&gt;六、分词Analysis&lt;/h3&gt;&lt;p&gt;​	在Solr可视化管理界面中，Core的管理菜单项中都会有Analysis。表示根据Scheme.xml(managed-schema)中配置要求进行解析。&lt;/p&gt;
 &lt;p&gt;​	对英文解析就比较简单了，只要按照空格把英文语句拆分成英文单词即可。&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;/2022/10/07/Distribution/Solr/solr-07.jpg&#34; class=&#34;&#34;&gt;&lt;/p&gt;
+&lt;img data-src=&#34;/2022/10/07/Distribution/Solr/solr-07.jpg&#34; class=&#34;&#34;&gt;
+
 &lt;p&gt;​	但是如果条件是中文时，把一句话按照字进行拆分就不是很合理了。正确的方式是按照合理的词组进行拆分。&lt;img data-src=&#34;/2022/10/07/Distribution/Solr/solr-08.jpg&#34; class=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h4 id=&#34;1配置步骤&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1配置步骤&#34;&gt;#&lt;/a&gt; 1. 配置步骤&lt;/h4&gt;
-&lt;p&gt;​	上传 ik-analyzer.jar 到 webapps 中。&lt;/p&gt;
-&lt;p&gt;​	去 https://search.maven.org/search?q=com.github.magese 下载对应版本的 ik-analyzer。可以在资料中直接获取。&lt;/p&gt;
-&lt;h5 id=&#34;11上传jar到指定目录&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#11上传jar到指定目录&#34;&gt;#&lt;/a&gt; 1.1 上传 jar 到指定目录&lt;/h5&gt;
-&lt;p&gt;​	上传 ik-analyzer-7.7.0.jar 到&lt;/p&gt;
-&lt;p&gt;​	/usr/local/solr/server/solr-webapp/webapp/WEB-INF/lib 目录中&lt;/p&gt;
-&lt;h5 id=&#34;12修改配置文件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#12修改配置文件&#34;&gt;#&lt;/a&gt; 1.2 修改配置文件&lt;/h5&gt;
-&lt;p&gt;​	修改 /usr/local/solr/server/solr/testcore/conf/managed-schema&lt;/p&gt;
-&lt;figure class=&#34;highlight sh&#34;&gt;&lt;figcaption data-lang=&#34;sh&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;vim&lt;/span&gt; /usr/local/solr/server/solr/testcore/conf/managed-schema&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;​	添加下面内容。&lt;/p&gt;
-&lt;p&gt;​	排版：Esc 退出编辑状态下：gg=G&lt;/p&gt;
+&lt;h4 id=&#34;1-配置步骤&#34;&gt;&lt;a href=&#34;#1-配置步骤&#34; class=&#34;headerlink&#34; title=&#34;1.配置步骤&#34;&gt;&lt;/a&gt;1.配置步骤&lt;/h4&gt;&lt;p&gt;​	上传ik-analyzer.jar到webapps中。&lt;/p&gt;
+&lt;p&gt;​	去&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zZWFyY2gubWF2ZW4ub3JnL3NlYXJjaD9xPWNvbS5naXRodWIubWFnZXNlJUU0JUI4JThCJUU4JUJEJUJEJUU1JUFGJUI5JUU1JUJBJTk0JUU3JTg5JTg4JUU2JTlDJUFDJUU3JTlBJTg0aWstYW5hbHl6ZXIlRTMlODAlODIlRTUlOEYlQUYlRTQlQkIlQTUlRTUlOUMlQTglRTglQjUlODQlRTYlOTYlOTklRTQlQjglQUQlRTclOUIlQjQlRTYlOEUlQTUlRTglOEUlQjclRTUlOEYlOTYlRTMlODAlODI=&#34;&gt;https://search.maven.org/search?q=com.github.magese下载对应版本的ik-analyzer。可以在资料中直接获取。&lt;/span&gt;&lt;/p&gt;
+&lt;h5 id=&#34;1-1上传jar到指定目录&#34;&gt;&lt;a href=&#34;#1-1上传jar到指定目录&#34; class=&#34;headerlink&#34; title=&#34;1.1上传jar到指定目录&#34;&gt;&lt;/a&gt;1.1上传jar到指定目录&lt;/h5&gt;&lt;p&gt;​	上传ik-analyzer-7.7.0.jar到&lt;/p&gt;
+&lt;p&gt;​	&amp;#x2F;usr&amp;#x2F;local&amp;#x2F;solr&amp;#x2F;server&amp;#x2F;solr-webapp&amp;#x2F;webapp&amp;#x2F;WEB-INF&amp;#x2F;lib目录中&lt;/p&gt;
+&lt;h5 id=&#34;1-2修改配置文件&#34;&gt;&lt;a href=&#34;#1-2修改配置文件&#34; class=&#34;headerlink&#34; title=&#34;1.2修改配置文件&#34;&gt;&lt;/a&gt;1.2修改配置文件&lt;/h5&gt;&lt;p&gt;​	修改&amp;#x2F;usr&amp;#x2F;local&amp;#x2F;solr&amp;#x2F;server&amp;#x2F;solr&amp;#x2F;testcore&amp;#x2F;conf&amp;#x2F;managed-schema&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;sh&#34;&gt;vim /usr/local/solr/server/solr/testcore/conf/managed-schema
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;​	添加下面内容。&lt;/p&gt;
+&lt;p&gt;​	排版：Esc 退出编辑状态下：gg&amp;#x3D;G&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;&amp;lt;field name=&amp;quot;myfield&amp;quot; type=&amp;quot;text_ik&amp;quot; indexed=&amp;quot;true&amp;quot; stored=&amp;quot;true&amp;quot; /&amp;gt;
     &amp;lt;fieldType name=&amp;quot;text_ik&amp;quot; class=&amp;quot;solr.TextField&amp;quot;&amp;gt;
             &amp;lt;analyzer type=&amp;quot;index&amp;quot;&amp;gt;
@@ -252,50 +220,41 @@
             &amp;lt;/analyzer&amp;gt;
     &amp;lt;/fieldType&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h5 id=&#34;13重启&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#13重启&#34;&gt;#&lt;/a&gt; 1.3 重启&lt;/h5&gt;
-&lt;pre&gt;&lt;code&gt;# cd /usr/local/solr/bin
+&lt;h5 id=&#34;1-3重启&#34;&gt;&lt;a href=&#34;#1-3重启&#34; class=&#34;headerlink&#34; title=&#34;1.3重启&#34;&gt;&lt;/a&gt;1.3重启&lt;/h5&gt;&lt;pre&gt;&lt;code&gt;# cd /usr/local/solr/bin
 # ./solr stop -all
 # ./solr start -force
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h5 id=&#34;14验证&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#14验证&#34;&gt;#&lt;/a&gt; 1.4 验证&lt;/h5&gt;
-&lt;p&gt;​	可以在可视化管理界面中找到 myfield 属性进行验证。&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;/2022/10/07/Distribution/Solr/solr-09.jpg&#34; class=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h4 id=&#34;2managed-schema配置说明&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2managed-schema配置说明&#34;&gt;#&lt;/a&gt; 2.managed-schema 配置说明&lt;/h4&gt;
-&lt;h5 id=&#34;21-fieldtype&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#21-fieldtype&#34;&gt;#&lt;/a&gt; 2.1&amp;lt; fieldType/&amp;gt;&lt;/h5&gt;
-&lt;p&gt;​	表示定义一个属性类型。在 Solr 中属性类型都是自定义的。在上面配置中 name=”text_ik” 为自定义类型。当某个属性取值为 text_ik 时 IK Analyzer 才能生效。&lt;/p&gt;
-&lt;h5 id=&#34;22-field&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#22-field&#34;&gt;#&lt;/a&gt; 2.2&amp;lt; field/&amp;gt;&lt;/h5&gt;
-&lt;p&gt;​	表示向 Document 中添加一个属性。&lt;/p&gt;
+&lt;h5 id=&#34;1-4验证&#34;&gt;&lt;a href=&#34;#1-4验证&#34; class=&#34;headerlink&#34; title=&#34;1.4验证&#34;&gt;&lt;/a&gt;1.4验证&lt;/h5&gt;&lt;p&gt;​	可以在可视化管理界面中找到myfield属性进行验证。&lt;/p&gt;
+&lt;img data-src=&#34;/2022/10/07/Distribution/Solr/solr-09.jpg&#34; class=&#34;&#34;&gt;
+
+&lt;h4 id=&#34;2-managed-schema配置说明&#34;&gt;&lt;a href=&#34;#2-managed-schema配置说明&#34; class=&#34;headerlink&#34; title=&#34;2.managed-schema配置说明&#34;&gt;&lt;/a&gt;2.managed-schema配置说明&lt;/h4&gt;&lt;h5 id=&#34;2-1-lt-fieldType-x2F-gt&#34;&gt;&lt;a href=&#34;#2-1-lt-fieldType-x2F-gt&#34; class=&#34;headerlink&#34; title=&#34;2.1&amp;lt; fieldType&amp;#x2F;&amp;gt;&#34;&gt;&lt;/a&gt;2.1&amp;lt; fieldType&amp;#x2F;&amp;gt;&lt;/h5&gt;&lt;p&gt;​	表示定义一个属性类型。在Solr中属性类型都是自定义的。在上面配置中name&amp;#x3D;”text_ik”为自定义类型。当某个属性取值为text_ik时IK Analyzer才能生效。&lt;/p&gt;
+&lt;h5 id=&#34;2-2-lt-field-x2F-gt&#34;&gt;&lt;a href=&#34;#2-2-lt-field-x2F-gt&#34; class=&#34;headerlink&#34; title=&#34;2.2&amp;lt; field&amp;#x2F;&amp;gt;&#34;&gt;&lt;/a&gt;2.2&amp;lt; field&amp;#x2F;&amp;gt;&lt;/h5&gt;&lt;p&gt;​	表示向Document中添加一个属性。&lt;/p&gt;
 &lt;p&gt;​	常用属性：&lt;/p&gt;
 &lt;p&gt;​		name: 属性名&lt;/p&gt;
-&lt;p&gt;​		type: 属性类型。所有类型都是 solr 使用 &amp;lt;fieldType&amp;gt; 配置的&lt;/p&gt;
+&lt;p&gt;​		type:属性类型。所有类型都是solr使用&lt;fieldType&gt;配置的&lt;/p&gt;
 &lt;p&gt;​		indexed: 是否建立索引&lt;/p&gt;
-&lt;p&gt;​		stored: solr 是否把该属性值响应给搜索用户。&lt;/p&gt;
-&lt;p&gt;​		required：该属性是否是必须的。默认 id 是必须的。&lt;/p&gt;
-&lt;p&gt;​		multiValued：如果为 true，表示该属性为复合属性，此属性中包含了多个其他的属性。常用在多个列作为搜索条件时，把这些列定义定义成一个新的复合属性，通过搜索一个复合属性就可以实现搜索多个列。当设置为 true 时与 &amp;lt;copyField source=&amp;quot;&amp;quot;dest=&amp;quot;&amp;quot;/&amp;gt; 结合使用&lt;/p&gt;
-&lt;h5 id=&#34;23-uniquekey&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#23-uniquekey&#34;&gt;#&lt;/a&gt; 2.3&amp;lt; uniqueKey&amp;gt;&lt;/h5&gt;
-&lt;p&gt;​	唯一主键，Solr 中默认定义 id 属性为唯一主键。ID 的值是不允许重复的。&lt;/p&gt;
-&lt;h5 id=&#34;24-dynamicfield&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#24-dynamicfield&#34;&gt;#&lt;/a&gt; 2.4&amp;lt; dynamicField&amp;gt;&lt;/h5&gt;
-&lt;p&gt;​	名称中允许 * 进行通配。代表满足特定名称要求的一组属性。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;msb_java    
+&lt;p&gt;​		stored: solr是否把该属性值响应给搜索用户。&lt;/p&gt;
+&lt;p&gt;​		required：该属性是否是必须的。默认id是必须的。&lt;/p&gt;
+&lt;p&gt;​		multiValued：如果为true，表示该属性为复合属性，此属性中包含了多个其他的属性。常用在多个列作为搜索条件时，把这些列定义定义成一个新的复合属性，通过搜索一个复合属性就可以实现搜索多个列。当设置为true时与&amp;lt; copyField source&amp;#x3D;”” dest&amp;#x3D;””&amp;#x2F;&amp;gt;结合使用&lt;/p&gt;
+&lt;h5 id=&#34;2-3-lt-uniqueKey-gt&#34;&gt;&lt;a href=&#34;#2-3-lt-uniqueKey-gt&#34; class=&#34;headerlink&#34; title=&#34;2.3&amp;lt; uniqueKey&amp;gt;&#34;&gt;&lt;/a&gt;2.3&amp;lt; uniqueKey&amp;gt;&lt;/h5&gt;&lt;p&gt;​	唯一主键，Solr中默认定义id属性为唯一主键。ID的值是不允许重复的。&lt;/p&gt;
+&lt;h5 id=&#34;2-4-lt-dynamicField-gt&#34;&gt;&lt;a href=&#34;#2-4-lt-dynamicField-gt&#34; class=&#34;headerlink&#34; title=&#34;2.4&amp;lt; dynamicField&amp;gt;&#34;&gt;&lt;/a&gt;2.4&amp;lt; dynamicField&amp;gt;&lt;/h5&gt;&lt;p&gt;​	名称中允许*进行通配。代表满足特定名称要求的一组属性。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt; msb_java    
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;​	msb_bigdata&lt;/p&gt;
 &lt;p&gt;​	msb_UI&lt;/p&gt;
 &lt;p&gt;​        msb_*&lt;/p&gt;
-&lt;h3 id=&#34;七-dataimport&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#七-dataimport&#34;&gt;#&lt;/a&gt; 七、Dataimport&lt;/h3&gt;
-&lt;p&gt;​	可以使用 Solr 自带的 Dataimport 功能把数据库中数据快速导入到 solr 中.&lt;/p&gt;
-&lt;p&gt;​	&lt;strong&gt;必须保证 managed-schema 和数据库中表的列对应。，添加配置&lt;/strong&gt;&lt;/p&gt;
-&lt;h4 id=&#34;1修改配置文件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1修改配置文件&#34;&gt;#&lt;/a&gt; 1. 修改配置文件&lt;/h4&gt;
-&lt;p&gt;​	修改 solrconfig.xml，添加下面内容&lt;/p&gt;
+&lt;h3 id=&#34;七、Dataimport&#34;&gt;&lt;a href=&#34;#七、Dataimport&#34; class=&#34;headerlink&#34; title=&#34;七、Dataimport&#34;&gt;&lt;/a&gt;七、Dataimport&lt;/h3&gt;&lt;p&gt;​	可以使用Solr自带的Dataimport功能把数据库中数据快速导入到solr中.&lt;/p&gt;
+&lt;p&gt;​	&lt;strong&gt;必须保证managed-schema和数据库中表的列对应。，添加配置&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;1-修改配置文件&#34;&gt;&lt;a href=&#34;#1-修改配置文件&#34; class=&#34;headerlink&#34; title=&#34;1.修改配置文件&#34;&gt;&lt;/a&gt;1.修改配置文件&lt;/h4&gt;&lt;p&gt;​	修改solrconfig.xml，添加下面内容&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt; &amp;lt;!-- 配置数据导入的处理器 --&amp;gt;
   &amp;lt;requestHandler name=&amp;quot;/dataimport&amp;quot; class=&amp;quot;org.apache.solr.handler.dataimport.DataImportHandler&amp;quot;&amp;gt;
     &amp;lt;lst name=&amp;quot;defaults&amp;quot;&amp;gt;
-	  &amp;lt;!--  加载data-config.xml  --&amp;gt;
+      &amp;lt;!--  加载data-config.xml  --&amp;gt;
       &amp;lt;str name=&amp;quot;config&amp;quot;&amp;gt;data-config.xml&amp;lt;/str&amp;gt;
      &amp;lt;/lst&amp;gt;
   &amp;lt;/requestHandler&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&#34;2新建data-configxml&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2新建data-configxml&#34;&gt;#&lt;/a&gt; 2. 新建 data-config.xml&lt;/h4&gt;
-&lt;p&gt;​	和 solrconfig.xml 同一目录下新建 data-config.xml&lt;/p&gt;
+&lt;h4 id=&#34;2-新建data-config-xml&#34;&gt;&lt;a href=&#34;#2-新建data-config-xml&#34; class=&#34;headerlink&#34; title=&#34;2.新建data-config.xml&#34;&gt;&lt;/a&gt;2.新建data-config.xml&lt;/h4&gt;&lt;p&gt;​	和solrconfig.xml同一目录下新建data-config.xml&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;
 &amp;lt;dataConfig&amp;gt;
         &amp;lt;dataSource type=&amp;quot;JdbcDataSource&amp;quot;   
@@ -312,69 +271,60 @@
                  --&amp;gt;
                  &amp;lt;field column=&amp;quot;id&amp;quot; name=&amp;quot;id&amp;quot;/&amp;gt;
                  &amp;lt;field column=&amp;quot;name&amp;quot; name=&amp;quot;name&amp;quot;/&amp;gt;
-				 &amp;lt;field column=&amp;quot;price&amp;quot; name=&amp;quot;price&amp;quot;/&amp;gt;
+                 &amp;lt;field column=&amp;quot;price&amp;quot; name=&amp;quot;price&amp;quot;/&amp;gt;
             &amp;lt;/entity&amp;gt;
          &amp;lt;/document&amp;gt;
 &amp;lt;/dataConfig&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&#34;3添加jar&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3添加jar&#34;&gt;#&lt;/a&gt; 3. 添加 jar&lt;/h4&gt;
-&lt;p&gt;​	向 solr-webapp 中添加三个 jar。在 dist 中两个还有一个数据库驱动。&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;/2022/10/07/Distribution/Solr/solr-10.jpg&#34; class=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h4 id=&#34;4操作&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#4操作&#34;&gt;#&lt;/a&gt; 4. 操作&lt;/h4&gt;
-&lt;p&gt;​	重启 solr 后，在可视化管理页面中进行数据导入。&lt;/p&gt;
+&lt;h4 id=&#34;3-添加jar&#34;&gt;&lt;a href=&#34;#3-添加jar&#34; class=&#34;headerlink&#34; title=&#34;3.添加jar&#34;&gt;&lt;/a&gt;3.添加jar&lt;/h4&gt;&lt;p&gt;​	向solr-webapp中添加三个jar。在dist中两个还有一个数据库驱动。&lt;/p&gt;
+&lt;img data-src=&#34;/2022/10/07/Distribution/Solr/solr-10.jpg&#34; class=&#34;&#34;&gt;
+
+&lt;h4 id=&#34;4-操作&#34;&gt;&lt;a href=&#34;#4-操作&#34; class=&#34;headerlink&#34; title=&#34;4.操作&#34;&gt;&lt;/a&gt;4.操作&lt;/h4&gt;&lt;p&gt;​	重启solr后，在可视化管理页面中进行数据导入。&lt;/p&gt;
 &lt;p&gt;​	注意：&lt;/p&gt;
 &lt;p&gt;​	点击导入按钮后，要记得点击刷新按钮。&lt;/p&gt;
-&lt;h3 id=&#34;八-菜单项目documents使用办法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#八-菜单项目documents使用办法&#34;&gt;#&lt;/a&gt; 八、菜单项目 Documents 使用办法&lt;/h3&gt;
-&lt;p&gt;​	以 XML 格式举例&lt;/p&gt;
-&lt;h4 id=&#34;1新增修改&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1新增修改&#34;&gt;#&lt;/a&gt; 1. 新增 / 修改&lt;/h4&gt;
-&lt;p&gt;​	当 id 不存在时新增，当 id 存在修改。&lt;/p&gt;
+&lt;h3 id=&#34;八、菜单项目Documents使用办法&#34;&gt;&lt;a href=&#34;#八、菜单项目Documents使用办法&#34; class=&#34;headerlink&#34; title=&#34;八、菜单项目Documents使用办法&#34;&gt;&lt;/a&gt;八、菜单项目Documents使用办法&lt;/h3&gt;&lt;p&gt;​	以XML格式举例&lt;/p&gt;
+&lt;h4 id=&#34;1-新增-x2F-修改&#34;&gt;&lt;a href=&#34;#1-新增-x2F-修改&#34; class=&#34;headerlink&#34; title=&#34;1.新增&amp;#x2F;修改&#34;&gt;&lt;/a&gt;1.新增&amp;#x2F;修改&lt;/h4&gt;&lt;p&gt;​	当id不存在时新增，当id存在修改。&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;&amp;lt;doc&amp;gt;
 &amp;lt;field name=&amp;quot;id&amp;quot;&amp;gt;8&amp;lt;/field&amp;gt;
 &amp;lt;field name=&amp;quot;name&amp;quot;&amp;gt;明天更大卖&amp;lt;/field&amp;gt;
 &amp;lt;field name=&amp;quot;price&amp;quot;&amp;gt;98&amp;lt;/field&amp;gt;
 &amp;lt;/doc&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&#34;2删除&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2删除&#34;&gt;#&lt;/a&gt; 2. 删除&lt;/h4&gt;
-&lt;h5 id=&#34;21根据主键删除&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#21根据主键删除&#34;&gt;#&lt;/a&gt; 2.1 根据主键删除&lt;/h5&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;delete&amp;gt;
-	&amp;lt;id&amp;gt;8&amp;lt;/id&amp;gt;
+&lt;h4 id=&#34;2-删除&#34;&gt;&lt;a href=&#34;#2-删除&#34; class=&#34;headerlink&#34; title=&#34;2.删除&#34;&gt;&lt;/a&gt;2.删除&lt;/h4&gt;&lt;h5 id=&#34;2-1根据主键删除&#34;&gt;&lt;a href=&#34;#2-1根据主键删除&#34; class=&#34;headerlink&#34; title=&#34;2.1根据主键删除&#34;&gt;&lt;/a&gt;2.1根据主键删除&lt;/h5&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;delete&amp;gt;
+    &amp;lt;id&amp;gt;8&amp;lt;/id&amp;gt;
 &amp;lt;/delete&amp;gt;
 &amp;lt;commit/&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h5 id=&#34;22根据条件删除&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#22根据条件删除&#34;&gt;#&lt;/a&gt; 2.2 根据条件删除&lt;/h5&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;delete&amp;gt;
-	&amp;lt;query&amp;gt;*:*&amp;lt;/query&amp;gt;
+&lt;h5 id=&#34;2-2根据条件删除&#34;&gt;&lt;a href=&#34;#2-2根据条件删除&#34; class=&#34;headerlink&#34; title=&#34;2.2根据条件删除&#34;&gt;&lt;/a&gt;2.2根据条件删除&lt;/h5&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;delete&amp;gt;
+    &amp;lt;query&amp;gt;*:*&amp;lt;/query&amp;gt;
 &amp;lt;/delete&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&#34;3solr可视化界面使用query&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3solr可视化界面使用query&#34;&gt;#&lt;/a&gt; 3.solr 可视化界面使用（QUERY）&lt;/h4&gt;
-&lt;p&gt;&lt;img data-src=&#34;C:%5CUsers%5CLenovo%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1645693120964.png&#34; alt=&#34;1645693120964&#34; /&gt;&lt;/p&gt;
+&lt;h4 id=&#34;3-solr可视化界面使用（QUERY）&#34;&gt;&lt;a href=&#34;#3-solr可视化界面使用（QUERY）&#34; class=&#34;headerlink&#34; title=&#34;3.solr可视化界面使用（QUERY）&#34;&gt;&lt;/a&gt;3.solr可视化界面使用（QUERY）&lt;/h4&gt;&lt;p&gt;&lt;img data-src=&#34;C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\1645693120964.png&#34; alt=&#34;1645693120964&#34;&gt;&lt;/p&gt;
 &lt;p&gt;参数：&lt;/p&gt;
-&lt;p&gt;​	**q：**query，等于。格式  ——&amp;gt; parameter/columns : value	&lt;strong&gt;具有分词时，相当于模糊查询 --like&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;​	&lt;strong&gt;fq：&lt;/strong&gt;【在 q 的情况下再加条件】（要有分词功能）注意这里的 keyword 是用来检索的字段，他包含 name、address、gender、expert_skill，这几个属性，所以我搜索 “海” 能够查询出来有海字的记录。&lt;/p&gt;
-&lt;p&gt;​	**sort：** 排序 。 parameter/columns    desc 逆序 /asc&lt;/p&gt;
-&lt;p&gt;​	**start,rows：** 从查询结果的 start 开始，显示到 rows 结束【下标】&lt;/p&gt;
-&lt;p&gt;​	**fl：** 想显示的属性。&lt;/p&gt;
-&lt;p&gt;​	**df：** 不想显示的属性。&lt;/p&gt;
-&lt;p&gt;​	**wt：** 返回值类型&lt;/p&gt;
-&lt;p&gt;​	**hl：** 高亮&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;	*  hl.fl						 value
-	*  hl.simple.pre        &amp;lt;font color=&#39;red&#39;&amp;gt;
-	*  hl.simple.post     &amp;lt;/font&amp;gt;
+&lt;p&gt;​	&lt;strong&gt;q：&lt;/strong&gt;query，等于。格式  ——&amp;gt; parameter&amp;#x2F;columns : value	&lt;strong&gt;具有分词时，相当于模糊查询–like&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;​	&lt;strong&gt;fq：&lt;/strong&gt;【在 q 的情况下再加条件】（要有分词功能）注意这里的keyword是用来检索的字段，他包含name、address、gender、expert_skill，这几个属性，所以我搜索“海”能够查询出来有海字的记录。&lt;/p&gt;
+&lt;p&gt;​	&lt;strong&gt;sort：&lt;/strong&gt;排序 。 parameter&amp;#x2F;columns    desc逆序&amp;#x2F;asc&lt;/p&gt;
+&lt;p&gt;​	&lt;strong&gt;start,rows：&lt;/strong&gt;从查询结果的start开始，显示到rows结束【下标】&lt;/p&gt;
+&lt;p&gt;​	&lt;strong&gt;fl：&lt;/strong&gt;想显示的属性。&lt;/p&gt;
+&lt;p&gt;​	&lt;strong&gt;df：&lt;/strong&gt;不想显示的属性。&lt;/p&gt;
+&lt;p&gt;​	&lt;strong&gt;wt：&lt;/strong&gt;返回值类型&lt;/p&gt;
+&lt;p&gt;​	&lt;strong&gt;hl：&lt;/strong&gt;高亮&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    *  hl.fl						 value
+    *  hl.simple.pre        &amp;lt;font color=&amp;#39;red&amp;#39;&amp;gt;
+    *  hl.simple.post     &amp;lt;/font&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;​&lt;/p&gt;
-&lt;h3 id=&#34;九-使用solrj操作solr&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#九-使用solrj操作solr&#34;&gt;#&lt;/a&gt; 九、使用 SolrJ 操作 Solr&lt;/h3&gt;
-&lt;p&gt;​	SolrJ 是 Solr 提供的 Java 客户端 API。通过 SolrJ 可以实现 Java 程序对 Solr 中数据的操作。&lt;/p&gt;
-&lt;p&gt;​	大前提：添加 SolrJ 依赖。依赖版本和 Solr 版本严格对应&lt;/p&gt;
+&lt;p&gt;​	&lt;/p&gt;
+&lt;h3 id=&#34;九、使用SolrJ操作Solr&#34;&gt;&lt;a href=&#34;#九、使用SolrJ操作Solr&#34; class=&#34;headerlink&#34; title=&#34;九、使用SolrJ操作Solr&#34;&gt;&lt;/a&gt;九、使用SolrJ操作Solr&lt;/h3&gt;&lt;p&gt;​	SolrJ是Solr提供的Java客户端API。通过SolrJ可以实现Java程序对Solr中数据的操作。&lt;/p&gt;
+&lt;p&gt;​	大前提：添加SolrJ依赖。依赖版本和Solr版本严格对应&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;&amp;lt;dependencies&amp;gt;
     &amp;lt;dependency&amp;gt;
         &amp;lt;groupId&amp;gt;org.apache.solr&amp;lt;/groupId&amp;gt;
-        	&amp;lt;artifactId&amp;gt;solr-solrj&amp;lt;/artifactId&amp;gt;
+            &amp;lt;artifactId&amp;gt;solr-solrj&amp;lt;/artifactId&amp;gt;
         &amp;lt;version&amp;gt;7.7.2&amp;lt;/version&amp;gt;
     &amp;lt;/dependency&amp;gt;
 &amp;lt;/dependencies&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&#34;1新增修改实现&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1新增修改实现&#34;&gt;#&lt;/a&gt; 1. 新增 / 修改实现&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;String url = &amp;quot;http://192.168.93.10:8983/solr/testcore&amp;quot;;
+&lt;h4 id=&#34;1-新增-x2F-修改实现&#34;&gt;&lt;a href=&#34;#1-新增-x2F-修改实现&#34; class=&#34;headerlink&#34; title=&#34;1.新增&amp;#x2F;修改实现&#34;&gt;&lt;/a&gt;1.新增&amp;#x2F;修改实现&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;String url = &amp;quot;http://192.168.93.10:8983/solr/testcore&amp;quot;;
 HttpSolrClient solrClient =  new HttpSolrClient.Builder(url).build();
 SolrInputDocument inputDocument = new SolrInputDocument();
 inputDocument.addField(&amp;quot;id&amp;quot;,&amp;quot;3&amp;quot;);
@@ -383,16 +333,13 @@ solrClient.add(inputDocument);
 solrClient.commit();
 &lt;/code&gt;&lt;/pre&gt;
 &lt;ul&gt;
-&lt;li&gt;使用 solrj 进行索引的添加
-&lt;ul&gt;
-&lt;li&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;每个索引的添加必须要 ID&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;添加 key 值要和 schema.xml 文件内的 field 域保持一致&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;使用solrj进行索引的添加&lt;ul&gt;
+&lt;li&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;每个索引的添加必须要ID&lt;/strong&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;添加key值要和schema.xml文件内的field域保持一致&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;添加数据后一定要提交数据，不然是不存在数据的&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;连接 Solr 的对象需要连接到项目名&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;每个 document 是一组 Json 数据对象&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;连接Solr的对象需要连接到项目名&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;每个document是一组Json数据对象&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -400,25 +347,19 @@ solrClient.commit();
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;2删除实现&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2删除实现&#34;&gt;#&lt;/a&gt; 2. 删除实现&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;String url = &amp;quot;http://192.168.93.10:8983/solr/testcore&amp;quot;;
+&lt;h4 id=&#34;2-删除实现&#34;&gt;&lt;a href=&#34;#2-删除实现&#34; class=&#34;headerlink&#34; title=&#34;2.删除实现&#34;&gt;&lt;/a&gt;2.删除实现&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;String url = &amp;quot;http://192.168.93.10:8983/solr/testcore&amp;quot;;
 HttpSolrClient solrClient =  new HttpSolrClient.Builder(url).build();
 solrClient.deleteById(&amp;quot;3&amp;quot;);
 solrClient.commit();
 &lt;/code&gt;&lt;/pre&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;删除&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;删除支持两种删除方式
-&lt;ul&gt;
-&lt;li&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;1. 根据 ID&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;2. 执行查询删除
-&lt;ul&gt;
-&lt;li&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;查询删除的格式：查询的域：值&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;删除支持两种删除方式&lt;ul&gt;
+&lt;li&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;1.根据ID&lt;/strong&gt;&lt;ul&gt;
+&lt;li&gt;2.执行查询删除&lt;ul&gt;
+&lt;li&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;查询删除的格式：查询的域:值&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -430,8 +371,7 @@ solrClient.commit();
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;3查询实现&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3查询实现&#34;&gt;#&lt;/a&gt; 3. 查询实现&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;public void testQuery()&amp;#123;
+&lt;h4 id=&#34;3-查询实现&#34;&gt;&lt;a href=&#34;#3-查询实现&#34; class=&#34;headerlink&#34; title=&#34;3.查询实现&#34;&gt;&lt;/a&gt;3.查询实现&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;public void testQuery()&amp;#123;
     try &amp;#123;
         String url = &amp;quot;http://192.168.93.10:8983/solr/testcore&amp;quot;;
         HttpSolrClient solrClient = new HttpSolrClient.Builder(url).build();
@@ -479,38 +419,27 @@ solrClient.commit();
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;strong&gt;使用到的对象&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;1.SolrQuery 查询对象
-&lt;ul&gt;
-&lt;li&gt;1.setQuery ()：设置查询的关键字&lt;br /&gt;
- 2.set（）: 设置查询的域&lt;br /&gt;
- 3.setStart (): 设置开始&lt;br /&gt;
- 4.setRows（）：设置结束&lt;/li&gt;
+&lt;li&gt;1.SolrQuery查询对象&lt;ul&gt;
+&lt;li&gt;1.setQuery()：设置查询的关键字&lt;br&gt;  2.set（）:设置查询的域&lt;br&gt;  3.setStart():设置开始&lt;br&gt;  4.setRows（）：设置结束&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;hr /&gt;
+&lt;hr&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;2.QueryResponse：响应结果集&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;2.QueryResponse：响应结果集&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;1.getNumFound (): 返回查询到的数量&lt;br /&gt;
- 2.getResults（）；返回封装的 list 集合&lt;/li&gt;
+&lt;li&gt;1.getNumFound():返回查询到的数量&lt;br&gt;  2.getResults（）；返回封装的list集合&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;3.SolrDocumentList：结果集合&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;3.SolrDocumentList：结果集合&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;1.get (): 获取指定域的值&lt;/li&gt;
+&lt;li&gt;1.get():获取指定域的值&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;十-spring-data-for-apache-solr&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#十-spring-data-for-apache-solr&#34;&gt;#&lt;/a&gt; 十、Spring Data for Apache Solr&lt;/h3&gt;
-&lt;h4 id=&#34;1spring-data简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1spring-data简介&#34;&gt;#&lt;/a&gt; 1.Spring Data 简介&lt;/h4&gt;
-&lt;p&gt;​	Spring Data 是 Spring 的顶级项目。里面包含了 N 多个二级子项目，每个子项目对应一种技术或工具。其目的为了让数据访问更加简单，更加方便的和 Spring 进行整合。&lt;/p&gt;
-&lt;p&gt;​	Spring Data 项目如果单独使用是还需要配置 XML 配置文件的，当和 Spring Boot 整合后使用起来非常方便。spring-boot-starter-data-xx 就是对应的启动器。&lt;/p&gt;
-&lt;h4 id=&#34;2实现步骤&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2实现步骤&#34;&gt;#&lt;/a&gt; 2. 实现步骤&lt;/h4&gt;
-&lt;h5 id=&#34;21添加依赖&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#21添加依赖&#34;&gt;#&lt;/a&gt; 2.1 添加依赖&lt;/h5&gt;
-&lt;pre&gt;&lt;code&gt; &amp;lt;dependencies&amp;gt;
+&lt;h3 id=&#34;十、Spring-Data-for-Apache-Solr&#34;&gt;&lt;a href=&#34;#十、Spring-Data-for-Apache-Solr&#34; class=&#34;headerlink&#34; title=&#34;十、Spring Data for Apache Solr&#34;&gt;&lt;/a&gt;十、Spring Data for Apache Solr&lt;/h3&gt;&lt;h4 id=&#34;1-Spring-Data简介&#34;&gt;&lt;a href=&#34;#1-Spring-Data简介&#34; class=&#34;headerlink&#34; title=&#34;1.Spring Data简介&#34;&gt;&lt;/a&gt;1.Spring Data简介&lt;/h4&gt;&lt;p&gt;​	Spring Data 是Spring的顶级项目。里面包含了N多个二级子项目，每个子项目对应一种技术或工具。其目的为了让数据访问更加简单，更加方便的和Spring进行整合。&lt;/p&gt;
+&lt;p&gt;​	Spring Data 项目如果单独使用是还需要配置XML配置文件的，当和Spring Boot整合后使用起来非常方便。spring-boot-starter-data-xx就是对应的启动器。&lt;/p&gt;
+&lt;h4 id=&#34;2-实现步骤&#34;&gt;&lt;a href=&#34;#2-实现步骤&#34; class=&#34;headerlink&#34; title=&#34;2.实现步骤&#34;&gt;&lt;/a&gt;2.实现步骤&lt;/h4&gt;&lt;h5 id=&#34;2-1添加依赖&#34;&gt;&lt;a href=&#34;#2-1添加依赖&#34; class=&#34;headerlink&#34; title=&#34;2.1添加依赖&#34;&gt;&lt;/a&gt;2.1添加依赖&lt;/h5&gt;&lt;pre&gt;&lt;code&gt; &amp;lt;dependencies&amp;gt;
         &amp;lt;dependency&amp;gt;
             &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
             &amp;lt;artifactId&amp;gt;spring-boot-starter-web&amp;lt;/artifactId&amp;gt;
@@ -525,15 +454,13 @@ solrClient.commit();
         &amp;lt;/dependency&amp;gt;
     &amp;lt;/dependencies&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h5 id=&#34;22编写配置文件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#22编写配置文件&#34;&gt;#&lt;/a&gt; 2.2 编写配置文件&lt;/h5&gt;
-&lt;pre&gt;&lt;code&gt;spring:
+&lt;h5 id=&#34;2-2编写配置文件&#34;&gt;&lt;a href=&#34;#2-2编写配置文件&#34; class=&#34;headerlink&#34; title=&#34;2.2编写配置文件&#34;&gt;&lt;/a&gt;2.2编写配置文件&lt;/h5&gt;&lt;pre&gt;&lt;code&gt;spring:
   data:
     solr:
       host: http://192.168.9.132:8080/solr
       # zk-host: 192.168.9.132:2181,192.168.9.132:2182,192.168.9.132:2183
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h5 id=&#34;23编写测试类&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#23编写测试类&#34;&gt;#&lt;/a&gt; 2.3 编写测试类&lt;/h5&gt;
-&lt;pre&gt;&lt;code&gt;@RunWith(SpringJUnit4ClassRunner.class)
+&lt;h5 id=&#34;2-3编写测试类&#34;&gt;&lt;a href=&#34;#2-3编写测试类&#34; class=&#34;headerlink&#34; title=&#34;2.3编写测试类&#34;&gt;&lt;/a&gt;2.3编写测试类&lt;/h5&gt;&lt;pre&gt;&lt;code&gt;@RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest(classes = MyApplication.class)
 public class MyTest &amp;#123;
     @Autowired
@@ -592,7 +519,7 @@ public class MyTest &amp;#123;
         //高亮设置
         HighlightOptions hlo = new HighlightOptions();
         hlo.addField(&amp;quot;item_title item_sell_point&amp;quot;);
-        hlo.setSimplePrefix(&amp;quot;&amp;lt;span style=&#39;color:red;&#39;&amp;gt;&amp;quot;);
+        hlo.setSimplePrefix(&amp;quot;&amp;lt;span style=&amp;#39;color:red;&amp;#39;&amp;gt;&amp;quot;);
         hlo.setSimplePostfix(&amp;quot;&amp;lt;/span&amp;gt;&amp;quot;);
         query.setHighlightOptions(hlo);
         HighlightPage&amp;lt;DemoPojo&amp;gt; hl = solrTemplate.queryForHighlightPage(&amp;quot;collection1&amp;quot;, query, DemoPojo.class);
@@ -612,42 +539,78 @@ public class MyTest &amp;#123;
     &amp;#125;
 &amp;#125;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;十一-使用zookeepr管理solr集群&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#十一-使用zookeepr管理solr集群&#34;&gt;#&lt;/a&gt; 十一。使用 zookeepr 管理 solr 集群&lt;/h3&gt;
-&lt;p&gt;1. 上传压缩包到 /usr/local/tmp 下 并解压。&lt;/p&gt;
-&lt;p&gt;2. 在 /usr/local 下新建文件夹 zookeeper&lt;/p&gt;
+&lt;h3 id=&#34;十一-使用zookeepr管理solr集群&#34;&gt;&lt;a href=&#34;#十一-使用zookeepr管理solr集群&#34; class=&#34;headerlink&#34; title=&#34;十一. 使用zookeepr管理solr集群&#34;&gt;&lt;/a&gt;十一. 使用zookeepr管理solr集群&lt;/h3&gt;&lt;p&gt;1.上传压缩包到&amp;#x2F;usr&amp;#x2F;local&amp;#x2F;tmp 下 并解压。&lt;/p&gt;
+&lt;p&gt;2.在 &amp;#x2F;usr&amp;#x2F;local下新建文件夹 zookeeper&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;# mkdir /usr/local/zookeeper
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;3. 把解压的所有文件复制到 zookeeper 下， 并命名为 zk1&lt;/p&gt;
+&lt;p&gt;3.把解压的所有文件复制到zookeeper下， 并命名为zk1&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;# cp -r /usr/local/temp/zookeeper-3.4.8 /usr/local/zookeeper/zk1
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;4. 在 zk1 下新建文件夹 data&lt;/p&gt;
-&lt;p&gt;5. 在 data 下新建文件 myid, 里面写上 1&lt;/p&gt;
+&lt;p&gt;4.在zk1下新建文件夹 data&lt;/p&gt;
+&lt;p&gt;5.在data下新建文件 myid, 里面写上 1&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;# vim myid
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;6. 进入到 zk1/conf 下 把 zoo_sample.cfg 复制一份叫做 zoo.cfg&lt;/p&gt;
-&lt;p&gt;7. 编辑 zoo.cfg 内容，设置 dataDIR 为 data 文件夹， 并在文件最下面添加下面内容&lt;/p&gt;
+&lt;p&gt;6.进入到zk1&amp;#x2F;conf 下 把 zoo_sample.cfg 复制一份叫做 zoo.cfg&lt;/p&gt;
+&lt;p&gt;7.编辑 zoo.cfg 内容，设置 dataDIR为 data文件夹， 并在文件最下面添加下面内容&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;server.1=192.168.93.10:2688:3888
 server.2=192.168.93.10:2689:3889
 server.3=192.168.93.10:2690:3890
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;7.1 server.1 中的 1 是 myid 的内容&lt;/p&gt;
-&lt;p&gt;7.2 2688 2689 2690 是 zookeeper 内部端口&lt;/p&gt;
-&lt;p&gt;7.3 3888 3889 3890 是 leader 端口&lt;/p&gt;
-&lt;p&gt;8. 把 zk1 复制两份，分部叫做 zk2  zk3  并修改 myid 的值为 2，3 修改 zoo.cfg 中 dataDIR 和 clientPort&lt;/p&gt;
-&lt;p&gt;9. 启动三个 zookeeper&lt;/p&gt;
+&lt;p&gt; 7.1 server.1中的1是myid的内容&lt;/p&gt;
+&lt;p&gt; 7.2 2688 2689 2690 是 zookeeper内部端口&lt;/p&gt;
+&lt;p&gt; 7.3 3888 3889 3890 是 leader端口&lt;/p&gt;
+&lt;p&gt;8.把zk1复制两份，分部叫做 zk2  zk3  并修改 myid 的值为 2，3 修改zoo.cfg中 dataDIR和clientPort&lt;/p&gt;
+&lt;p&gt;9.启动三个zookeeper&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;# ./zkServer.sh start
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;10. 查看状态&lt;/p&gt;
+&lt;p&gt;10.查看状态&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;# ./zkServer.sh status
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;十一-使用zookeepr管理solr集群dokcer&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#十一-使用zookeepr管理solr集群dokcer&#34;&gt;#&lt;/a&gt; 十一。使用 zookeepr 管理 solr 集群 (Dokcer)&lt;/h3&gt;
-&lt;h4 id=&#34;1-准备docker-composeyml文件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-准备docker-composeyml文件&#34;&gt;#&lt;/a&gt; &lt;strong&gt;1、准备&lt;/strong&gt; docker-compose.yml&lt;strong&gt; 文件&lt;/strong&gt;&lt;/h4&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;version: &lt;span class=&#34;token string&#34;&gt;&#39;2&#39;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;services:&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  zoo1:&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    image: zookeeper:3.5&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    restart: always&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    container_name: zoo1&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    ports:&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      - &lt;span class=&#34;token string&#34;&gt;&#34;2181:2181&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    environment:&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      ZOO_MY_ID: &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      ZOO_SERVERS: &lt;span class=&#34;token assign-left variable&#34;&gt;server.1&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;0.0&lt;/span&gt;.0.0:2688:3888 &lt;span class=&#34;token assign-left variable&#34;&gt;server.2&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;zoo2:2689:3888 &lt;span class=&#34;token assign-left variable&#34;&gt;server.3&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;zoo3:2690:3888&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  zoo2:&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    image: zookeeper:3.5&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    restart: always&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    container_name: zoo2&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;17&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    ports:&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;18&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      - &lt;span class=&#34;token string&#34;&gt;&#34;2182:2181&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;19&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    environment:&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;20&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      ZOO_MY_ID: &lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;21&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      ZOO_SERVERS: &lt;span class=&#34;token assign-left variable&#34;&gt;server.1&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;zoo1:2688:3888 &lt;span class=&#34;token assign-left variable&#34;&gt;server.2&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;0.0&lt;/span&gt;.0.0:2689:3888 &lt;span class=&#34;token assign-left variable&#34;&gt;server.3&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;zoo3:2690:3888&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;22&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;23&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  zoo3:&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;24&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    image: zookeeper:3.5&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;25&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    restart: always&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;26&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    container_name: zoo3&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;27&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    ports:&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;28&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      - &lt;span class=&#34;token string&#34;&gt;&#34;2183:2181&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;29&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    environment:&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;30&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      ZOO_MY_ID: &lt;span class=&#34;token number&#34;&gt;3&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;31&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      ZOO_SERVERS: &lt;span class=&#34;token assign-left variable&#34;&gt;server.1&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;zoo1:2688:3888 &lt;span class=&#34;token assign-left variable&#34;&gt;server.2&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;zoo2:2689:3888 &lt;span class=&#34;token assign-left variable&#34;&gt;server.3&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;0.0&lt;/span&gt;.0.0:2690:3888&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h4 id=&#34;2-创建镜像&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-创建镜像&#34;&gt;#&lt;/a&gt; &lt;strong&gt;2、创建镜像&lt;/strong&gt;&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;要在创建的 docker-compose.yml 文件中使用命令&lt;/li&gt;
+&lt;h3 id=&#34;十一-使用zookeepr管理solr集群-Dokcer&#34;&gt;&lt;a href=&#34;#十一-使用zookeepr管理solr集群-Dokcer&#34; class=&#34;headerlink&#34; title=&#34;十一. 使用zookeepr管理solr集群(Dokcer )&#34;&gt;&lt;/a&gt;十一. 使用zookeepr管理solr集群(Dokcer )&lt;/h3&gt;&lt;h4 id=&#34;1、准备docker-compose-yml文件&#34;&gt;&lt;a href=&#34;#1、准备docker-compose-yml文件&#34; class=&#34;headerlink&#34; title=&#34;1、准备docker-compose.yml文件&#34;&gt;&lt;/a&gt;&lt;strong&gt;1、准备&lt;/strong&gt;docker-compose.yml&lt;strong&gt;文件&lt;/strong&gt;&lt;/h4&gt;&lt;pre&gt;&lt;code class=&#34;shell&#34;&gt;version: &amp;#39;2&amp;#39;
+services:
+  zoo1:
+    image: zookeeper:3.5
+    restart: always
+    container_name: zoo1
+    ports:
+      - &amp;quot;2181:2181&amp;quot;
+    environment:
+      ZOO_MY_ID: 1
+      ZOO_SERVERS: server.1=0.0.0.0:2688:3888 server.2=zoo2:2689:3888 server.3=zoo3:2690:3888
+
+  zoo2:
+    image: zookeeper:3.5
+    restart: always
+    container_name: zoo2
+    ports:
+      - &amp;quot;2182:2181&amp;quot;
+    environment:
+      ZOO_MY_ID: 2
+      ZOO_SERVERS: server.1=zoo1:2688:3888 server.2=0.0.0.0:2689:3888 server.3=zoo3:2690:3888
+
+  zoo3:
+    image: zookeeper:3.5
+    restart: always
+    container_name: zoo3
+    ports:
+      - &amp;quot;2183:2181&amp;quot;
+    environment:
+      ZOO_MY_ID: 3
+      ZOO_SERVERS: server.1=zoo1:2688:3888 server.2=zoo2:2689:3888 server.3=0.0.0.0:2690:3888
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;2、创建镜像&#34;&gt;&lt;a href=&#34;#2、创建镜像&#34; class=&#34;headerlink&#34; title=&#34;2、创建镜像&#34;&gt;&lt;/a&gt;&lt;strong&gt;2、创建镜像&lt;/strong&gt;&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;要在创建的docker-compose.yml文件中使用命令&lt;/li&gt;
 &lt;/ul&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker-compose&lt;/span&gt; up &lt;span class=&#34;token parameter variable&#34;&gt;-d&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h4 id=&#34;3-进入容器&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3-进入容器&#34;&gt;#&lt;/a&gt; &lt;strong&gt;3、进入容器&lt;/strong&gt;&lt;/h4&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; &lt;span class=&#34;token builtin class-name&#34;&gt;exec&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-it&lt;/span&gt; zoo1 /bin/bash&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;#查看 zoo1 的状态&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token builtin class-name&#34;&gt;cd&lt;/span&gt; bin&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;./zkServer.sh status&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ul&gt;
+&lt;pre&gt;&lt;code class=&#34;shell&#34;&gt;docker-compose up -d
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;3、进入容器&#34;&gt;&lt;a href=&#34;#3、进入容器&#34; class=&#34;headerlink&#34; title=&#34;3、进入容器&#34;&gt;&lt;/a&gt;&lt;strong&gt;3、进入容器&lt;/strong&gt;&lt;/h4&gt;&lt;pre&gt;&lt;code class=&#34;shell&#34;&gt;docker exec -it zoo1 /bin/bash
+
+#查看zoo1 的状态
+cd bin
+./zkServer.sh status
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
 &lt;li&gt;如果出现，以下情况：&lt;/li&gt;
 &lt;/ul&gt;
 &lt;pre&gt;&lt;code&gt;ZooKeeper JMX enabled by default
@@ -658,43 +621,40 @@ Client port not found in the server configs
 Client port not found. Looking for secureClientPort in the static config.
 Unable to find either secure or unsecure client port in any configs. Terminating.
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;​	通过阅读我们知道他在 conf 中的 zoo.cfg 文件中缺少 **clientPort ** 我们只需要自行添加即可&lt;/p&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;#修改之前我们先装一下 vim&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;apt-get&lt;/span&gt; update&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;apt-get&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;install&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-y&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;vim&lt;/span&gt; &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;#修改 zoo.fcg 文件&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;vim&lt;/span&gt; /conf/zoo.fcg&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token assign-left variable&#34;&gt;clientPort&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;2181&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;完事之后&lt;strong&gt;重启&lt;/strong&gt; zoo1&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;C:%5CUsers%5CLenovo%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1645780920291.png&#34; alt=&#34;1645780920291&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;成功！！&lt;/p&gt;
+&lt;p&gt;​	通过阅读我们知道他在conf中的zoo.cfg文件中缺少 **clientPort **我们只需要自行添加即可&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;shell&#34;&gt;#修改之前我们先装一下 vim
+apt-get update
+
+apt-get install -y vim 
+
+#修改zoo.fcg文件
+vim /conf/zoo.fcg
+
+clientPort=2181
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;完事之后&lt;strong&gt;重启&lt;/strong&gt;zoo1&lt;/p&gt;
+&lt;p&gt;  &lt;img data-src=&#34;C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\1645780920291.png&#34; alt=&#34;1645780920291&#34;&gt;&lt;/p&gt;
+&lt;p&gt;  成功！！&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;4-查看所有zookeeper的状态&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#4-查看所有zookeeper的状态&#34;&gt;#&lt;/a&gt; 4、查看所有 zookeeper 的状态&lt;/h4&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; &lt;span class=&#34;token builtin class-name&#34;&gt;exec&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-it&lt;/span&gt; zoo3 &lt;span class=&#34;token function&#34;&gt;bash&lt;/span&gt; ./bin/zkServer.sh status&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h4 id=&#34;5-进去客户端&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#5-进去客户端&#34;&gt;#&lt;/a&gt; 5、进去客户端&lt;/h4&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; &lt;span class=&#34;token builtin class-name&#34;&gt;exec&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-it&lt;/span&gt; zoo3 zkCli.sh&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;十二-solrcloud&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#十二-solrcloud&#34;&gt;#&lt;/a&gt; 十二、SolrCloud&lt;/h3&gt;
-&lt;p&gt;​	Solr 可以搭建具备容错能力和高可用的 Solr 集群。集群中集群配置、自动负载均衡和查询故障转移、			Zookeeper 集群实现集群协调管理，这些全部功能统称为 SolrCloud。&lt;/p&gt;
-&lt;p&gt;​	SolrCloud 是基于 Zookeeper 进行管理的。在 Solr 中已经内置了 Zookeeper 相关内容，当执行集群创建命令会自动创建 Zookeeper 相关内容。这个使用的是 Zookeeper 的集群管理功能实现的。&lt;/p&gt;
-&lt;h4 id=&#34;1搭建&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1搭建&#34;&gt;#&lt;/a&gt; 1. 搭建&lt;/h4&gt;
-&lt;h5 id=&#34;11创建&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#11创建&#34;&gt;#&lt;/a&gt; 1.1 创建&lt;/h5&gt;
-&lt;p&gt;​	SolrCloud 已经包含在了 Solr 中，可以直接启动 Solr 集群。&lt;/p&gt;
+&lt;h4 id=&#34;4、查看所有zookeeper的状态&#34;&gt;&lt;a href=&#34;#4、查看所有zookeeper的状态&#34; class=&#34;headerlink&#34; title=&#34;4、查看所有zookeeper的状态&#34;&gt;&lt;/a&gt;4、查看所有zookeeper的状态&lt;/h4&gt;&lt;pre&gt;&lt;code class=&#34;shell&#34;&gt;docker exec -it zoo3 bash ./bin/zkServer.sh status
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;5、进去客户端&#34;&gt;&lt;a href=&#34;#5、进去客户端&#34; class=&#34;headerlink&#34; title=&#34;5、进去客户端&#34;&gt;&lt;/a&gt;5、进去客户端&lt;/h4&gt;&lt;pre&gt;&lt;code class=&#34;shell&#34;&gt;docker exec -it zoo3 zkCli.sh
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;十二、SolrCloud&#34;&gt;&lt;a href=&#34;#十二、SolrCloud&#34; class=&#34;headerlink&#34; title=&#34;十二、SolrCloud&#34;&gt;&lt;/a&gt;十二、SolrCloud&lt;/h3&gt;&lt;p&gt;​	Solr可以搭建具备容错能力和高可用的Solr集群。集群中集群配置、自动负载均衡和查询故障转移、			Zookeeper集群实现集群协调管理，这些全部功能统称为SolrCloud。&lt;/p&gt;
+&lt;p&gt;​	SolrCloud是基于Zookeeper进行管理的。在Solr中已经内置了Zookeeper相关内容，当执行集群创建命令会自动创建Zookeeper相关内容。这个使用的是Zookeeper的集群管理功能实现的。&lt;/p&gt;
+&lt;h4 id=&#34;1-搭建&#34;&gt;&lt;a href=&#34;#1-搭建&#34; class=&#34;headerlink&#34; title=&#34;1.搭建&#34;&gt;&lt;/a&gt;1.搭建&lt;/h4&gt;&lt;h5 id=&#34;1-1创建&#34;&gt;&lt;a href=&#34;#1-1创建&#34; class=&#34;headerlink&#34; title=&#34;1.1创建&#34;&gt;&lt;/a&gt;1.1创建&lt;/h5&gt;&lt;p&gt;​	SolrCloud已经包含在了Solr中，可以直接启动Solr集群。&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt; ./solr -e cloud -noprompt -force
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;​	此命令等同于# ./solr -e cloud -force 全部参数为默认值。&lt;/p&gt;
-&lt;p&gt;​	运行成功后会在 example 文件夹多出 cloud 文件夹。&lt;/p&gt;
-&lt;h5 id=&#34;12停止&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#12停止&#34;&gt;#&lt;/a&gt; 1.2 停止&lt;/h5&gt;
-&lt;pre&gt;&lt;code&gt; ./solr stop -all
+&lt;p&gt;​	此命令等同于# .&amp;#x2F;solr -e cloud -force全部参数为默认值。&lt;/p&gt;
+&lt;p&gt;​	运行成功后会在example文件夹多出cloud文件夹。&lt;/p&gt;
+&lt;h5 id=&#34;1-2停止&#34;&gt;&lt;a href=&#34;#1-2停止&#34; class=&#34;headerlink&#34; title=&#34;1.2停止&#34;&gt;&lt;/a&gt;1.2停止&lt;/h5&gt;&lt;pre&gt;&lt;code&gt; ./solr stop -all
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h5 id=&#34;13重新运行&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#13重新运行&#34;&gt;#&lt;/a&gt; 1.3 重新运行&lt;/h5&gt;
-&lt;pre&gt;&lt;code&gt; ./solr start -c -p 8983 -s ../example/cloud/node1/solr/ -force
+&lt;h5 id=&#34;1-3重新运行&#34;&gt;&lt;a href=&#34;#1-3重新运行&#34; class=&#34;headerlink&#34; title=&#34;1.3重新运行&#34;&gt;&lt;/a&gt;1.3重新运行&lt;/h5&gt;&lt;pre&gt;&lt;code&gt; ./solr start -c -p 8983 -s ../example/cloud/node1/solr/ -force
  ./solr start -c -p 7574 -z localhost:9983 -s ../example/cloud/node2/solr/ -force
 &lt;/code&gt;&lt;/pre&gt;
-
-&lt;div id=&#34;gitalk-container&#34;&gt;&lt;/div&gt;
-&lt;script src=&#34;https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js&#34;&gt;&lt;/script&gt;&lt;link rel=&#34;stylesheet&#34; href=&#34;https://unpkg.com/gitalk/dist/gitalk.css&#34;&gt;&lt;script src=&#34;https://unpkg.com/gitalk/dist/gitalk.min.js&#34;&gt;&lt;/script&gt;
-
-		&lt;script&gt;
-		var gitalkConfig = {&#34;clientID&#34;:&#34;eda74f740080fa01d0b5&#34;,&#34;clientSecret&#34;:&#34;c994dd2162a1dadaefbf078fcab49361438a7aca&#34;,&#34;repo&#34;:&#34;bk-comment02&#34;,&#34;owner&#34;:&#34;onlymarryu&#34;,&#34;admin&#34;:[&#34;onlymarryu&#34;],&#34;distractionFreeMode&#34;:true,&#34;proxy&#34;:&#34;https://winter-rain-5b30.wudu-bk.workers.dev/https://github.com/login/oauth/access_token&#34;};
-	    gitalkConfig.id = md5(location.pathname);
-		var gitalk = new Gitalk(gitalkConfig);
-	    gitalk.render(&#34;gitalk-container&#34;);
-	    &lt;/script&gt; ]]></description>
+ ]]></description>
         </item>
     </channel>
 </rss>
