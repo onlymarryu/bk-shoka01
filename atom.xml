@@ -13,29 +13,19 @@
         <id>http://yoursite.com/interview/JVM/</id>
         <title>JVM常见面试题</title>
         <link rel="alternate" href="http://yoursite.com/interview/JVM/"/>
-        <content type="html">&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;什么是 JVM&lt;/p&gt;
+        <content type="html">&lt;h2 id=&#34;什么是jvm&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#什么是jvm&#34;&gt;#&lt;/a&gt; 什么是 JVM&lt;/h2&gt;
 &lt;p&gt;JVM 是 java 代码运行的平台，他帮助我们的代码一次编译到处运行&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;类加载过程&lt;/p&gt;
+&lt;h2 id=&#34;类加载过程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#类加载过程&#34;&gt;#&lt;/a&gt; 类加载过程&lt;/h2&gt;
 &lt;p&gt;字节码 ——&amp;gt; ClassLoader 类加载 ——&amp;gt; Linking （ 格式检查、 静态成员变量附默认值、resolution [符号引用 ——&amp;gt; 直接引用]）——&amp;gt; init 初始化 ——&amp;gt;  UIsing 对象使用  ——&amp;gt;  GC 回收&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;双亲委派是什么？&lt;/p&gt;
+&lt;h2 id=&#34;双亲委派是什么&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#双亲委派是什么&#34;&gt;#&lt;/a&gt; 双亲委派是什么？&lt;/h2&gt;
 &lt;p&gt;我们在加载一个类对象的时候，要经过类加载器。&lt;/p&gt;
 &lt;p&gt;类加载器分为 4 种 ，分别为：自定义类加载器（ConsumerClassLoader）、系统类加载器（APP）【classpath】、扩展类加载器（ex）【找的是 JAVA_HOME/jre/lib】、启动类加载器（bootstrap）【找的是 JAVA_HOME/lib】&lt;/p&gt;
 &lt;p&gt;我们加载的时候，一般都是从最下方的自定义加载器向上查找到启动类加载器，当然前提是有自定义类加载器，加载过程中会首先判断这个类加载器是否能存在这个类的缓存，存在就直接返回结果，不存在它就会向上委托，交由上层加载器加载，直至启动类加载器，如果这里也没有缓存，就要自己生成了，这时候启动类加载器就开始判断他是否可以生成，能生成就直接返回结果即可，不能生成就委托与下层加载器，直至生成，如果最后了都没找到可以生成这个类的类加载器就返回 &lt;code&gt;Class Not Found Exception&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;如何打破双亲委派？&lt;/p&gt;
+&lt;h2 id=&#34;如何打破双亲委派&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#如何打破双亲委派&#34;&gt;#&lt;/a&gt; 如何打破双亲委派？&lt;/h2&gt;
 &lt;p&gt;JDK1.2 之前，自定义 ClassLoader 都必须重写 loadClass ()&lt;/p&gt;
 &lt;p&gt;ThreadContextClassLoader 可以实现基础类调用实现类代码，通过 thread.setContextClassLoader 指定&lt;/p&gt;
 &lt;p&gt;简单来说就是用自定义的 ClassLoader 即可，但是大多是情况不建议打破&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;JVM 的内存模型&lt;/p&gt;
+&lt;h2 id=&#34;jvm的内存模型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#jvm的内存模型&#34;&gt;#&lt;/a&gt; JVM 的内存模型&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;PC 程序计数器：记录程序运行到哪里一步，只增不减&lt;/p&gt;
@@ -65,28 +55,21 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;JVM 中那些是线程独享，那些是共享的？&lt;/p&gt;
+&lt;h2 id=&#34;jvm中那些是线程独享那些是共享的&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#jvm中那些是线程独享那些是共享的&#34;&gt;#&lt;/a&gt; JVM 中那些是线程独享，那些是共享的？&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;JVM 中 每个线程都有一个 PC、JVM stack 、NMS&lt;/li&gt;
 &lt;li&gt;JVM 中 所有线程共享 ：堆内存，方法区&lt;/li&gt;
 &lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;永久区和元空间的区别&lt;/p&gt;
+&lt;h2 id=&#34;永久区和元空间的区别&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#永久区和元空间的区别&#34;&gt;#&lt;/a&gt; 永久区和元空间的区别&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;字符串常量池 ——&amp;gt; 永久代有；元空间 没有，放在了堆内存中&lt;/li&gt;
 &lt;li&gt;GC——&amp;gt; 永久代不会被 FullGC  ; 会被 FUGC&lt;/li&gt;
 &lt;li&gt;内存：永久代启动时设定，且不能改；元空间时代不设定最大就是物理内存&lt;/li&gt;
 &lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;如何确定一个垃圾&lt;/p&gt;
+&lt;h2 id=&#34;如何确定一个垃圾&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#如何确定一个垃圾&#34;&gt;#&lt;/a&gt; 如何确定一个垃圾&lt;/h2&gt;
 &lt;p&gt;如果这个内存没有任何的引用，他就是一个垃圾&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;确认垃圾的方式&lt;/p&gt;
+&lt;ol start=&#34;9&#34;&gt;
+&lt;li&gt;确认垃圾的方式
 &lt;ol&gt;
 &lt;li&gt;根的可达性分析&lt;/li&gt;
 &lt;li&gt;引用计数法&lt;/li&gt;
@@ -108,14 +91,11 @@
 &lt;p&gt;其实就是去看这个对象是否被引用没有被引用那就是垃圾，最简单的&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;ol start=&#34;10&#34;&gt;
-&lt;li&gt;常见的垃圾回收算法
+&lt;h2 id=&#34;常见的垃圾回收算法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#常见的垃圾回收算法&#34;&gt;#&lt;/a&gt; 常见的垃圾回收算法&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;标记清除&lt;/li&gt;
 &lt;li&gt;标记复制算法&lt;/li&gt;
 &lt;li&gt;标记整理&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;具体解释：&lt;/p&gt;
 &lt;ul&gt;
