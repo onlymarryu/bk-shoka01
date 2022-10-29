@@ -451,7 +451,7 @@ jinfo -flag  &amp;lt;name&amp;gt;=&amp;lt;value&amp;gt; PID
 	    gitalk.render(&#34;gitalk-container&#34;);
 	    &lt;/script&gt;</content>
         <category term=".面试题" scheme="http://yoursite.com/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/" />
-        <category term="面试题" scheme="http://yoursite.com/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/" />
+        <category term="复习版" scheme="http://yoursite.com/tags/%E5%A4%8D%E4%B9%A0%E7%89%88/" />
         <updated>2022-10-28T16:00:00.000Z</updated>
     </entry>
     <entry>
@@ -646,7 +646,7 @@ jinfo -flag  &amp;lt;name&amp;gt;=&amp;lt;value&amp;gt; PID
 	    gitalk.render(&#34;gitalk-container&#34;);
 	    &lt;/script&gt;</content>
         <category term=".面试题" scheme="http://yoursite.com/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/" />
-        <category term="面试题" scheme="http://yoursite.com/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/" />
+        <category term="突击版" scheme="http://yoursite.com/tags/%E7%AA%81%E5%87%BB%E7%89%88/" />
         <updated>2022-10-28T16:00:00.000Z</updated>
     </entry>
     <entry>

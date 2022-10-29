@@ -17,7 +17,7 @@
             <title>JVM常见面试题——复习版</title>
             <link>http://yoursite.com/interview/JVM%E5%A4%8D%E4%B9%A0%E7%89%88/</link>
             <category term=".面试题" scheme="http://yoursite.com/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/" />
-            <category term="面试题" scheme="http://yoursite.com/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/" />
+            <category term="复习版" scheme="http://yoursite.com/tags/%E5%A4%8D%E4%B9%A0%E7%89%88/" />
             <pubDate>Sat, 29 Oct 2022 00:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;h3 id=&#34;jvm全情概要&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#jvm全情概要&#34;&gt;#&lt;/a&gt; JVM 全情概要&lt;/h3&gt;
 &lt;img data-src=&#34;/interview/JVM%E5%A4%8D%E4%B9%A0%E7%89%88/image-20220821204809060.png&#34; class=&#34;&#34; title=&#34;image-20220821204809060&#34;&gt;
@@ -462,7 +462,7 @@ jinfo -flag  &amp;lt;name&amp;gt;=&amp;lt;value&amp;gt; PID
             <title>JVM常见面试题——快速突击版</title>
             <link>http://yoursite.com/interview/JVM%E5%BF%AB%E9%80%9F%E7%AA%81%E5%87%BB%E7%89%88/</link>
             <category term=".面试题" scheme="http://yoursite.com/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/" />
-            <category term="面试题" scheme="http://yoursite.com/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/" />
+            <category term="突击版" scheme="http://yoursite.com/tags/%E7%AA%81%E5%87%BB%E7%89%88/" />
             <pubDate>Sat, 29 Oct 2022 00:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;什么是jvm&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#什么是jvm&#34;&gt;#&lt;/a&gt; 什么是 JVM&lt;/h2&gt;
 &lt;p&gt;JVM 是 java 代码运行的平台，他帮助我们的代码一次编译到处运行&lt;/p&gt;
