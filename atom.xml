@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://yoursite.com</id>
+    <id>https://eth168.top</id>
     <title>记录“美食”每刻</title>
     <subtitle></subtitle>
-    <icon>http://yoursite.com/images/favicon.ico</icon>
-    <link href="http://yoursite.com" />
+    <icon>https://eth168.top/images/favicon.ico</icon>
+    <link href="https://eth168.top" />
     <author>
       <name>雾都</name>
     </author>
     <updated>2022-10-31T15:06:22.718Z</updated>
     <entry>
-        <id>http://yoursite.com/tools/Zookeeper-tool/</id>
+        <id>https://eth168.top/tools/Zookeeper-tool/</id>
         <title>Zookeeper</title>
-        <link rel="alternate" href="http://yoursite.com/tools/Zookeeper-tool/"/>
+        <link rel="alternate" href="https://eth168.top/tools/Zookeeper-tool/"/>
         <content type="html">&lt;h3 id=&#34;zookeeper-linux安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#zookeeper-linux安装&#34;&gt;#&lt;/a&gt; Zookeeper-linux 安装&lt;/h3&gt;
 &lt;h4 id=&#34;1&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1&#34;&gt;#&lt;/a&gt; ——1&lt;/h4&gt;
 &lt;h5 id=&#34;1-zookeeper简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-zookeeper简介&#34;&gt;#&lt;/a&gt; 1     Zookeeper 简介&lt;/h5&gt;
@@ -183,13 +183,13 @@ Unable to find either secure or unsecure client port in any configs. Terminating
 		var gitalk = new Gitalk(gitalkConfig);
 	    gitalk.render(&#34;gitalk-container&#34;);
 	    &lt;/script&gt;</content>
-        <category term="工具软件安装" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
+        <category term="工具软件安装" scheme="https://eth168.top/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
         <updated>2022-10-31T15:06:22.718Z</updated>
     </entry>
     <entry>
-        <id>http://yoursite.com/tools/XShell-tool/</id>
+        <id>https://eth168.top/tools/XShell-tool/</id>
         <title>XShell</title>
-        <link rel="alternate" href="http://yoursite.com/tools/XShell-tool/"/>
+        <link rel="alternate" href="https://eth168.top/tools/XShell-tool/"/>
         <content type="html">&lt;h2 id=&#34;安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装&#34;&gt;#&lt;/a&gt; 安装&lt;/h2&gt;
 &lt;h2 id=&#34;配色&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#配色&#34;&gt;#&lt;/a&gt; 配色&lt;/h2&gt;
 &lt;blockquote&gt;
@@ -215,13 +215,13 @@ Unable to find either secure or unsecure client port in any configs. Terminating
 		var gitalk = new Gitalk(gitalkConfig);
 	    gitalk.render(&#34;gitalk-container&#34;);
 	    &lt;/script&gt;</content>
-        <category term="工具软件安装" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
+        <category term="工具软件安装" scheme="https://eth168.top/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
         <updated>2022-10-31T15:06:22.715Z</updated>
     </entry>
     <entry>
-        <id>http://yoursite.com/tools/Tomcat-tool/</id>
+        <id>https://eth168.top/tools/Tomcat-tool/</id>
         <title>Tomcat</title>
-        <link rel="alternate" href="http://yoursite.com/tools/Tomcat-tool/"/>
+        <link rel="alternate" href="https://eth168.top/tools/Tomcat-tool/"/>
         <content type="html">&lt;h3 id=&#34;tomcat安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#tomcat安装&#34;&gt;#&lt;/a&gt; Tomcat 安装&lt;/h3&gt;
 &lt;p&gt;下载&lt;/p&gt;
 &lt;p&gt;下载地址：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3RvbWNhdC5hcGFjaGUub3JnLw==&#34;&gt;http://tomcat.apache.org/&lt;/span&gt;&lt;/p&gt;
@@ -261,13 +261,13 @@ Unable to find either secure or unsecure client port in any configs. Terminating
 		var gitalk = new Gitalk(gitalkConfig);
 	    gitalk.render(&#34;gitalk-container&#34;);
 	    &lt;/script&gt;</content>
-        <category term="工具软件安装" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
+        <category term="工具软件安装" scheme="https://eth168.top/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
         <updated>2022-10-31T15:06:22.710Z</updated>
     </entry>
     <entry>
-        <id>http://yoursite.com/tools/Solr-tool/</id>
+        <id>https://eth168.top/tools/Solr-tool/</id>
         <title>Solr</title>
-        <link rel="alternate" href="http://yoursite.com/tools/Solr-tool/"/>
+        <link rel="alternate" href="https://eth168.top/tools/Solr-tool/"/>
         <content type="html">&lt;h2 id=&#34;solr安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#solr安装&#34;&gt;#&lt;/a&gt; Solr 安装&lt;/h2&gt;
 &lt;h3 id=&#34;1&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1&#34;&gt;#&lt;/a&gt; ——1&lt;/h3&gt;
 &lt;p&gt;​	Solr 是使用 Java 编写，所以必选先安装 JDK。&lt;/p&gt;
@@ -432,13 +432,13 @@ Unable to find either secure or unsecure client port in any configs. Terminating
 		var gitalk = new Gitalk(gitalkConfig);
 	    gitalk.render(&#34;gitalk-container&#34;);
 	    &lt;/script&gt;</content>
-        <category term="工具软件安装" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
+        <category term="工具软件安装" scheme="https://eth168.top/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
         <updated>2022-10-31T15:06:22.705Z</updated>
     </entry>
     <entry>
-        <id>http://yoursite.com/tools/redis-tool/</id>
+        <id>https://eth168.top/tools/redis-tool/</id>
         <title>redis</title>
-        <link rel="alternate" href="http://yoursite.com/tools/redis-tool/"/>
+        <link rel="alternate" href="https://eth168.top/tools/redis-tool/"/>
         <content type="html">&lt;h3 id=&#34;redis安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#redis安装&#34;&gt;#&lt;/a&gt; redis 安装&lt;/h3&gt;
 &lt;h4 id=&#34;1&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1&#34;&gt;#&lt;/a&gt; ——1&lt;/h4&gt;
 &lt;h5 id=&#34;1安装依赖c语言依赖&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1安装依赖c语言依赖&#34;&gt;#&lt;/a&gt; 1. 安装依赖 C 语言依赖&lt;/h5&gt;
@@ -517,13 +517,13 @@ Unable to find either secure or unsecure client port in any configs. Terminating
 		var gitalk = new Gitalk(gitalkConfig);
 	    gitalk.render(&#34;gitalk-container&#34;);
 	    &lt;/script&gt;</content>
-        <category term="工具软件安装" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
+        <category term="工具软件安装" scheme="https://eth168.top/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
         <updated>2022-10-31T15:06:22.703Z</updated>
     </entry>
     <entry>
-        <id>http://yoursite.com/tools/RabbitMQ-tool/</id>
+        <id>https://eth168.top/tools/RabbitMQ-tool/</id>
         <title>RabbitMQ</title>
-        <link rel="alternate" href="http://yoursite.com/tools/RabbitMQ-tool/"/>
+        <link rel="alternate" href="https://eth168.top/tools/RabbitMQ-tool/"/>
         <content type="html">&lt;h3 id=&#34;rabbitmq安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#rabbitmq安装&#34;&gt;#&lt;/a&gt; RabbitMQ&lt;strong&gt; 安装&lt;/strong&gt;&lt;/h3&gt;
 &lt;h4 id=&#34;1-上传并解压&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-上传并解压&#34;&gt;#&lt;/a&gt; 1 &lt;strong&gt;上传并解压&lt;/strong&gt;&lt;/h4&gt;
 &lt;p&gt;​	上传 rabbitmq-server-generic-unix-3.7.18.tar.xz 到 /usr/loca/tmp 中&lt;/p&gt;
@@ -602,13 +602,13 @@ Unable to find either secure or unsecure client port in any configs. Terminating
 		var gitalk = new Gitalk(gitalkConfig);
 	    gitalk.render(&#34;gitalk-container&#34;);
 	    &lt;/script&gt;</content>
-        <category term="工具软件安装" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
+        <category term="工具软件安装" scheme="https://eth168.top/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
         <updated>2022-10-31T15:06:22.701Z</updated>
     </entry>
     <entry>
-        <id>http://yoursite.com/tools/python-tool/</id>
+        <id>https://eth168.top/tools/python-tool/</id>
         <title>python</title>
-        <link rel="alternate" href="http://yoursite.com/tools/python-tool/"/>
+        <link rel="alternate" href="https://eth168.top/tools/python-tool/"/>
         <content type="html">&lt;h3 id=&#34;python升级&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#python升级&#34;&gt;#&lt;/a&gt; Python 升级&lt;/h3&gt;
 &lt;h4 id=&#34;一-查看当前python版本&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#一-查看当前python版本&#34;&gt;#&lt;/a&gt; 一、&lt;strong&gt;查看当前 python 版本&lt;/strong&gt;&lt;/h4&gt;
 &lt;pre&gt;&lt;code&gt;#[root@ansible ~]# python -V
@@ -673,13 +673,13 @@ SyntaxError: invalid syntax
 		var gitalk = new Gitalk(gitalkConfig);
 	    gitalk.render(&#34;gitalk-container&#34;);
 	    &lt;/script&gt;</content>
-        <category term="工具软件安装" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
+        <category term="工具软件安装" scheme="https://eth168.top/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
         <updated>2022-10-31T15:06:22.698Z</updated>
     </entry>
     <entry>
-        <id>http://yoursite.com/tools/OpenSSL-tool/</id>
+        <id>https://eth168.top/tools/OpenSSL-tool/</id>
         <title>OpenSSL</title>
-        <link rel="alternate" href="http://yoursite.com/tools/OpenSSL-tool/"/>
+        <link rel="alternate" href="https://eth168.top/tools/OpenSSL-tool/"/>
         <content type="html">&lt;h3 id=&#34;openssl安装教程windows&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#openssl安装教程windows&#34;&gt;#&lt;/a&gt; OpenSSL 安装教程（Windows）&lt;/h3&gt;
 &lt;p&gt;openssl 官网下载地址：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3NscHJvd2ViLmNvbS9wcm9kdWN0cy9XaW4zMk9wZW5TU0wuaHRtbA==&#34;&gt;http://slproweb.com/products/Win32OpenSSL.html&lt;/span&gt;&lt;/p&gt;
 &lt;h4 id=&#34;安装环境&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装环境&#34;&gt;#&lt;/a&gt; 安装环境:&lt;/h4&gt;
@@ -737,13 +737,13 @@ Win64 OpenSSL v1.1.1i&lt;/p&gt;
 		var gitalk = new Gitalk(gitalkConfig);
 	    gitalk.render(&#34;gitalk-container&#34;);
 	    &lt;/script&gt;</content>
-        <category term="工具软件安装" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
+        <category term="工具软件安装" scheme="https://eth168.top/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
         <updated>2022-10-31T15:06:22.696Z</updated>
     </entry>
     <entry>
-        <id>http://yoursite.com/tools/Nginx-tool/</id>
+        <id>https://eth168.top/tools/Nginx-tool/</id>
         <title>Nginx</title>
-        <link rel="alternate" href="http://yoursite.com/tools/Nginx-tool/"/>
+        <link rel="alternate" href="https://eth168.top/tools/Nginx-tool/"/>
         <content type="html">&lt;h3 id=&#34;nginx安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#nginx安装&#34;&gt;#&lt;/a&gt; nginx 安装&lt;/h3&gt;
 &lt;h4 id=&#34;1&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1&#34;&gt;#&lt;/a&gt; ——1&lt;/h4&gt;
 &lt;h5 id=&#34;安装yum&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装yum&#34;&gt;#&lt;/a&gt; 安装：yum&lt;/h5&gt;
@@ -769,13 +769,13 @@ Win64 OpenSSL v1.1.1i&lt;/p&gt;
 		var gitalk = new Gitalk(gitalkConfig);
 	    gitalk.render(&#34;gitalk-container&#34;);
 	    &lt;/script&gt;</content>
-        <category term="工具软件安装" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
+        <category term="工具软件安装" scheme="https://eth168.top/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
         <updated>2022-10-31T15:06:22.692Z</updated>
     </entry>
     <entry>
-        <id>http://yoursite.com/tools/Nacos-tool/</id>
+        <id>https://eth168.top/tools/Nacos-tool/</id>
         <title>Nacos</title>
-        <link rel="alternate" href="http://yoursite.com/tools/Nacos-tool/"/>
+        <link rel="alternate" href="https://eth168.top/tools/Nacos-tool/"/>
         <content type="html">&lt;h3 id=&#34;nacos安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#nacos安装&#34;&gt;#&lt;/a&gt; Nacos 安装&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;注：&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -865,13 +865,13 @@ Win64 OpenSSL v1.1.1i&lt;/p&gt;
 		var gitalk = new Gitalk(gitalkConfig);
 	    gitalk.render(&#34;gitalk-container&#34;);
 	    &lt;/script&gt;</content>
-        <category term="工具软件安装" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
+        <category term="工具软件安装" scheme="https://eth168.top/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
         <updated>2022-10-31T15:06:22.690Z</updated>
     </entry>
     <entry>
-        <id>http://yoursite.com/tools/MySQL-tool/</id>
+        <id>https://eth168.top/tools/MySQL-tool/</id>
         <title>MySQL</title>
-        <link rel="alternate" href="http://yoursite.com/tools/MySQL-tool/"/>
+        <link rel="alternate" href="https://eth168.top/tools/MySQL-tool/"/>
         <content type="html">&lt;h3 id=&#34;mysql安装windows&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#mysql安装windows&#34;&gt;#&lt;/a&gt; MySQL 安装（Windows）&lt;/h3&gt;
 &lt;h4 id=&#34;1mysql的版本&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1mysql的版本&#34;&gt;#&lt;/a&gt; 【1】MySQL 的版本：&lt;/h4&gt;
 &lt;p&gt;近期主要历史版本有 5.0/5.1/5.5/5.6/5.7，目前最新版本是 MySQL8。6.0 曾经是个内部试验版本，已取消了。&lt;/p&gt;
@@ -1092,13 +1092,13 @@ Win64 OpenSSL v1.1.1i&lt;/p&gt;
 		var gitalk = new Gitalk(gitalkConfig);
 	    gitalk.render(&#34;gitalk-container&#34;);
 	    &lt;/script&gt;</content>
-        <category term="工具软件安装" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
+        <category term="工具软件安装" scheme="https://eth168.top/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
         <updated>2022-10-31T15:06:22.688Z</updated>
     </entry>
     <entry>
-        <id>http://yoursite.com/tools/MyCat-tool/</id>
+        <id>https://eth168.top/tools/MyCat-tool/</id>
         <title>MyCat</title>
-        <link rel="alternate" href="http://yoursite.com/tools/MyCat-tool/"/>
+        <link rel="alternate" href="https://eth168.top/tools/MyCat-tool/"/>
         <content type="html">&lt;h2 id=&#34;mycatlinux&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#mycatlinux&#34;&gt;#&lt;/a&gt; MyCat（Linux）&lt;/h2&gt;
 &lt;h3 id=&#34;server安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#server安装&#34;&gt;#&lt;/a&gt; (Server 安装)&lt;/h3&gt;
 &lt;ul&gt;
@@ -1164,13 +1164,13 @@ Win64 OpenSSL v1.1.1i&lt;/p&gt;
 		var gitalk = new Gitalk(gitalkConfig);
 	    gitalk.render(&#34;gitalk-container&#34;);
 	    &lt;/script&gt;</content>
-        <category term="工具软件安装" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
+        <category term="工具软件安装" scheme="https://eth168.top/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
         <updated>2022-10-31T15:06:22.685Z</updated>
     </entry>
     <entry>
-        <id>http://yoursite.com/tools/Maven-tool/</id>
+        <id>https://eth168.top/tools/Maven-tool/</id>
         <title>Maven-tool</title>
-        <link rel="alternate" href="http://yoursite.com/tools/Maven-tool/"/>
+        <link rel="alternate" href="https://eth168.top/tools/Maven-tool/"/>
         <content type="html">&lt;h3 id=&#34;maven-安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#maven-安装&#34;&gt;#&lt;/a&gt; Maven 安装&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;要是新版本  &lt;code&gt;IDEA&lt;/code&gt;  则不需要修改  &lt;code&gt;Maven&lt;/code&gt;  ,  &lt;code&gt;IDEA&lt;/code&gt;  中默认整合了  &lt;code&gt;Maven&lt;/code&gt; ，只不过是版本问题&lt;/p&gt;
@@ -1210,13 +1210,13 @@ Win64 OpenSSL v1.1.1i&lt;/p&gt;
 		var gitalk = new Gitalk(gitalkConfig);
 	    gitalk.render(&#34;gitalk-container&#34;);
 	    &lt;/script&gt;</content>
-        <category term="工具软件安装" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
+        <category term="工具软件安装" scheme="https://eth168.top/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
         <updated>2022-10-31T15:06:22.683Z</updated>
     </entry>
     <entry>
-        <id>http://yoursite.com/tools/Keepalived-tool/</id>
+        <id>https://eth168.top/tools/Keepalived-tool/</id>
         <title>Keepalived</title>
-        <link rel="alternate" href="http://yoursite.com/tools/Keepalived-tool/"/>
+        <link rel="alternate" href="https://eth168.top/tools/Keepalived-tool/"/>
         <content type="html">&lt;h3 id=&#34;keepalived安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#keepalived安装&#34;&gt;#&lt;/a&gt; Keepalived 安装&lt;/h3&gt;
 &lt;h4 id=&#34;1&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1&#34;&gt;#&lt;/a&gt; ——1&lt;/h4&gt;
 &lt;h5 id=&#34;1-准备好keepalived安装包&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-准备好keepalived安装包&#34;&gt;#&lt;/a&gt; 1、准备好 Keepalived 安装包&lt;/h5&gt;
@@ -1279,13 +1279,13 @@ vrrp_instance VI_1 &amp;#123;
 		var gitalk = new Gitalk(gitalkConfig);
 	    gitalk.render(&#34;gitalk-container&#34;);
 	    &lt;/script&gt;</content>
-        <category term="工具软件安装" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
+        <category term="工具软件安装" scheme="https://eth168.top/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
         <updated>2022-10-31T15:06:22.681Z</updated>
     </entry>
     <entry>
-        <id>http://yoursite.com/tools/Kafka-tool/</id>
+        <id>https://eth168.top/tools/Kafka-tool/</id>
         <title>Kafka</title>
-        <link rel="alternate" href="http://yoursite.com/tools/Kafka-tool/"/>
+        <link rel="alternate" href="https://eth168.top/tools/Kafka-tool/"/>
         <content type="html">&lt;h3 id=&#34;kafka-安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#kafka-安装&#34;&gt;#&lt;/a&gt; Kafka 安装&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;安装前提，kafka 安装运行最低支持 jdk7；本篇演示版本是基于 jdk1.8；&lt;/p&gt;
@@ -1313,13 +1313,13 @@ vrrp_instance VI_1 &amp;#123;
 		var gitalk = new Gitalk(gitalkConfig);
 	    gitalk.render(&#34;gitalk-container&#34;);
 	    &lt;/script&gt;</content>
-        <category term="工具软件安装" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
+        <category term="工具软件安装" scheme="https://eth168.top/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
         <updated>2022-10-31T15:06:22.678Z</updated>
     </entry>
     <entry>
-        <id>http://yoursite.com/tools/JRebel-tool/</id>
+        <id>https://eth168.top/tools/JRebel-tool/</id>
         <title>JRebel安装</title>
-        <link rel="alternate" href="http://yoursite.com/tools/JRebel-tool/"/>
+        <link rel="alternate" href="https://eth168.top/tools/JRebel-tool/"/>
         <content type="html">&lt;h3 id=&#34;资料在网盘里面&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#资料在网盘里面&#34;&gt;#&lt;/a&gt; 资料在网盘里面&lt;/h3&gt;
 
 &lt;div id=&#34;gitalk-container&#34;&gt;&lt;/div&gt;
@@ -1331,13 +1331,13 @@ vrrp_instance VI_1 &amp;#123;
 		var gitalk = new Gitalk(gitalkConfig);
 	    gitalk.render(&#34;gitalk-container&#34;);
 	    &lt;/script&gt;</content>
-        <category term="工具软件安装" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
+        <category term="工具软件安装" scheme="https://eth168.top/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
         <updated>2022-10-31T15:06:22.675Z</updated>
     </entry>
     <entry>
-        <id>http://yoursite.com/tools/IDEA-tool/</id>
+        <id>https://eth168.top/tools/IDEA-tool/</id>
         <title>IDEA-tool</title>
-        <link rel="alternate" href="http://yoursite.com/tools/IDEA-tool/"/>
+        <link rel="alternate" href="https://eth168.top/tools/IDEA-tool/"/>
         <content type="html">&lt;h2 id=&#34;常用插件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#常用插件&#34;&gt;#&lt;/a&gt; 常用插件&lt;/h2&gt;
 &lt;h4 id=&#34;皮肤&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#皮肤&#34;&gt;#&lt;/a&gt; 皮肤&lt;/h4&gt;
 &lt;blockquote&gt;
@@ -1461,13 +1461,13 @@ vrrp_instance VI_1 &amp;#123;
 		var gitalk = new Gitalk(gitalkConfig);
 	    gitalk.render(&#34;gitalk-container&#34;);
 	    &lt;/script&gt;</content>
-        <category term="工具软件安装" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
+        <category term="工具软件安装" scheme="https://eth168.top/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
         <updated>2022-10-31T15:06:22.673Z</updated>
     </entry>
     <entry>
-        <id>http://yoursite.com/tools/HDFS-tool/</id>
+        <id>https://eth168.top/tools/HDFS-tool/</id>
         <title>HDFS安装</title>
-        <link rel="alternate" href="http://yoursite.com/tools/HDFS-tool/"/>
+        <link rel="alternate" href="https://eth168.top/tools/HDFS-tool/"/>
         <content type="html">&lt;h3 id=&#34;hdfs安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#hdfs安装&#34;&gt;#&lt;/a&gt; HDFS 安装&lt;/h3&gt;
 &lt;h4 id=&#34;1&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1&#34;&gt;#&lt;/a&gt; ——1&lt;/h4&gt;
 &lt;h4 id=&#34;2&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2&#34;&gt;#&lt;/a&gt; ——2&lt;/h4&gt;
@@ -1488,13 +1488,13 @@ vrrp_instance VI_1 &amp;#123;
 		var gitalk = new Gitalk(gitalkConfig);
 	    gitalk.render(&#34;gitalk-container&#34;);
 	    &lt;/script&gt;</content>
-        <category term="工具软件安装" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
+        <category term="工具软件安装" scheme="https://eth168.top/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
         <updated>2022-10-31T15:06:22.671Z</updated>
     </entry>
     <entry>
-        <id>http://yoursite.com/tools/HAProxy-tool/</id>
+        <id>https://eth168.top/tools/HAProxy-tool/</id>
         <title>HAProxy安装</title>
-        <link rel="alternate" href="http://yoursite.com/tools/HAProxy-tool/"/>
+        <link rel="alternate" href="https://eth168.top/tools/HAProxy-tool/"/>
         <content type="html">&lt;h4 id=&#34;haproxy安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#haproxy安装&#34;&gt;#&lt;/a&gt; HAProxy 安装&lt;/h4&gt;
 &lt;h5 id=&#34;1&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1&#34;&gt;#&lt;/a&gt; ——1&lt;/h5&gt;
 &lt;h6 id=&#34;1-准备好haproxy的安装包&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-准备好haproxy的安装包&#34;&gt;#&lt;/a&gt; 1、准备好 HAProxy 的安装包&lt;/h6&gt;
@@ -1522,13 +1522,13 @@ vrrp_instance VI_1 &amp;#123;
 		var gitalk = new Gitalk(gitalkConfig);
 	    gitalk.render(&#34;gitalk-container&#34;);
 	    &lt;/script&gt;</content>
-        <category term="工具软件安装" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
+        <category term="工具软件安装" scheme="https://eth168.top/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
         <updated>2022-10-31T15:06:22.668Z</updated>
     </entry>
     <entry>
-        <id>http://yoursite.com/tools/Erlang-tool/</id>
+        <id>https://eth168.top/tools/Erlang-tool/</id>
         <title>Erlang</title>
-        <link rel="alternate" href="http://yoursite.com/tools/Erlang-tool/"/>
+        <link rel="alternate" href="https://eth168.top/tools/Erlang-tool/"/>
         <content type="html">&lt;h3 id=&#34;erlang安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#erlang安装&#34;&gt;#&lt;/a&gt; &lt;strong&gt;Erlang 安装&lt;/strong&gt;&lt;/h3&gt;
 &lt;h4 id=&#34;1&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1&#34;&gt;#&lt;/a&gt; ——1&lt;/h4&gt;
 &lt;p&gt;​	RabbitMQ 是使用 Erlang 语言编写的，所以需要先配置 Erlang&lt;/p&gt;
@@ -1599,7 +1599,7 @@ eg: 192.168.1.195 node-1
 		var gitalk = new Gitalk(gitalkConfig);
 	    gitalk.render(&#34;gitalk-container&#34;);
 	    &lt;/script&gt;</content>
-        <category term="工具软件安装" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
+        <category term="工具软件安装" scheme="https://eth168.top/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
         <updated>2022-10-31T15:06:22.666Z</updated>
     </entry>
 </feed>

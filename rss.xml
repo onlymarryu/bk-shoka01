@@ -3,8 +3,8 @@
     <channel>
         <title>记录“美食”每刻</title>
         <subtitle></subtitle>
-        <icon>http://yoursite.com/images/favicon.ico</icon>
-        <link>http://yoursite.com</link>
+        <icon>https://eth168.top/images/favicon.ico</icon>
+        <link>https://eth168.top</link>
         <author>
           <name>雾都</name>
         </author>
@@ -13,10 +13,10 @@
         <pubDate>Mon, 31 Oct 2022 23:06:22 +0800</pubDate>
         <lastBuildDate>Mon, 31 Oct 2022 23:06:22 +0800</lastBuildDate>
         <item>
-            <guid isPermalink="true">http://yoursite.com/tools/Zookeeper-tool/</guid>
+            <guid isPermalink="true">https://eth168.top/tools/Zookeeper-tool/</guid>
             <title>Zookeeper</title>
-            <link>http://yoursite.com/tools/Zookeeper-tool/</link>
-            <category term="工具软件安装" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
+            <link>https://eth168.top/tools/Zookeeper-tool/</link>
+            <category term="工具软件安装" scheme="https://eth168.top/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
             <pubDate>Mon, 31 Oct 2022 23:06:22 +0800</pubDate>
             <description><![CDATA[ &lt;h3 id=&#34;zookeeper-linux安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#zookeeper-linux安装&#34;&gt;#&lt;/a&gt; Zookeeper-linux 安装&lt;/h3&gt;
 &lt;h4 id=&#34;1&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1&#34;&gt;#&lt;/a&gt; ——1&lt;/h4&gt;
@@ -190,10 +190,10 @@ Unable to find either secure or unsecure client port in any configs. Terminating
 	    &lt;/script&gt; ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yoursite.com/tools/XShell-tool/</guid>
+            <guid isPermalink="true">https://eth168.top/tools/XShell-tool/</guid>
             <title>XShell</title>
-            <link>http://yoursite.com/tools/XShell-tool/</link>
-            <category term="工具软件安装" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
+            <link>https://eth168.top/tools/XShell-tool/</link>
+            <category term="工具软件安装" scheme="https://eth168.top/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
             <pubDate>Mon, 31 Oct 2022 23:06:22 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装&#34;&gt;#&lt;/a&gt; 安装&lt;/h2&gt;
 &lt;h2 id=&#34;配色&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#配色&#34;&gt;#&lt;/a&gt; 配色&lt;/h2&gt;
@@ -222,10 +222,10 @@ Unable to find either secure or unsecure client port in any configs. Terminating
 	    &lt;/script&gt; ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yoursite.com/tools/Tomcat-tool/</guid>
+            <guid isPermalink="true">https://eth168.top/tools/Tomcat-tool/</guid>
             <title>Tomcat</title>
-            <link>http://yoursite.com/tools/Tomcat-tool/</link>
-            <category term="工具软件安装" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
+            <link>https://eth168.top/tools/Tomcat-tool/</link>
+            <category term="工具软件安装" scheme="https://eth168.top/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
             <pubDate>Mon, 31 Oct 2022 23:06:22 +0800</pubDate>
             <description><![CDATA[ &lt;h3 id=&#34;tomcat安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#tomcat安装&#34;&gt;#&lt;/a&gt; Tomcat 安装&lt;/h3&gt;
 &lt;p&gt;下载&lt;/p&gt;
@@ -268,10 +268,10 @@ Unable to find either secure or unsecure client port in any configs. Terminating
 	    &lt;/script&gt; ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yoursite.com/tools/Solr-tool/</guid>
+            <guid isPermalink="true">https://eth168.top/tools/Solr-tool/</guid>
             <title>Solr</title>
-            <link>http://yoursite.com/tools/Solr-tool/</link>
-            <category term="工具软件安装" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
+            <link>https://eth168.top/tools/Solr-tool/</link>
+            <category term="工具软件安装" scheme="https://eth168.top/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
             <pubDate>Mon, 31 Oct 2022 23:06:22 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;solr安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#solr安装&#34;&gt;#&lt;/a&gt; Solr 安装&lt;/h2&gt;
 &lt;h3 id=&#34;1&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1&#34;&gt;#&lt;/a&gt; ——1&lt;/h3&gt;
@@ -439,10 +439,10 @@ Unable to find either secure or unsecure client port in any configs. Terminating
 	    &lt;/script&gt; ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yoursite.com/tools/redis-tool/</guid>
+            <guid isPermalink="true">https://eth168.top/tools/redis-tool/</guid>
             <title>redis</title>
-            <link>http://yoursite.com/tools/redis-tool/</link>
-            <category term="工具软件安装" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
+            <link>https://eth168.top/tools/redis-tool/</link>
+            <category term="工具软件安装" scheme="https://eth168.top/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
             <pubDate>Mon, 31 Oct 2022 23:06:22 +0800</pubDate>
             <description><![CDATA[ &lt;h3 id=&#34;redis安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#redis安装&#34;&gt;#&lt;/a&gt; redis 安装&lt;/h3&gt;
 &lt;h4 id=&#34;1&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1&#34;&gt;#&lt;/a&gt; ——1&lt;/h4&gt;
@@ -524,10 +524,10 @@ Unable to find either secure or unsecure client port in any configs. Terminating
 	    &lt;/script&gt; ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yoursite.com/tools/RabbitMQ-tool/</guid>
+            <guid isPermalink="true">https://eth168.top/tools/RabbitMQ-tool/</guid>
             <title>RabbitMQ</title>
-            <link>http://yoursite.com/tools/RabbitMQ-tool/</link>
-            <category term="工具软件安装" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
+            <link>https://eth168.top/tools/RabbitMQ-tool/</link>
+            <category term="工具软件安装" scheme="https://eth168.top/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
             <pubDate>Mon, 31 Oct 2022 23:06:22 +0800</pubDate>
             <description><![CDATA[ &lt;h3 id=&#34;rabbitmq安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#rabbitmq安装&#34;&gt;#&lt;/a&gt; RabbitMQ&lt;strong&gt; 安装&lt;/strong&gt;&lt;/h3&gt;
 &lt;h4 id=&#34;1-上传并解压&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-上传并解压&#34;&gt;#&lt;/a&gt; 1 &lt;strong&gt;上传并解压&lt;/strong&gt;&lt;/h4&gt;
@@ -609,10 +609,10 @@ Unable to find either secure or unsecure client port in any configs. Terminating
 	    &lt;/script&gt; ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yoursite.com/tools/python-tool/</guid>
+            <guid isPermalink="true">https://eth168.top/tools/python-tool/</guid>
             <title>python</title>
-            <link>http://yoursite.com/tools/python-tool/</link>
-            <category term="工具软件安装" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
+            <link>https://eth168.top/tools/python-tool/</link>
+            <category term="工具软件安装" scheme="https://eth168.top/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
             <pubDate>Mon, 31 Oct 2022 23:06:22 +0800</pubDate>
             <description><![CDATA[ &lt;h3 id=&#34;python升级&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#python升级&#34;&gt;#&lt;/a&gt; Python 升级&lt;/h3&gt;
 &lt;h4 id=&#34;一-查看当前python版本&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#一-查看当前python版本&#34;&gt;#&lt;/a&gt; 一、&lt;strong&gt;查看当前 python 版本&lt;/strong&gt;&lt;/h4&gt;
@@ -680,10 +680,10 @@ SyntaxError: invalid syntax
 	    &lt;/script&gt; ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yoursite.com/tools/OpenSSL-tool/</guid>
+            <guid isPermalink="true">https://eth168.top/tools/OpenSSL-tool/</guid>
             <title>OpenSSL</title>
-            <link>http://yoursite.com/tools/OpenSSL-tool/</link>
-            <category term="工具软件安装" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
+            <link>https://eth168.top/tools/OpenSSL-tool/</link>
+            <category term="工具软件安装" scheme="https://eth168.top/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
             <pubDate>Mon, 31 Oct 2022 23:06:22 +0800</pubDate>
             <description><![CDATA[ &lt;h3 id=&#34;openssl安装教程windows&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#openssl安装教程windows&#34;&gt;#&lt;/a&gt; OpenSSL 安装教程（Windows）&lt;/h3&gt;
 &lt;p&gt;openssl 官网下载地址：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3NscHJvd2ViLmNvbS9wcm9kdWN0cy9XaW4zMk9wZW5TU0wuaHRtbA==&#34;&gt;http://slproweb.com/products/Win32OpenSSL.html&lt;/span&gt;&lt;/p&gt;
@@ -744,10 +744,10 @@ Win64 OpenSSL v1.1.1i&lt;/p&gt;
 	    &lt;/script&gt; ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yoursite.com/tools/Nginx-tool/</guid>
+            <guid isPermalink="true">https://eth168.top/tools/Nginx-tool/</guid>
             <title>Nginx</title>
-            <link>http://yoursite.com/tools/Nginx-tool/</link>
-            <category term="工具软件安装" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
+            <link>https://eth168.top/tools/Nginx-tool/</link>
+            <category term="工具软件安装" scheme="https://eth168.top/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
             <pubDate>Mon, 31 Oct 2022 23:06:22 +0800</pubDate>
             <description><![CDATA[ &lt;h3 id=&#34;nginx安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#nginx安装&#34;&gt;#&lt;/a&gt; nginx 安装&lt;/h3&gt;
 &lt;h4 id=&#34;1&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1&#34;&gt;#&lt;/a&gt; ——1&lt;/h4&gt;
@@ -776,10 +776,10 @@ Win64 OpenSSL v1.1.1i&lt;/p&gt;
 	    &lt;/script&gt; ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yoursite.com/tools/Nacos-tool/</guid>
+            <guid isPermalink="true">https://eth168.top/tools/Nacos-tool/</guid>
             <title>Nacos</title>
-            <link>http://yoursite.com/tools/Nacos-tool/</link>
-            <category term="工具软件安装" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
+            <link>https://eth168.top/tools/Nacos-tool/</link>
+            <category term="工具软件安装" scheme="https://eth168.top/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
             <pubDate>Mon, 31 Oct 2022 23:06:22 +0800</pubDate>
             <description><![CDATA[ &lt;h3 id=&#34;nacos安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#nacos安装&#34;&gt;#&lt;/a&gt; Nacos 安装&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;注：&lt;/strong&gt;&lt;/p&gt;
@@ -872,10 +872,10 @@ Win64 OpenSSL v1.1.1i&lt;/p&gt;
 	    &lt;/script&gt; ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yoursite.com/tools/MySQL-tool/</guid>
+            <guid isPermalink="true">https://eth168.top/tools/MySQL-tool/</guid>
             <title>MySQL</title>
-            <link>http://yoursite.com/tools/MySQL-tool/</link>
-            <category term="工具软件安装" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
+            <link>https://eth168.top/tools/MySQL-tool/</link>
+            <category term="工具软件安装" scheme="https://eth168.top/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
             <pubDate>Mon, 31 Oct 2022 23:06:22 +0800</pubDate>
             <description><![CDATA[ &lt;h3 id=&#34;mysql安装windows&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#mysql安装windows&#34;&gt;#&lt;/a&gt; MySQL 安装（Windows）&lt;/h3&gt;
 &lt;h4 id=&#34;1mysql的版本&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1mysql的版本&#34;&gt;#&lt;/a&gt; 【1】MySQL 的版本：&lt;/h4&gt;
@@ -1099,10 +1099,10 @@ Win64 OpenSSL v1.1.1i&lt;/p&gt;
 	    &lt;/script&gt; ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yoursite.com/tools/MyCat-tool/</guid>
+            <guid isPermalink="true">https://eth168.top/tools/MyCat-tool/</guid>
             <title>MyCat</title>
-            <link>http://yoursite.com/tools/MyCat-tool/</link>
-            <category term="工具软件安装" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
+            <link>https://eth168.top/tools/MyCat-tool/</link>
+            <category term="工具软件安装" scheme="https://eth168.top/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
             <pubDate>Mon, 31 Oct 2022 23:06:22 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;mycatlinux&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#mycatlinux&#34;&gt;#&lt;/a&gt; MyCat（Linux）&lt;/h2&gt;
 &lt;h3 id=&#34;server安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#server安装&#34;&gt;#&lt;/a&gt; (Server 安装)&lt;/h3&gt;
@@ -1171,10 +1171,10 @@ Win64 OpenSSL v1.1.1i&lt;/p&gt;
 	    &lt;/script&gt; ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yoursite.com/tools/Maven-tool/</guid>
+            <guid isPermalink="true">https://eth168.top/tools/Maven-tool/</guid>
             <title>Maven-tool</title>
-            <link>http://yoursite.com/tools/Maven-tool/</link>
-            <category term="工具软件安装" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
+            <link>https://eth168.top/tools/Maven-tool/</link>
+            <category term="工具软件安装" scheme="https://eth168.top/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
             <pubDate>Mon, 31 Oct 2022 23:06:22 +0800</pubDate>
             <description><![CDATA[ &lt;h3 id=&#34;maven-安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#maven-安装&#34;&gt;#&lt;/a&gt; Maven 安装&lt;/h3&gt;
 &lt;blockquote&gt;
@@ -1217,10 +1217,10 @@ Win64 OpenSSL v1.1.1i&lt;/p&gt;
 	    &lt;/script&gt; ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yoursite.com/tools/Keepalived-tool/</guid>
+            <guid isPermalink="true">https://eth168.top/tools/Keepalived-tool/</guid>
             <title>Keepalived</title>
-            <link>http://yoursite.com/tools/Keepalived-tool/</link>
-            <category term="工具软件安装" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
+            <link>https://eth168.top/tools/Keepalived-tool/</link>
+            <category term="工具软件安装" scheme="https://eth168.top/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
             <pubDate>Mon, 31 Oct 2022 23:06:22 +0800</pubDate>
             <description><![CDATA[ &lt;h3 id=&#34;keepalived安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#keepalived安装&#34;&gt;#&lt;/a&gt; Keepalived 安装&lt;/h3&gt;
 &lt;h4 id=&#34;1&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1&#34;&gt;#&lt;/a&gt; ——1&lt;/h4&gt;
@@ -1286,10 +1286,10 @@ vrrp_instance VI_1 &amp;#123;
 	    &lt;/script&gt; ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yoursite.com/tools/Kafka-tool/</guid>
+            <guid isPermalink="true">https://eth168.top/tools/Kafka-tool/</guid>
             <title>Kafka</title>
-            <link>http://yoursite.com/tools/Kafka-tool/</link>
-            <category term="工具软件安装" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
+            <link>https://eth168.top/tools/Kafka-tool/</link>
+            <category term="工具软件安装" scheme="https://eth168.top/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
             <pubDate>Mon, 31 Oct 2022 23:06:22 +0800</pubDate>
             <description><![CDATA[ &lt;h3 id=&#34;kafka-安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#kafka-安装&#34;&gt;#&lt;/a&gt; Kafka 安装&lt;/h3&gt;
 &lt;blockquote&gt;
@@ -1320,10 +1320,10 @@ vrrp_instance VI_1 &amp;#123;
 	    &lt;/script&gt; ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yoursite.com/tools/JRebel-tool/</guid>
+            <guid isPermalink="true">https://eth168.top/tools/JRebel-tool/</guid>
             <title>JRebel安装</title>
-            <link>http://yoursite.com/tools/JRebel-tool/</link>
-            <category term="工具软件安装" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
+            <link>https://eth168.top/tools/JRebel-tool/</link>
+            <category term="工具软件安装" scheme="https://eth168.top/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
             <pubDate>Mon, 31 Oct 2022 23:06:22 +0800</pubDate>
             <description><![CDATA[ &lt;h3 id=&#34;资料在网盘里面&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#资料在网盘里面&#34;&gt;#&lt;/a&gt; 资料在网盘里面&lt;/h3&gt;
 
@@ -1338,10 +1338,10 @@ vrrp_instance VI_1 &amp;#123;
 	    &lt;/script&gt; ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yoursite.com/tools/IDEA-tool/</guid>
+            <guid isPermalink="true">https://eth168.top/tools/IDEA-tool/</guid>
             <title>IDEA-tool</title>
-            <link>http://yoursite.com/tools/IDEA-tool/</link>
-            <category term="工具软件安装" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
+            <link>https://eth168.top/tools/IDEA-tool/</link>
+            <category term="工具软件安装" scheme="https://eth168.top/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
             <pubDate>Mon, 31 Oct 2022 23:06:22 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;常用插件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#常用插件&#34;&gt;#&lt;/a&gt; 常用插件&lt;/h2&gt;
 &lt;h4 id=&#34;皮肤&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#皮肤&#34;&gt;#&lt;/a&gt; 皮肤&lt;/h4&gt;
@@ -1468,10 +1468,10 @@ vrrp_instance VI_1 &amp;#123;
 	    &lt;/script&gt; ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yoursite.com/tools/HDFS-tool/</guid>
+            <guid isPermalink="true">https://eth168.top/tools/HDFS-tool/</guid>
             <title>HDFS安装</title>
-            <link>http://yoursite.com/tools/HDFS-tool/</link>
-            <category term="工具软件安装" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
+            <link>https://eth168.top/tools/HDFS-tool/</link>
+            <category term="工具软件安装" scheme="https://eth168.top/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
             <pubDate>Mon, 31 Oct 2022 23:06:22 +0800</pubDate>
             <description><![CDATA[ &lt;h3 id=&#34;hdfs安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#hdfs安装&#34;&gt;#&lt;/a&gt; HDFS 安装&lt;/h3&gt;
 &lt;h4 id=&#34;1&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1&#34;&gt;#&lt;/a&gt; ——1&lt;/h4&gt;
@@ -1495,10 +1495,10 @@ vrrp_instance VI_1 &amp;#123;
 	    &lt;/script&gt; ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yoursite.com/tools/HAProxy-tool/</guid>
+            <guid isPermalink="true">https://eth168.top/tools/HAProxy-tool/</guid>
             <title>HAProxy安装</title>
-            <link>http://yoursite.com/tools/HAProxy-tool/</link>
-            <category term="工具软件安装" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
+            <link>https://eth168.top/tools/HAProxy-tool/</link>
+            <category term="工具软件安装" scheme="https://eth168.top/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
             <pubDate>Mon, 31 Oct 2022 23:06:22 +0800</pubDate>
             <description><![CDATA[ &lt;h4 id=&#34;haproxy安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#haproxy安装&#34;&gt;#&lt;/a&gt; HAProxy 安装&lt;/h4&gt;
 &lt;h5 id=&#34;1&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1&#34;&gt;#&lt;/a&gt; ——1&lt;/h5&gt;
@@ -1529,10 +1529,10 @@ vrrp_instance VI_1 &amp;#123;
 	    &lt;/script&gt; ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yoursite.com/tools/Erlang-tool/</guid>
+            <guid isPermalink="true">https://eth168.top/tools/Erlang-tool/</guid>
             <title>Erlang</title>
-            <link>http://yoursite.com/tools/Erlang-tool/</link>
-            <category term="工具软件安装" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
+            <link>https://eth168.top/tools/Erlang-tool/</link>
+            <category term="工具软件安装" scheme="https://eth168.top/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
             <pubDate>Mon, 31 Oct 2022 23:06:22 +0800</pubDate>
             <description><![CDATA[ &lt;h3 id=&#34;erlang安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#erlang安装&#34;&gt;#&lt;/a&gt; &lt;strong&gt;Erlang 安装&lt;/strong&gt;&lt;/h3&gt;
 &lt;h4 id=&#34;1&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1&#34;&gt;#&lt;/a&gt; ——1&lt;/h4&gt;
