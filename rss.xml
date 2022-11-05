@@ -10,8 +10,60 @@
         </author>
         <description>记录“美食”每刻</description>
         <language>zh-CN</language>
-        <pubDate>Mon, 31 Oct 2022 23:06:22 +0800</pubDate>
-        <lastBuildDate>Mon, 31 Oct 2022 23:06:22 +0800</lastBuildDate>
+        <pubDate>Sat, 05 Nov 2022 23:14:39 +0800</pubDate>
+        <lastBuildDate>Sat, 05 Nov 2022 23:14:39 +0800</lastBuildDate>
+        <item>
+            <guid isPermalink="true">https://eth168.top/tools/nushell/</guid>
+            <title>nushell</title>
+            <link>https://eth168.top/tools/nushell/</link>
+            <category term="工具软件安装" scheme="https://eth168.top/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
+            <category term="Terminal" scheme="https://eth168.top/tags/Terminal/" />
+            <pubDate>Sat, 05 Nov 2022 23:14:39 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;&lt;code&gt;NuShell&lt;/code&gt;  是一个终端管理工具&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;创建具有现代感的灵活的跨平台 Shell&lt;/li&gt;
+&lt;li&gt;允许你将命令行应用程序与可理解数据结构的 Shell 进行混合和匹配&lt;/li&gt;
+&lt;li&gt;具有现代命令行应用程序提供的用户体验优化&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;官网：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cubnVzaGVsbC5zaC96aC1DTi8=&#34;&gt;https://www.nushell.sh/zh-CN/&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;GitHub：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL251c2hlbGwvbnVzaGVsbA==&#34;&gt;https://github.com/nushell/nushell&lt;/span&gt;&lt;/p&gt;
+&lt;img data-src=&#34;/tools/nushell/ls-example.png&#34; class=&#34;&#34; title=&#34;Screenshot showing using the ls comman&#34;&gt;
+&lt;h1 id=&#34;安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装&#34;&gt;#&lt;/a&gt; 安装&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我们常用的也就三个系统  &lt;code&gt;Windows&lt;/code&gt;  、 &lt;code&gt;Linux&lt;/code&gt;  、 &lt;code&gt;Macos&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;下载&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;这个工具安装使用也很简单，就是在 github 上下载下来，放一个地方上直接用就行了。&lt;/p&gt;
+&lt;p&gt;下载地址：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL251c2hlbGwvbnVzaGVsbC9yZWxlYXNlcw==&#34;&gt;https://github.com/nushell/nushell/releases&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;mark&gt;&lt;strong&gt;注意：&lt;/strong&gt; 他这个文件名写的有点绕，看清楚在下载。&lt;/mark&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;解压使用&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;下载完成后，直接解压，他的文件格式目录不变，放在同一个文件夹下即可，然后再  &lt;code&gt;Linux\Macos&lt;/code&gt;  中 &lt;code&gt;nu&lt;/code&gt;  或者 &lt;code&gt;Windows&lt;/code&gt;  的  &lt;code&gt;nu.exe&lt;/code&gt;  直接运行即可。&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;补充&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;在 Linux 下，将所有的文件都扔到   &lt;code&gt;/usr/local/bin&lt;/code&gt;  中即可&lt;/p&gt;
+&lt;h1 id=&#34;其他设置操作&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#其他设置操作&#34;&gt;#&lt;/a&gt; 其他设置操作&lt;/h1&gt;
+&lt;p&gt;具体的都可以参照我们的文档&lt;/p&gt;
+&lt;p&gt;官网：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cubnVzaGVsbC5zaC96aC1DTi8=&#34;&gt;https://www.nushell.sh/zh-CN/&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;设置 NuShell 为默认 Terminal&lt;/li&gt;
+&lt;li&gt;.....&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div id=&#34;gitalk-container&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js&#34;&gt;&lt;/script&gt;&lt;link rel=&#34;stylesheet&#34; href=&#34;https://unpkg.com/gitalk/dist/gitalk.css&#34;&gt;&lt;script src=&#34;https://unpkg.com/gitalk/dist/gitalk.min.js&#34;&gt;&lt;/script&gt;
+
+		&lt;script&gt;
+		var gitalkConfig = {&#34;clientID&#34;:&#34;6db178ba46c8af8f6a6f&#34;,&#34;clientSecret&#34;:&#34;90f730e5956024596558df00975cd8eae28cae3d&#34;,&#34;repo&#34;:&#34;bk-comment01&#34;,&#34;owner&#34;:&#34;onlymarryu&#34;,&#34;admin&#34;:[&#34;onlymarryu&#34;],&#34;distractionFreeMode&#34;:false,&#34;language&#34;:&#34;zh-CN&#34;,&#34;proxy&#34;:&#34;https://gitalk-comments.netlify.app/github_access_token&#34;,&#34;perPage&#34;:15};
+	    gitalkConfig.id = md5(location.pathname);
+		var gitalk = new Gitalk(gitalkConfig);
+	    gitalk.render(&#34;gitalk-container&#34;);
+	    &lt;/script&gt; ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://eth168.top/tools/Zookeeper-tool/</guid>
             <title>Zookeeper</title>
@@ -194,6 +246,7 @@ Unable to find either secure or unsecure client port in any configs. Terminating
             <title>XShell</title>
             <link>https://eth168.top/tools/XShell-tool/</link>
             <category term="工具软件安装" scheme="https://eth168.top/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
+            <category term="Terminal" scheme="https://eth168.top/tags/Terminal/" />
             <pubDate>Mon, 31 Oct 2022 23:06:22 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装&#34;&gt;#&lt;/a&gt; 安装&lt;/h2&gt;
 &lt;h2 id=&#34;配色&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#配色&#34;&gt;#&lt;/a&gt; 配色&lt;/h2&gt;
@@ -1517,83 +1570,6 @@ vrrp_instance VI_1 &amp;#123;
 &lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;/usr/local/haproxy/sbin/haproxy &lt;span class=&#34;token parameter variable&#34;&gt;-f&lt;/span&gt; /usr/local/haproxy/conf/haproxy.conf&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h6 id=&#34;8-查看haproxy的进程如果存在则说明没有问题&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#8-查看haproxy的进程如果存在则说明没有问题&#34;&gt;#&lt;/a&gt; 8、查看 haproxy 的进程，如果存在则说明没有问题&lt;/h6&gt;
 &lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;ps&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-ef&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;grep&lt;/span&gt; haproxy&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h6 id=&#34;9-打开浏览器访问用户名为admin密码为123123&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#9-打开浏览器访问用户名为admin密码为123123&#34;&gt;#&lt;/a&gt; 9、打开浏览器访问，用户名为 admin，密码为 123123&lt;/h6&gt;
 &lt;p&gt;​	&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovLzE5Mi4xNjguMS4xNjQ6Nzc3Ny9hZG1pbg==&#34;&gt;http://192.168.1.164:7777/admin&lt;/span&gt;&lt;/p&gt;
-
-&lt;div id=&#34;gitalk-container&#34;&gt;&lt;/div&gt;
-&lt;script src=&#34;https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js&#34;&gt;&lt;/script&gt;&lt;link rel=&#34;stylesheet&#34; href=&#34;https://unpkg.com/gitalk/dist/gitalk.css&#34;&gt;&lt;script src=&#34;https://unpkg.com/gitalk/dist/gitalk.min.js&#34;&gt;&lt;/script&gt;
-
-		&lt;script&gt;
-		var gitalkConfig = {&#34;clientID&#34;:&#34;6db178ba46c8af8f6a6f&#34;,&#34;clientSecret&#34;:&#34;90f730e5956024596558df00975cd8eae28cae3d&#34;,&#34;repo&#34;:&#34;bk-comment01&#34;,&#34;owner&#34;:&#34;onlymarryu&#34;,&#34;admin&#34;:[&#34;onlymarryu&#34;],&#34;distractionFreeMode&#34;:false,&#34;language&#34;:&#34;zh-CN&#34;,&#34;proxy&#34;:&#34;https://gitalk-comments.netlify.app/github_access_token&#34;,&#34;perPage&#34;:15};
-	    gitalkConfig.id = md5(location.pathname);
-		var gitalk = new Gitalk(gitalkConfig);
-	    gitalk.render(&#34;gitalk-container&#34;);
-	    &lt;/script&gt; ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://eth168.top/tools/Erlang-tool/</guid>
-            <title>Erlang</title>
-            <link>https://eth168.top/tools/Erlang-tool/</link>
-            <category term="工具软件安装" scheme="https://eth168.top/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
-            <pubDate>Mon, 31 Oct 2022 23:06:22 +0800</pubDate>
-            <description><![CDATA[ &lt;h3 id=&#34;erlang安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#erlang安装&#34;&gt;#&lt;/a&gt; &lt;strong&gt;Erlang 安装&lt;/strong&gt;&lt;/h3&gt;
-&lt;h4 id=&#34;1&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1&#34;&gt;#&lt;/a&gt; ——1&lt;/h4&gt;
-&lt;p&gt;​	RabbitMQ 是使用 Erlang 语言编写的，所以需要先配置 Erlang&lt;/p&gt;
-&lt;h5 id=&#34;1-修改主机名&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-修改主机名&#34;&gt;#&lt;/a&gt; 1 &lt;strong&gt;修改主机名&lt;/strong&gt;&lt;/h5&gt;
-&lt;p&gt;​	RabbitMQ 是通过主机名进行访问的，必须指定能访问的主机名。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;  vim /etc/sysconfig/network
-  
-  添加
-  NETWORKING=yes
-#  HOSTNAME=node-1 #名字可以随意
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/onlymarryu/typora-ims-test@master/RabbitMQ-06.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;    vim /etc/hosts
-  
-    ip network_hostname
-eg: 192.168.1.195 node-1  
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;​	新添加了一行，前面为服务器 ip，空格后面添加计算机主机名&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/onlymarryu/typora-ims-test@master/RabbitMQ-07.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;h5 id=&#34;2-安装依赖&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-安装依赖&#34;&gt;#&lt;/a&gt; 2 &lt;strong&gt;安装依赖&lt;/strong&gt;&lt;/h5&gt;
-&lt;pre&gt;&lt;code&gt;  yum -y install make gcc gcc-c++ kernel-devel m4 ncurses-devel openssl-devel unixODBC unixODBC-devel
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h5 id=&#34;3-上传并解压&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3-上传并解压&#34;&gt;#&lt;/a&gt; 3 &lt;strong&gt;上传并解压&lt;/strong&gt;&lt;/h5&gt;
-&lt;p&gt;​	上传 otp_src_22.0.tar.gz 到 /usr/local/tmp 目录中，进入目录并解压。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;解压时注意，此压缩包不具有gzip属性，解压参数没有z，只有xf
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;  cd /usr/local/tmp
-  tar xf otp_src_22.0.tar.gz -C /usr/local/tmp
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h5 id=&#34;4-配置参数&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#4-配置参数&#34;&gt;#&lt;/a&gt; 4 &lt;strong&gt;配置参数&lt;/strong&gt;&lt;/h5&gt;
-&lt;p&gt;​	先新建 /usr/local/erlang 文件夹，作为安装文件夹&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;  mkdir -p /usr/local/erlang
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;​	 进入文件夹&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;  cd otp_src_22.0
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;​	 配置参数&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;  ./configure --prefix=/usr/local/erlang --with-ssl --enable-threads --enable-smp-support --enable-kernel-poll --enable-hipe --without-javac
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h5 id=&#34;5-编译并安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#5-编译并安装&#34;&gt;#&lt;/a&gt; 5 &lt;strong&gt;编译并安装&lt;/strong&gt;&lt;/h5&gt;
-&lt;p&gt;​	编译&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;  make
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;​	 安装&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;  make install
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h5 id=&#34;6-修改环境变量&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#6-修改环境变量&#34;&gt;#&lt;/a&gt; 6 &lt;strong&gt;修改环境变量&lt;/strong&gt;&lt;/h5&gt;
-&lt;p&gt;​	修改 /etc/profile 文件&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt; vim /etc/profile
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;​	 在文件中添加下面代码&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;export PATH=$PATH:/usr/local/erlang/bin
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;​	运行文件，让修改内容生效&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;  source /etc/profile
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h5 id=&#34;7-查看配置是否成功&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#7-查看配置是否成功&#34;&gt;#&lt;/a&gt; 7 &lt;strong&gt;查看配置是否成功&lt;/strong&gt;&lt;/h5&gt;
-&lt;pre&gt;&lt;code&gt;  erl -version
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/onlymarryu/typora-ims-test@master/RabbitMQ-08.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;div id=&#34;gitalk-container&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js&#34;&gt;&lt;/script&gt;&lt;link rel=&#34;stylesheet&#34; href=&#34;https://unpkg.com/gitalk/dist/gitalk.css&#34;&gt;&lt;script src=&#34;https://unpkg.com/gitalk/dist/gitalk.min.js&#34;&gt;&lt;/script&gt;
