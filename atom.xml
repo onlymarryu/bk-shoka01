@@ -799,6 +799,7 @@ Unable to find either secure or unsecure client port in any configs. Terminating
         <title>python</title>
         <link rel="alternate" href="https://eth168.top/tools/python-tool/"/>
         <content type="html">&lt;h3 id=&#34;python升级&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#python升级&#34;&gt;#&lt;/a&gt; Python 升级&lt;/h3&gt;
+&lt;p&gt;国内镜像：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9yZWdpc3RyeS5ucG1taXJyb3IuY29tL2JpbmFyeS5odG1s&#34;&gt;https://registry.npmmirror.com/binary.html&lt;/span&gt;&lt;/p&gt;
 &lt;h4 id=&#34;一-查看当前python版本&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#一-查看当前python版本&#34;&gt;#&lt;/a&gt; 一、&lt;strong&gt;查看当前 python 版本&lt;/strong&gt;&lt;/h4&gt;
 &lt;pre&gt;&lt;code&gt;#[root@ansible ~]# python -V
 Python 2.7.5
