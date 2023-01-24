@@ -10,8 +10,450 @@
         </author>
         <description>花非花，雾非雾</description>
         <language>zh-CN</language>
-        <pubDate>Thu, 12 Jan 2023 00:00:00 +0800</pubDate>
-        <lastBuildDate>Thu, 12 Jan 2023 00:00:00 +0800</lastBuildDate>
+        <pubDate>Tue, 24 Jan 2023 12:43:45 +0800</pubDate>
+        <lastBuildDate>Tue, 24 Jan 2023 12:43:45 +0800</lastBuildDate>
+        <item>
+            <guid isPermalink="true">https://eth168.top/interview/MySQL/</guid>
+            <title>MySQL复习题</title>
+            <link>https://eth168.top/interview/MySQL/</link>
+            <category term=".面试题" scheme="https://eth168.top/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/" />
+            <category term="突击版 复习版" scheme="https://eth168.top/tags/%E7%AA%81%E5%87%BB%E7%89%88-%E5%A4%8D%E4%B9%A0%E7%89%88/" />
+            <pubDate>Tue, 24 Jan 2023 12:43:45 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;数据库存储引擎有哪些&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#数据库存储引擎有哪些&#34;&gt;#&lt;/a&gt; 数据库存储引擎有哪些&lt;/h1&gt;
+&lt;p&gt;Myisam、Innodb&lt;/p&gt;
+&lt;h1 id=&#34;myisam和innodb有什么区别&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#myisam和innodb有什么区别&#34;&gt;#&lt;/a&gt; Myisam 和 Innodb 有什么区别&lt;/h1&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;区别&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;MyISAM&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;InnoDB&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;数据结构&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;.frm 存储表定义 &lt;br/&gt;.MYD  存储数据文件&lt;br/&gt;.MYI  存储索引文件&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;.frm 存储表定义&lt;br/&gt;.ibd 存储数据和索引&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;存储空间&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;MyISAM&lt;strong&gt; 可被压缩，存储空间较小&lt;/strong&gt;&lt;br/&gt;支持三种存储：静态表 [默认]、动态表、压缩表&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;InnoDB&lt;strong&gt; 需要更多的内存和存储，它会在主内存中建立其专用的缓冲池用于高速缓冲数据和索引&lt;/strong&gt;。InnoDB 所在的表都保存在同一个数据文件中（也可能是多个文件，或者是独立的表空间）&lt;br/&gt;InnoDB 表的大小只受限于操作系统文件的大小，一般为 2GB&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;事务的支持&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;MyISAM 强调的是性能，每次查询具有原子性，其执行速度比 Innodb 类型更快，&lt;br/&gt;但是&lt;strong&gt;不提供事务支持&lt;/strong&gt;。&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;InnoDB 除了&lt;em&gt;&lt;strong&gt;提供事务支持&lt;/strong&gt;&lt;/em&gt;和外部键等高级数据库功能。还具有事务提交（commit）、回滚（rollback）和崩溃修复能力（crach recovery capabilities）等这些事务安全（transaction-safe ACID compliant）型表&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;锁的支持&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;如果只是执行大量的查询，MyISAM 是更好的选择。MyISAM 在&lt;strong&gt;增删&lt;/strong&gt;的时候需要&lt;strong&gt;锁定整个表格&lt;/strong&gt;，效率会低一些&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;innoDB 支持行级锁，&lt;em&gt;&lt;strong&gt;删除插入&lt;/strong&gt;&lt;/em&gt;的时候只需要&lt;em&gt;&lt;strong&gt;锁定操作行&lt;/strong&gt;&lt;/em&gt;就行。如果有大量的插入、修改删除操作，使用 InnoDB 性能能会更高&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;查询效率&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;strong&gt;高&lt;/strong&gt;&lt;br&gt;支持全文索引&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;strong&gt;低&lt;/strong&gt;&lt;br/&gt;不支持全文索引&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;外键的支持&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;MyISAM&lt;strong&gt; 不支持外键&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;支持外键&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h1 id=&#34;如何选择数据库引擎&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#如何选择数据库引擎&#34;&gt;#&lt;/a&gt; 如何选择数据库引擎？&lt;/h1&gt;
+&lt;p&gt;1、如果需要支持事务，选择 InnoDB，不需要事务则选择 MyISAM。&lt;/p&gt;
+&lt;p&gt;2、如果大部分表操作都是查询，选择 MyISAM，有写又有读选 InnoDB。&lt;/p&gt;
+&lt;p&gt;3、如果系统崩溃导致数据难以恢复，且成本高，不要选择 MyISAM。&lt;/p&gt;
+&lt;h1 id=&#34;三范式是什么&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#三范式是什么&#34;&gt;#&lt;/a&gt; 三范式是什么&lt;/h1&gt;
+&lt;p&gt;第一范式：列不可再分&lt;/p&gt;
+&lt;p&gt;第二范式：行可以唯一区分，主键约束&lt;/p&gt;
+&lt;p&gt;第三范式：表的非主属性不能依赖与其他表的非主属性  外键约束&lt;/p&gt;
+&lt;p&gt;简单来说，第一范式就是让属性原子化，不可再分；第二范式就是让数据具有主属性从而产生唯一标识（特别是为了标识有联合主键的情况）；第三范式就是表的非主属性不能依赖与其他表的非主属性，也可以说是表中的属性不能有依赖关系&lt;/p&gt;
+&lt;img data-src=&#34;/interview/MySQL/image-20220714214608165.png&#34; class=&#34;&#34; title=&#34;image-20220714214608165&#34;&gt;
+&lt;h1 id=&#34;什么是事务有哪些特点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#什么是事务有哪些特点&#34;&gt;#&lt;/a&gt; 什么是事务，有哪些特点&lt;/h1&gt;
+&lt;p&gt;事务是用来维护数据库完整性的，具体体现就是多条 sql 语句，要么全部成功，要么全部失败。&lt;/p&gt;
+&lt;p&gt;特点：&lt;mark&gt;ACID&lt;/mark&gt;&lt;/p&gt;
+&lt;p&gt;A:（原子性 Atomicity）、C: 一致性（Consistency）、I：隔离性（Isolation）、D：持久性（Durability）&lt;/p&gt;
+&lt;p&gt;1) 原子性&lt;br /&gt;
+原子是自然界最小的颗粒，具有不可再分的特性&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;一致性&lt;br /&gt;
+一致性是指事务执行的结果必须使数据库从一个一致性状态，变到另一个一致性状态。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;隔离性&lt;br /&gt;
+隔离性是指各个事务的执行互不干扰&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;4) 持久性&lt;br /&gt;
+持久性指事务一旦提交，对数据所做的任何改变，都要记录到永久存储器中&lt;/p&gt;
+&lt;h1 id=&#34;事务的隔离级别有哪些&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#事务的隔离级别有哪些&#34;&gt;#&lt;/a&gt; 事务的隔离级别有哪些&lt;/h1&gt;
+&lt;p&gt;由低到高：&lt;/p&gt;
+&lt;img data-src=&#34;/interview/MySQL/image-20220714221905692.png&#34; class=&#34;&#34; title=&#34;image-20220714221905692&#34;&gt;
+&lt;p&gt;&lt;strong&gt;READ UNCOMMITTED（读未提交）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;​	在这个隔离级别，所有事务都可以看到未提交事务的执行结果。在这种隔离级别上，可能会产生很多问题。所以这种隔离级别很少用于实际应用，而且它的性能也没有比其他性能好很多，而别的级别还有其他的优点。读取未提交数据，也被称为 “脏读”。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;READ COMMITTED（读已提交）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;​	读已提交这种隔离级别是大多数数据库系统默认的隔离级别（但 mysql 默认的隔离级别却不是这种），满足了隔离的最早简单定义：一个事务开始时，只能看见已经提交事务所做的改变，一个事务从开始到提交前，所做的任何数据改变都是不可见的，除非已经提交。这种隔离级别也支持所谓的不可重复读。这意味着用户运行同一个语句两次，看到的结果是不同的。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;REPEATABLE READ（可重复读）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;​	mysql 数据库默认的隔离级别。该级别解决了 READ UNCOMMITTED 导致的问题。它保证了同一事务的多个实例在并发读取事务时，会看到同样的数据行。不过这会导致另外一个问题 “幻读”。InnoDB 和 Falcon 存储引擎通过多版本并发控制解决了幻读问题。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;SERIALIZABLE（可串行化）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;​	该隔离级别是最高的隔离级别。它通过强制事务排序，使之不可能相互冲突，从而解决幻读问题。简而言之：SERIALIZABLE 是在每个读的数据行加锁，在这个级别上可能导致大量的超时和锁竞争现象，实际应用中很少使用这个级别，但如果用户的应用为了数据的稳定性，需要强制减少并发，也可以选择这种隔离级别。&lt;/p&gt;
+&lt;h1 id=&#34;并发事务带来哪些问题&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#并发事务带来哪些问题&#34;&gt;#&lt;/a&gt; 并发事务带来哪些问题？&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;脏读（Dirty read）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;​	当一个事务正在访问数据并且对数据进行了修改，而这种修改还没有提交到数据库中，这时另外一个事务也访问了这个数据，然后使用了这个数据。因为这个数据是还没有提交的数据，那么另外一个事务读到的这个数据是 “脏数据”，依据 “脏数据” 所做的操作可能是不正确的。&lt;/p&gt;
+ &lt;img data-src=&#34;/interview/MySQL/image-20220714222508260.png&#34; class=&#34;&#34; title=&#34;image-20220714222508260&#34;&gt;
+&lt;p&gt;&lt;strong&gt;不可重复读（Unrepeatableread）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;​	指在一个事务内多次读同一数据。在这个事务还没有结束时，另一个事务也访问该数据。那么，在第一个事务中的两次读数据之间，由于第二个事务的修改导致第一个事务两次读取的数据可能不太一样。这就发生了在一个事务内两次读到的数据是不一样的情况，因此称为不可重复读。&lt;/p&gt;
+ &lt;img data-src=&#34;/interview/MySQL/image-20220714222512979.png&#34; class=&#34;&#34; title=&#34;image-20220714222512979&#34;&gt;
+&lt;p&gt;&lt;strong&gt;幻读 （Phantom read）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;幻读与不可重复读类似。它发生在一个事务（T1）读取了几行数据，接着另一个并发事务（T2）插入了一些数据时。在随后的查询中，第一个事务（T1）就会发现多了一些原本不存在的记录，就好像发生了幻觉一样，所以称为幻读。&lt;/p&gt;
+ &lt;img data-src=&#34;/interview/MySQL/image-20220714222518876.png&#34; class=&#34;&#34; title=&#34;image-20220714222518876&#34;&gt;
+&lt;h1 id=&#34;不可重复度和幻读区别&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#不可重复度和幻读区别&#34;&gt;#&lt;/a&gt; 不可重复度和幻读区别？&lt;/h1&gt;
+&lt;p&gt;不可重复读的重点是修改，幻读的重点在于新增或者删除。&lt;/p&gt;
+&lt;p&gt;解决不可重复读的问题只需锁住满足条件的行，解决幻读需要锁表&lt;/p&gt;
+&lt;h1 id=&#34;sql优化手段有哪些&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#sql优化手段有哪些&#34;&gt;#&lt;/a&gt; SQL 优化手段有哪些？&lt;/h1&gt;
+&lt;p&gt;1、查询语句中不要使用 select *&lt;/p&gt;
+&lt;p&gt;2、尽量减少子查询，使用关联查询（left join,right join,inner join）替代&lt;/p&gt;
+&lt;p&gt;3、减少使用 IN 或者 NOT IN , 使用 exists，not exists 或者关联查询语句替代&lt;/p&gt;
+&lt;p&gt;4、or 的查询尽量用 union 或者 union all 代替 (在确认没有重复数据或者不用剔除重复数据时，union all 会更好)&lt;/p&gt;
+&lt;p&gt;5、应尽量避免在 where 子句中使用！= 或 &amp;lt;&amp;gt; 操作符，否则将引擎放弃使用索引而进行全表扫描。&lt;/p&gt;
+&lt;p&gt;6、应尽量避免在 where 子句中对字段进行 null 值判断，否则将导致引擎放弃使用索引而进行全表扫描，如： select id from t where num is null 可以在 num 上设置默认值 0，确保表中 num 列没有 null 值，然后这样查询： select id from t where num=0&lt;/p&gt;
+&lt;h1 id=&#34;mysql常见的日志有哪些分别起到了什么作用&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#mysql常见的日志有哪些分别起到了什么作用&#34;&gt;#&lt;/a&gt; MySQL 常见的日志有哪些，分别起到了什么作用&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;bin log ：数据恢复、主从复制&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;MySQL Server 层也有一个日志文件叫做 Binlog ，它可以被所有的存储引擎使用。&lt;/p&gt;
+&lt;p&gt;bin log 以事件的形式记录了所有的 DDL 和 DML 语句（因为他记录的是操作而不是数据值），可以用做主从复制和数据恢复&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;relay log ：中介日志&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;redo log&lt;/p&gt;
+&lt;p&gt;记录修改后的值，属于物理日志&lt;/p&gt;
+&lt;p&gt;redo log 的大小事固定的，前面的内容会被覆盖，所以不能用于数据回滚 / 数据恢复&lt;/p&gt;
+&lt;p&gt;redo log 是 InnoDB 存储引擎实现的，并不是所有引擎都有&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;什么是buffer-pool&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#什么是buffer-pool&#34;&gt;#&lt;/a&gt; 什么是 Buffer Pool&lt;/h1&gt;
+&lt;img data-src=&#34;/interview/MySQL/image-20220909103813728.png&#34; class=&#34;&#34; title=&#34;image-20220909103813728&#34;&gt;
+&lt;h1 id=&#34;buffer-pool-内存淘汰策略&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#buffer-pool-内存淘汰策略&#34;&gt;#&lt;/a&gt; Buffer pool 内存淘汰策略&lt;/h1&gt;
+&lt;p&gt;冷热分区的 LRU 策略&lt;/p&gt;
+&lt;p&gt;冷热分区比：5:3&lt;/p&gt;
+&lt;p&gt;数据一进来先进入到冷区的头部，默认在 1000ms 之后如果再次访问，就会将他放入到热区&lt;/p&gt;
+&lt;h1 id=&#34;什么是hash索引&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#什么是hash索引&#34;&gt;#&lt;/a&gt; 什么是 hash 索引&lt;/h1&gt;
+&lt;img data-src=&#34;/interview/MySQL/image-20220909104250912.png&#34; class=&#34;&#34; title=&#34;image-20220909104250912&#34;&gt;
+&lt;p&gt;不适合做范围查找，innodb 不支持 hash 索引&lt;/p&gt;
+&lt;h1 id=&#34;mysql为什么要用b数做索引&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#mysql为什么要用b数做索引&#34;&gt;#&lt;/a&gt; MySQL 为什么要用 B + 数做索引&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;B + 树能显著的减少 IO 次数，提高效率&lt;/li&gt;
+&lt;li&gt;B + 树的查询效率更加稳定，因为所有的数据都放在了叶子上&lt;/li&gt;
+&lt;li&gt;B + 树能提高范围查询的效率，因为叶子结点指向下一个叶子结点&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;数据库优化什么是数据库索引有哪些类型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#数据库优化什么是数据库索引有哪些类型&#34;&gt;#&lt;/a&gt; 数据库优化，什么是数据库索引，有哪些类型&lt;/h1&gt;
+&lt;h1 id=&#34;谈一下你对数据库btree的理解&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#谈一下你对数据库btree的理解&#34;&gt;#&lt;/a&gt; 谈一下你对数据库 b+tree 的理解&lt;/h1&gt;
+&lt;h1 id=&#34;聚集索引和非聚集索引的区别&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#聚集索引和非聚集索引的区别&#34;&gt;#&lt;/a&gt; 聚集索引和非聚集索引的区别&lt;/h1&gt;
+&lt;h1 id=&#34;在日常工作中是如何进行数据库优化的&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#在日常工作中是如何进行数据库优化的&#34;&gt;#&lt;/a&gt; 在日常工作中是如何进行数据库优化的&lt;/h1&gt;
+&lt;h1 id=&#34;请列举几个索引失效的场景&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#请列举几个索引失效的场景&#34;&gt;#&lt;/a&gt; 请列举几个索引失效的场景&lt;/h1&gt;
+&lt;h1 id=&#34;数据库锁的机制&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#数据库锁的机制&#34;&gt;#&lt;/a&gt; 数据库锁的机制&lt;/h1&gt;
+&lt;h1 id=&#34;在遇到死锁情况如何处理&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#在遇到死锁情况如何处理&#34;&gt;#&lt;/a&gt; 在遇到死锁情况如何处理&lt;/h1&gt;
+&lt;h1 id=&#34;mysql和oracle的区别&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#mysql和oracle的区别&#34;&gt;#&lt;/a&gt; mysql 和 oracle 的区别&lt;/h1&gt;
+&lt;h1 id=&#34;数据库的根本特点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#数据库的根本特点&#34;&gt;#&lt;/a&gt; 数据库的根本特点&lt;/h1&gt;
+&lt;p&gt;1、数据结构化 数据库系统实现了整体数据的结构化，这是数据库的最主要的特征之一&lt;/p&gt;
+&lt;p&gt;2、数据的共享性高，冗余度低，易扩充 因为数据是面向整体的，所以数据可以被多个用户、多个应用程序共享使用&lt;/p&gt;
+&lt;p&gt;3、数据独立性高 数据独立性包括数据的物理独立性和逻辑独立性。&lt;/p&gt;
+&lt;p&gt;4、数据由 DBMS 统一管理和控制 数据库的共享是并发的 (concurrency) 共享，即多个用户可以同时存取数据库中的数据，甚至可以同时存取数据库中的同一个数据；&lt;/p&gt;
+&lt;h1 id=&#34;数据库中数据共享是指&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#数据库中数据共享是指&#34;&gt;#&lt;/a&gt; 数据库中数据共享是指&lt;/h1&gt;
+&lt;p&gt;多个应用、多种语言、多个用户共享数据&lt;/p&gt;
+&lt;h1 id=&#34;数据库中产生数据不一致&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#数据库中产生数据不一致&#34;&gt;#&lt;/a&gt; 数据库中产生数据不一致&lt;/h1&gt;
+&lt;p&gt;1. 并发控制不当&lt;/p&gt;
+&lt;p&gt;2. 数据冗余&lt;/p&gt;
+&lt;p&gt;3. 各种故障，错误&lt;/p&gt;
+&lt;p&gt;第一种往往是由于重复存放的数据未能进行一致性更新造成的&lt;/p&gt;
+&lt;p&gt;第二种情况是由于多用户共享数据库，而更新操作未能保持同步进行引起的&lt;/p&gt;
+&lt;p&gt;第三种是由于某种原因（硬件故障或软件故障等）而造成数据丢失或数据损坏等&lt;/p&gt;
+&lt;h1 id=&#34;运算&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#运算&#34;&gt;#&lt;/a&gt; 运算&lt;/h1&gt;
+&lt;img data-src=&#34;/interview/MySQL/c484ce59eba713b93d75a1381901dabe.png&#34; class=&#34;&#34; title=&#34;img&#34;&gt;
+&lt;img data-src=&#34;/interview/MySQL/9606dddddf13fb7dafa3119aa768e7a4.png&#34; class=&#34;&#34; title=&#34;数据库之运算符详解_数据库_18&#34;&gt;
+&lt;h2 id=&#34;运算优先级&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#运算优先级&#34;&gt;#&lt;/a&gt; 运算优先级&lt;/h2&gt;
+&lt;img data-src=&#34;/interview/MySQL/2b23723e1f54716522beeb85047554c2.png&#34; class=&#34;&#34; title=&#34;数据库之运算符详解_mysql_23&#34;&gt;
+&lt;h1 id=&#34;问题&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#问题&#34;&gt;#&lt;/a&gt; 问题&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;MySQL 索引使用有哪些注意事项呢？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;MysQL 遇到过死锁问题吗，你是如何解决的？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;日常工作中你是怎么优化 SQL 的？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;说说分库与分表的设计&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;InnoDB 与 MylSAM 的区别&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;数据库索引的原理，为什么要用 B + 树，为什么不用二叉树？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;聚集索引与非聚集索引的区别&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;limit 1000000 加载很慢的话，你是怎么解决的呢？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如何选择合适的分布式主键方案呢？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;事务的隔离级别有哪些？MySQL 的默认隔离级别是什么？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;什么是幻读，脏读，不可重复读呢？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在高并发情况下，如何做到安全的修改同一行数据？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;数据库的乐观锁和悲观锁。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;select for update 有什么含义，会锁表还是锁行还是其他。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;MySQL 事务得四大特性以及实现原理&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如果某个表有近千万数据，CRUD 比较慢，如何优化。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如何写 sql 能够有效的使用到复合索引。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;mysql 中 in 和 exists 的区别。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;数据库自增主键可能遇到什么问题。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;MVCC 熟悉吗，它的底层原理？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;数据库中间件了解过吗，sharding jdbc，mycat?&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;MYSQL 的主从延迟，你怎么解决？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;说一下大表查询的优化方案&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;什么是数据库连接池？为什么需要数据库连接池呢？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;一条 SQL 语句在 MySQL 中如何执行的？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;innodb 引擎中的索引策略了解过吗&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;一条 SQL 执行时间过长如何优化&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;MYSQL 数据库服务器性能分析的方法命令有哪些？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Blob 和 text 有什么区别？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;mysql 里记录货币用什么字段类型比较好？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Mysql 中有哪几种锁，列举一下？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Hash 索引和 B + 树区别是什么？你在设计索引是怎么抉择的？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;mysql 的内连接、左连接、右连接有什么区别？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;说说 MySQL 的基础架构图&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;什么是内连接、外连接、交叉连接、笛卡尔积呢？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;说一下数据库的三大范式&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Mysql 的 binlog 有几种录入格式？分别有什么区别？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;InnoDB 引擎的 4 大特性，了解过吗&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;索引有哪些优缺点？索引有哪几种类型？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;创建索引有什么原则呢？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;创建索引的三种方式&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;百万级别或以上的数据，你是如何删除的？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;什么是最左前缀原则？什么是最左匹配原则？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;B 树和 B + 树的区别，数据库为什么使用 B + 树而不是 B 树？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;覆盖索引、回表等这些，了解过吗？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;非聚簇索引一定会回表查询吗？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;联合索引是什么？为什么需要注意联合索引中的顺序？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;数据库隔离级别与锁的关系&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;聊聊 InnoDb 的锁，什么是死锁？怎么解决？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;count (1)、count (*) 与 count (列名) 的区别？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;什么是存储过程？有哪些优缺点？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;SQL 约束有哪几种呢？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;varchar (50) 中的 50 是啥意思，varchar 和 char 的区别&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;mysql 中 int (20)、char (20)、varchar (20) 的区别&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;drop、delete 与 truncate 的区别&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;UNION 与 UNION ALL 的区别？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;SQL 的生命周期？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;一条 Sql 的执行顺序？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;关心过业务系统里面的 sql 耗时吗？统计过慢查询吗？对慢查询都怎么优化过？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;主键使用自增 ID 还是 UUID，为什么？mysql 自增主键用完了怎么办？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;MySQL 数据库 cpu 飙升的话，要怎么处理呢？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;读写分离常见方案？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;MySQL 的复制原理以及流程&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Innodb 的事务实现原理？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;谈谈 MySQL 的 Explain&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Innodb 的事务与日志的实现方式&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;你们数据库是否支持 emoji 表情存储，如果不支持，如何操作？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;一个 6 亿的表 a，一个 3 亿的表 b，通过外间 tid 关联，你如何最快的查询出满足条件的第 50000 到第 50200 中的这 200 条数据记录。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Mysql 一条 SOL 加锁分析&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;回表问题和覆盖索引&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;MySQL 索引&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;回表问题和覆盖索引&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;双写一致性&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;undo 、redo、binlog&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Hash 索引和 B + 树的区别是什么？&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;B + 树可以进行范围查询，Hash 索引不能。&lt;/li&gt;
+&lt;li&gt;B + 树支持联合索引的最左侧原则，Hash 索引不支持。B + 树支持 order by 排序，Hash 索引不支持。&lt;/li&gt;
+&lt;li&gt;Hash 索引在等值查询上比 B + 树效率更高。&lt;/li&gt;
+&lt;li&gt;B + 树使用 like 进行模糊查询的时候，like 后面（比如 % 开头) 的话可以起到优化的作用，Hash 索引根本无法进行模糊查询&lt;/li&gt;
+&lt;/ol&gt;
+&lt;img data-src=&#34;MySQL/image-20230124130116883.png&#34; alt=&#34;image-20230124130116883&#34; style=&#34;zoom:150%;&#34; /&gt;
+&lt;p&gt;Mysql 逻辑架构图主要分三层:&lt;/p&gt;
+&lt;p&gt;第一层负责连接处理，授权认证，安全等等&lt;/p&gt;
+&lt;p&gt;第二层负责编译并优化 SQL&lt;/p&gt;
+&lt;p&gt;第三层是存储引擎。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;img data-src=&#34;MySQL/image-20230124125910848.png&#34; alt=&#34;image-20230124125910848&#34; style=&#34;zoom:150%;&#34; /&gt;
+&lt;p&gt;主从复制分了五个步骤进行&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;主库的更新事件 (update、insert、 delete) 被写到 binlog&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;从库发起连接，连接到主库。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;此时主库创建一个 binlog dump thread，把 binlog 的内容发送到从库。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;从库启动之后，创建一个 I/O 线程，读取主库传过来的 binlog 内容并写入到 relay log&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;还会创建一个 SQL 线程，从 relay log 里面读取内容，从 Exec_Master_Log_Pos 位置开始执行读取到的更新事件，将更新内容写入到 slave 的 db&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;未完成&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#未完成&#34;&gt;#&lt;/a&gt; 未完成&lt;/h2&gt;
+&lt;h1 id=&#34;未完成-2&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#未完成-2&#34;&gt;#&lt;/a&gt; —————————— 未完成&lt;/h1&gt;
+
+&lt;div id=&#34;gitalk-container&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js&#34;&gt;&lt;/script&gt;&lt;link rel=&#34;stylesheet&#34; href=&#34;https://unpkg.com/gitalk/dist/gitalk.css&#34;&gt;&lt;script src=&#34;https://unpkg.com/gitalk/dist/gitalk.min.js&#34;&gt;&lt;/script&gt;
+
+		&lt;script&gt;
+		var gitalkConfig = {&#34;clientID&#34;:&#34;6db178ba46c8af8f6a6f&#34;,&#34;clientSecret&#34;:&#34;90f730e5956024596558df00975cd8eae28cae3d&#34;,&#34;repo&#34;:&#34;bk-comment01&#34;,&#34;owner&#34;:&#34;onlymarryu&#34;,&#34;admin&#34;:[&#34;onlymarryu&#34;],&#34;distractionFreeMode&#34;:false,&#34;language&#34;:&#34;zh-CN&#34;,&#34;proxy&#34;:&#34;https://gitalk-comments.netlify.app/github_access_token&#34;,&#34;perPage&#34;:15};
+	    gitalkConfig.id = md5(location.pathname);
+		var gitalk = new Gitalk(gitalkConfig);
+	    gitalk.render(&#34;gitalk-container&#34;);
+	    &lt;/script&gt; ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://eth168.top/interview/JVM%E5%BF%AB%E9%80%9F%E7%AA%81%E5%87%BB%E7%89%88/</guid>
             <title>JVM突击版</title>
@@ -5731,75 +6173,6 @@ Win64 OpenSSL v1.1.1i&lt;/p&gt;
 &lt;p&gt;一般都在本地：C:\Users\Lenovo\.m2\settings.xml&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;figure class=&#34;highlight xml&#34;&gt;&lt;figcaption data-lang=&#34;XML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token prolog&#34;&gt;&amp;lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;&amp;lt;!--&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;Licensed to the Apache Software Foundation (ASF) under one&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;or more contributor license agreements.  See the NOTICE file&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;distributed with this work for additional information&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;regarding copyright ownership.  The ASF licenses this file&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;to you under the Apache License, Version 2.0 (the&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&#34;License&#34;); you may not use this file except in compliance&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;with the License.  You may obtain a copy of the License at&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    http://www.apache.org/licenses/LICENSE-2.0&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;Unless required by applicable law or agreed to in writing,&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;software distributed under the License is distributed on an&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&#34;AS IS&#34; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;17&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;KIND, either express or implied.  See the License for the&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;18&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;specific language governing permissions and limitations&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;19&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;under the License.&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;20&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;--&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;21&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;22&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;&amp;lt;!--&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;23&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; | This is the configuration file for Maven. It can be specified at two levels:&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;24&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; |&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;25&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; |  1. User Level. This settings.xml file provides configuration for a single user,&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;26&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; |                 and is normally provided in $&amp;#123;user.home&amp;#125;/.m2/settings.xml.&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;27&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; |&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;28&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; |                 NOTE: This location can be overridden with the CLI option:&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;29&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; |&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;30&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; |                 -s /path/to/user/settings.xml&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;31&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; |&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;32&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; |  2. Global Level. This settings.xml file provides configuration for all Maven&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;33&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; |                 users on a machine (assuming they&#39;re all using the same Maven&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;34&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; |                 installation). It&#39;s normally provided in&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;35&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; |                 $&amp;#123;maven.home&amp;#125;/conf/settings.xml.&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;36&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; |&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;37&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; |                 NOTE: This location can be overridden with the CLI option:&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;38&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; |&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;39&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; |                 -gs /path/to/global/settings.xml&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;40&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; |&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;41&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; | The sections in this sample file are intended to give you a running start at&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;42&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; | getting the most out of your Maven installation. Where appropriate, the default&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;43&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; | values (values used when the setting is not specified) are provided.&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;44&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; |&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;45&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; |--&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;46&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;settings&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;xmlns&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;http://maven.apache.org/SETTINGS/1.0.0&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt; &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;47&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;          &lt;span class=&#34;token attr-name&#34;&gt;&lt;span class=&#34;token namespace&#34;&gt;xmlns:&lt;/span&gt;xsi&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;http://www.w3.org/2001/XMLSchema-instance&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt; &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;48&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;          &lt;span class=&#34;token attr-name&#34;&gt;&lt;span class=&#34;token namespace&#34;&gt;xsi:&lt;/span&gt;schemaLocation&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;49&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;		  &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;50&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;		  &lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;51&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token comment&#34;&gt;&amp;lt;!-- localRepository&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;52&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   | The path to the local repository maven will use to store artifacts.&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;53&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   |&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;54&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   | Default: $&amp;#123;user.home&amp;#125;/.m2/repository&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;55&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &amp;lt;localRepository&gt;/path/to/local/repo&amp;lt;/localRepository&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;56&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  --&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;57&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   &lt;span class=&#34;token comment&#34;&gt;&amp;lt;!--Maven 本地仓库 --&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;58&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;localRepository&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;D:\_Porgram_IT\maven-repository&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;localRepository&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;59&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;60&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token comment&#34;&gt;&amp;lt;!-- interactiveMode&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;61&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   | This will determine whether maven prompts you when it needs input. If set to false,&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;62&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   | maven will use a sensible default value, perhaps based on some other setting, for&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;63&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   | the parameter in question.&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;64&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   |&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;65&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   | Default: true&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;66&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &amp;lt;interactiveMode&gt;true&amp;lt;/interactiveMode&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;67&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  --&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;68&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;69&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token comment&#34;&gt;&amp;lt;!-- offline&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;70&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   | Determines whether maven should attempt to connect to the network when executing a build.&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;71&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   | This will have an effect on artifact downloads, artifact deployment, and others.&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;72&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   |&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;73&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   | Default: false&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;74&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &amp;lt;offline&gt;false&amp;lt;/offline&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;75&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  --&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;76&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;77&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token comment&#34;&gt;&amp;lt;!-- pluginGroups&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;78&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   | This is a list of additional group identifiers that will be searched when resolving plugins by their prefix, i.e.&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;79&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   | when invoking a command line like &#34;mvn prefix:goal&#34;. Maven will automatically add the group identifiers&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;80&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   | &#34;org.apache.maven.plugins&#34; and &#34;org.codehaus.mojo&#34; if these are not already contained in the list.&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;81&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   |--&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;82&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;pluginGroups&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;83&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token comment&#34;&gt;&amp;lt;!-- pluginGroup&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;84&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     | Specifies a further group identifier to use for plugin lookup.&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;85&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &amp;lt;pluginGroup&gt;com.your.plugins&amp;lt;/pluginGroup&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;86&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    --&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;87&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;pluginGroups&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;88&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;89&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token comment&#34;&gt;&amp;lt;!-- proxies&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;90&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   | This is a list of proxies which can be used on this machine to connect to the network.&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;91&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   | Unless otherwise specified (by system property or command-line switch), the first proxy&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;92&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   | specification in this list marked as active will be used.&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;93&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   |--&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;94&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;proxies&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;95&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token comment&#34;&gt;&amp;lt;!-- proxy&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;96&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     | Specification for one proxy, to be used in connecting to the network.&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;97&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     |&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;98&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &amp;lt;proxy&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;99&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &amp;lt;id&gt;optional&amp;lt;/id&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;100&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &amp;lt;active&gt;true&amp;lt;/active&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;101&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &amp;lt;protocol&gt;http&amp;lt;/protocol&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;102&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &amp;lt;username&gt;proxyuser&amp;lt;/username&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;103&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &amp;lt;password&gt;proxypass&amp;lt;/password&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;104&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &amp;lt;host&gt;proxy.host.net&amp;lt;/host&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;105&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &amp;lt;port&gt;80&amp;lt;/port&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;106&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &amp;lt;nonProxyHosts&gt;local.net|some.host.com&amp;lt;/nonProxyHosts&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;107&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &amp;lt;/proxy&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;108&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    --&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;109&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;proxies&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;110&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;111&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token comment&#34;&gt;&amp;lt;!-- servers&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;112&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   | This is a list of authentication profiles, keyed by the server-id used within the system.&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;113&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   | Authentication profiles can be used whenever maven must make a connection to a remote server.&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;114&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   |--&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;115&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;servers&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;116&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token comment&#34;&gt;&amp;lt;!-- server&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;117&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     | Specifies the authentication information to use when connecting to a particular server, identified by&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;118&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     | a unique name within the system (referred to by the &#39;id&#39; attribute below).&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;119&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     |&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;120&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     | NOTE: You should either specify username/password OR privateKey/passphrase, since these pairings are&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;121&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     |       used together.&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;122&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     |&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;123&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &amp;lt;server&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;124&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &amp;lt;id&gt;deploymentRepo&amp;lt;/id&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;125&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &amp;lt;username&gt;repouser&amp;lt;/username&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;126&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &amp;lt;password&gt;repopwd&amp;lt;/password&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;127&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &amp;lt;/server&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;128&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    --&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;129&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;130&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token comment&#34;&gt;&amp;lt;!-- Another sample, using keys to authenticate.&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;131&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &amp;lt;server&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;132&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &amp;lt;id&gt;siteServer&amp;lt;/id&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;133&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &amp;lt;privateKey&gt;/path/to/private/key&amp;lt;/privateKey&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;134&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &amp;lt;passphrase&gt;optional; leave empty if not used.&amp;lt;/passphrase&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;135&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &amp;lt;/server&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;136&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    --&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;137&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;servers&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;138&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;139&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token comment&#34;&gt;&amp;lt;!-- mirrors&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;140&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   | This is a list of mirrors to be used in downloading artifacts from remote repositories.&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;141&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   |&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;142&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   | It works like this: a POM may declare a repository to use in resolving certain artifacts.&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;143&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   | However, this repository may have problems with heavy traffic at times, so people have mirrored&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;144&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   | it to several places.&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;145&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   |&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;146&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   | That repository definition will have a unique id, so we can create a mirror reference for that&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;147&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   | repository, to be used as an alternate download site. The mirror site will be the preferred&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;148&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   | server for that repository.&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;149&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   |--&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;150&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;mirrors&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;151&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;mirror&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt; &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;152&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;		&lt;span class=&#34;token comment&#34;&gt;&amp;lt;!-- 指定镜像 ID（可自己改名） --&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;153&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;		&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;id&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;nexus-aliyun&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;id&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt; &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;154&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;		&lt;span class=&#34;token comment&#34;&gt;&amp;lt;!-- 匹配中央仓库（阿里云的仓库名称，不可以自己起名，必须这么写）--&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;155&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;		&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;mirrorOf&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;central&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;mirrorOf&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;156&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;		&lt;span class=&#34;token comment&#34;&gt;&amp;lt;!-- 指定镜像名称（可自己改名）  --&gt;&lt;/span&gt;   &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;157&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;		&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;name&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Nexus aliyun&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;name&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt; &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;158&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;		&lt;span class=&#34;token comment&#34;&gt;&amp;lt;!-- 指定镜像路径（镜像地址） --&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;159&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;		&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;url&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;http://maven.aliyun.com/nexus/content/groups/public&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;url&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt; &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;160&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;mirror&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;161&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;162&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;mirror&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;  &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;163&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;id&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;alimaven&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;id&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;  &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;164&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;mirrorOf&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;central&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;mirrorOf&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;  &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;165&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;name&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;aliyun maven&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;name&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;  &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;166&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;url&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;http://maven.aliyun.com/nexus/content/groups/public/&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;url&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;  &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;167&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;mirror&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;168&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token comment&#34;&gt;&amp;lt;!-- mirror&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;169&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     | Specifies a repository mirror site to use instead of a given repository. The repository that&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;170&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     | this mirror serves has an ID that matches the mirrorOf element of this mirror. IDs are used&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;171&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     | for inheritance and direct lookup purposes, and must be unique across the set of mirrors.&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;172&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     |&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;173&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &amp;lt;mirror&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;174&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &amp;lt;id&gt;mirrorId&amp;lt;/id&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;175&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &amp;lt;mirrorOf&gt;repositoryId&amp;lt;/mirrorOf&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;176&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &amp;lt;name&gt;Human Readable Name for this Mirror.&amp;lt;/name&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;177&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &amp;lt;url&gt;http://my.repository.com/repo/path&amp;lt;/url&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;178&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &amp;lt;/mirror&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;179&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     --&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;180&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	 &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;181&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;mirrors&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;182&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;183&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token comment&#34;&gt;&amp;lt;!-- profiles&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;184&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   | This is a list of profiles which can be activated in a variety of ways, and which can modify&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;185&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   | the build process. Profiles provided in the settings.xml are intended to provide local machine-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;186&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   | specific paths and repository locations which allow the build to work in the local environment.&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;187&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   |&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;188&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   | For example, if you have an integration testing plugin - like cactus - that needs to know where&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;189&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   | your Tomcat instance is installed, you can provide a variable here such that the variable is&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;190&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   | dereferenced during the build process to configure the cactus plugin.&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;191&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   |&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;192&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   | As noted above, profiles can be activated in a variety of ways. One way - the activeProfiles&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;193&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   | section of this document (settings.xml) - will be discussed later. Another way essentially&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;194&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   | relies on the detection of a system property, either matching a particular value for the property,&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;195&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   | or merely testing its existence. Profiles can also be activated by JDK version prefix, where a&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;196&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   | value of &#39;1.4&#39; might activate a profile when the build is executed on a JDK version of &#39;1.4.2_07&#39;.&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;197&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   | Finally, the list of active profiles can be specified directly from the command line.&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;198&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   |&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;199&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   | NOTE: For profiles defined in the settings.xml, you are restricted to specifying only artifact&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;200&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   |       repositories, plugin repositories, and free-form properties to be used as configuration&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;201&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   |       variables for plugins in the POM.&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;202&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   |&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;203&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   |--&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;204&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;profiles&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;205&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;profile&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;206&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;id&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;jdk-1.8&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;id&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;207&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;activation&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;208&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;activeByDefault&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;true&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;activeByDefault&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;209&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;jdk&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;1.8&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;jdk&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;210&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;activation&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;211&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;properties&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;212&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;maven.compiler.source&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;1.8&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;maven.compiler.source&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;213&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;maven.compiler.target&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;1.8&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;maven.compiler.target&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;214&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;maven.compiler.compilerVersion&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;1.8&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;maven.compiler.compilerVersion&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;215&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;properties&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;216&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;profile&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;217&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;218&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token comment&#34;&gt;&amp;lt;!-- profile&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;219&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     | Specifies a set of introductions to the build process, to be activated using one or more of the&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;220&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     | mechanisms described above. For inheritance purposes, and to activate profiles via &amp;lt;activatedProfiles/&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;221&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     | or the command line, profiles have to have an ID that is unique.&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;222&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     |&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;223&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     | An encouraged best practice for profile identification is to use a consistent naming convention&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;224&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     | for profiles, such as &#39;env-dev&#39;, &#39;env-test&#39;, &#39;env-production&#39;, &#39;user-jdcasey&#39;, &#39;user-brett&#39;, etc.&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;225&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     | This will make it more intuitive to understand what the set of introduced profiles is attempting&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;226&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     | to accomplish, particularly when you only have a list of profile id&#39;s for debug.&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;227&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     |&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;228&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     | This profile example uses the JDK version to trigger activation, and provides a JDK-specific repo.&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;229&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &amp;lt;profile&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;230&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &amp;lt;id&gt;jdk-1.4&amp;lt;/id&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;231&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;232&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &amp;lt;activation&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;233&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &amp;lt;jdk&gt;1.4&amp;lt;/jdk&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;234&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &amp;lt;/activation&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;235&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;236&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &amp;lt;repositories&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;237&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &amp;lt;repository&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;238&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;          &amp;lt;id&gt;jdk14&amp;lt;/id&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;239&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;          &amp;lt;name&gt;Repository for JDK 1.4 builds&amp;lt;/name&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;240&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;          &amp;lt;url&gt;http://www.myhost.com/maven/jdk14&amp;lt;/url&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;241&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;          &amp;lt;layout&gt;default&amp;lt;/layout&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;242&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;          &amp;lt;snapshotPolicy&gt;always&amp;lt;/snapshotPolicy&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;243&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &amp;lt;/repository&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;244&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &amp;lt;/repositories&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;245&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &amp;lt;/profile&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;246&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    --&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;247&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;248&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token comment&#34;&gt;&amp;lt;!--&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;249&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     | Here is another profile, activated by the system property &#39;target-env&#39; with a value of &#39;dev&#39;,&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;250&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     | which provides a specific path to the Tomcat instance. To use this, your plugin configuration&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;251&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     | might hypothetically look like:&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;252&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     |&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;253&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     | ...&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;254&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     | &amp;lt;plugin&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;255&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     |   &amp;lt;groupId&gt;org.myco.myplugins&amp;lt;/groupId&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;256&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     |   &amp;lt;artifactId&gt;myplugin&amp;lt;/artifactId&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;257&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     |&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;258&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     |   &amp;lt;configuration&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;259&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     |     &amp;lt;tomcatLocation&gt;$&amp;#123;tomcatPath&amp;#125;&amp;lt;/tomcatLocation&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;260&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     |   &amp;lt;/configuration&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;261&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     | &amp;lt;/plugin&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;262&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     | ...&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;263&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     |&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;264&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     | NOTE: If you just wanted to inject this configuration whenever someone set &#39;target-env&#39; to&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;265&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     |       anything, you could just leave off the &amp;lt;value/&gt; inside the activation-property.&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;266&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     |&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;267&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &amp;lt;profile&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;268&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &amp;lt;id&gt;env-dev&amp;lt;/id&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;269&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;270&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &amp;lt;activation&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;271&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &amp;lt;property&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;272&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;          &amp;lt;name&gt;target-env&amp;lt;/name&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;273&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;          &amp;lt;value&gt;dev&amp;lt;/value&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;274&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &amp;lt;/property&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;275&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &amp;lt;/activation&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;276&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;277&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &amp;lt;properties&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;278&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &amp;lt;tomcatPath&gt;/path/to/tomcat/instance&amp;lt;/tomcatPath&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;279&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &amp;lt;/properties&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;280&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &amp;lt;/profile&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;281&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    --&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;282&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;profiles&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;283&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;284&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token comment&#34;&gt;&amp;lt;!-- activeProfiles&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;285&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   | List of profiles that are active for all builds.&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;286&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   |&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;287&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &amp;lt;activeProfiles&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;288&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &amp;lt;activeProfile&gt;alwaysActiveProfile&amp;lt;/activeProfile&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;289&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &amp;lt;activeProfile&gt;anotherAlwaysActiveProfile&amp;lt;/activeProfile&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;290&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &amp;lt;/activeProfiles&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;291&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  --&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;292&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;settings&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;div id=&#34;gitalk-container&#34;&gt;&lt;/div&gt;
-&lt;script src=&#34;https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js&#34;&gt;&lt;/script&gt;&lt;link rel=&#34;stylesheet&#34; href=&#34;https://unpkg.com/gitalk/dist/gitalk.css&#34;&gt;&lt;script src=&#34;https://unpkg.com/gitalk/dist/gitalk.min.js&#34;&gt;&lt;/script&gt;
-
-		&lt;script&gt;
-		var gitalkConfig = {&#34;clientID&#34;:&#34;6db178ba46c8af8f6a6f&#34;,&#34;clientSecret&#34;:&#34;90f730e5956024596558df00975cd8eae28cae3d&#34;,&#34;repo&#34;:&#34;bk-comment01&#34;,&#34;owner&#34;:&#34;onlymarryu&#34;,&#34;admin&#34;:[&#34;onlymarryu&#34;],&#34;distractionFreeMode&#34;:false,&#34;language&#34;:&#34;zh-CN&#34;,&#34;proxy&#34;:&#34;https://gitalk-comments.netlify.app/github_access_token&#34;,&#34;perPage&#34;:15};
-	    gitalkConfig.id = md5(location.pathname);
-		var gitalk = new Gitalk(gitalkConfig);
-	    gitalk.render(&#34;gitalk-container&#34;);
-	    &lt;/script&gt; ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://eth168.top/tools/Keepalived-tool/</guid>
-            <title>Keepalived</title>
-            <link>https://eth168.top/tools/Keepalived-tool/</link>
-            <category term="工具软件安装" scheme="https://eth168.top/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
-            <pubDate>Mon, 31 Oct 2022 23:06:22 +0800</pubDate>
-            <description><![CDATA[ &lt;h3 id=&#34;keepalived安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#keepalived安装&#34;&gt;#&lt;/a&gt; Keepalived 安装&lt;/h3&gt;
-&lt;h4 id=&#34;1&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1&#34;&gt;#&lt;/a&gt; ——1&lt;/h4&gt;
-&lt;h5 id=&#34;1-准备好keepalived安装包&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-准备好keepalived安装包&#34;&gt;#&lt;/a&gt; 1、准备好 Keepalived 安装包&lt;/h5&gt;
-&lt;h5 id=&#34;2-解压到usrlocal目录&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-解压到usrlocal目录&#34;&gt;#&lt;/a&gt; 2、解压到 /usr/local 目录&lt;/h5&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;tar&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-zxvf&lt;/span&gt; /usr/local/tmp/keepalived-1.4.5.tar.gz &lt;span class=&#34;token parameter variable&#34;&gt;-C&lt;/span&gt; /usr/local/&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h5 id=&#34;3-安装需要依赖的环境组件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3-安装需要依赖的环境组件&#34;&gt;#&lt;/a&gt; 3、安装需要依赖的环境组件&lt;/h5&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;yum &lt;span class=&#34;token function&#34;&gt;install&lt;/span&gt; gcc openssl-devel popt-devel &lt;span class=&#34;token parameter variable&#34;&gt;-y&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h5 id=&#34;4-进入到解压目录进行编译&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#4-进入到解压目录进行编译&#34;&gt;#&lt;/a&gt; 4、进入到解压目录，进行编译&lt;/h5&gt;
-&lt;pre&gt;&lt;code&gt;cd /usr/local/keepalived-1.4.5
-./configure --prefix=/usr/local/keepalived	
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h5 id=&#34;5-编译完成之后进行安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#5-编译完成之后进行安装&#34;&gt;#&lt;/a&gt; 5、编译完成之后，进行安装&lt;/h5&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;make&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;make&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;install&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h5 id=&#34;6-将keepalived的服务注册为系统服务&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#6-将keepalived的服务注册为系统服务&#34;&gt;#&lt;/a&gt; 6、将 keepalived 的服务注册为系统服务&lt;/h5&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;cp&lt;/span&gt;  &lt;span class=&#34;token parameter variable&#34;&gt;-rf&lt;/span&gt;   /usr/local/keepalived-1.4.5/keepalived/etc/init.d/keepalived /etc/init.d/&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;mkdir&lt;/span&gt; /etc/keepalived&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;cp&lt;/span&gt;   &lt;span class=&#34;token parameter variable&#34;&gt;-rf&lt;/span&gt;  /usr/local/keepalived/etc/keepalived/keepalived.conf /etc/keepalived/&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;cp&lt;/span&gt;   &lt;span class=&#34;token parameter variable&#34;&gt;-rf&lt;/span&gt;  /usr/local/keepalived-1.4.5/keepalived/etc/sysconfig/keepalived /etc/sysconfig/&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;cp&lt;/span&gt;   &lt;span class=&#34;token parameter variable&#34;&gt;-rf&lt;/span&gt;  /usr/local/keepalived/sbin/keepalived /usr/sbin/&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h5 id=&#34;7-修改配置文件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#7-修改配置文件&#34;&gt;#&lt;/a&gt; 7、修改配置文件&lt;/h5&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;vim&lt;/span&gt;  /etc/keepalived/keepalived.conf&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;strong&gt;CentOS-6   下的配置文件&lt;/strong&gt;&lt;/p&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token operator&#34;&gt;!&lt;/span&gt; Configuration File &lt;span class=&#34;token keyword&#34;&gt;for&lt;/span&gt; keepalived&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;global_defs &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   notification_email &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     acassen@firewall.loc&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     failover@firewall.loc&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     sysadmin@firewall.loc&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   notification_email_from Alexandre.Cassen@firewall.loc&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   smtp_server &lt;span class=&#34;token number&#34;&gt;127.0&lt;/span&gt;.0.1&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   smtp_connect_timeout &lt;span class=&#34;token number&#34;&gt;30&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   router_id LVS_DEVEL&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   vrrp_skip_check_adv_addr&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   vrrp_garp_interval &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   vrrp_gna_interval &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;17&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;vrrp_instance VI_1 &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;18&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;##	# 配置为主&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;19&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    state MASTER&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;20&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;#    # 设置网卡&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;21&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    interface eth0&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;22&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;#     # 虚拟路由 ID，全局唯一&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;23&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    virtual_router_id &lt;span class=&#34;token number&#34;&gt;51&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;24&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;#    # 优先级，权重值&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;25&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    priority &lt;span class=&#34;token number&#34;&gt;100&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;26&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    advert_int &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;27&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    authentication &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;28&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        auth_type PASS&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;29&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        auth_pass &lt;span class=&#34;token number&#34;&gt;1111&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;30&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;31&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    virtual_ipaddress &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;32&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;         &lt;span class=&#34;token number&#34;&gt;192.168&lt;/span&gt;.1.100/24  dev eth0 label eth0:3:&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;33&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;34&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;strong&gt;CentOS-7   下的配置文件&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-conf&#34;&gt;! Configuration File for keepalived
-global_defs &amp;#123;
-   notification_email &amp;#123;
-     acassen@firewall.loc
-     failover@firewall.loc
-     sysadmin@firewall.loc
-   &amp;#125;
-   notification_email_from Alexandre.Cassen@firewall.loc
-   smtp_server 127.0.0.1
-   smtp_connect_timeout 30
-   router_id LVS_DEVEL
-   vrrp_skip_check_adv_addr
-   vrrp_garp_interval 0
-   vrrp_gna_interval 0
-&amp;#125;
-
-vrrp_instance VI_1 &amp;#123;
-##	# 配置为主
-    state MASTER
-#    # 设置网卡
-    interface ens33
-#     # 虚拟路由ID，全局唯一
-    virtual_router_id 51
-#    # 优先级，权重值
-    priority 100
-    advert_int 1
-    authentication &amp;#123;
-        auth_type PASS
-        auth_pass 1111
-    &amp;#125;
-    virtual_ipaddress &amp;#123;
-        192.168.1.100/24 
-    &amp;#125;
-&amp;#125;
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h6 id=&#34;8-启动keepalived&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#8-启动keepalived&#34;&gt;#&lt;/a&gt; 8、启动 keepalived&lt;/h6&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;service&lt;/span&gt; keepalived start&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;### 或者&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;systemctl start keepalived.service&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h6 id=&#34;9-登录验证&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#9-登录验证&#34;&gt;#&lt;/a&gt; 9、登录验证&lt;/h6&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;mysql &lt;span class=&#34;token parameter variable&#34;&gt;-uroot&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-p123456&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-h&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;192.168&lt;/span&gt;.1.100 &lt;span class=&#34;token parameter variable&#34;&gt;-P&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;48066&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;div id=&#34;gitalk-container&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js&#34;&gt;&lt;/script&gt;&lt;link rel=&#34;stylesheet&#34; href=&#34;https://unpkg.com/gitalk/dist/gitalk.css&#34;&gt;&lt;script src=&#34;https://unpkg.com/gitalk/dist/gitalk.min.js&#34;&gt;&lt;/script&gt;
 

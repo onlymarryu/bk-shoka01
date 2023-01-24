@@ -8,7 +8,449 @@
     <author>
       <name>雾都</name>
     </author>
-    <updated>2023-01-11T16:00:00.000Z</updated>
+    <updated>2023-01-24T04:43:45.719Z</updated>
+    <entry>
+        <id>https://eth168.top/interview/MySQL/</id>
+        <title>MySQL复习题</title>
+        <link rel="alternate" href="https://eth168.top/interview/MySQL/"/>
+        <content type="html">&lt;h1 id=&#34;数据库存储引擎有哪些&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#数据库存储引擎有哪些&#34;&gt;#&lt;/a&gt; 数据库存储引擎有哪些&lt;/h1&gt;
+&lt;p&gt;Myisam、Innodb&lt;/p&gt;
+&lt;h1 id=&#34;myisam和innodb有什么区别&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#myisam和innodb有什么区别&#34;&gt;#&lt;/a&gt; Myisam 和 Innodb 有什么区别&lt;/h1&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;区别&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;MyISAM&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;InnoDB&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;数据结构&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;.frm 存储表定义 &lt;br/&gt;.MYD  存储数据文件&lt;br/&gt;.MYI  存储索引文件&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;.frm 存储表定义&lt;br/&gt;.ibd 存储数据和索引&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;存储空间&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;MyISAM&lt;strong&gt; 可被压缩，存储空间较小&lt;/strong&gt;&lt;br/&gt;支持三种存储：静态表 [默认]、动态表、压缩表&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;InnoDB&lt;strong&gt; 需要更多的内存和存储，它会在主内存中建立其专用的缓冲池用于高速缓冲数据和索引&lt;/strong&gt;。InnoDB 所在的表都保存在同一个数据文件中（也可能是多个文件，或者是独立的表空间）&lt;br/&gt;InnoDB 表的大小只受限于操作系统文件的大小，一般为 2GB&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;事务的支持&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;MyISAM 强调的是性能，每次查询具有原子性，其执行速度比 Innodb 类型更快，&lt;br/&gt;但是&lt;strong&gt;不提供事务支持&lt;/strong&gt;。&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;InnoDB 除了&lt;em&gt;&lt;strong&gt;提供事务支持&lt;/strong&gt;&lt;/em&gt;和外部键等高级数据库功能。还具有事务提交（commit）、回滚（rollback）和崩溃修复能力（crach recovery capabilities）等这些事务安全（transaction-safe ACID compliant）型表&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;锁的支持&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;如果只是执行大量的查询，MyISAM 是更好的选择。MyISAM 在&lt;strong&gt;增删&lt;/strong&gt;的时候需要&lt;strong&gt;锁定整个表格&lt;/strong&gt;，效率会低一些&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;innoDB 支持行级锁，&lt;em&gt;&lt;strong&gt;删除插入&lt;/strong&gt;&lt;/em&gt;的时候只需要&lt;em&gt;&lt;strong&gt;锁定操作行&lt;/strong&gt;&lt;/em&gt;就行。如果有大量的插入、修改删除操作，使用 InnoDB 性能能会更高&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;查询效率&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;strong&gt;高&lt;/strong&gt;&lt;br&gt;支持全文索引&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;strong&gt;低&lt;/strong&gt;&lt;br/&gt;不支持全文索引&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;外键的支持&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;MyISAM&lt;strong&gt; 不支持外键&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;支持外键&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h1 id=&#34;如何选择数据库引擎&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#如何选择数据库引擎&#34;&gt;#&lt;/a&gt; 如何选择数据库引擎？&lt;/h1&gt;
+&lt;p&gt;1、如果需要支持事务，选择 InnoDB，不需要事务则选择 MyISAM。&lt;/p&gt;
+&lt;p&gt;2、如果大部分表操作都是查询，选择 MyISAM，有写又有读选 InnoDB。&lt;/p&gt;
+&lt;p&gt;3、如果系统崩溃导致数据难以恢复，且成本高，不要选择 MyISAM。&lt;/p&gt;
+&lt;h1 id=&#34;三范式是什么&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#三范式是什么&#34;&gt;#&lt;/a&gt; 三范式是什么&lt;/h1&gt;
+&lt;p&gt;第一范式：列不可再分&lt;/p&gt;
+&lt;p&gt;第二范式：行可以唯一区分，主键约束&lt;/p&gt;
+&lt;p&gt;第三范式：表的非主属性不能依赖与其他表的非主属性  外键约束&lt;/p&gt;
+&lt;p&gt;简单来说，第一范式就是让属性原子化，不可再分；第二范式就是让数据具有主属性从而产生唯一标识（特别是为了标识有联合主键的情况）；第三范式就是表的非主属性不能依赖与其他表的非主属性，也可以说是表中的属性不能有依赖关系&lt;/p&gt;
+&lt;img data-src=&#34;/interview/MySQL/image-20220714214608165.png&#34; class=&#34;&#34; title=&#34;image-20220714214608165&#34;&gt;
+&lt;h1 id=&#34;什么是事务有哪些特点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#什么是事务有哪些特点&#34;&gt;#&lt;/a&gt; 什么是事务，有哪些特点&lt;/h1&gt;
+&lt;p&gt;事务是用来维护数据库完整性的，具体体现就是多条 sql 语句，要么全部成功，要么全部失败。&lt;/p&gt;
+&lt;p&gt;特点：&lt;mark&gt;ACID&lt;/mark&gt;&lt;/p&gt;
+&lt;p&gt;A:（原子性 Atomicity）、C: 一致性（Consistency）、I：隔离性（Isolation）、D：持久性（Durability）&lt;/p&gt;
+&lt;p&gt;1) 原子性&lt;br /&gt;
+原子是自然界最小的颗粒，具有不可再分的特性&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;一致性&lt;br /&gt;
+一致性是指事务执行的结果必须使数据库从一个一致性状态，变到另一个一致性状态。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;隔离性&lt;br /&gt;
+隔离性是指各个事务的执行互不干扰&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;4) 持久性&lt;br /&gt;
+持久性指事务一旦提交，对数据所做的任何改变，都要记录到永久存储器中&lt;/p&gt;
+&lt;h1 id=&#34;事务的隔离级别有哪些&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#事务的隔离级别有哪些&#34;&gt;#&lt;/a&gt; 事务的隔离级别有哪些&lt;/h1&gt;
+&lt;p&gt;由低到高：&lt;/p&gt;
+&lt;img data-src=&#34;/interview/MySQL/image-20220714221905692.png&#34; class=&#34;&#34; title=&#34;image-20220714221905692&#34;&gt;
+&lt;p&gt;&lt;strong&gt;READ UNCOMMITTED（读未提交）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;​	在这个隔离级别，所有事务都可以看到未提交事务的执行结果。在这种隔离级别上，可能会产生很多问题。所以这种隔离级别很少用于实际应用，而且它的性能也没有比其他性能好很多，而别的级别还有其他的优点。读取未提交数据，也被称为 “脏读”。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;READ COMMITTED（读已提交）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;​	读已提交这种隔离级别是大多数数据库系统默认的隔离级别（但 mysql 默认的隔离级别却不是这种），满足了隔离的最早简单定义：一个事务开始时，只能看见已经提交事务所做的改变，一个事务从开始到提交前，所做的任何数据改变都是不可见的，除非已经提交。这种隔离级别也支持所谓的不可重复读。这意味着用户运行同一个语句两次，看到的结果是不同的。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;REPEATABLE READ（可重复读）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;​	mysql 数据库默认的隔离级别。该级别解决了 READ UNCOMMITTED 导致的问题。它保证了同一事务的多个实例在并发读取事务时，会看到同样的数据行。不过这会导致另外一个问题 “幻读”。InnoDB 和 Falcon 存储引擎通过多版本并发控制解决了幻读问题。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;SERIALIZABLE（可串行化）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;​	该隔离级别是最高的隔离级别。它通过强制事务排序，使之不可能相互冲突，从而解决幻读问题。简而言之：SERIALIZABLE 是在每个读的数据行加锁，在这个级别上可能导致大量的超时和锁竞争现象，实际应用中很少使用这个级别，但如果用户的应用为了数据的稳定性，需要强制减少并发，也可以选择这种隔离级别。&lt;/p&gt;
+&lt;h1 id=&#34;并发事务带来哪些问题&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#并发事务带来哪些问题&#34;&gt;#&lt;/a&gt; 并发事务带来哪些问题？&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;脏读（Dirty read）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;​	当一个事务正在访问数据并且对数据进行了修改，而这种修改还没有提交到数据库中，这时另外一个事务也访问了这个数据，然后使用了这个数据。因为这个数据是还没有提交的数据，那么另外一个事务读到的这个数据是 “脏数据”，依据 “脏数据” 所做的操作可能是不正确的。&lt;/p&gt;
+ &lt;img data-src=&#34;/interview/MySQL/image-20220714222508260.png&#34; class=&#34;&#34; title=&#34;image-20220714222508260&#34;&gt;
+&lt;p&gt;&lt;strong&gt;不可重复读（Unrepeatableread）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;​	指在一个事务内多次读同一数据。在这个事务还没有结束时，另一个事务也访问该数据。那么，在第一个事务中的两次读数据之间，由于第二个事务的修改导致第一个事务两次读取的数据可能不太一样。这就发生了在一个事务内两次读到的数据是不一样的情况，因此称为不可重复读。&lt;/p&gt;
+ &lt;img data-src=&#34;/interview/MySQL/image-20220714222512979.png&#34; class=&#34;&#34; title=&#34;image-20220714222512979&#34;&gt;
+&lt;p&gt;&lt;strong&gt;幻读 （Phantom read）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;幻读与不可重复读类似。它发生在一个事务（T1）读取了几行数据，接着另一个并发事务（T2）插入了一些数据时。在随后的查询中，第一个事务（T1）就会发现多了一些原本不存在的记录，就好像发生了幻觉一样，所以称为幻读。&lt;/p&gt;
+ &lt;img data-src=&#34;/interview/MySQL/image-20220714222518876.png&#34; class=&#34;&#34; title=&#34;image-20220714222518876&#34;&gt;
+&lt;h1 id=&#34;不可重复度和幻读区别&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#不可重复度和幻读区别&#34;&gt;#&lt;/a&gt; 不可重复度和幻读区别？&lt;/h1&gt;
+&lt;p&gt;不可重复读的重点是修改，幻读的重点在于新增或者删除。&lt;/p&gt;
+&lt;p&gt;解决不可重复读的问题只需锁住满足条件的行，解决幻读需要锁表&lt;/p&gt;
+&lt;h1 id=&#34;sql优化手段有哪些&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#sql优化手段有哪些&#34;&gt;#&lt;/a&gt; SQL 优化手段有哪些？&lt;/h1&gt;
+&lt;p&gt;1、查询语句中不要使用 select *&lt;/p&gt;
+&lt;p&gt;2、尽量减少子查询，使用关联查询（left join,right join,inner join）替代&lt;/p&gt;
+&lt;p&gt;3、减少使用 IN 或者 NOT IN , 使用 exists，not exists 或者关联查询语句替代&lt;/p&gt;
+&lt;p&gt;4、or 的查询尽量用 union 或者 union all 代替 (在确认没有重复数据或者不用剔除重复数据时，union all 会更好)&lt;/p&gt;
+&lt;p&gt;5、应尽量避免在 where 子句中使用！= 或 &amp;lt;&amp;gt; 操作符，否则将引擎放弃使用索引而进行全表扫描。&lt;/p&gt;
+&lt;p&gt;6、应尽量避免在 where 子句中对字段进行 null 值判断，否则将导致引擎放弃使用索引而进行全表扫描，如： select id from t where num is null 可以在 num 上设置默认值 0，确保表中 num 列没有 null 值，然后这样查询： select id from t where num=0&lt;/p&gt;
+&lt;h1 id=&#34;mysql常见的日志有哪些分别起到了什么作用&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#mysql常见的日志有哪些分别起到了什么作用&#34;&gt;#&lt;/a&gt; MySQL 常见的日志有哪些，分别起到了什么作用&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;bin log ：数据恢复、主从复制&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;MySQL Server 层也有一个日志文件叫做 Binlog ，它可以被所有的存储引擎使用。&lt;/p&gt;
+&lt;p&gt;bin log 以事件的形式记录了所有的 DDL 和 DML 语句（因为他记录的是操作而不是数据值），可以用做主从复制和数据恢复&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;relay log ：中介日志&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;redo log&lt;/p&gt;
+&lt;p&gt;记录修改后的值，属于物理日志&lt;/p&gt;
+&lt;p&gt;redo log 的大小事固定的，前面的内容会被覆盖，所以不能用于数据回滚 / 数据恢复&lt;/p&gt;
+&lt;p&gt;redo log 是 InnoDB 存储引擎实现的，并不是所有引擎都有&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;什么是buffer-pool&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#什么是buffer-pool&#34;&gt;#&lt;/a&gt; 什么是 Buffer Pool&lt;/h1&gt;
+&lt;img data-src=&#34;/interview/MySQL/image-20220909103813728.png&#34; class=&#34;&#34; title=&#34;image-20220909103813728&#34;&gt;
+&lt;h1 id=&#34;buffer-pool-内存淘汰策略&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#buffer-pool-内存淘汰策略&#34;&gt;#&lt;/a&gt; Buffer pool 内存淘汰策略&lt;/h1&gt;
+&lt;p&gt;冷热分区的 LRU 策略&lt;/p&gt;
+&lt;p&gt;冷热分区比：5:3&lt;/p&gt;
+&lt;p&gt;数据一进来先进入到冷区的头部，默认在 1000ms 之后如果再次访问，就会将他放入到热区&lt;/p&gt;
+&lt;h1 id=&#34;什么是hash索引&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#什么是hash索引&#34;&gt;#&lt;/a&gt; 什么是 hash 索引&lt;/h1&gt;
+&lt;img data-src=&#34;/interview/MySQL/image-20220909104250912.png&#34; class=&#34;&#34; title=&#34;image-20220909104250912&#34;&gt;
+&lt;p&gt;不适合做范围查找，innodb 不支持 hash 索引&lt;/p&gt;
+&lt;h1 id=&#34;mysql为什么要用b数做索引&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#mysql为什么要用b数做索引&#34;&gt;#&lt;/a&gt; MySQL 为什么要用 B + 数做索引&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;B + 树能显著的减少 IO 次数，提高效率&lt;/li&gt;
+&lt;li&gt;B + 树的查询效率更加稳定，因为所有的数据都放在了叶子上&lt;/li&gt;
+&lt;li&gt;B + 树能提高范围查询的效率，因为叶子结点指向下一个叶子结点&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;数据库优化什么是数据库索引有哪些类型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#数据库优化什么是数据库索引有哪些类型&#34;&gt;#&lt;/a&gt; 数据库优化，什么是数据库索引，有哪些类型&lt;/h1&gt;
+&lt;h1 id=&#34;谈一下你对数据库btree的理解&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#谈一下你对数据库btree的理解&#34;&gt;#&lt;/a&gt; 谈一下你对数据库 b+tree 的理解&lt;/h1&gt;
+&lt;h1 id=&#34;聚集索引和非聚集索引的区别&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#聚集索引和非聚集索引的区别&#34;&gt;#&lt;/a&gt; 聚集索引和非聚集索引的区别&lt;/h1&gt;
+&lt;h1 id=&#34;在日常工作中是如何进行数据库优化的&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#在日常工作中是如何进行数据库优化的&#34;&gt;#&lt;/a&gt; 在日常工作中是如何进行数据库优化的&lt;/h1&gt;
+&lt;h1 id=&#34;请列举几个索引失效的场景&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#请列举几个索引失效的场景&#34;&gt;#&lt;/a&gt; 请列举几个索引失效的场景&lt;/h1&gt;
+&lt;h1 id=&#34;数据库锁的机制&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#数据库锁的机制&#34;&gt;#&lt;/a&gt; 数据库锁的机制&lt;/h1&gt;
+&lt;h1 id=&#34;在遇到死锁情况如何处理&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#在遇到死锁情况如何处理&#34;&gt;#&lt;/a&gt; 在遇到死锁情况如何处理&lt;/h1&gt;
+&lt;h1 id=&#34;mysql和oracle的区别&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#mysql和oracle的区别&#34;&gt;#&lt;/a&gt; mysql 和 oracle 的区别&lt;/h1&gt;
+&lt;h1 id=&#34;数据库的根本特点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#数据库的根本特点&#34;&gt;#&lt;/a&gt; 数据库的根本特点&lt;/h1&gt;
+&lt;p&gt;1、数据结构化 数据库系统实现了整体数据的结构化，这是数据库的最主要的特征之一&lt;/p&gt;
+&lt;p&gt;2、数据的共享性高，冗余度低，易扩充 因为数据是面向整体的，所以数据可以被多个用户、多个应用程序共享使用&lt;/p&gt;
+&lt;p&gt;3、数据独立性高 数据独立性包括数据的物理独立性和逻辑独立性。&lt;/p&gt;
+&lt;p&gt;4、数据由 DBMS 统一管理和控制 数据库的共享是并发的 (concurrency) 共享，即多个用户可以同时存取数据库中的数据，甚至可以同时存取数据库中的同一个数据；&lt;/p&gt;
+&lt;h1 id=&#34;数据库中数据共享是指&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#数据库中数据共享是指&#34;&gt;#&lt;/a&gt; 数据库中数据共享是指&lt;/h1&gt;
+&lt;p&gt;多个应用、多种语言、多个用户共享数据&lt;/p&gt;
+&lt;h1 id=&#34;数据库中产生数据不一致&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#数据库中产生数据不一致&#34;&gt;#&lt;/a&gt; 数据库中产生数据不一致&lt;/h1&gt;
+&lt;p&gt;1. 并发控制不当&lt;/p&gt;
+&lt;p&gt;2. 数据冗余&lt;/p&gt;
+&lt;p&gt;3. 各种故障，错误&lt;/p&gt;
+&lt;p&gt;第一种往往是由于重复存放的数据未能进行一致性更新造成的&lt;/p&gt;
+&lt;p&gt;第二种情况是由于多用户共享数据库，而更新操作未能保持同步进行引起的&lt;/p&gt;
+&lt;p&gt;第三种是由于某种原因（硬件故障或软件故障等）而造成数据丢失或数据损坏等&lt;/p&gt;
+&lt;h1 id=&#34;运算&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#运算&#34;&gt;#&lt;/a&gt; 运算&lt;/h1&gt;
+&lt;img data-src=&#34;/interview/MySQL/c484ce59eba713b93d75a1381901dabe.png&#34; class=&#34;&#34; title=&#34;img&#34;&gt;
+&lt;img data-src=&#34;/interview/MySQL/9606dddddf13fb7dafa3119aa768e7a4.png&#34; class=&#34;&#34; title=&#34;数据库之运算符详解_数据库_18&#34;&gt;
+&lt;h2 id=&#34;运算优先级&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#运算优先级&#34;&gt;#&lt;/a&gt; 运算优先级&lt;/h2&gt;
+&lt;img data-src=&#34;/interview/MySQL/2b23723e1f54716522beeb85047554c2.png&#34; class=&#34;&#34; title=&#34;数据库之运算符详解_mysql_23&#34;&gt;
+&lt;h1 id=&#34;问题&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#问题&#34;&gt;#&lt;/a&gt; 问题&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;MySQL 索引使用有哪些注意事项呢？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;MysQL 遇到过死锁问题吗，你是如何解决的？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;日常工作中你是怎么优化 SQL 的？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;说说分库与分表的设计&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;InnoDB 与 MylSAM 的区别&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;数据库索引的原理，为什么要用 B + 树，为什么不用二叉树？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;聚集索引与非聚集索引的区别&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;limit 1000000 加载很慢的话，你是怎么解决的呢？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如何选择合适的分布式主键方案呢？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;事务的隔离级别有哪些？MySQL 的默认隔离级别是什么？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;什么是幻读，脏读，不可重复读呢？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在高并发情况下，如何做到安全的修改同一行数据？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;数据库的乐观锁和悲观锁。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;select for update 有什么含义，会锁表还是锁行还是其他。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;MySQL 事务得四大特性以及实现原理&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如果某个表有近千万数据，CRUD 比较慢，如何优化。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如何写 sql 能够有效的使用到复合索引。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;mysql 中 in 和 exists 的区别。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;数据库自增主键可能遇到什么问题。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;MVCC 熟悉吗，它的底层原理？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;数据库中间件了解过吗，sharding jdbc，mycat?&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;MYSQL 的主从延迟，你怎么解决？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;说一下大表查询的优化方案&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;什么是数据库连接池？为什么需要数据库连接池呢？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;一条 SQL 语句在 MySQL 中如何执行的？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;innodb 引擎中的索引策略了解过吗&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;一条 SQL 执行时间过长如何优化&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;MYSQL 数据库服务器性能分析的方法命令有哪些？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Blob 和 text 有什么区别？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;mysql 里记录货币用什么字段类型比较好？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Mysql 中有哪几种锁，列举一下？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Hash 索引和 B + 树区别是什么？你在设计索引是怎么抉择的？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;mysql 的内连接、左连接、右连接有什么区别？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;说说 MySQL 的基础架构图&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;什么是内连接、外连接、交叉连接、笛卡尔积呢？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;说一下数据库的三大范式&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Mysql 的 binlog 有几种录入格式？分别有什么区别？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;InnoDB 引擎的 4 大特性，了解过吗&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;索引有哪些优缺点？索引有哪几种类型？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;创建索引有什么原则呢？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;创建索引的三种方式&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;百万级别或以上的数据，你是如何删除的？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;什么是最左前缀原则？什么是最左匹配原则？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;B 树和 B + 树的区别，数据库为什么使用 B + 树而不是 B 树？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;覆盖索引、回表等这些，了解过吗？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;非聚簇索引一定会回表查询吗？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;联合索引是什么？为什么需要注意联合索引中的顺序？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;数据库隔离级别与锁的关系&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;聊聊 InnoDb 的锁，什么是死锁？怎么解决？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;count (1)、count (*) 与 count (列名) 的区别？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;什么是存储过程？有哪些优缺点？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;SQL 约束有哪几种呢？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;varchar (50) 中的 50 是啥意思，varchar 和 char 的区别&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;mysql 中 int (20)、char (20)、varchar (20) 的区别&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;drop、delete 与 truncate 的区别&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;UNION 与 UNION ALL 的区别？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;SQL 的生命周期？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;一条 Sql 的执行顺序？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;关心过业务系统里面的 sql 耗时吗？统计过慢查询吗？对慢查询都怎么优化过？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;主键使用自增 ID 还是 UUID，为什么？mysql 自增主键用完了怎么办？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;MySQL 数据库 cpu 飙升的话，要怎么处理呢？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;读写分离常见方案？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;MySQL 的复制原理以及流程&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Innodb 的事务实现原理？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;谈谈 MySQL 的 Explain&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Innodb 的事务与日志的实现方式&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;你们数据库是否支持 emoji 表情存储，如果不支持，如何操作？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;一个 6 亿的表 a，一个 3 亿的表 b，通过外间 tid 关联，你如何最快的查询出满足条件的第 50000 到第 50200 中的这 200 条数据记录。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Mysql 一条 SOL 加锁分析&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;回表问题和覆盖索引&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;MySQL 索引&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;回表问题和覆盖索引&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;双写一致性&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;undo 、redo、binlog&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Hash 索引和 B + 树的区别是什么？&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;B + 树可以进行范围查询，Hash 索引不能。&lt;/li&gt;
+&lt;li&gt;B + 树支持联合索引的最左侧原则，Hash 索引不支持。B + 树支持 order by 排序，Hash 索引不支持。&lt;/li&gt;
+&lt;li&gt;Hash 索引在等值查询上比 B + 树效率更高。&lt;/li&gt;
+&lt;li&gt;B + 树使用 like 进行模糊查询的时候，like 后面（比如 % 开头) 的话可以起到优化的作用，Hash 索引根本无法进行模糊查询&lt;/li&gt;
+&lt;/ol&gt;
+&lt;img data-src=&#34;MySQL/image-20230124130116883.png&#34; alt=&#34;image-20230124130116883&#34; style=&#34;zoom:150%;&#34; /&gt;
+&lt;p&gt;Mysql 逻辑架构图主要分三层:&lt;/p&gt;
+&lt;p&gt;第一层负责连接处理，授权认证，安全等等&lt;/p&gt;
+&lt;p&gt;第二层负责编译并优化 SQL&lt;/p&gt;
+&lt;p&gt;第三层是存储引擎。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;img data-src=&#34;MySQL/image-20230124125910848.png&#34; alt=&#34;image-20230124125910848&#34; style=&#34;zoom:150%;&#34; /&gt;
+&lt;p&gt;主从复制分了五个步骤进行&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;主库的更新事件 (update、insert、 delete) 被写到 binlog&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;从库发起连接，连接到主库。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;此时主库创建一个 binlog dump thread，把 binlog 的内容发送到从库。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;从库启动之后，创建一个 I/O 线程，读取主库传过来的 binlog 内容并写入到 relay log&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;还会创建一个 SQL 线程，从 relay log 里面读取内容，从 Exec_Master_Log_Pos 位置开始执行读取到的更新事件，将更新内容写入到 slave 的 db&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;未完成&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#未完成&#34;&gt;#&lt;/a&gt; 未完成&lt;/h2&gt;
+&lt;h1 id=&#34;未完成-2&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#未完成-2&#34;&gt;#&lt;/a&gt; —————————— 未完成&lt;/h1&gt;
+
+&lt;div id=&#34;gitalk-container&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js&#34;&gt;&lt;/script&gt;&lt;link rel=&#34;stylesheet&#34; href=&#34;https://unpkg.com/gitalk/dist/gitalk.css&#34;&gt;&lt;script src=&#34;https://unpkg.com/gitalk/dist/gitalk.min.js&#34;&gt;&lt;/script&gt;
+
+		&lt;script&gt;
+		var gitalkConfig = {&#34;clientID&#34;:&#34;6db178ba46c8af8f6a6f&#34;,&#34;clientSecret&#34;:&#34;90f730e5956024596558df00975cd8eae28cae3d&#34;,&#34;repo&#34;:&#34;bk-comment01&#34;,&#34;owner&#34;:&#34;onlymarryu&#34;,&#34;admin&#34;:[&#34;onlymarryu&#34;],&#34;distractionFreeMode&#34;:false,&#34;language&#34;:&#34;zh-CN&#34;,&#34;proxy&#34;:&#34;https://gitalk-comments.netlify.app/github_access_token&#34;,&#34;perPage&#34;:15};
+	    gitalkConfig.id = md5(location.pathname);
+		var gitalk = new Gitalk(gitalkConfig);
+	    gitalk.render(&#34;gitalk-container&#34;);
+	    &lt;/script&gt;</content>
+        <category term=".面试题" scheme="https://eth168.top/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/" />
+        <category term="突击版 复习版" scheme="https://eth168.top/tags/%E7%AA%81%E5%87%BB%E7%89%88-%E5%A4%8D%E4%B9%A0%E7%89%88/" />
+        <updated>2023-01-24T04:43:45.719Z</updated>
+    </entry>
     <entry>
         <id>https://eth168.top/interview/JVM%E5%BF%AB%E9%80%9F%E7%AA%81%E5%87%BB%E7%89%88/</id>
         <title>JVM突击版</title>
@@ -5737,74 +6179,5 @@ Win64 OpenSSL v1.1.1i&lt;/p&gt;
 	    &lt;/script&gt;</content>
         <category term="工具软件安装" scheme="https://eth168.top/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
         <updated>2022-10-31T15:06:22.683Z</updated>
-    </entry>
-    <entry>
-        <id>https://eth168.top/tools/Keepalived-tool/</id>
-        <title>Keepalived</title>
-        <link rel="alternate" href="https://eth168.top/tools/Keepalived-tool/"/>
-        <content type="html">&lt;h3 id=&#34;keepalived安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#keepalived安装&#34;&gt;#&lt;/a&gt; Keepalived 安装&lt;/h3&gt;
-&lt;h4 id=&#34;1&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1&#34;&gt;#&lt;/a&gt; ——1&lt;/h4&gt;
-&lt;h5 id=&#34;1-准备好keepalived安装包&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-准备好keepalived安装包&#34;&gt;#&lt;/a&gt; 1、准备好 Keepalived 安装包&lt;/h5&gt;
-&lt;h5 id=&#34;2-解压到usrlocal目录&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-解压到usrlocal目录&#34;&gt;#&lt;/a&gt; 2、解压到 /usr/local 目录&lt;/h5&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;tar&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-zxvf&lt;/span&gt; /usr/local/tmp/keepalived-1.4.5.tar.gz &lt;span class=&#34;token parameter variable&#34;&gt;-C&lt;/span&gt; /usr/local/&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h5 id=&#34;3-安装需要依赖的环境组件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3-安装需要依赖的环境组件&#34;&gt;#&lt;/a&gt; 3、安装需要依赖的环境组件&lt;/h5&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;yum &lt;span class=&#34;token function&#34;&gt;install&lt;/span&gt; gcc openssl-devel popt-devel &lt;span class=&#34;token parameter variable&#34;&gt;-y&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h5 id=&#34;4-进入到解压目录进行编译&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#4-进入到解压目录进行编译&#34;&gt;#&lt;/a&gt; 4、进入到解压目录，进行编译&lt;/h5&gt;
-&lt;pre&gt;&lt;code&gt;cd /usr/local/keepalived-1.4.5
-./configure --prefix=/usr/local/keepalived	
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h5 id=&#34;5-编译完成之后进行安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#5-编译完成之后进行安装&#34;&gt;#&lt;/a&gt; 5、编译完成之后，进行安装&lt;/h5&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;make&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;make&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;install&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h5 id=&#34;6-将keepalived的服务注册为系统服务&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#6-将keepalived的服务注册为系统服务&#34;&gt;#&lt;/a&gt; 6、将 keepalived 的服务注册为系统服务&lt;/h5&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;cp&lt;/span&gt;  &lt;span class=&#34;token parameter variable&#34;&gt;-rf&lt;/span&gt;   /usr/local/keepalived-1.4.5/keepalived/etc/init.d/keepalived /etc/init.d/&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;mkdir&lt;/span&gt; /etc/keepalived&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;cp&lt;/span&gt;   &lt;span class=&#34;token parameter variable&#34;&gt;-rf&lt;/span&gt;  /usr/local/keepalived/etc/keepalived/keepalived.conf /etc/keepalived/&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;cp&lt;/span&gt;   &lt;span class=&#34;token parameter variable&#34;&gt;-rf&lt;/span&gt;  /usr/local/keepalived-1.4.5/keepalived/etc/sysconfig/keepalived /etc/sysconfig/&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;cp&lt;/span&gt;   &lt;span class=&#34;token parameter variable&#34;&gt;-rf&lt;/span&gt;  /usr/local/keepalived/sbin/keepalived /usr/sbin/&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h5 id=&#34;7-修改配置文件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#7-修改配置文件&#34;&gt;#&lt;/a&gt; 7、修改配置文件&lt;/h5&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;vim&lt;/span&gt;  /etc/keepalived/keepalived.conf&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;strong&gt;CentOS-6   下的配置文件&lt;/strong&gt;&lt;/p&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token operator&#34;&gt;!&lt;/span&gt; Configuration File &lt;span class=&#34;token keyword&#34;&gt;for&lt;/span&gt; keepalived&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;global_defs &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   notification_email &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     acassen@firewall.loc&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     failover@firewall.loc&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     sysadmin@firewall.loc&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   notification_email_from Alexandre.Cassen@firewall.loc&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   smtp_server &lt;span class=&#34;token number&#34;&gt;127.0&lt;/span&gt;.0.1&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   smtp_connect_timeout &lt;span class=&#34;token number&#34;&gt;30&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   router_id LVS_DEVEL&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   vrrp_skip_check_adv_addr&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   vrrp_garp_interval &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   vrrp_gna_interval &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;17&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;vrrp_instance VI_1 &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;18&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;##	# 配置为主&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;19&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    state MASTER&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;20&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;#    # 设置网卡&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;21&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    interface eth0&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;22&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;#     # 虚拟路由 ID，全局唯一&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;23&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    virtual_router_id &lt;span class=&#34;token number&#34;&gt;51&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;24&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;#    # 优先级，权重值&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;25&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    priority &lt;span class=&#34;token number&#34;&gt;100&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;26&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    advert_int &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;27&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    authentication &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;28&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        auth_type PASS&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;29&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        auth_pass &lt;span class=&#34;token number&#34;&gt;1111&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;30&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;31&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    virtual_ipaddress &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;32&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;         &lt;span class=&#34;token number&#34;&gt;192.168&lt;/span&gt;.1.100/24  dev eth0 label eth0:3:&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;33&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;34&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;strong&gt;CentOS-7   下的配置文件&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-conf&#34;&gt;! Configuration File for keepalived
-global_defs &amp;#123;
-   notification_email &amp;#123;
-     acassen@firewall.loc
-     failover@firewall.loc
-     sysadmin@firewall.loc
-   &amp;#125;
-   notification_email_from Alexandre.Cassen@firewall.loc
-   smtp_server 127.0.0.1
-   smtp_connect_timeout 30
-   router_id LVS_DEVEL
-   vrrp_skip_check_adv_addr
-   vrrp_garp_interval 0
-   vrrp_gna_interval 0
-&amp;#125;
-
-vrrp_instance VI_1 &amp;#123;
-##	# 配置为主
-    state MASTER
-#    # 设置网卡
-    interface ens33
-#     # 虚拟路由ID，全局唯一
-    virtual_router_id 51
-#    # 优先级，权重值
-    priority 100
-    advert_int 1
-    authentication &amp;#123;
-        auth_type PASS
-        auth_pass 1111
-    &amp;#125;
-    virtual_ipaddress &amp;#123;
-        192.168.1.100/24 
-    &amp;#125;
-&amp;#125;
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h6 id=&#34;8-启动keepalived&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#8-启动keepalived&#34;&gt;#&lt;/a&gt; 8、启动 keepalived&lt;/h6&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;service&lt;/span&gt; keepalived start&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;### 或者&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;systemctl start keepalived.service&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h6 id=&#34;9-登录验证&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#9-登录验证&#34;&gt;#&lt;/a&gt; 9、登录验证&lt;/h6&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;mysql &lt;span class=&#34;token parameter variable&#34;&gt;-uroot&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-p123456&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-h&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;192.168&lt;/span&gt;.1.100 &lt;span class=&#34;token parameter variable&#34;&gt;-P&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;48066&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;div id=&#34;gitalk-container&#34;&gt;&lt;/div&gt;
-&lt;script src=&#34;https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js&#34;&gt;&lt;/script&gt;&lt;link rel=&#34;stylesheet&#34; href=&#34;https://unpkg.com/gitalk/dist/gitalk.css&#34;&gt;&lt;script src=&#34;https://unpkg.com/gitalk/dist/gitalk.min.js&#34;&gt;&lt;/script&gt;
-
-		&lt;script&gt;
-		var gitalkConfig = {&#34;clientID&#34;:&#34;6db178ba46c8af8f6a6f&#34;,&#34;clientSecret&#34;:&#34;90f730e5956024596558df00975cd8eae28cae3d&#34;,&#34;repo&#34;:&#34;bk-comment01&#34;,&#34;owner&#34;:&#34;onlymarryu&#34;,&#34;admin&#34;:[&#34;onlymarryu&#34;],&#34;distractionFreeMode&#34;:false,&#34;language&#34;:&#34;zh-CN&#34;,&#34;proxy&#34;:&#34;https://gitalk-comments.netlify.app/github_access_token&#34;,&#34;perPage&#34;:15};
-	    gitalkConfig.id = md5(location.pathname);
-		var gitalk = new Gitalk(gitalkConfig);
-	    gitalk.render(&#34;gitalk-container&#34;);
-	    &lt;/script&gt;</content>
-        <category term="工具软件安装" scheme="https://eth168.top/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
-        <updated>2022-10-31T15:06:22.681Z</updated>
     </entry>
 </feed>
