@@ -886,202 +886,6 @@ sleep 方案：主库更新后，读从库之前先 sleep 一下；&lt;br /&gt;
         <updated>2023-01-24T04:43:45.719Z</updated>
     </entry>
     <entry>
-        <id>https://eth168.top/interview/JVM%E5%BF%AB%E9%80%9F%E7%AA%81%E5%87%BB%E7%89%88/</id>
-        <title>JVM突击版</title>
-        <link rel="alternate" href="https://eth168.top/interview/JVM%E5%BF%AB%E9%80%9F%E7%AA%81%E5%87%BB%E7%89%88/"/>
-        <content type="html">&lt;h2 id=&#34;什么是jvm&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#什么是jvm&#34;&gt;#&lt;/a&gt; 什么是 JVM&lt;/h2&gt;
-&lt;p&gt;JVM 是 java 代码运行的平台，他帮助我们的代码一次编译到处运行&lt;/p&gt;
-&lt;h2 id=&#34;类加载过程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#类加载过程&#34;&gt;#&lt;/a&gt; 类加载过程&lt;/h2&gt;
-&lt;p&gt;字节码 ——&amp;gt; ClassLoader 类加载 ——&amp;gt; Linking （ 格式检查、 静态成员变量附默认值、resolution [符号引用 ——&amp;gt; 直接引用]）——&amp;gt; init 初始化 ——&amp;gt;  UIsing 对象使用  ——&amp;gt;  GC 回收&lt;/p&gt;
-&lt;h2 id=&#34;双亲委派是什么&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#双亲委派是什么&#34;&gt;#&lt;/a&gt; 双亲委派是什么？&lt;/h2&gt;
-&lt;p&gt;我们在加载一个类对象的时候，要经过类加载器。&lt;/p&gt;
-&lt;p&gt;类加载器分为 4 种 ，分别为：自定义类加载器（ConsumerClassLoader）、系统类加载器（APP）【classpath】、扩展类加载器（ex）【找的是 JAVA_HOME/jre/lib】、启动类加载器（bootstrap）【找的是 JAVA_HOME/lib】&lt;/p&gt;
-&lt;p&gt;我们加载的时候，一般都是从最下方的自定义加载器向上查找到启动类加载器，当然前提是有自定义类加载器，加载过程中会首先判断这个类加载器是否能存在这个类的缓存，存在就直接返回结果，不存在它就会向上委托，交由上层加载器加载，直至启动类加载器，如果这里也没有缓存，就要自己生成了，这时候启动类加载器就开始判断他是否可以生成，能生成就直接返回结果即可，不能生成就委托与下层加载器，直至生成，如果最后了都没找到可以生成这个类的类加载器就返回 &lt;code&gt;Class Not Found Exception&lt;/code&gt;&lt;/p&gt;
-&lt;h2 id=&#34;如何打破双亲委派&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#如何打破双亲委派&#34;&gt;#&lt;/a&gt; 如何打破双亲委派？&lt;/h2&gt;
-&lt;p&gt;JDK1.2 之前，自定义 ClassLoader 都必须重写 loadClass ()&lt;/p&gt;
-&lt;p&gt;ThreadContextClassLoader 可以实现基础类调用实现类代码，通过 thread.setContextClassLoader 指定&lt;/p&gt;
-&lt;p&gt;简单来说就是用自定义的 ClassLoader 即可，但是大多是情况不建议打破&lt;/p&gt;
-&lt;h2 id=&#34;jvm的内存模型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#jvm的内存模型&#34;&gt;#&lt;/a&gt; JVM 的内存模型&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;PC 程序计数器：记录程序运行到哪里一步，只增不减&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;JVM 栈：存储基本类型和引用地址&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;本地方法栈（不关注）&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;堆：存储所有的引用类型&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;方法区：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;在 jdk  &amp;lt;=  1.7 ：永久区，永久代&lt;/p&gt;
-&lt;p&gt;本质上，方法区和永久代并不等价，永久代的数据在 FUllGC 也会删除，他不会，所以会导致 OOM。&lt;/p&gt;
-&lt;p&gt;大小启动的时候指定，不能变&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;在 jdk  》  1.8 ：元数据区，元空间&lt;/p&gt;
-&lt;p&gt;元空间不再虚拟机设置的内存当中，而是使用本地内存。在 FULLGC 也会删除。&lt;/p&gt;
-&lt;p&gt;不设定的话，最大就是物理内存&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;jvm中那些是线程独享那些是共享的&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#jvm中那些是线程独享那些是共享的&#34;&gt;#&lt;/a&gt; JVM 中那些是线程独享，那些是共享的？&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;JVM 中 每个线程都有一个 PC、JVM stack 、NMS&lt;/li&gt;
-&lt;li&gt;JVM 中 所有线程共享 ：堆内存，方法区&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;永久区和元空间的区别&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#永久区和元空间的区别&#34;&gt;#&lt;/a&gt; 永久区和元空间的区别&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;字符串常量池 ——&amp;gt; 永久代有；元空间 没有，放在了堆内存中&lt;/li&gt;
-&lt;li&gt;GC——&amp;gt; 永久代不会被 FullGC  ; 会被 FUGC&lt;/li&gt;
-&lt;li&gt;内存：永久代启动时设定，且不能改；元空间时代不设定最大就是物理内存&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;如何确定一个垃圾&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#如何确定一个垃圾&#34;&gt;#&lt;/a&gt; 如何确定一个垃圾&lt;/h2&gt;
-&lt;p&gt;如果这个内存没有任何的引用，他就是一个垃圾&lt;/p&gt;
-&lt;ol start=&#34;9&#34;&gt;
-&lt;li&gt;确认垃圾的方式
-&lt;ol&gt;
-&lt;li&gt;根的可达性分析&lt;/li&gt;
-&lt;li&gt;引用计数法&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;解释：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;根的可达性分析，可选择作为根的：&lt;/p&gt;
-&lt;p&gt;(1). &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zby5jc2RuLm5ldC9zby9zZWFyY2g/cT0lRTglOTklOUElRTYlOEIlOUYlRTYlOUMlQkEmYW1wO3NwbT0xMDAxLjIxMDEuMzAwMS43MDIw&#34;&gt;虚拟机&lt;/span&gt;栈（栈帧中的局部变量区，也叫做局部变量表）中引用的对象。&lt;/p&gt;
-&lt;p&gt;(2). 方法区中的类静态属性引用的对象。&lt;/p&gt;
-&lt;p&gt;(3). 方法区中常量引用的对象。&lt;/p&gt;
-&lt;p&gt;(4). 本地方法栈中 JNI (&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zby5jc2RuLm5ldC9zby9zZWFyY2g/cT1OYXRpdmUmYW1wO3NwbT0xMDAxLjIxMDEuMzAwMS43MDIw&#34;&gt;Native&lt;/span&gt; 方法) 引用的对象。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;基本思路&lt;/strong&gt;：通过一系列名为”GC Roots” 的对象作为起始点，从这些节点开始向下搜索，搜索所走过的路径称为引用链 (Reference Chain)，当一个对象到 GC Roots 没有任何引用链相连时，则证明此对象是不可用的&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;引用计数法&lt;/p&gt;
-&lt;p&gt;其实就是去看这个对象是否被引用没有被引用那就是垃圾，最简单的&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;常见的垃圾回收算法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#常见的垃圾回收算法&#34;&gt;#&lt;/a&gt; 常见的垃圾回收算法&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;标记清除&lt;/li&gt;
-&lt;li&gt;标记复制算法&lt;/li&gt;
-&lt;li&gt;标记整理&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;具体解释：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;标记清除&lt;/p&gt;
-&lt;p&gt;标记清除简单来看就是两步，标记和清除，是垃圾就标记，然后清理掉，简单粗暴，但是有个问题就是导致我们的空间碎片化，位置不连续。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;标记复制算法&lt;/p&gt;
-&lt;p&gt;同样两步，这个标记前将我们的空间分成两部分，将垃圾和非垃圾的标记出来，然后分别放入我们之前划分好的空间，这样就避免了空间碎片化的问题，但是有一个新问题，我们浪费了空间。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;标记整理、标记压缩&lt;/p&gt;
-&lt;p&gt;步骤同复制算法一致，但是后续步骤不是直接对可回收对象进行清理，而是让所有存活的对象都向一端移动，然后直接清理掉端边界以外的内存。&lt;/p&gt;
-&lt;p&gt;其实上述过程相对 &amp;quot;复制算法&amp;quot; 来讲，少了一个 &amp;quot; 保留区，但是要多出一个临时空间，要保证被使用的对象要存活。老年代一般不这样做。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;jvm内存分代模型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#jvm内存分代模型&#34;&gt;#&lt;/a&gt; JVM 内存分代模型&lt;/h2&gt;
-&lt;p&gt;新生代（Eden + 2 survive ） 	； 老年代				；永久区 / 元空间&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;提示：在记忆的时候，我们可以联想诺亚方舟的故事，Eden (伊甸园) 是最初的世界，GC 是洪水，老年代是洪水过后的世界&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;解释：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;新生代&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;一个 Eden 区，2 个 survive 区 {&lt;strong&gt;8:1:1&lt;/strong&gt;}，存储的时候现在 Eden 区（&lt;strong&gt;如果对象过大，直接去老年代&lt;/strong&gt;）&lt;/li&gt;
-&lt;li&gt;经过 YGC 后活着的对象进入第 1 个 survive 区&lt;/li&gt;
-&lt;li&gt;再次 YGC 后活着的对象进入第 2 个 survive 区&lt;/li&gt;
-&lt;li&gt;进入老年代
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;动态对象年龄判定&lt;/strong&gt;	如果 Survivor 区中相同年龄所有对象的大小总和大于 Survivor 区空间一半，年龄大于或者等于该年龄的对象在 MinorGC 时将复制到老年代&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;空间分配担保&lt;/strong&gt;，当 YGC 时，如果存活对象过多，无法完全放入 Survivor 区，就会向老年代借用内存存放对象，已完成 YGC&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;长期存活的对象将进入到老年代&lt;/strong&gt;（&lt;em&gt;&lt;strong&gt;* 虚拟机设置值，默认阈值为 15*&lt;/strong&gt;&lt;/em&gt;）&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;老年代&lt;/p&gt;
-&lt;p&gt;在空间满了之后，会执行 FGC&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;注意：要尽量减少 FGC 次数&lt;/p&gt;
-&lt;h2 id=&#34;常见的垃圾回收器&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#常见的垃圾回收器&#34;&gt;#&lt;/a&gt; 常见的垃圾回收器&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;串行回收器 (Serial/SerialOld)&lt;/p&gt;
-&lt;p&gt;它是一种单线程收集器，不仅仅意味着它只会使用一个 CPU 或者一条收集线程去完成垃圾收集工作，更重要的是其在进行垃圾收集的时候需要暂停其他线程&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;并行回收器 (Parallel/ParallelOld)&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;可以把这个收集器理解为 Serial 收集器的多线程版本。&lt;/strong&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;并发回收器 (PN/CMS)&lt;/p&gt;
-&lt;p&gt;采取的是 &amp;quot;标记 - 清除算法&amp;quot;，整个过程分为四步：&lt;/p&gt;
-&lt;p&gt;(1) 初始标记 CMS initial mark					标记 GC Roots 直接关联对象，不用 Tracing，速度很快&lt;/p&gt;
-&lt;p&gt;(2) 并发标记 CMS concurrent mark		   进行 GC Roots Tracing&lt;/p&gt;
-&lt;p&gt;(3) 重新标记 CMS remark								修改并发标记因用户程序变动的内容&lt;/p&gt;
-&lt;p&gt;(4) 并发清除 CMS concurrent sweep 			清除不可达对象回收空间，同时有新垃圾产生，留着下次清理称为&lt;/p&gt;
-&lt;p&gt;​																				 浮动垃圾&lt;/p&gt;
-&lt;p&gt;整个过程中，并发标记和并发编程，收集器线程可以与用户线程一起工作，所以总体来说，CMS 收集器的内存回收过程是与用户线程一起并发的执行。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;G1&lt;/p&gt;
-&lt;p&gt;算法：三色标记 + SATB&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;ZGC&lt;/p&gt;
-&lt;p&gt;算法：ColoredPointers + LoadBarrier&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Shenandoah&lt;/p&gt;
-&lt;p&gt;算法：ColoredPointers + WriteBarrier&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Eplison&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;jvm内存分代模型是逻辑分代还是物理分代&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#jvm内存分代模型是逻辑分代还是物理分代&#34;&gt;#&lt;/a&gt; JVM 内存分代模型是逻辑分代还是物理分代&lt;/h2&gt;
-&lt;p&gt;除 Epsilon 、ZGC 、Shenandoah 之外的 GC 都是使用逻辑分代模型&lt;/p&gt;
-&lt;p&gt;G1 是逻辑分代，物理不分代&lt;/p&gt;
-&lt;p&gt;除此之外不仅逻辑分代，而且物理分代&lt;/p&gt;
-&lt;h2 id=&#34;垃圾收集器跟内存大小的关系&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#垃圾收集器跟内存大小的关系&#34;&gt;#&lt;/a&gt; 垃圾收集器跟内存大小的关系&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;Serial 几十兆&lt;/li&gt;
-&lt;li&gt;PS 上百兆 - 几个 G&lt;/li&gt;
-&lt;li&gt;CMS - 20G&lt;/li&gt;
-&lt;li&gt;G1 - 上百 G&lt;/li&gt;
-&lt;li&gt;ZGC - 4T - 16T（JDK13）&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;1.8 默认的垃圾回收：PS + ParallelOld&lt;/p&gt;
-
-&lt;div id=&#34;gitalk-container&#34;&gt;&lt;/div&gt;
-&lt;script src=&#34;https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js&#34;&gt;&lt;/script&gt;&lt;link rel=&#34;stylesheet&#34; href=&#34;https://unpkg.com/gitalk/dist/gitalk.css&#34;&gt;&lt;script src=&#34;https://unpkg.com/gitalk/dist/gitalk.min.js&#34;&gt;&lt;/script&gt;
-
-		&lt;script&gt;
-		var gitalkConfig = {&#34;clientID&#34;:&#34;6db178ba46c8af8f6a6f&#34;,&#34;clientSecret&#34;:&#34;90f730e5956024596558df00975cd8eae28cae3d&#34;,&#34;repo&#34;:&#34;bk-comment01&#34;,&#34;owner&#34;:&#34;onlymarryu&#34;,&#34;admin&#34;:[&#34;onlymarryu&#34;],&#34;distractionFreeMode&#34;:false,&#34;language&#34;:&#34;zh-CN&#34;,&#34;proxy&#34;:&#34;https://gitalk-comments.netlify.app/github_access_token&#34;,&#34;perPage&#34;:15};
-	    gitalkConfig.id = md5(location.pathname);
-		var gitalk = new Gitalk(gitalkConfig);
-	    gitalk.render(&#34;gitalk-container&#34;);
-	    &lt;/script&gt;</content>
-        <category term="面试" scheme="https://eth168.top/categories/%E9%9D%A2%E8%AF%95/" />
-        <category term="JVM" scheme="https://eth168.top/tags/JVM/" />
-        <category term="面试" scheme="https://eth168.top/tags/%E9%9D%A2%E8%AF%95/" />
-        <updated>2023-01-11T16:00:00.000Z</updated>
-    </entry>
-    <entry>
         <id>https://eth168.top/interview/JavaSE%E2%80%94%E9%9B%86%E5%90%88/</id>
         <title>集合</title>
         <link rel="alternate" href="https://eth168.top/interview/JavaSE%E2%80%94%E9%9B%86%E5%90%88/"/>
@@ -2620,6 +2424,202 @@ public class HashMap&amp;lt;K,V&amp;gt; extends AbstractMap&amp;lt;K,V&amp;gt;  
 	    gitalk.render(&#34;gitalk-container&#34;);
 	    &lt;/script&gt;</content>
         <category term="面试" scheme="https://eth168.top/categories/%E9%9D%A2%E8%AF%95/" />
+        <category term="面试" scheme="https://eth168.top/tags/%E9%9D%A2%E8%AF%95/" />
+        <updated>2023-01-11T16:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://eth168.top/interview/JVM%E5%BF%AB%E9%80%9F%E7%AA%81%E5%87%BB%E7%89%88/</id>
+        <title>JVM突击版</title>
+        <link rel="alternate" href="https://eth168.top/interview/JVM%E5%BF%AB%E9%80%9F%E7%AA%81%E5%87%BB%E7%89%88/"/>
+        <content type="html">&lt;h2 id=&#34;什么是jvm&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#什么是jvm&#34;&gt;#&lt;/a&gt; 什么是 JVM&lt;/h2&gt;
+&lt;p&gt;JVM 是 java 代码运行的平台，他帮助我们的代码一次编译到处运行&lt;/p&gt;
+&lt;h2 id=&#34;类加载过程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#类加载过程&#34;&gt;#&lt;/a&gt; 类加载过程&lt;/h2&gt;
+&lt;p&gt;字节码 ——&amp;gt; ClassLoader 类加载 ——&amp;gt; Linking （ 格式检查、 静态成员变量附默认值、resolution [符号引用 ——&amp;gt; 直接引用]）——&amp;gt; init 初始化 ——&amp;gt;  UIsing 对象使用  ——&amp;gt;  GC 回收&lt;/p&gt;
+&lt;h2 id=&#34;双亲委派是什么&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#双亲委派是什么&#34;&gt;#&lt;/a&gt; 双亲委派是什么？&lt;/h2&gt;
+&lt;p&gt;我们在加载一个类对象的时候，要经过类加载器。&lt;/p&gt;
+&lt;p&gt;类加载器分为 4 种 ，分别为：自定义类加载器（ConsumerClassLoader）、系统类加载器（APP）【classpath】、扩展类加载器（ex）【找的是 JAVA_HOME/jre/lib】、启动类加载器（bootstrap）【找的是 JAVA_HOME/lib】&lt;/p&gt;
+&lt;p&gt;我们加载的时候，一般都是从最下方的自定义加载器向上查找到启动类加载器，当然前提是有自定义类加载器，加载过程中会首先判断这个类加载器是否能存在这个类的缓存，存在就直接返回结果，不存在它就会向上委托，交由上层加载器加载，直至启动类加载器，如果这里也没有缓存，就要自己生成了，这时候启动类加载器就开始判断他是否可以生成，能生成就直接返回结果即可，不能生成就委托与下层加载器，直至生成，如果最后了都没找到可以生成这个类的类加载器就返回 &lt;code&gt;Class Not Found Exception&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;如何打破双亲委派&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#如何打破双亲委派&#34;&gt;#&lt;/a&gt; 如何打破双亲委派？&lt;/h2&gt;
+&lt;p&gt;JDK1.2 之前，自定义 ClassLoader 都必须重写 loadClass ()&lt;/p&gt;
+&lt;p&gt;ThreadContextClassLoader 可以实现基础类调用实现类代码，通过 thread.setContextClassLoader 指定&lt;/p&gt;
+&lt;p&gt;简单来说就是用自定义的 ClassLoader 即可，但是大多是情况不建议打破&lt;/p&gt;
+&lt;h2 id=&#34;jvm的内存模型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#jvm的内存模型&#34;&gt;#&lt;/a&gt; JVM 的内存模型&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;PC 程序计数器：记录程序运行到哪里一步，只增不减&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;JVM 栈：存储基本类型和引用地址&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;本地方法栈（不关注）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;堆：存储所有的引用类型&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;方法区：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;在 jdk  &amp;lt;=  1.7 ：永久区，永久代&lt;/p&gt;
+&lt;p&gt;本质上，方法区和永久代并不等价，永久代的数据在 FUllGC 也会删除，他不会，所以会导致 OOM。&lt;/p&gt;
+&lt;p&gt;大小启动的时候指定，不能变&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在 jdk  》  1.8 ：元数据区，元空间&lt;/p&gt;
+&lt;p&gt;元空间不再虚拟机设置的内存当中，而是使用本地内存。在 FULLGC 也会删除。&lt;/p&gt;
+&lt;p&gt;不设定的话，最大就是物理内存&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;jvm中那些是线程独享那些是共享的&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#jvm中那些是线程独享那些是共享的&#34;&gt;#&lt;/a&gt; JVM 中那些是线程独享，那些是共享的？&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;JVM 中 每个线程都有一个 PC、JVM stack 、NMS&lt;/li&gt;
+&lt;li&gt;JVM 中 所有线程共享 ：堆内存，方法区&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;永久区和元空间的区别&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#永久区和元空间的区别&#34;&gt;#&lt;/a&gt; 永久区和元空间的区别&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;字符串常量池 ——&amp;gt; 永久代有；元空间 没有，放在了堆内存中&lt;/li&gt;
+&lt;li&gt;GC——&amp;gt; 永久代不会被 FullGC  ; 会被 FUGC&lt;/li&gt;
+&lt;li&gt;内存：永久代启动时设定，且不能改；元空间时代不设定最大就是物理内存&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;如何确定一个垃圾&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#如何确定一个垃圾&#34;&gt;#&lt;/a&gt; 如何确定一个垃圾&lt;/h2&gt;
+&lt;p&gt;如果这个内存没有任何的引用，他就是一个垃圾&lt;/p&gt;
+&lt;ol start=&#34;9&#34;&gt;
+&lt;li&gt;确认垃圾的方式
+&lt;ol&gt;
+&lt;li&gt;根的可达性分析&lt;/li&gt;
+&lt;li&gt;引用计数法&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;解释：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;根的可达性分析，可选择作为根的：&lt;/p&gt;
+&lt;p&gt;(1). &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zby5jc2RuLm5ldC9zby9zZWFyY2g/cT0lRTglOTklOUElRTYlOEIlOUYlRTYlOUMlQkEmYW1wO3NwbT0xMDAxLjIxMDEuMzAwMS43MDIw&#34;&gt;虚拟机&lt;/span&gt;栈（栈帧中的局部变量区，也叫做局部变量表）中引用的对象。&lt;/p&gt;
+&lt;p&gt;(2). 方法区中的类静态属性引用的对象。&lt;/p&gt;
+&lt;p&gt;(3). 方法区中常量引用的对象。&lt;/p&gt;
+&lt;p&gt;(4). 本地方法栈中 JNI (&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zby5jc2RuLm5ldC9zby9zZWFyY2g/cT1OYXRpdmUmYW1wO3NwbT0xMDAxLjIxMDEuMzAwMS43MDIw&#34;&gt;Native&lt;/span&gt; 方法) 引用的对象。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;基本思路&lt;/strong&gt;：通过一系列名为”GC Roots” 的对象作为起始点，从这些节点开始向下搜索，搜索所走过的路径称为引用链 (Reference Chain)，当一个对象到 GC Roots 没有任何引用链相连时，则证明此对象是不可用的&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;引用计数法&lt;/p&gt;
+&lt;p&gt;其实就是去看这个对象是否被引用没有被引用那就是垃圾，最简单的&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;常见的垃圾回收算法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#常见的垃圾回收算法&#34;&gt;#&lt;/a&gt; 常见的垃圾回收算法&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;标记清除&lt;/li&gt;
+&lt;li&gt;标记复制算法&lt;/li&gt;
+&lt;li&gt;标记整理&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;具体解释：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;标记清除&lt;/p&gt;
+&lt;p&gt;标记清除简单来看就是两步，标记和清除，是垃圾就标记，然后清理掉，简单粗暴，但是有个问题就是导致我们的空间碎片化，位置不连续。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;标记复制算法&lt;/p&gt;
+&lt;p&gt;同样两步，这个标记前将我们的空间分成两部分，将垃圾和非垃圾的标记出来，然后分别放入我们之前划分好的空间，这样就避免了空间碎片化的问题，但是有一个新问题，我们浪费了空间。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;标记整理、标记压缩&lt;/p&gt;
+&lt;p&gt;步骤同复制算法一致，但是后续步骤不是直接对可回收对象进行清理，而是让所有存活的对象都向一端移动，然后直接清理掉端边界以外的内存。&lt;/p&gt;
+&lt;p&gt;其实上述过程相对 &amp;quot;复制算法&amp;quot; 来讲，少了一个 &amp;quot; 保留区，但是要多出一个临时空间，要保证被使用的对象要存活。老年代一般不这样做。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;jvm内存分代模型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#jvm内存分代模型&#34;&gt;#&lt;/a&gt; JVM 内存分代模型&lt;/h2&gt;
+&lt;p&gt;新生代（Eden + 2 survive ） 	； 老年代				；永久区 / 元空间&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;提示：在记忆的时候，我们可以联想诺亚方舟的故事，Eden (伊甸园) 是最初的世界，GC 是洪水，老年代是洪水过后的世界&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;解释：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;新生代&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;一个 Eden 区，2 个 survive 区 {&lt;strong&gt;8:1:1&lt;/strong&gt;}，存储的时候现在 Eden 区（&lt;strong&gt;如果对象过大，直接去老年代&lt;/strong&gt;）&lt;/li&gt;
+&lt;li&gt;经过 YGC 后活着的对象进入第 1 个 survive 区&lt;/li&gt;
+&lt;li&gt;再次 YGC 后活着的对象进入第 2 个 survive 区&lt;/li&gt;
+&lt;li&gt;进入老年代
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;动态对象年龄判定&lt;/strong&gt;	如果 Survivor 区中相同年龄所有对象的大小总和大于 Survivor 区空间一半，年龄大于或者等于该年龄的对象在 MinorGC 时将复制到老年代&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;空间分配担保&lt;/strong&gt;，当 YGC 时，如果存活对象过多，无法完全放入 Survivor 区，就会向老年代借用内存存放对象，已完成 YGC&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;长期存活的对象将进入到老年代&lt;/strong&gt;（&lt;em&gt;&lt;strong&gt;* 虚拟机设置值，默认阈值为 15*&lt;/strong&gt;&lt;/em&gt;）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;老年代&lt;/p&gt;
+&lt;p&gt;在空间满了之后，会执行 FGC&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;注意：要尽量减少 FGC 次数&lt;/p&gt;
+&lt;h2 id=&#34;常见的垃圾回收器&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#常见的垃圾回收器&#34;&gt;#&lt;/a&gt; 常见的垃圾回收器&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;串行回收器 (Serial/SerialOld)&lt;/p&gt;
+&lt;p&gt;它是一种单线程收集器，不仅仅意味着它只会使用一个 CPU 或者一条收集线程去完成垃圾收集工作，更重要的是其在进行垃圾收集的时候需要暂停其他线程&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;并行回收器 (Parallel/ParallelOld)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;可以把这个收集器理解为 Serial 收集器的多线程版本。&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;并发回收器 (PN/CMS)&lt;/p&gt;
+&lt;p&gt;采取的是 &amp;quot;标记 - 清除算法&amp;quot;，整个过程分为四步：&lt;/p&gt;
+&lt;p&gt;(1) 初始标记 CMS initial mark					标记 GC Roots 直接关联对象，不用 Tracing，速度很快&lt;/p&gt;
+&lt;p&gt;(2) 并发标记 CMS concurrent mark		   进行 GC Roots Tracing&lt;/p&gt;
+&lt;p&gt;(3) 重新标记 CMS remark								修改并发标记因用户程序变动的内容&lt;/p&gt;
+&lt;p&gt;(4) 并发清除 CMS concurrent sweep 			清除不可达对象回收空间，同时有新垃圾产生，留着下次清理称为&lt;/p&gt;
+&lt;p&gt;​																				 浮动垃圾&lt;/p&gt;
+&lt;p&gt;整个过程中，并发标记和并发编程，收集器线程可以与用户线程一起工作，所以总体来说，CMS 收集器的内存回收过程是与用户线程一起并发的执行。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;G1&lt;/p&gt;
+&lt;p&gt;算法：三色标记 + SATB&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;ZGC&lt;/p&gt;
+&lt;p&gt;算法：ColoredPointers + LoadBarrier&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Shenandoah&lt;/p&gt;
+&lt;p&gt;算法：ColoredPointers + WriteBarrier&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Eplison&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;jvm内存分代模型是逻辑分代还是物理分代&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#jvm内存分代模型是逻辑分代还是物理分代&#34;&gt;#&lt;/a&gt; JVM 内存分代模型是逻辑分代还是物理分代&lt;/h2&gt;
+&lt;p&gt;除 Epsilon 、ZGC 、Shenandoah 之外的 GC 都是使用逻辑分代模型&lt;/p&gt;
+&lt;p&gt;G1 是逻辑分代，物理不分代&lt;/p&gt;
+&lt;p&gt;除此之外不仅逻辑分代，而且物理分代&lt;/p&gt;
+&lt;h2 id=&#34;垃圾收集器跟内存大小的关系&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#垃圾收集器跟内存大小的关系&#34;&gt;#&lt;/a&gt; 垃圾收集器跟内存大小的关系&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Serial 几十兆&lt;/li&gt;
+&lt;li&gt;PS 上百兆 - 几个 G&lt;/li&gt;
+&lt;li&gt;CMS - 20G&lt;/li&gt;
+&lt;li&gt;G1 - 上百 G&lt;/li&gt;
+&lt;li&gt;ZGC - 4T - 16T（JDK13）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;1.8 默认的垃圾回收：PS + ParallelOld&lt;/p&gt;
+
+&lt;div id=&#34;gitalk-container&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js&#34;&gt;&lt;/script&gt;&lt;link rel=&#34;stylesheet&#34; href=&#34;https://unpkg.com/gitalk/dist/gitalk.css&#34;&gt;&lt;script src=&#34;https://unpkg.com/gitalk/dist/gitalk.min.js&#34;&gt;&lt;/script&gt;
+
+		&lt;script&gt;
+		var gitalkConfig = {&#34;clientID&#34;:&#34;6db178ba46c8af8f6a6f&#34;,&#34;clientSecret&#34;:&#34;90f730e5956024596558df00975cd8eae28cae3d&#34;,&#34;repo&#34;:&#34;bk-comment01&#34;,&#34;owner&#34;:&#34;onlymarryu&#34;,&#34;admin&#34;:[&#34;onlymarryu&#34;],&#34;distractionFreeMode&#34;:false,&#34;language&#34;:&#34;zh-CN&#34;,&#34;proxy&#34;:&#34;https://gitalk-comments.netlify.app/github_access_token&#34;,&#34;perPage&#34;:15};
+	    gitalkConfig.id = md5(location.pathname);
+		var gitalk = new Gitalk(gitalkConfig);
+	    gitalk.render(&#34;gitalk-container&#34;);
+	    &lt;/script&gt;</content>
+        <category term="面试" scheme="https://eth168.top/categories/%E9%9D%A2%E8%AF%95/" />
+        <category term="JVM" scheme="https://eth168.top/tags/JVM/" />
         <category term="面试" scheme="https://eth168.top/tags/%E9%9D%A2%E8%AF%95/" />
         <updated>2023-01-11T16:00:00.000Z</updated>
     </entry>
@@ -6116,6 +6116,125 @@ wxss (Weixin Style Sheets) 是一套样式语言，用于美化 WXML 的组件�
         <updated>2023-01-01T16:00:00.000Z</updated>
     </entry>
     <entry>
+        <id>https://eth168.top/Web-anteriore/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/4.%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E5%9F%BA%E7%A1%80%E5%8A%A0%E5%BC%BA/</id>
+        <title>基础加强</title>
+        <link rel="alternate" href="https://eth168.top/Web-anteriore/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/4.%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E5%9F%BA%E7%A1%80%E5%8A%A0%E5%BC%BA/"/>
+        <content type="html">&lt;h1 id=&#34;目标&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#目标&#34;&gt;#&lt;/a&gt; 目标&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;能够知道如何自定义小程序组件&lt;/li&gt;
+&lt;li&gt;能够知道小程序组件中 behaviors 的作用&lt;/li&gt;
+&lt;li&gt;能够知道如何安装和配置 vant-weapp 组件库&lt;/li&gt;
+&lt;li&gt;能够知道如何使用 MobX 实现全局数据共享&lt;/li&gt;
+&lt;li&gt;能够知道如何对小程序的 API 进行 Promise 化&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;自定义组件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#自定义组件&#34;&gt;#&lt;/a&gt; 自定义组件&lt;/h1&gt;
+&lt;h2 id=&#34;组件的创建与引用&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#组件的创建与引用&#34;&gt;#&lt;/a&gt; 组件的创建与引用&lt;/h2&gt;
+&lt;h3 id=&#34;创建组件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#创建组件&#34;&gt;#&lt;/a&gt; 创建组件&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;在项目的根目录中，鼠标右键，创建&lt;strong&gt; components&lt;/strong&gt; -&amp;gt; &lt;strong&gt;test&lt;/strong&gt; 文件夹&lt;/li&gt;
+&lt;li&gt;在新建的 components -&amp;gt; test 文件夹上，鼠标右键，点击 “&lt;strong&gt;新建 Component&lt;/strong&gt;&amp;quot;&lt;/li&gt;
+&lt;li&gt;键入组件的名称之后回车，会自动生成组件对应的 4 个文件，后缀名分别为.js，.json，.wxml 和.wxs5&lt;/li&gt;
+&lt;/ol&gt;
+&lt;img data-src=&#34;/Web-anteriore/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/4.%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E5%9F%BA%E7%A1%80%E5%8A%A0%E5%BC%BA/image-20230108215534200.png&#34; class=&#34;&#34;&gt;
+&lt;h3 id=&#34;引用组件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#引用组件&#34;&gt;#&lt;/a&gt; 引用组件&lt;/h3&gt;
+&lt;p&gt;组件的引用方式分为 “&lt;strong&gt;局部引用&lt;/strong&gt;” 和 “&lt;strong&gt;全局引用&lt;/strong&gt;”，顾名思义:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;局部引用：组件只能在当前被引用的页面内使用&lt;/li&gt;
+&lt;li&gt;全局引用：组件可以在每个小程序页面中使用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;局部引用组件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#局部引用组件&#34;&gt;#&lt;/a&gt; 局部引用组件&lt;/h4&gt;
+&lt;p&gt;在页面的.json 配置文件中引用组件的方式，叫做 “局部引用”。示例代码如下:&lt;/p&gt;
+&lt;img data-src=&#34;/Web-anteriore/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/4.%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E5%9F%BA%E7%A1%80%E5%8A%A0%E5%BC%BA/image-20230108220014041.png&#34; class=&#34;&#34;&gt;
+&lt;h4 id=&#34;全局引用组件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#全局引用组件&#34;&gt;#&lt;/a&gt; 全局引用组件&lt;/h4&gt;
+&lt;img data-src=&#34;/Web-anteriore/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/4.%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E5%9F%BA%E7%A1%80%E5%8A%A0%E5%BC%BA/image-20230108220033905.png&#34; class=&#34;&#34;&gt;
+&lt;h3 id=&#34;组件和页面的区别&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#组件和页面的区别&#34;&gt;#&lt;/a&gt; 组件和页面的区别&lt;/h3&gt;
+&lt;p&gt;从表面来看，组件和页面都是由.js、.json、.wxml 和.wxss 这四个文件组成的。但是，组件和页面的.js 与.json 文件有明显的不同:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;组件的.json 文件中需要声明 &amp;quot;&lt;strong&gt;component&lt;/strong&gt;&amp;quot;: &lt;strong&gt;true&lt;/strong&gt; 属性&lt;/li&gt;
+&lt;li&gt;组件的.js 文件中调用的是 **Component ()** 函数&lt;/li&gt;
+&lt;li&gt;组件的事件处理函数需要定义到 &lt;strong&gt;methods&lt;/strong&gt; 节点中&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;样式&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#样式&#34;&gt;#&lt;/a&gt; 样式&lt;/h2&gt;
+&lt;h3 id=&#34;组件的样式隔离&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#组件的样式隔离&#34;&gt;#&lt;/a&gt; 组件的样式隔离&lt;/h3&gt;
+&lt;p&gt;默认情况下，自定义组件的样式只对当前组件生效，不会影响到组件之外的 UI 结构，如图所示:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;组件 A 的样式&lt;strong&gt;不会影响&lt;/strong&gt;组件 C 的样式&lt;/li&gt;
+&lt;li&gt;组件 A 的样式&lt;strong&gt;不会影响&lt;/strong&gt;小程序页面的&lt;/li&gt;
+&lt;li&gt;样式小程序页面的样式&lt;strong&gt;不会影响&lt;/strong&gt;组件 A 和 C 的样式&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img data-src=&#34;/Web-anteriore/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/4.%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E5%9F%BA%E7%A1%80%E5%8A%A0%E5%BC%BA/image-20230108220344454.png&#34; class=&#34;&#34;&gt;
+&lt;h3 id=&#34;样式隔离注意点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#样式隔离注意点&#34;&gt;#&lt;/a&gt; 样式隔离注意点&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;app.wxss 中的全局样式对组件无效&lt;/li&gt;
+&lt;li&gt;只有 class 选择器会有样式隔离效果，id 选择器、属性选择器、标签选择器不受样式隔离的影响&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;建议&lt;/strong&gt;：在&lt;strong&gt;组件&lt;/strong&gt;和&lt;strong&gt;引用组件的页面&lt;/strong&gt;中建议使用 class 选择器，&lt;strong&gt;不要使用 id、属性、标签选择器&lt;/strong&gt;！&lt;/p&gt;
+&lt;h3 id=&#34;修改组件的样式隔离选项&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#修改组件的样式隔离选项&#34;&gt;#&lt;/a&gt; 修改组件的样式隔离选项&lt;/h3&gt;
+&lt;p&gt;默认情况下，自定义组件的&lt;strong&gt;样式隔离特性&lt;/strong&gt;能够&lt;strong&gt;防止组件内外样式互相干扰的问题&lt;/strong&gt;。但有时，我们希望在外界能够控制组件内部的样式，此时，可以通过&lt;strong&gt; stylelsolation&lt;/strong&gt; 修改组件的样式隔离选项，用法如下:&lt;/p&gt;
+&lt;img data-src=&#34;/Web-anteriore/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/4.%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E5%9F%BA%E7%A1%80%E5%8A%A0%E5%BC%BA/image-20230108220840711.png&#34; class=&#34;&#34;&gt;
+&lt;img data-src=&#34;/Web-anteriore/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/4.%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E5%9F%BA%E7%A1%80%E5%8A%A0%E5%BC%BA/image-20230108220928650.png&#34; class=&#34;&#34;&gt;
+&lt;h2 id=&#34;数据-方法和属性&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#数据-方法和属性&#34;&gt;#&lt;/a&gt; 数据、方法和属性&lt;/h2&gt;
+&lt;h3 id=&#34;data数据&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#data数据&#34;&gt;#&lt;/a&gt; data 数据&lt;/h3&gt;
+&lt;img data-src=&#34;/Web-anteriore/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/4.%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E5%9F%BA%E7%A1%80%E5%8A%A0%E5%BC%BA/image-20230108221002498.png&#34; class=&#34;&#34;&gt;
+&lt;h3 id=&#34;methods方法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#methods方法&#34;&gt;#&lt;/a&gt; methods 方法&lt;/h3&gt;
+&lt;img data-src=&#34;/Web-anteriore/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/4.%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E5%9F%BA%E7%A1%80%E5%8A%A0%E5%BC%BA/image-20230108221100249.png&#34; class=&#34;&#34;&gt;
+&lt;h3 id=&#34;properties属性&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#properties属性&#34;&gt;#&lt;/a&gt; properties 属性&lt;/h3&gt;
+&lt;img data-src=&#34;/Web-anteriore/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/4.%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E5%9F%BA%E7%A1%80%E5%8A%A0%E5%BC%BA/image-20230108221155090.png&#34; class=&#34;&#34;&gt;
+&lt;h3 id=&#34;data和properties的区别&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#data和properties的区别&#34;&gt;#&lt;/a&gt; data 和 properties 的区别&lt;/h3&gt;
+&lt;p&gt;在小程序的组件中，properties 属性和 data 数据的用法相同，它们都是&lt;strong&gt;可读可写&lt;/strong&gt;的，只不过:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;data 更倾向于&lt;strong&gt;存储组件的私有数据&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;properties 更倾向于&lt;strong&gt;存储外界传递到组件中的数据&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img data-src=&#34;/Web-anteriore/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/4.%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E5%9F%BA%E7%A1%80%E5%8A%A0%E5%BC%BA/image-20230108221445289.png&#34; class=&#34;&#34;&gt;
+&lt;h3 id=&#34;使用setdata修改properties的值&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#使用setdata修改properties的值&#34;&gt;#&lt;/a&gt; 使用 setData 修改 properties 的值&lt;/h3&gt;
+&lt;p&gt;由于&lt;strong&gt; data 数据&lt;/strong&gt;和 &lt;strong&gt;properties 属性&lt;/strong&gt;在本质上没有任何区别，因此 properties 属性的值也可以用于页面渲染，或使用 setData 为 properties 中的属性重新赋值，示例代码如下:&lt;/p&gt;
+&lt;img data-src=&#34;/Web-anteriore/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/4.%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E5%9F%BA%E7%A1%80%E5%8A%A0%E5%BC%BA/image-20230108223810961.png&#34; class=&#34;&#34;&gt;
+&lt;h1 id=&#34;使用npm&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#使用npm&#34;&gt;#&lt;/a&gt; 使用 npm&lt;/h1&gt;
+&lt;p&gt;目前，小程序中已经支持使用 npm 安装第三方包，从而来提高小程序的开发效率。但是，在小程序中使用 npm 包有如下 3 个限制:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;不支持依赖于 Node.js 内置库的包&lt;/li&gt;
+&lt;li&gt;不支持依赖于浏览器内置对象的包&lt;/li&gt;
+&lt;li&gt;不支持依赖于 C++ 插件的包&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;vant-weapp&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#vant-weapp&#34;&gt;#&lt;/a&gt; Vant WeAPP&lt;/h2&gt;
+&lt;p&gt;Vant weapp 是有赞前端团队开源的一套&lt;strong&gt;小程序 UI 组件库&lt;/strong&gt;，助力开发者快速搭建小程序应用。它所使用的是&lt;strong&gt; MIT 开源许可协议&lt;/strong&gt;，对商业使用比较友好。&lt;/p&gt;
+&lt;p&gt;官网：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly95b3V6YW4uZ2l0aHViLmlvL3ZhbnQtd2VhcHAvIy9ob21l&#34;&gt;https://youzan.github.io/vant-weapp/#/home&lt;/span&gt;&lt;/p&gt;
+&lt;h3 id=&#34;安装组件库&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装组件库&#34;&gt;#&lt;/a&gt; 安装组件库&lt;/h3&gt;
+&lt;p&gt;在小程序项目中，安装 Vant 组件库主要分为如下 3 步:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;通过 npm 安装（建议指定版本为 **@1.3.3**)&lt;/p&gt;
+&lt;figure class=&#34;highlight sh&#34;&gt;&lt;figcaption data-lang=&#34;sh&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;#初始化包管理配置 --- 出现 package.json&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;npm&lt;/span&gt; init &lt;span class=&#34;token parameter variable&#34;&gt;-y&lt;/span&gt; &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 通过 npm 安装&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;npm&lt;/span&gt; i @vant/weapp@1.3.3 &lt;span class=&#34;token parameter variable&#34;&gt;-S&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;--production&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 通过 yarn 安装&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;yarn&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;add&lt;/span&gt; @vant/weapp &lt;span class=&#34;token parameter variable&#34;&gt;--production&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 安装 0.x 版本&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;npm&lt;/span&gt; i vant-weapp &lt;span class=&#34;token parameter variable&#34;&gt;-S&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;--production&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;构建 npm 包&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;修改 app.json&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;使用&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#使用&#34;&gt;#&lt;/a&gt; 使用&lt;/h3&gt;
+&lt;p&gt;安装完 Vant 组件库之后，可以在  &lt;code&gt;app.json&lt;/code&gt;  的 &lt;code&gt;usingComponents&lt;/code&gt;  节点中引入需要的组件，即可在 wxml 中直接使用组件。示例代码如下:&lt;/p&gt;
+&lt;img data-src=&#34;/Web-anteriore/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/4.%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E5%9F%BA%E7%A1%80%E5%8A%A0%E5%BC%BA/image-20230108215228076.png&#34; class=&#34;&#34;&gt;
+&lt;h1 id=&#34;全局数据共享&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#全局数据共享&#34;&gt;#&lt;/a&gt; 全局数据共享&lt;/h1&gt;
+&lt;h1 id=&#34;分包&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#分包&#34;&gt;#&lt;/a&gt; 分包&lt;/h1&gt;
+&lt;h1 id=&#34;案例-自定义tabbar&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#案例-自定义tabbar&#34;&gt;#&lt;/a&gt; 案例 - 自定义 tabBar&lt;/h1&gt;
+&lt;h1 id=&#34;总结&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#总结&#34;&gt;#&lt;/a&gt; 总结&lt;/h1&gt;
+
+&lt;div id=&#34;gitalk-container&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js&#34;&gt;&lt;/script&gt;&lt;link rel=&#34;stylesheet&#34; href=&#34;https://unpkg.com/gitalk/dist/gitalk.css&#34;&gt;&lt;script src=&#34;https://unpkg.com/gitalk/dist/gitalk.min.js&#34;&gt;&lt;/script&gt;
+
+		&lt;script&gt;
+		var gitalkConfig = {&#34;clientID&#34;:&#34;6db178ba46c8af8f6a6f&#34;,&#34;clientSecret&#34;:&#34;90f730e5956024596558df00975cd8eae28cae3d&#34;,&#34;repo&#34;:&#34;bk-comment01&#34;,&#34;owner&#34;:&#34;onlymarryu&#34;,&#34;admin&#34;:[&#34;onlymarryu&#34;],&#34;distractionFreeMode&#34;:false,&#34;language&#34;:&#34;zh-CN&#34;,&#34;proxy&#34;:&#34;https://gitalk-comments.netlify.app/github_access_token&#34;,&#34;perPage&#34;:15};
+	    gitalkConfig.id = md5(location.pathname);
+		var gitalk = new Gitalk(gitalkConfig);
+	    gitalk.render(&#34;gitalk-container&#34;);
+	    &lt;/script&gt;</content>
+        <category term="小程序开发" scheme="https://eth168.top/categories/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/" />
+        <category term="小程序开发" scheme="https://eth168.top/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/" />
+        <updated>2023-01-01T16:00:00.000Z</updated>
+    </entry>
+    <entry>
         <id>https://eth168.top/Web-anteriore/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/3.%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E8%A7%86%E5%9B%BE%E4%B8%8E%E9%80%BB%E8%BE%91/</id>
         <title>视图与逻辑</title>
         <link rel="alternate" href="https://eth168.top/Web-anteriore/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/3.%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E8%A7%86%E5%9B%BE%E4%B8%8E%E9%80%BB%E8%BE%91/"/>
@@ -6357,125 +6476,6 @@ wxml 文件中的每个 &amp;lt;WXS&amp;gt;&amp;lt;/WXS &amp;gt; 标签， &lt;c
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;h1 id=&#34;案例本地生活列表页面&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#案例本地生活列表页面&#34;&gt;#&lt;/a&gt; 案例–本地生活（列表页面)&lt;/h1&gt;
-&lt;h1 id=&#34;总结&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#总结&#34;&gt;#&lt;/a&gt; 总结&lt;/h1&gt;
-
-&lt;div id=&#34;gitalk-container&#34;&gt;&lt;/div&gt;
-&lt;script src=&#34;https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js&#34;&gt;&lt;/script&gt;&lt;link rel=&#34;stylesheet&#34; href=&#34;https://unpkg.com/gitalk/dist/gitalk.css&#34;&gt;&lt;script src=&#34;https://unpkg.com/gitalk/dist/gitalk.min.js&#34;&gt;&lt;/script&gt;
-
-		&lt;script&gt;
-		var gitalkConfig = {&#34;clientID&#34;:&#34;6db178ba46c8af8f6a6f&#34;,&#34;clientSecret&#34;:&#34;90f730e5956024596558df00975cd8eae28cae3d&#34;,&#34;repo&#34;:&#34;bk-comment01&#34;,&#34;owner&#34;:&#34;onlymarryu&#34;,&#34;admin&#34;:[&#34;onlymarryu&#34;],&#34;distractionFreeMode&#34;:false,&#34;language&#34;:&#34;zh-CN&#34;,&#34;proxy&#34;:&#34;https://gitalk-comments.netlify.app/github_access_token&#34;,&#34;perPage&#34;:15};
-	    gitalkConfig.id = md5(location.pathname);
-		var gitalk = new Gitalk(gitalkConfig);
-	    gitalk.render(&#34;gitalk-container&#34;);
-	    &lt;/script&gt;</content>
-        <category term="小程序开发" scheme="https://eth168.top/categories/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/" />
-        <category term="小程序开发" scheme="https://eth168.top/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/" />
-        <updated>2023-01-01T16:00:00.000Z</updated>
-    </entry>
-    <entry>
-        <id>https://eth168.top/Web-anteriore/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/4.%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E5%9F%BA%E7%A1%80%E5%8A%A0%E5%BC%BA/</id>
-        <title>基础加强</title>
-        <link rel="alternate" href="https://eth168.top/Web-anteriore/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/4.%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E5%9F%BA%E7%A1%80%E5%8A%A0%E5%BC%BA/"/>
-        <content type="html">&lt;h1 id=&#34;目标&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#目标&#34;&gt;#&lt;/a&gt; 目标&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;能够知道如何自定义小程序组件&lt;/li&gt;
-&lt;li&gt;能够知道小程序组件中 behaviors 的作用&lt;/li&gt;
-&lt;li&gt;能够知道如何安装和配置 vant-weapp 组件库&lt;/li&gt;
-&lt;li&gt;能够知道如何使用 MobX 实现全局数据共享&lt;/li&gt;
-&lt;li&gt;能够知道如何对小程序的 API 进行 Promise 化&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;自定义组件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#自定义组件&#34;&gt;#&lt;/a&gt; 自定义组件&lt;/h1&gt;
-&lt;h2 id=&#34;组件的创建与引用&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#组件的创建与引用&#34;&gt;#&lt;/a&gt; 组件的创建与引用&lt;/h2&gt;
-&lt;h3 id=&#34;创建组件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#创建组件&#34;&gt;#&lt;/a&gt; 创建组件&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;在项目的根目录中，鼠标右键，创建&lt;strong&gt; components&lt;/strong&gt; -&amp;gt; &lt;strong&gt;test&lt;/strong&gt; 文件夹&lt;/li&gt;
-&lt;li&gt;在新建的 components -&amp;gt; test 文件夹上，鼠标右键，点击 “&lt;strong&gt;新建 Component&lt;/strong&gt;&amp;quot;&lt;/li&gt;
-&lt;li&gt;键入组件的名称之后回车，会自动生成组件对应的 4 个文件，后缀名分别为.js，.json，.wxml 和.wxs5&lt;/li&gt;
-&lt;/ol&gt;
-&lt;img data-src=&#34;/Web-anteriore/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/4.%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E5%9F%BA%E7%A1%80%E5%8A%A0%E5%BC%BA/image-20230108215534200.png&#34; class=&#34;&#34;&gt;
-&lt;h3 id=&#34;引用组件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#引用组件&#34;&gt;#&lt;/a&gt; 引用组件&lt;/h3&gt;
-&lt;p&gt;组件的引用方式分为 “&lt;strong&gt;局部引用&lt;/strong&gt;” 和 “&lt;strong&gt;全局引用&lt;/strong&gt;”，顾名思义:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;局部引用：组件只能在当前被引用的页面内使用&lt;/li&gt;
-&lt;li&gt;全局引用：组件可以在每个小程序页面中使用&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;局部引用组件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#局部引用组件&#34;&gt;#&lt;/a&gt; 局部引用组件&lt;/h4&gt;
-&lt;p&gt;在页面的.json 配置文件中引用组件的方式，叫做 “局部引用”。示例代码如下:&lt;/p&gt;
-&lt;img data-src=&#34;/Web-anteriore/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/4.%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E5%9F%BA%E7%A1%80%E5%8A%A0%E5%BC%BA/image-20230108220014041.png&#34; class=&#34;&#34;&gt;
-&lt;h4 id=&#34;全局引用组件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#全局引用组件&#34;&gt;#&lt;/a&gt; 全局引用组件&lt;/h4&gt;
-&lt;img data-src=&#34;/Web-anteriore/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/4.%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E5%9F%BA%E7%A1%80%E5%8A%A0%E5%BC%BA/image-20230108220033905.png&#34; class=&#34;&#34;&gt;
-&lt;h3 id=&#34;组件和页面的区别&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#组件和页面的区别&#34;&gt;#&lt;/a&gt; 组件和页面的区别&lt;/h3&gt;
-&lt;p&gt;从表面来看，组件和页面都是由.js、.json、.wxml 和.wxss 这四个文件组成的。但是，组件和页面的.js 与.json 文件有明显的不同:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;组件的.json 文件中需要声明 &amp;quot;&lt;strong&gt;component&lt;/strong&gt;&amp;quot;: &lt;strong&gt;true&lt;/strong&gt; 属性&lt;/li&gt;
-&lt;li&gt;组件的.js 文件中调用的是 **Component ()** 函数&lt;/li&gt;
-&lt;li&gt;组件的事件处理函数需要定义到 &lt;strong&gt;methods&lt;/strong&gt; 节点中&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;样式&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#样式&#34;&gt;#&lt;/a&gt; 样式&lt;/h2&gt;
-&lt;h3 id=&#34;组件的样式隔离&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#组件的样式隔离&#34;&gt;#&lt;/a&gt; 组件的样式隔离&lt;/h3&gt;
-&lt;p&gt;默认情况下，自定义组件的样式只对当前组件生效，不会影响到组件之外的 UI 结构，如图所示:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;组件 A 的样式&lt;strong&gt;不会影响&lt;/strong&gt;组件 C 的样式&lt;/li&gt;
-&lt;li&gt;组件 A 的样式&lt;strong&gt;不会影响&lt;/strong&gt;小程序页面的&lt;/li&gt;
-&lt;li&gt;样式小程序页面的样式&lt;strong&gt;不会影响&lt;/strong&gt;组件 A 和 C 的样式&lt;/li&gt;
-&lt;/ul&gt;
-&lt;img data-src=&#34;/Web-anteriore/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/4.%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E5%9F%BA%E7%A1%80%E5%8A%A0%E5%BC%BA/image-20230108220344454.png&#34; class=&#34;&#34;&gt;
-&lt;h3 id=&#34;样式隔离注意点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#样式隔离注意点&#34;&gt;#&lt;/a&gt; 样式隔离注意点&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;app.wxss 中的全局样式对组件无效&lt;/li&gt;
-&lt;li&gt;只有 class 选择器会有样式隔离效果，id 选择器、属性选择器、标签选择器不受样式隔离的影响&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;建议&lt;/strong&gt;：在&lt;strong&gt;组件&lt;/strong&gt;和&lt;strong&gt;引用组件的页面&lt;/strong&gt;中建议使用 class 选择器，&lt;strong&gt;不要使用 id、属性、标签选择器&lt;/strong&gt;！&lt;/p&gt;
-&lt;h3 id=&#34;修改组件的样式隔离选项&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#修改组件的样式隔离选项&#34;&gt;#&lt;/a&gt; 修改组件的样式隔离选项&lt;/h3&gt;
-&lt;p&gt;默认情况下，自定义组件的&lt;strong&gt;样式隔离特性&lt;/strong&gt;能够&lt;strong&gt;防止组件内外样式互相干扰的问题&lt;/strong&gt;。但有时，我们希望在外界能够控制组件内部的样式，此时，可以通过&lt;strong&gt; stylelsolation&lt;/strong&gt; 修改组件的样式隔离选项，用法如下:&lt;/p&gt;
-&lt;img data-src=&#34;/Web-anteriore/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/4.%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E5%9F%BA%E7%A1%80%E5%8A%A0%E5%BC%BA/image-20230108220840711.png&#34; class=&#34;&#34;&gt;
-&lt;img data-src=&#34;/Web-anteriore/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/4.%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E5%9F%BA%E7%A1%80%E5%8A%A0%E5%BC%BA/image-20230108220928650.png&#34; class=&#34;&#34;&gt;
-&lt;h2 id=&#34;数据-方法和属性&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#数据-方法和属性&#34;&gt;#&lt;/a&gt; 数据、方法和属性&lt;/h2&gt;
-&lt;h3 id=&#34;data数据&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#data数据&#34;&gt;#&lt;/a&gt; data 数据&lt;/h3&gt;
-&lt;img data-src=&#34;/Web-anteriore/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/4.%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E5%9F%BA%E7%A1%80%E5%8A%A0%E5%BC%BA/image-20230108221002498.png&#34; class=&#34;&#34;&gt;
-&lt;h3 id=&#34;methods方法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#methods方法&#34;&gt;#&lt;/a&gt; methods 方法&lt;/h3&gt;
-&lt;img data-src=&#34;/Web-anteriore/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/4.%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E5%9F%BA%E7%A1%80%E5%8A%A0%E5%BC%BA/image-20230108221100249.png&#34; class=&#34;&#34;&gt;
-&lt;h3 id=&#34;properties属性&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#properties属性&#34;&gt;#&lt;/a&gt; properties 属性&lt;/h3&gt;
-&lt;img data-src=&#34;/Web-anteriore/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/4.%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E5%9F%BA%E7%A1%80%E5%8A%A0%E5%BC%BA/image-20230108221155090.png&#34; class=&#34;&#34;&gt;
-&lt;h3 id=&#34;data和properties的区别&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#data和properties的区别&#34;&gt;#&lt;/a&gt; data 和 properties 的区别&lt;/h3&gt;
-&lt;p&gt;在小程序的组件中，properties 属性和 data 数据的用法相同，它们都是&lt;strong&gt;可读可写&lt;/strong&gt;的，只不过:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;data 更倾向于&lt;strong&gt;存储组件的私有数据&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;properties 更倾向于&lt;strong&gt;存储外界传递到组件中的数据&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;img data-src=&#34;/Web-anteriore/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/4.%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E5%9F%BA%E7%A1%80%E5%8A%A0%E5%BC%BA/image-20230108221445289.png&#34; class=&#34;&#34;&gt;
-&lt;h3 id=&#34;使用setdata修改properties的值&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#使用setdata修改properties的值&#34;&gt;#&lt;/a&gt; 使用 setData 修改 properties 的值&lt;/h3&gt;
-&lt;p&gt;由于&lt;strong&gt; data 数据&lt;/strong&gt;和 &lt;strong&gt;properties 属性&lt;/strong&gt;在本质上没有任何区别，因此 properties 属性的值也可以用于页面渲染，或使用 setData 为 properties 中的属性重新赋值，示例代码如下:&lt;/p&gt;
-&lt;img data-src=&#34;/Web-anteriore/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/4.%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E5%9F%BA%E7%A1%80%E5%8A%A0%E5%BC%BA/image-20230108223810961.png&#34; class=&#34;&#34;&gt;
-&lt;h1 id=&#34;使用npm&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#使用npm&#34;&gt;#&lt;/a&gt; 使用 npm&lt;/h1&gt;
-&lt;p&gt;目前，小程序中已经支持使用 npm 安装第三方包，从而来提高小程序的开发效率。但是，在小程序中使用 npm 包有如下 3 个限制:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;不支持依赖于 Node.js 内置库的包&lt;/li&gt;
-&lt;li&gt;不支持依赖于浏览器内置对象的包&lt;/li&gt;
-&lt;li&gt;不支持依赖于 C++ 插件的包&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;vant-weapp&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#vant-weapp&#34;&gt;#&lt;/a&gt; Vant WeAPP&lt;/h2&gt;
-&lt;p&gt;Vant weapp 是有赞前端团队开源的一套&lt;strong&gt;小程序 UI 组件库&lt;/strong&gt;，助力开发者快速搭建小程序应用。它所使用的是&lt;strong&gt; MIT 开源许可协议&lt;/strong&gt;，对商业使用比较友好。&lt;/p&gt;
-&lt;p&gt;官网：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly95b3V6YW4uZ2l0aHViLmlvL3ZhbnQtd2VhcHAvIy9ob21l&#34;&gt;https://youzan.github.io/vant-weapp/#/home&lt;/span&gt;&lt;/p&gt;
-&lt;h3 id=&#34;安装组件库&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装组件库&#34;&gt;#&lt;/a&gt; 安装组件库&lt;/h3&gt;
-&lt;p&gt;在小程序项目中，安装 Vant 组件库主要分为如下 3 步:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;通过 npm 安装（建议指定版本为 **@1.3.3**)&lt;/p&gt;
-&lt;figure class=&#34;highlight sh&#34;&gt;&lt;figcaption data-lang=&#34;sh&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;#初始化包管理配置 --- 出现 package.json&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;npm&lt;/span&gt; init &lt;span class=&#34;token parameter variable&#34;&gt;-y&lt;/span&gt; &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 通过 npm 安装&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;npm&lt;/span&gt; i @vant/weapp@1.3.3 &lt;span class=&#34;token parameter variable&#34;&gt;-S&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;--production&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 通过 yarn 安装&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;yarn&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;add&lt;/span&gt; @vant/weapp &lt;span class=&#34;token parameter variable&#34;&gt;--production&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 安装 0.x 版本&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;npm&lt;/span&gt; i vant-weapp &lt;span class=&#34;token parameter variable&#34;&gt;-S&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;--production&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;构建 npm 包&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;修改 app.json&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;使用&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#使用&#34;&gt;#&lt;/a&gt; 使用&lt;/h3&gt;
-&lt;p&gt;安装完 Vant 组件库之后，可以在  &lt;code&gt;app.json&lt;/code&gt;  的 &lt;code&gt;usingComponents&lt;/code&gt;  节点中引入需要的组件，即可在 wxml 中直接使用组件。示例代码如下:&lt;/p&gt;
-&lt;img data-src=&#34;/Web-anteriore/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/4.%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E5%9F%BA%E7%A1%80%E5%8A%A0%E5%BC%BA/image-20230108215228076.png&#34; class=&#34;&#34;&gt;
-&lt;h1 id=&#34;全局数据共享&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#全局数据共享&#34;&gt;#&lt;/a&gt; 全局数据共享&lt;/h1&gt;
-&lt;h1 id=&#34;分包&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#分包&#34;&gt;#&lt;/a&gt; 分包&lt;/h1&gt;
-&lt;h1 id=&#34;案例-自定义tabbar&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#案例-自定义tabbar&#34;&gt;#&lt;/a&gt; 案例 - 自定义 tabBar&lt;/h1&gt;
 &lt;h1 id=&#34;总结&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#总结&#34;&gt;#&lt;/a&gt; 总结&lt;/h1&gt;
 
 &lt;div id=&#34;gitalk-container&#34;&gt;&lt;/div&gt;
