@@ -1165,8 +1165,8 @@ sleep 方案：主库更新后，读从库之前先 sleep 一下；&lt;br /&gt;
 	    gitalk.render(&#34;gitalk-container&#34;);
 	    &lt;/script&gt;</content>
         <category term="面试" scheme="https://eth168.top/categories/%E9%9D%A2%E8%AF%95/" />
-        <category term="面试" scheme="https://eth168.top/tags/%E9%9D%A2%E8%AF%95/" />
         <category term="JVM" scheme="https://eth168.top/tags/JVM/" />
+        <category term="面试" scheme="https://eth168.top/tags/%E9%9D%A2%E8%AF%95/" />
         <updated>2023-01-11T16:00:00.000Z</updated>
     </entry>
     <entry>
@@ -6575,8 +6575,8 @@ jinfo -flag  &amp;lt;name&amp;gt;=&amp;lt;value&amp;gt; PID
 	    gitalk.render(&#34;gitalk-container&#34;);
 	    &lt;/script&gt;</content>
         <category term="面试" scheme="https://eth168.top/categories/%E9%9D%A2%E8%AF%95/" />
-        <category term="面试" scheme="https://eth168.top/tags/%E9%9D%A2%E8%AF%95/" />
         <category term="JVM" scheme="https://eth168.top/tags/JVM/" />
+        <category term="面试" scheme="https://eth168.top/tags/%E9%9D%A2%E8%AF%95/" />
         <updated>2023-01-01T16:00:00.000Z</updated>
     </entry>
     <entry>

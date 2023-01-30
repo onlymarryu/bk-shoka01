@@ -981,8 +981,8 @@ sleep 方案：主库更新后，读从库之前先 sleep 一下；&lt;br /&gt;
             <title>JVM突击版</title>
             <link>https://eth168.top/interview/JVM%E5%BF%AB%E9%80%9F%E7%AA%81%E5%87%BB%E7%89%88/</link>
             <category term="面试" scheme="https://eth168.top/categories/%E9%9D%A2%E8%AF%95/" />
-            <category term="面试" scheme="https://eth168.top/tags/%E9%9D%A2%E8%AF%95/" />
             <category term="JVM" scheme="https://eth168.top/tags/JVM/" />
+            <category term="面试" scheme="https://eth168.top/tags/%E9%9D%A2%E8%AF%95/" />
             <pubDate>Thu, 12 Jan 2023 00:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;什么是jvm&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#什么是jvm&#34;&gt;#&lt;/a&gt; 什么是 JVM&lt;/h2&gt;
 &lt;p&gt;JVM 是 java 代码运行的平台，他帮助我们的代码一次编译到处运行&lt;/p&gt;
@@ -6141,8 +6141,8 @@ wxml 文件中的每个 &amp;lt;WXS&amp;gt;&amp;lt;/WXS &amp;gt; 标签， &lt;c
             <title>JVM复习版</title>
             <link>https://eth168.top/interview/JVM%E5%A4%8D%E4%B9%A0%E7%89%88/</link>
             <category term="面试" scheme="https://eth168.top/categories/%E9%9D%A2%E8%AF%95/" />
-            <category term="面试" scheme="https://eth168.top/tags/%E9%9D%A2%E8%AF%95/" />
             <category term="JVM" scheme="https://eth168.top/tags/JVM/" />
+            <category term="面试" scheme="https://eth168.top/tags/%E9%9D%A2%E8%AF%95/" />
             <pubDate>Mon, 02 Jan 2023 00:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;jvm&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#jvm&#34;&gt;#&lt;/a&gt; JVM&lt;/h1&gt;
 &lt;img data-src=&#34;/interview/JVM%E5%A4%8D%E4%B9%A0%E7%89%88/image-20220821204809060.png&#34; class=&#34;&#34; title=&#34;image-20220821204809060&#34;&gt;
