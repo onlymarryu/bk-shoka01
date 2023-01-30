@@ -117,22 +117,6 @@ dempsey.dnspod.net
 	    &lt;/script&gt; ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://eth168.top/toolsPage/%E5%B8%B8%E7%94%A8Typeroa%E6%A0%BC%E5%BC%8F/</guid>
-            <title></title>
-            <link>https://eth168.top/toolsPage/%E5%B8%B8%E7%94%A8Typeroa%E6%A0%BC%E5%BC%8F/</link>
-            <pubDate>Thu, 26 Jan 2023 14:18:31 +0800</pubDate>
-            <description><![CDATA[ 
-&lt;div id=&#34;gitalk-container&#34;&gt;&lt;/div&gt;
-&lt;script src=&#34;https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js&#34;&gt;&lt;/script&gt;&lt;link rel=&#34;stylesheet&#34; href=&#34;https://unpkg.com/gitalk/dist/gitalk.css&#34;&gt;&lt;script src=&#34;https://unpkg.com/gitalk/dist/gitalk.min.js&#34;&gt;&lt;/script&gt;
-
-		&lt;script&gt;
-		var gitalkConfig = {&#34;clientID&#34;:&#34;6db178ba46c8af8f6a6f&#34;,&#34;clientSecret&#34;:&#34;90f730e5956024596558df00975cd8eae28cae3d&#34;,&#34;repo&#34;:&#34;bk-comment01&#34;,&#34;owner&#34;:&#34;onlymarryu&#34;,&#34;admin&#34;:[&#34;onlymarryu&#34;],&#34;distractionFreeMode&#34;:false,&#34;language&#34;:&#34;zh-CN&#34;,&#34;proxy&#34;:&#34;https://gitalk-comments.netlify.app/github_access_token&#34;,&#34;perPage&#34;:15};
-	    gitalkConfig.id = md5(location.pathname);
-		var gitalk = new Gitalk(gitalkConfig);
-	    gitalk.render(&#34;gitalk-container&#34;);
-	    &lt;/script&gt; ]]></description>
-        </item>
-        <item>
             <guid isPermalink="true">https://eth168.top/interview/MySQL/</guid>
             <title>MySQL复习题</title>
             <link>https://eth168.top/interview/MySQL/</link>
@@ -6223,125 +6207,6 @@ wxss (Weixin Style Sheets) 是一套样式语言，用于美化 WXML 的组件�
 	    &lt;/script&gt; ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://eth168.top/Web-anteriore/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/4.%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E5%9F%BA%E7%A1%80%E5%8A%A0%E5%BC%BA/</guid>
-            <title>基础加强</title>
-            <link>https://eth168.top/Web-anteriore/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/4.%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E5%9F%BA%E7%A1%80%E5%8A%A0%E5%BC%BA/</link>
-            <category term="小程序开发" scheme="https://eth168.top/categories/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/" />
-            <category term="小程序开发" scheme="https://eth168.top/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/" />
-            <pubDate>Mon, 02 Jan 2023 00:00:00 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;目标&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#目标&#34;&gt;#&lt;/a&gt; 目标&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;能够知道如何自定义小程序组件&lt;/li&gt;
-&lt;li&gt;能够知道小程序组件中 behaviors 的作用&lt;/li&gt;
-&lt;li&gt;能够知道如何安装和配置 vant-weapp 组件库&lt;/li&gt;
-&lt;li&gt;能够知道如何使用 MobX 实现全局数据共享&lt;/li&gt;
-&lt;li&gt;能够知道如何对小程序的 API 进行 Promise 化&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;自定义组件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#自定义组件&#34;&gt;#&lt;/a&gt; 自定义组件&lt;/h1&gt;
-&lt;h2 id=&#34;组件的创建与引用&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#组件的创建与引用&#34;&gt;#&lt;/a&gt; 组件的创建与引用&lt;/h2&gt;
-&lt;h3 id=&#34;创建组件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#创建组件&#34;&gt;#&lt;/a&gt; 创建组件&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;在项目的根目录中，鼠标右键，创建&lt;strong&gt; components&lt;/strong&gt; -&amp;gt; &lt;strong&gt;test&lt;/strong&gt; 文件夹&lt;/li&gt;
-&lt;li&gt;在新建的 components -&amp;gt; test 文件夹上，鼠标右键，点击 “&lt;strong&gt;新建 Component&lt;/strong&gt;&amp;quot;&lt;/li&gt;
-&lt;li&gt;键入组件的名称之后回车，会自动生成组件对应的 4 个文件，后缀名分别为.js，.json，.wxml 和.wxs5&lt;/li&gt;
-&lt;/ol&gt;
-&lt;img data-src=&#34;/Web-anteriore/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/4.%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E5%9F%BA%E7%A1%80%E5%8A%A0%E5%BC%BA/image-20230108215534200.png&#34; class=&#34;&#34;&gt;
-&lt;h3 id=&#34;引用组件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#引用组件&#34;&gt;#&lt;/a&gt; 引用组件&lt;/h3&gt;
-&lt;p&gt;组件的引用方式分为 “&lt;strong&gt;局部引用&lt;/strong&gt;” 和 “&lt;strong&gt;全局引用&lt;/strong&gt;”，顾名思义:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;局部引用：组件只能在当前被引用的页面内使用&lt;/li&gt;
-&lt;li&gt;全局引用：组件可以在每个小程序页面中使用&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;局部引用组件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#局部引用组件&#34;&gt;#&lt;/a&gt; 局部引用组件&lt;/h4&gt;
-&lt;p&gt;在页面的.json 配置文件中引用组件的方式，叫做 “局部引用”。示例代码如下:&lt;/p&gt;
-&lt;img data-src=&#34;/Web-anteriore/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/4.%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E5%9F%BA%E7%A1%80%E5%8A%A0%E5%BC%BA/image-20230108220014041.png&#34; class=&#34;&#34;&gt;
-&lt;h4 id=&#34;全局引用组件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#全局引用组件&#34;&gt;#&lt;/a&gt; 全局引用组件&lt;/h4&gt;
-&lt;img data-src=&#34;/Web-anteriore/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/4.%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E5%9F%BA%E7%A1%80%E5%8A%A0%E5%BC%BA/image-20230108220033905.png&#34; class=&#34;&#34;&gt;
-&lt;h3 id=&#34;组件和页面的区别&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#组件和页面的区别&#34;&gt;#&lt;/a&gt; 组件和页面的区别&lt;/h3&gt;
-&lt;p&gt;从表面来看，组件和页面都是由.js、.json、.wxml 和.wxss 这四个文件组成的。但是，组件和页面的.js 与.json 文件有明显的不同:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;组件的.json 文件中需要声明 &amp;quot;&lt;strong&gt;component&lt;/strong&gt;&amp;quot;: &lt;strong&gt;true&lt;/strong&gt; 属性&lt;/li&gt;
-&lt;li&gt;组件的.js 文件中调用的是 **Component ()** 函数&lt;/li&gt;
-&lt;li&gt;组件的事件处理函数需要定义到 &lt;strong&gt;methods&lt;/strong&gt; 节点中&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;样式&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#样式&#34;&gt;#&lt;/a&gt; 样式&lt;/h2&gt;
-&lt;h3 id=&#34;组件的样式隔离&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#组件的样式隔离&#34;&gt;#&lt;/a&gt; 组件的样式隔离&lt;/h3&gt;
-&lt;p&gt;默认情况下，自定义组件的样式只对当前组件生效，不会影响到组件之外的 UI 结构，如图所示:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;组件 A 的样式&lt;strong&gt;不会影响&lt;/strong&gt;组件 C 的样式&lt;/li&gt;
-&lt;li&gt;组件 A 的样式&lt;strong&gt;不会影响&lt;/strong&gt;小程序页面的&lt;/li&gt;
-&lt;li&gt;样式小程序页面的样式&lt;strong&gt;不会影响&lt;/strong&gt;组件 A 和 C 的样式&lt;/li&gt;
-&lt;/ul&gt;
-&lt;img data-src=&#34;/Web-anteriore/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/4.%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E5%9F%BA%E7%A1%80%E5%8A%A0%E5%BC%BA/image-20230108220344454.png&#34; class=&#34;&#34;&gt;
-&lt;h3 id=&#34;样式隔离注意点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#样式隔离注意点&#34;&gt;#&lt;/a&gt; 样式隔离注意点&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;app.wxss 中的全局样式对组件无效&lt;/li&gt;
-&lt;li&gt;只有 class 选择器会有样式隔离效果，id 选择器、属性选择器、标签选择器不受样式隔离的影响&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;建议&lt;/strong&gt;：在&lt;strong&gt;组件&lt;/strong&gt;和&lt;strong&gt;引用组件的页面&lt;/strong&gt;中建议使用 class 选择器，&lt;strong&gt;不要使用 id、属性、标签选择器&lt;/strong&gt;！&lt;/p&gt;
-&lt;h3 id=&#34;修改组件的样式隔离选项&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#修改组件的样式隔离选项&#34;&gt;#&lt;/a&gt; 修改组件的样式隔离选项&lt;/h3&gt;
-&lt;p&gt;默认情况下，自定义组件的&lt;strong&gt;样式隔离特性&lt;/strong&gt;能够&lt;strong&gt;防止组件内外样式互相干扰的问题&lt;/strong&gt;。但有时，我们希望在外界能够控制组件内部的样式，此时，可以通过&lt;strong&gt; stylelsolation&lt;/strong&gt; 修改组件的样式隔离选项，用法如下:&lt;/p&gt;
-&lt;img data-src=&#34;/Web-anteriore/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/4.%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E5%9F%BA%E7%A1%80%E5%8A%A0%E5%BC%BA/image-20230108220840711.png&#34; class=&#34;&#34;&gt;
-&lt;img data-src=&#34;/Web-anteriore/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/4.%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E5%9F%BA%E7%A1%80%E5%8A%A0%E5%BC%BA/image-20230108220928650.png&#34; class=&#34;&#34;&gt;
-&lt;h2 id=&#34;数据-方法和属性&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#数据-方法和属性&#34;&gt;#&lt;/a&gt; 数据、方法和属性&lt;/h2&gt;
-&lt;h3 id=&#34;data数据&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#data数据&#34;&gt;#&lt;/a&gt; data 数据&lt;/h3&gt;
-&lt;img data-src=&#34;/Web-anteriore/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/4.%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E5%9F%BA%E7%A1%80%E5%8A%A0%E5%BC%BA/image-20230108221002498.png&#34; class=&#34;&#34;&gt;
-&lt;h3 id=&#34;methods方法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#methods方法&#34;&gt;#&lt;/a&gt; methods 方法&lt;/h3&gt;
-&lt;img data-src=&#34;/Web-anteriore/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/4.%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E5%9F%BA%E7%A1%80%E5%8A%A0%E5%BC%BA/image-20230108221100249.png&#34; class=&#34;&#34;&gt;
-&lt;h3 id=&#34;properties属性&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#properties属性&#34;&gt;#&lt;/a&gt; properties 属性&lt;/h3&gt;
-&lt;img data-src=&#34;/Web-anteriore/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/4.%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E5%9F%BA%E7%A1%80%E5%8A%A0%E5%BC%BA/image-20230108221155090.png&#34; class=&#34;&#34;&gt;
-&lt;h3 id=&#34;data和properties的区别&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#data和properties的区别&#34;&gt;#&lt;/a&gt; data 和 properties 的区别&lt;/h3&gt;
-&lt;p&gt;在小程序的组件中，properties 属性和 data 数据的用法相同，它们都是&lt;strong&gt;可读可写&lt;/strong&gt;的，只不过:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;data 更倾向于&lt;strong&gt;存储组件的私有数据&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;properties 更倾向于&lt;strong&gt;存储外界传递到组件中的数据&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;img data-src=&#34;/Web-anteriore/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/4.%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E5%9F%BA%E7%A1%80%E5%8A%A0%E5%BC%BA/image-20230108221445289.png&#34; class=&#34;&#34;&gt;
-&lt;h3 id=&#34;使用setdata修改properties的值&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#使用setdata修改properties的值&#34;&gt;#&lt;/a&gt; 使用 setData 修改 properties 的值&lt;/h3&gt;
-&lt;p&gt;由于&lt;strong&gt; data 数据&lt;/strong&gt;和 &lt;strong&gt;properties 属性&lt;/strong&gt;在本质上没有任何区别，因此 properties 属性的值也可以用于页面渲染，或使用 setData 为 properties 中的属性重新赋值，示例代码如下:&lt;/p&gt;
-&lt;img data-src=&#34;/Web-anteriore/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/4.%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E5%9F%BA%E7%A1%80%E5%8A%A0%E5%BC%BA/image-20230108223810961.png&#34; class=&#34;&#34;&gt;
-&lt;h1 id=&#34;使用npm&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#使用npm&#34;&gt;#&lt;/a&gt; 使用 npm&lt;/h1&gt;
-&lt;p&gt;目前，小程序中已经支持使用 npm 安装第三方包，从而来提高小程序的开发效率。但是，在小程序中使用 npm 包有如下 3 个限制:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;不支持依赖于 Node.js 内置库的包&lt;/li&gt;
-&lt;li&gt;不支持依赖于浏览器内置对象的包&lt;/li&gt;
-&lt;li&gt;不支持依赖于 C++ 插件的包&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;vant-weapp&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#vant-weapp&#34;&gt;#&lt;/a&gt; Vant WeAPP&lt;/h2&gt;
-&lt;p&gt;Vant weapp 是有赞前端团队开源的一套&lt;strong&gt;小程序 UI 组件库&lt;/strong&gt;，助力开发者快速搭建小程序应用。它所使用的是&lt;strong&gt; MIT 开源许可协议&lt;/strong&gt;，对商业使用比较友好。&lt;/p&gt;
-&lt;p&gt;官网：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly95b3V6YW4uZ2l0aHViLmlvL3ZhbnQtd2VhcHAvIy9ob21l&#34;&gt;https://youzan.github.io/vant-weapp/#/home&lt;/span&gt;&lt;/p&gt;
-&lt;h3 id=&#34;安装组件库&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装组件库&#34;&gt;#&lt;/a&gt; 安装组件库&lt;/h3&gt;
-&lt;p&gt;在小程序项目中，安装 Vant 组件库主要分为如下 3 步:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;通过 npm 安装（建议指定版本为 **@1.3.3**)&lt;/p&gt;
-&lt;figure class=&#34;highlight sh&#34;&gt;&lt;figcaption data-lang=&#34;sh&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;#初始化包管理配置 --- 出现 package.json&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;npm&lt;/span&gt; init &lt;span class=&#34;token parameter variable&#34;&gt;-y&lt;/span&gt; &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 通过 npm 安装&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;npm&lt;/span&gt; i @vant/weapp@1.3.3 &lt;span class=&#34;token parameter variable&#34;&gt;-S&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;--production&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 通过 yarn 安装&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;yarn&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;add&lt;/span&gt; @vant/weapp &lt;span class=&#34;token parameter variable&#34;&gt;--production&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 安装 0.x 版本&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;npm&lt;/span&gt; i vant-weapp &lt;span class=&#34;token parameter variable&#34;&gt;-S&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;--production&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;构建 npm 包&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;修改 app.json&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;使用&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#使用&#34;&gt;#&lt;/a&gt; 使用&lt;/h3&gt;
-&lt;p&gt;安装完 Vant 组件库之后，可以在  &lt;code&gt;app.json&lt;/code&gt;  的 &lt;code&gt;usingComponents&lt;/code&gt;  节点中引入需要的组件，即可在 wxml 中直接使用组件。示例代码如下:&lt;/p&gt;
-&lt;img data-src=&#34;/Web-anteriore/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/4.%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E5%9F%BA%E7%A1%80%E5%8A%A0%E5%BC%BA/image-20230108215228076.png&#34; class=&#34;&#34;&gt;
-&lt;h1 id=&#34;全局数据共享&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#全局数据共享&#34;&gt;#&lt;/a&gt; 全局数据共享&lt;/h1&gt;
-&lt;h1 id=&#34;分包&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#分包&#34;&gt;#&lt;/a&gt; 分包&lt;/h1&gt;
-&lt;h1 id=&#34;案例-自定义tabbar&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#案例-自定义tabbar&#34;&gt;#&lt;/a&gt; 案例 - 自定义 tabBar&lt;/h1&gt;
-&lt;h1 id=&#34;总结&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#总结&#34;&gt;#&lt;/a&gt; 总结&lt;/h1&gt;
-
-&lt;div id=&#34;gitalk-container&#34;&gt;&lt;/div&gt;
-&lt;script src=&#34;https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js&#34;&gt;&lt;/script&gt;&lt;link rel=&#34;stylesheet&#34; href=&#34;https://unpkg.com/gitalk/dist/gitalk.css&#34;&gt;&lt;script src=&#34;https://unpkg.com/gitalk/dist/gitalk.min.js&#34;&gt;&lt;/script&gt;
-
-		&lt;script&gt;
-		var gitalkConfig = {&#34;clientID&#34;:&#34;6db178ba46c8af8f6a6f&#34;,&#34;clientSecret&#34;:&#34;90f730e5956024596558df00975cd8eae28cae3d&#34;,&#34;repo&#34;:&#34;bk-comment01&#34;,&#34;owner&#34;:&#34;onlymarryu&#34;,&#34;admin&#34;:[&#34;onlymarryu&#34;],&#34;distractionFreeMode&#34;:false,&#34;language&#34;:&#34;zh-CN&#34;,&#34;proxy&#34;:&#34;https://gitalk-comments.netlify.app/github_access_token&#34;,&#34;perPage&#34;:15};
-	    gitalkConfig.id = md5(location.pathname);
-		var gitalk = new Gitalk(gitalkConfig);
-	    gitalk.render(&#34;gitalk-container&#34;);
-	    &lt;/script&gt; ]]></description>
-        </item>
-        <item>
             <guid isPermalink="true">https://eth168.top/Web-anteriore/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/3.%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E8%A7%86%E5%9B%BE%E4%B8%8E%E9%80%BB%E8%BE%91/</guid>
             <title>视图与逻辑</title>
             <link>https://eth168.top/Web-anteriore/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/3.%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E8%A7%86%E5%9B%BE%E4%B8%8E%E9%80%BB%E8%BE%91/</link>
@@ -6586,6 +6451,125 @@ wxml 文件中的每个 &amp;lt;WXS&amp;gt;&amp;lt;/WXS &amp;gt; 标签， &lt;c
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;h1 id=&#34;案例本地生活列表页面&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#案例本地生活列表页面&#34;&gt;#&lt;/a&gt; 案例–本地生活（列表页面)&lt;/h1&gt;
+&lt;h1 id=&#34;总结&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#总结&#34;&gt;#&lt;/a&gt; 总结&lt;/h1&gt;
+
+&lt;div id=&#34;gitalk-container&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js&#34;&gt;&lt;/script&gt;&lt;link rel=&#34;stylesheet&#34; href=&#34;https://unpkg.com/gitalk/dist/gitalk.css&#34;&gt;&lt;script src=&#34;https://unpkg.com/gitalk/dist/gitalk.min.js&#34;&gt;&lt;/script&gt;
+
+		&lt;script&gt;
+		var gitalkConfig = {&#34;clientID&#34;:&#34;6db178ba46c8af8f6a6f&#34;,&#34;clientSecret&#34;:&#34;90f730e5956024596558df00975cd8eae28cae3d&#34;,&#34;repo&#34;:&#34;bk-comment01&#34;,&#34;owner&#34;:&#34;onlymarryu&#34;,&#34;admin&#34;:[&#34;onlymarryu&#34;],&#34;distractionFreeMode&#34;:false,&#34;language&#34;:&#34;zh-CN&#34;,&#34;proxy&#34;:&#34;https://gitalk-comments.netlify.app/github_access_token&#34;,&#34;perPage&#34;:15};
+	    gitalkConfig.id = md5(location.pathname);
+		var gitalk = new Gitalk(gitalkConfig);
+	    gitalk.render(&#34;gitalk-container&#34;);
+	    &lt;/script&gt; ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://eth168.top/Web-anteriore/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/4.%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E5%9F%BA%E7%A1%80%E5%8A%A0%E5%BC%BA/</guid>
+            <title>基础加强</title>
+            <link>https://eth168.top/Web-anteriore/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/4.%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E5%9F%BA%E7%A1%80%E5%8A%A0%E5%BC%BA/</link>
+            <category term="小程序开发" scheme="https://eth168.top/categories/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/" />
+            <category term="小程序开发" scheme="https://eth168.top/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/" />
+            <pubDate>Mon, 02 Jan 2023 00:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;目标&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#目标&#34;&gt;#&lt;/a&gt; 目标&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;能够知道如何自定义小程序组件&lt;/li&gt;
+&lt;li&gt;能够知道小程序组件中 behaviors 的作用&lt;/li&gt;
+&lt;li&gt;能够知道如何安装和配置 vant-weapp 组件库&lt;/li&gt;
+&lt;li&gt;能够知道如何使用 MobX 实现全局数据共享&lt;/li&gt;
+&lt;li&gt;能够知道如何对小程序的 API 进行 Promise 化&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;自定义组件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#自定义组件&#34;&gt;#&lt;/a&gt; 自定义组件&lt;/h1&gt;
+&lt;h2 id=&#34;组件的创建与引用&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#组件的创建与引用&#34;&gt;#&lt;/a&gt; 组件的创建与引用&lt;/h2&gt;
+&lt;h3 id=&#34;创建组件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#创建组件&#34;&gt;#&lt;/a&gt; 创建组件&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;在项目的根目录中，鼠标右键，创建&lt;strong&gt; components&lt;/strong&gt; -&amp;gt; &lt;strong&gt;test&lt;/strong&gt; 文件夹&lt;/li&gt;
+&lt;li&gt;在新建的 components -&amp;gt; test 文件夹上，鼠标右键，点击 “&lt;strong&gt;新建 Component&lt;/strong&gt;&amp;quot;&lt;/li&gt;
+&lt;li&gt;键入组件的名称之后回车，会自动生成组件对应的 4 个文件，后缀名分别为.js，.json，.wxml 和.wxs5&lt;/li&gt;
+&lt;/ol&gt;
+&lt;img data-src=&#34;/Web-anteriore/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/4.%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E5%9F%BA%E7%A1%80%E5%8A%A0%E5%BC%BA/image-20230108215534200.png&#34; class=&#34;&#34;&gt;
+&lt;h3 id=&#34;引用组件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#引用组件&#34;&gt;#&lt;/a&gt; 引用组件&lt;/h3&gt;
+&lt;p&gt;组件的引用方式分为 “&lt;strong&gt;局部引用&lt;/strong&gt;” 和 “&lt;strong&gt;全局引用&lt;/strong&gt;”，顾名思义:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;局部引用：组件只能在当前被引用的页面内使用&lt;/li&gt;
+&lt;li&gt;全局引用：组件可以在每个小程序页面中使用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;局部引用组件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#局部引用组件&#34;&gt;#&lt;/a&gt; 局部引用组件&lt;/h4&gt;
+&lt;p&gt;在页面的.json 配置文件中引用组件的方式，叫做 “局部引用”。示例代码如下:&lt;/p&gt;
+&lt;img data-src=&#34;/Web-anteriore/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/4.%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E5%9F%BA%E7%A1%80%E5%8A%A0%E5%BC%BA/image-20230108220014041.png&#34; class=&#34;&#34;&gt;
+&lt;h4 id=&#34;全局引用组件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#全局引用组件&#34;&gt;#&lt;/a&gt; 全局引用组件&lt;/h4&gt;
+&lt;img data-src=&#34;/Web-anteriore/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/4.%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E5%9F%BA%E7%A1%80%E5%8A%A0%E5%BC%BA/image-20230108220033905.png&#34; class=&#34;&#34;&gt;
+&lt;h3 id=&#34;组件和页面的区别&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#组件和页面的区别&#34;&gt;#&lt;/a&gt; 组件和页面的区别&lt;/h3&gt;
+&lt;p&gt;从表面来看，组件和页面都是由.js、.json、.wxml 和.wxss 这四个文件组成的。但是，组件和页面的.js 与.json 文件有明显的不同:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;组件的.json 文件中需要声明 &amp;quot;&lt;strong&gt;component&lt;/strong&gt;&amp;quot;: &lt;strong&gt;true&lt;/strong&gt; 属性&lt;/li&gt;
+&lt;li&gt;组件的.js 文件中调用的是 **Component ()** 函数&lt;/li&gt;
+&lt;li&gt;组件的事件处理函数需要定义到 &lt;strong&gt;methods&lt;/strong&gt; 节点中&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;样式&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#样式&#34;&gt;#&lt;/a&gt; 样式&lt;/h2&gt;
+&lt;h3 id=&#34;组件的样式隔离&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#组件的样式隔离&#34;&gt;#&lt;/a&gt; 组件的样式隔离&lt;/h3&gt;
+&lt;p&gt;默认情况下，自定义组件的样式只对当前组件生效，不会影响到组件之外的 UI 结构，如图所示:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;组件 A 的样式&lt;strong&gt;不会影响&lt;/strong&gt;组件 C 的样式&lt;/li&gt;
+&lt;li&gt;组件 A 的样式&lt;strong&gt;不会影响&lt;/strong&gt;小程序页面的&lt;/li&gt;
+&lt;li&gt;样式小程序页面的样式&lt;strong&gt;不会影响&lt;/strong&gt;组件 A 和 C 的样式&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img data-src=&#34;/Web-anteriore/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/4.%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E5%9F%BA%E7%A1%80%E5%8A%A0%E5%BC%BA/image-20230108220344454.png&#34; class=&#34;&#34;&gt;
+&lt;h3 id=&#34;样式隔离注意点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#样式隔离注意点&#34;&gt;#&lt;/a&gt; 样式隔离注意点&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;app.wxss 中的全局样式对组件无效&lt;/li&gt;
+&lt;li&gt;只有 class 选择器会有样式隔离效果，id 选择器、属性选择器、标签选择器不受样式隔离的影响&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;建议&lt;/strong&gt;：在&lt;strong&gt;组件&lt;/strong&gt;和&lt;strong&gt;引用组件的页面&lt;/strong&gt;中建议使用 class 选择器，&lt;strong&gt;不要使用 id、属性、标签选择器&lt;/strong&gt;！&lt;/p&gt;
+&lt;h3 id=&#34;修改组件的样式隔离选项&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#修改组件的样式隔离选项&#34;&gt;#&lt;/a&gt; 修改组件的样式隔离选项&lt;/h3&gt;
+&lt;p&gt;默认情况下，自定义组件的&lt;strong&gt;样式隔离特性&lt;/strong&gt;能够&lt;strong&gt;防止组件内外样式互相干扰的问题&lt;/strong&gt;。但有时，我们希望在外界能够控制组件内部的样式，此时，可以通过&lt;strong&gt; stylelsolation&lt;/strong&gt; 修改组件的样式隔离选项，用法如下:&lt;/p&gt;
+&lt;img data-src=&#34;/Web-anteriore/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/4.%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E5%9F%BA%E7%A1%80%E5%8A%A0%E5%BC%BA/image-20230108220840711.png&#34; class=&#34;&#34;&gt;
+&lt;img data-src=&#34;/Web-anteriore/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/4.%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E5%9F%BA%E7%A1%80%E5%8A%A0%E5%BC%BA/image-20230108220928650.png&#34; class=&#34;&#34;&gt;
+&lt;h2 id=&#34;数据-方法和属性&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#数据-方法和属性&#34;&gt;#&lt;/a&gt; 数据、方法和属性&lt;/h2&gt;
+&lt;h3 id=&#34;data数据&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#data数据&#34;&gt;#&lt;/a&gt; data 数据&lt;/h3&gt;
+&lt;img data-src=&#34;/Web-anteriore/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/4.%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E5%9F%BA%E7%A1%80%E5%8A%A0%E5%BC%BA/image-20230108221002498.png&#34; class=&#34;&#34;&gt;
+&lt;h3 id=&#34;methods方法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#methods方法&#34;&gt;#&lt;/a&gt; methods 方法&lt;/h3&gt;
+&lt;img data-src=&#34;/Web-anteriore/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/4.%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E5%9F%BA%E7%A1%80%E5%8A%A0%E5%BC%BA/image-20230108221100249.png&#34; class=&#34;&#34;&gt;
+&lt;h3 id=&#34;properties属性&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#properties属性&#34;&gt;#&lt;/a&gt; properties 属性&lt;/h3&gt;
+&lt;img data-src=&#34;/Web-anteriore/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/4.%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E5%9F%BA%E7%A1%80%E5%8A%A0%E5%BC%BA/image-20230108221155090.png&#34; class=&#34;&#34;&gt;
+&lt;h3 id=&#34;data和properties的区别&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#data和properties的区别&#34;&gt;#&lt;/a&gt; data 和 properties 的区别&lt;/h3&gt;
+&lt;p&gt;在小程序的组件中，properties 属性和 data 数据的用法相同，它们都是&lt;strong&gt;可读可写&lt;/strong&gt;的，只不过:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;data 更倾向于&lt;strong&gt;存储组件的私有数据&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;properties 更倾向于&lt;strong&gt;存储外界传递到组件中的数据&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img data-src=&#34;/Web-anteriore/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/4.%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E5%9F%BA%E7%A1%80%E5%8A%A0%E5%BC%BA/image-20230108221445289.png&#34; class=&#34;&#34;&gt;
+&lt;h3 id=&#34;使用setdata修改properties的值&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#使用setdata修改properties的值&#34;&gt;#&lt;/a&gt; 使用 setData 修改 properties 的值&lt;/h3&gt;
+&lt;p&gt;由于&lt;strong&gt; data 数据&lt;/strong&gt;和 &lt;strong&gt;properties 属性&lt;/strong&gt;在本质上没有任何区别，因此 properties 属性的值也可以用于页面渲染，或使用 setData 为 properties 中的属性重新赋值，示例代码如下:&lt;/p&gt;
+&lt;img data-src=&#34;/Web-anteriore/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/4.%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E5%9F%BA%E7%A1%80%E5%8A%A0%E5%BC%BA/image-20230108223810961.png&#34; class=&#34;&#34;&gt;
+&lt;h1 id=&#34;使用npm&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#使用npm&#34;&gt;#&lt;/a&gt; 使用 npm&lt;/h1&gt;
+&lt;p&gt;目前，小程序中已经支持使用 npm 安装第三方包，从而来提高小程序的开发效率。但是，在小程序中使用 npm 包有如下 3 个限制:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;不支持依赖于 Node.js 内置库的包&lt;/li&gt;
+&lt;li&gt;不支持依赖于浏览器内置对象的包&lt;/li&gt;
+&lt;li&gt;不支持依赖于 C++ 插件的包&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;vant-weapp&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#vant-weapp&#34;&gt;#&lt;/a&gt; Vant WeAPP&lt;/h2&gt;
+&lt;p&gt;Vant weapp 是有赞前端团队开源的一套&lt;strong&gt;小程序 UI 组件库&lt;/strong&gt;，助力开发者快速搭建小程序应用。它所使用的是&lt;strong&gt; MIT 开源许可协议&lt;/strong&gt;，对商业使用比较友好。&lt;/p&gt;
+&lt;p&gt;官网：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly95b3V6YW4uZ2l0aHViLmlvL3ZhbnQtd2VhcHAvIy9ob21l&#34;&gt;https://youzan.github.io/vant-weapp/#/home&lt;/span&gt;&lt;/p&gt;
+&lt;h3 id=&#34;安装组件库&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装组件库&#34;&gt;#&lt;/a&gt; 安装组件库&lt;/h3&gt;
+&lt;p&gt;在小程序项目中，安装 Vant 组件库主要分为如下 3 步:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;通过 npm 安装（建议指定版本为 **@1.3.3**)&lt;/p&gt;
+&lt;figure class=&#34;highlight sh&#34;&gt;&lt;figcaption data-lang=&#34;sh&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;#初始化包管理配置 --- 出现 package.json&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;npm&lt;/span&gt; init &lt;span class=&#34;token parameter variable&#34;&gt;-y&lt;/span&gt; &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 通过 npm 安装&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;npm&lt;/span&gt; i @vant/weapp@1.3.3 &lt;span class=&#34;token parameter variable&#34;&gt;-S&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;--production&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 通过 yarn 安装&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;yarn&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;add&lt;/span&gt; @vant/weapp &lt;span class=&#34;token parameter variable&#34;&gt;--production&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 安装 0.x 版本&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;npm&lt;/span&gt; i vant-weapp &lt;span class=&#34;token parameter variable&#34;&gt;-S&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;--production&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;构建 npm 包&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;修改 app.json&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;使用&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#使用&#34;&gt;#&lt;/a&gt; 使用&lt;/h3&gt;
+&lt;p&gt;安装完 Vant 组件库之后，可以在  &lt;code&gt;app.json&lt;/code&gt;  的 &lt;code&gt;usingComponents&lt;/code&gt;  节点中引入需要的组件，即可在 wxml 中直接使用组件。示例代码如下:&lt;/p&gt;
+&lt;img data-src=&#34;/Web-anteriore/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/4.%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E5%9F%BA%E7%A1%80%E5%8A%A0%E5%BC%BA/image-20230108215228076.png&#34; class=&#34;&#34;&gt;
+&lt;h1 id=&#34;全局数据共享&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#全局数据共享&#34;&gt;#&lt;/a&gt; 全局数据共享&lt;/h1&gt;
+&lt;h1 id=&#34;分包&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#分包&#34;&gt;#&lt;/a&gt; 分包&lt;/h1&gt;
+&lt;h1 id=&#34;案例-自定义tabbar&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#案例-自定义tabbar&#34;&gt;#&lt;/a&gt; 案例 - 自定义 tabBar&lt;/h1&gt;
 &lt;h1 id=&#34;总结&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#总结&#34;&gt;#&lt;/a&gt; 总结&lt;/h1&gt;
 
 &lt;div id=&#34;gitalk-container&#34;&gt;&lt;/div&gt;
@@ -7264,6 +7248,70 @@ SyntaxError: invalid syntax
 &lt;p&gt;vim /usr/bin/yum&lt;/p&gt;
 &lt;p&gt;vim /usr/libexec/urlgrabber-ext-down&lt;/p&gt;
 &lt;/blockquote&gt;
+
+&lt;div id=&#34;gitalk-container&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js&#34;&gt;&lt;/script&gt;&lt;link rel=&#34;stylesheet&#34; href=&#34;https://unpkg.com/gitalk/dist/gitalk.css&#34;&gt;&lt;script src=&#34;https://unpkg.com/gitalk/dist/gitalk.min.js&#34;&gt;&lt;/script&gt;
+
+		&lt;script&gt;
+		var gitalkConfig = {&#34;clientID&#34;:&#34;6db178ba46c8af8f6a6f&#34;,&#34;clientSecret&#34;:&#34;90f730e5956024596558df00975cd8eae28cae3d&#34;,&#34;repo&#34;:&#34;bk-comment01&#34;,&#34;owner&#34;:&#34;onlymarryu&#34;,&#34;admin&#34;:[&#34;onlymarryu&#34;],&#34;distractionFreeMode&#34;:false,&#34;language&#34;:&#34;zh-CN&#34;,&#34;proxy&#34;:&#34;https://gitalk-comments.netlify.app/github_access_token&#34;,&#34;perPage&#34;:15};
+	    gitalkConfig.id = md5(location.pathname);
+		var gitalk = new Gitalk(gitalkConfig);
+	    gitalk.render(&#34;gitalk-container&#34;);
+	    &lt;/script&gt; ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://eth168.top/tools/OpenSSL-tool/</guid>
+            <title>OpenSSL</title>
+            <link>https://eth168.top/tools/OpenSSL-tool/</link>
+            <category term="工具软件安装" scheme="https://eth168.top/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" />
+            <pubDate>Mon, 31 Oct 2022 23:06:22 +0800</pubDate>
+            <description><![CDATA[ &lt;h3 id=&#34;openssl安装教程windows&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#openssl安装教程windows&#34;&gt;#&lt;/a&gt; OpenSSL 安装教程（Windows）&lt;/h3&gt;
+&lt;p&gt;openssl 官网下载地址：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3NscHJvd2ViLmNvbS9wcm9kdWN0cy9XaW4zMk9wZW5TU0wuaHRtbA==&#34;&gt;http://slproweb.com/products/Win32OpenSSL.html&lt;/span&gt;&lt;/p&gt;
+&lt;h4 id=&#34;安装环境&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装环境&#34;&gt;#&lt;/a&gt; 安装环境:&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;windows 10&lt;br /&gt;
+Win64 OpenSSL v1.1.1i&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;一下载openssl安装版&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#一下载openssl安装版&#34;&gt;#&lt;/a&gt; 一。下载 openssl 安装版&lt;/h4&gt;
+&lt;p&gt;​	我这里是 win10 64 位，所以选的中间那个&lt;/p&gt;
+&lt;img data-src=&#34;/tools/OpenSSL-tool/20201222101342278.png&#34; class=&#34;&#34; title=&#34;按照操作系统选择&#34;&gt; 
+&lt;h4 id=&#34;二安装过程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#二安装过程&#34;&gt;#&lt;/a&gt; 二。安装过程&lt;/h4&gt;
+&lt;p&gt;​	也没啥特殊的 ，一直 next，只有两点注意：&lt;/p&gt;
+&lt;p&gt;1、修改安装地址&lt;/p&gt;
+&lt;p&gt;2、最后一步，不要勾选，会掏钱。&lt;/p&gt;
+ &lt;img data-src=&#34;/tools/OpenSSL-tool/20201222102601218.png&#34; class=&#34;&#34; title=&#34;在这里插入图片描述&#34;&gt; 
+ &lt;img data-src=&#34;/tools/OpenSSL-tool/20201222102703276.png&#34; class=&#34;&#34; title=&#34;在这里插入图片描述&#34;&gt; 
+ &lt;img data-src=&#34;/tools/OpenSSL-tool/20201222102703268.png&#34; class=&#34;&#34; title=&#34;在这里插入图片描述&#34;&gt; 
+ &lt;img data-src=&#34;/tools/OpenSSL-tool/20201222102721958.png&#34; class=&#34;&#34; title=&#34;在这里插入图片描述&#34;&gt; 
+&lt;img data-src=&#34;/tools/OpenSSL-tool/1650347562395.png&#34; class=&#34;&#34;&gt;
+&lt;h4 id=&#34;三配置环境变量&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#三配置环境变量&#34;&gt;#&lt;/a&gt; 三。配置环境变量&lt;/h4&gt;
+&lt;img data-src=&#34;/tools/OpenSSL-tool/1650351119292.png&#34; class=&#34;&#34;&gt;
+ &lt;img data-src=&#34;/tools/OpenSSL-tool/1650351138506.png&#34; class=&#34;&#34; width=&#34;1650351138506&#34;&gt;
+&lt;h4 id=&#34;四测试&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#四测试&#34;&gt;#&lt;/a&gt; 四。测试&lt;/h4&gt;
+&lt;figure class=&#34;highlight sh&#34;&gt;&lt;figcaption data-lang=&#34;sh&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;openssl &lt;span class=&#34;token parameter variable&#34;&gt;-version&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;img data-src=&#34;/tools/OpenSSL-tool/1650351011263.png&#34; class=&#34;&#34;&gt;
+&lt;h3 id=&#34;openssl安装linux&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#openssl安装linux&#34;&gt;#&lt;/a&gt; OpenSSL 安装（Linux）&lt;/h3&gt;
+&lt;h4 id=&#34;1&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1&#34;&gt;#&lt;/a&gt; ——1&lt;/h4&gt;
+&lt;p&gt;参考链接：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3ZlY3Rvcl9kYXRhL2FydGljbGUvZGV0YWlscy8xMDc1NTc5NDE=&#34;&gt;https://blog.csdn.net/vector_data/article/details/107557941&lt;/span&gt;&lt;/p&gt;
+&lt;h5 id=&#34;1安装依赖c语言依赖&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1安装依赖c语言依赖&#34;&gt;#&lt;/a&gt; 1. 安装依赖 C 语言依赖&lt;/h5&gt;
+&lt;p&gt;​	redis 使用 C 语言编写，所以需要安装 C 语言库&lt;/p&gt;
+&lt;figure class=&#34;highlight sh&#34;&gt;&lt;figcaption data-lang=&#34;sh&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;yum &lt;span class=&#34;token function&#34;&gt;install&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-y&lt;/span&gt; gcc zlib&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;​&lt;/p&gt;
+&lt;h5 id=&#34;2上传并解压&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2上传并解压&#34;&gt;#&lt;/a&gt; 2. 上传并解压&lt;/h5&gt;
+&lt;p&gt;​	把  &lt;code&gt;openssl-1.1.1j.tar.gz&lt;/code&gt;  上传到 /usr/local/tmp 中，解压文件&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt; cd /usr/local/tmp
+
+ tar zxf openssl-1.1.1j.tar.gz 
+ mv openssl-1.1.1j ../openssl
+ 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h5 id=&#34;3编译并安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3编译并安装&#34;&gt;#&lt;/a&gt; 3. 编译并安装&lt;/h5&gt;
+&lt;p&gt;​	进入解压文件夹&lt;/p&gt;
+&lt;figure class=&#34;highlight sh&#34;&gt;&lt;figcaption data-lang=&#34;sh&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token builtin class-name&#34;&gt;cd&lt;/span&gt; /usr/local/openssl&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;​	 配置编译&lt;/p&gt;
+&lt;figure class=&#34;highlight sh&#34;&gt;&lt;figcaption data-lang=&#34;sh&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;./config&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;​	编译安装&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;make clean &amp;amp;&amp;amp; make install
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;​	测试&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;openssl version -a
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;div id=&#34;gitalk-container&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js&#34;&gt;&lt;/script&gt;&lt;link rel=&#34;stylesheet&#34; href=&#34;https://unpkg.com/gitalk/dist/gitalk.css&#34;&gt;&lt;script src=&#34;https://unpkg.com/gitalk/dist/gitalk.min.js&#34;&gt;&lt;/script&gt;
