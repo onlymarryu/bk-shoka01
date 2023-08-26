@@ -1,0 +1,160 @@
+alternate: 雾都博客
+
+# Assets
+statics: / #//cdn.jsdelivr.net/gh/amehime/shoka@latest/
+
+open_graph:
+  #twitter_id:
+  #google_plus:
+  #fb_admins:
+  #fb_app_id:
+
+# 自动定位,返回你之前看到的地方
+auto_scroll: false
+
+# 侧边栏
+sidebar:
+  # Sidebar Position.
+  position: left
+  # position: right
+  # Replace the default avatar image and set the url here.
+  avatar: avatar.jpg
+
+menu:
+  home: / || home
+  archives: /archives/ || list-alt
+  posts:
+    default: / || feather
+    categories: /categories/ || th
+    tags: /tags/ || tags
+    toolsPage: /toolPage/ || feather
+    projectBuild: /projectBuild/ || th
+  mianshi: /mianshi/ || calendar
+  study: /study/ || sakura
+  friends: /friends/ || heart
+  about: /about/ || calendar
+
+# Social Links
+# Usage: `Key: permalink || icon || color`
+# Key is the link label showing to end users.
+# Value before `||` delimiter is the target permalink,
+# secend value is the name of Font icon.
+# project of https://www.iconfont.cn/
+# //at.alicdn.com/t/font_1832207_c8i9n1ulxlt.css => 1832207_c8i9n1ulxlt
+iconfont: "1832207_igi8uaupcus"
+# iconfont: "3731160_8pmmsyz1p7k"
+
+social:
+  github: https://github.com/onlymarryu || github || "#191717"
+  # github: https://github.com/onlymarryu || github1 || "#191717"
+  # CSDN: https://blog.csdn.net/Bkhole?spm=1000.2115.3001.5343 || csdn || "#ea716e"
+  # fengye: https://cloud.fynote.com/edit?nid=113796&id=1567528016345563136&t=1665816345587 || icon9 || "#55acd5"
+  # yuque: https://www.yuque.com/dashboard/recent || tubiaozhizuomoban || "#20FB25"
+  # google: https://plus.google.com/ || google
+  # twitter: https://twitter.com/amehime || twitter || "#00aff0"
+  zhihu: https://www.zhihu.com/people/rurismzk || zhihu || "#1e88e5"
+  music: https://music.163.com/#/my/m/music/playlist?id=3166060790 || cloud-music || "#e60026"
+  weibo: https://weibo.com/amehime || weibo || "#ea716e"
+  # about: https://about.me/amehime || address-card || "#3b5998"
+  # email: mailto:yourname@mail.com || envelope || "#55acd5"
+  #facebook: https://www.facebook.com/yourname || facebook
+  #stackoverflow: https://stackoverflow.com/yourname || stack-overflow
+  #youtube: https://youtube.com/yourname || youtube
+  #instagram: https://instagram.com/yourname || instagram
+  #skype: skype:yourname?call|chat || skype
+  #douban: https://www.douban.com/people/yourname/ || douban
+
+footer:
+  # Specify the date when the site was setup. If not defined, current year will be used.
+  since: 2010
+  count: true
+
+post:
+  count: true
+
+# ---------------------------------------------------------------
+# Third Party Plugins & Services Settings
+# ---------------------------------------------------------------
+
+# Comments
+# Valine
+# For more information: https://valine.js.org, https://github.com/xCss/Valine
+# valine:
+#   enable: false
+#   appId: CcRFYrQF2jeLivqZJ02IX02H-gzGzoHsz  #Your_appId
+#   appKey: xDkO9dJRzIJK7n0GofHoyP0y  #Your_appkey
+#   placeholder: ヽ(○´∀`)ﾉ♪  # Comment box placeholder
+#   avatar: wavatar  # Gravatar style : mp, identicon, monsterid, wavatar, robohash, retro
+#   pageSize: 10  # Pagination size
+#   lang: zh-CN
+#   visitor: true # 文章访问量统计
+#   NoRecordIP: false # 不记录 IP
+#   serverURLs: # When the custom domain name is enabled, fill it in here (it will be detected automatically by default, no need to fill in)
+#   powerMode: true # 默认打开评论框输入特效
+#   tagMember:
+#     master:
+#       # - hash of master@email.com
+#       # - hash of master2@email.com
+#     friend:
+#       # - hash of friend@email.com
+#       # - hash of friend2@email.com
+#     investor:
+#       # - hash of investor1@email.com
+# valine:
+#   appId: #这里不要忘了改
+#   appKey: #这里不要忘了改
+#   placeholder: ヽ(○´∀`)ﾉ♪ # Comment box placeholder
+#   pageSize: 10 # Pagination size
+#   lang: zh-CN
+#   tagMember:
+#     master:
+#       # - deea5a8d259d17182a53be1772e4c182
+#     friend:
+#       - deea5a8d259d17182a53be1772e4c182
+
+# 随机图床Api 百度
+# image_server: "https://api.ixiaowai.cn/api/api.php"
+image_server: "https://api.yimian.xyz/img"
+
+# bgm
+audio:
+  - title: 网易音乐
+    list:
+      - https://music.163.com/#/my/m/music/playlist?id=3166060790
+      - https://music.163.com/#/my/m/music/playlist?id=2433770074
+  - title: QQ音乐
+    # QQ 音乐要自带.html
+    list:
+      - https://y.qq.com/n/ryqq/playlist/2686028913.html
+
+# Dependencies: https://github.com/amehime/hexo-renderer-multi-markdown-it
+pangu: true
+
+# ---------------------------------------------------------------
+# analytics & SEO Settings
+# ---------------------------------------------------------------
+
+# Disable Baidu transformation on mobile devices.
+disable_baidu_transformation: true
+
+# Automatically add external URL with Base64 encrypt & decrypt.
+exturl: true
+
+#Algolia Search
+algolia_search:
+  enable: true
+  hits:
+    per_page: 6
+  labels:
+    input_placeholder: Search for Posts !
+    hits_empty: "我们没有找到任何搜索结果：${query}"
+    hits_stats: "找到约${hits}条结果 (用时${time}ms)"
+
+# local searach
+local_sreach:
+  enable: false
+
+# 是否显示页面加载动画 loading-cat
+loader:
+  start: false # 当初次打开页面时，显示加载动画
+  switch: false # tab 切换到其他页面时，显示加载动画
