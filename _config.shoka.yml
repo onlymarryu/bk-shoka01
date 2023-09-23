@@ -30,7 +30,7 @@ menu:
     toolsPage: /toolPage/ || feather
     projectBuild: /projectBuild/ || th
   mianshi: /mianshi/ || calendar
-  study: /study/ || sakura
+  study: /study/index || sakura
   friends: /friends/ || heart
   about: /about/ || calendar
 
