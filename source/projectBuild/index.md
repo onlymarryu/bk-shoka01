@@ -5,8 +5,6 @@ date: 2022-11-23 16:59:22
 
 > 主要就是为了避免我们日常生产过程中的出现一些不必要的重复性工作，下面是我经常用的 springboot 项目 Parent 模块的 POM 文件模板，后期可以在这个基础上进行修改
 
-
-
 注意：
 
 1. 这是以`SpringBoot` `2.3.12`为主的的模板
@@ -364,11 +362,9 @@ public class SwaggerConfig {
 }
 ```
 
-
-
 ## Mybatis-Plus
 
->分页插件使用的必备配置，指定数据库类型
+> 分页插件使用的必备配置，指定数据库类型
 
 ```java
 import com.baomidou.mybatisplus.annotation.DbType;
@@ -393,11 +389,11 @@ public class MybatisConfig {
 
 ## 拦截器配置
 
-> ​		我们在开发过程中会遇到很多需要拦截请求的地方，这里就需要我们实现一个拦截器，然后将他加入到我们的配置中。
+> ​ 我们在开发过程中会遇到很多需要拦截请求的地方，这里就需要我们实现一个拦截器，然后将他加入到我们的配置中。
 >
-> ​		首先我们需要定义一个拦截器。（实现 `HandlerInterceptor` 接口)[org.springframework.web.servlet.HandlerInterceptor]
+> ​ 首先我们需要定义一个拦截器。（实现 `HandlerInterceptor` 接口)[org.springframework.web.servlet.HandlerInterceptor]
 >
-> ​		将拦截器加入到配置中即可。如下：
+> ​ 将拦截器加入到配置中即可。如下：
 
 ```java
 import com.hmdp.interceptor.LoginInterceptor;
@@ -436,8 +432,6 @@ public class WebMvcConfig implements WebMvcConfigurer {
 }
 ```
 
-
-
 ### 示例：登录
 
 > 我们加一点特殊性，要求每一个请求我们对应一个独立的用户
@@ -461,14 +455,14 @@ public class UserHolder<T> {
     public static T getUser(){
         return tl.get();
     }
-    
+
     public static void removeUser(){
         tl.remove();
     }
 }
 ```
 
-\ * 我们在登录的时候需要根据token去查询对象，拦截器就来了
+\ \* 我们在登录的时候需要根据 token 去查询对象，拦截器就来了
 
 ```java
 import cn.hutool.core.bean.BeanUtil;
@@ -491,11 +485,11 @@ public class RefreshTokenInterceptor implements HandlerInterceptor {
 	* 我们在使用它的地方，也就只有配置的时候会创建他，所以在配置类中获取到 redisTemplate 传给他就行了 ，也不用Spring去托管
 	*/
     private StringRedisTemplate stringRedisTemplate;
-	
+
     public RefreshTokenInterceptor(StringRedisTemplate stringRedisTemplate) {
         this.stringRedisTemplate = stringRedisTemplate;
     }
-	
+
     /**
     * 事前方法
     * 1. 判断是否存在 token
@@ -514,7 +508,7 @@ public class RefreshTokenInterceptor implements HandlerInterceptor {
         Map<Object, Object> entries = stringRedisTemplate.opsForHash()
                 .entries(key);
 
-        // 3 不存在,后面的操作就不做了，放行剩余的拦截器进行处理，或者直接拒绝请求，返回 false 
+        // 3 不存在,后面的操作就不做了，放行剩余的拦截器进行处理，或者直接拒绝请求，返回 false
         if (entries.isEmpty()) { // 没找到用户，直接放行
             return true; // false 也行，根据业务自己判断，true 要做用户信息补偿，至于地点，自定
         }
@@ -542,12 +536,6 @@ public class RefreshTokenInterceptor implements HandlerInterceptor {
 }
 ```
 
-
-
-
-
-
-
 ## 全局异常
 
 ```java
@@ -567,8 +555,6 @@ public class WebExceptionAdvice {
     }
 }
 ```
-
-
 
 # 常用工具类
 
@@ -770,8 +756,6 @@ public class RegentEnum {
 }
 ```
 
-
-
 ### 正则工具类
 
 ```java
@@ -897,17 +881,11 @@ public class RegentUtil {
         if (!res) log.error("我们只能支持4种邮箱");
         return res;
     }
-    
+
 }
 ```
 
-
-
-## Redis工具类 (待补充！)
-
-
-
-
+## Redis 工具类 (待补充！)
 
 ## JWT 封装类
 
@@ -2118,8 +2096,6 @@ public class PageInfo<T> implements Serializable {
 }
 ```
 
-
-
 ## BeanUtils
 
 > 只做参考，这个都是自己写的
@@ -2138,8 +2114,8 @@ public class BeanUtil {
     /*
     只做参考，这个都是自己写的
     */
-    
-    
+
+
     private static BeanUtil BEAN_UTIL = null;
 
     private BeanUtil() {
@@ -2213,10 +2189,6 @@ public class BeanUtil {
 
 ```
 
-
-
-
-
 # 打包
 
 > 微服务架构下的打包，其他的类似，更加简单
@@ -2227,9 +2199,9 @@ public class BeanUtil {
 
 2. 注意父子`POM`文件的路径，善用`relationPath`标签
 
-   * `<relationPath>../<relationPath>`默认值，最好写上，不写也行
-   * `<relativePath/>`设定空值，意思是：**将始终从仓库中获取，不从本地路径获取**
-   * `<relativePath>某个pom的路径<relativePath/>`指定本地的路径，从本地路径获取`parent`的`pom`。
+   - `<relationPath>../<relationPath>`默认值，最好写上，不写也行
+   - `<relativePath/>`设定空值，意思是：**将始终从仓库中获取，不从本地路径获取**
+   - `<relativePath>某个pom的路径<relativePath/>`指定本地的路径，从本地路径获取`parent`的`pom`。
 
 3. 具体打包步骤
 
@@ -2256,16 +2228,16 @@ public class BeanUtil {
 
    2. 修改`spring-boot-starter-web`依赖**（打成`jar`包，跳过）**
 
-      去掉自带的Tomcat，自己重新引入一个Tomcat依赖，将他设置为`private`这样我们在打包的时候，就不会带有Tomcat，会直接依赖于外部的Tomcat。其次我们在本地测试也还是可以继续进行。
+      去掉自带的 Tomcat，自己重新引入一个 Tomcat 依赖，将他设置为`private`这样我们在打包的时候，就不会带有 Tomcat，会直接依赖于外部的 Tomcat。其次我们在本地测试也还是可以继续进行。
 
-      * 好处：
+      - 好处：
 
-        * 可以不修改程序而改变服务的端口号，它的端口号由外部Tomcat指定
-        * 可以轻松的实现单台机器多服务部署
+        - 可以不修改程序而改变服务的端口号，它的端口号由外部 Tomcat 指定
+        - 可以轻松的实现单台机器多服务部署
 
-      * 缺点
+      - 缺点
 
-        操作过多，服务完全寄托于Tomcat
+        操作过多，服务完全寄托于 Tomcat
 
       > 修改后的`spring-boot-starter-web`
 
@@ -2332,20 +2304,20 @@ public class BeanUtil {
 
    > 前提：上线的服务器有`JDK` ；`Tomcat`可以根据需求而定，但是`JDK`必须
 
-   * `jar`包格式
+   - `jar`包格式
 
      直接在合适的地方，执行启动命令
 
      ```shell
      # 带日志启动 ctrl+z 退出控制台 ctl+c退出程序
      java -jar xxxx.jar
-     
+
      # 不产生控制台启动
      java -jar xxx.jar & #&代表在后台运行 ，ctrl+c 后程序也会继续运行
-     
+
      #nohup 即 no hang up 不挂断 ，关闭SSH客户端连接，程序不会中止运行缺省情况下该作业的所有输出被重定向到nohup.out的文件中
      nohup java -jar xxx.jar &
-     
+
      #具体参考 https://blog.csdn.net/weixin_46356409/article/details/128893837
      ```
 
@@ -2353,29 +2325,10 @@ public class BeanUtil {
 
      直接就和我们在`idea`中使用一致即可，例如：http://localhost:8080/test
 
-   * `war`包格式
+   - `war`包格式
 
-     将我们的`war`包直接放到`tomcat安装目录/webapps`下，重启服务器，自动解压一个与我们`war`包同名的文件夹，我们在访问服务的时候要先带一个我们的文件名再写我们的url路径，例如：
+     将我们的`war`包直接放到`tomcat安装目录/webapps`下，重启服务器，自动解压一个与我们`war`包同名的文件夹，我们在访问服务的时候要先带一个我们的文件名再写我们的 url 路径，例如：
 
      我们的`war`包名为：`temp.war`，所以我们的解压文件名为：`temp`，我们终止测试的地址为：http://localhost:8080/temp/test
 
-     
-
      至于要省去文件名`temp`的操作设置，这就涉及到了`Tomcat`的相关内容，我们后期补充~~~
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
