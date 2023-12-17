@@ -28,19 +28,19 @@ valine:
 
 2.设计模式的分类
 
-![image.png](https://fynotefile.oss-cn-zhangjiakou.aliyuncs.com/fynote/1462/1648123011000/2014caaf469649d1a3c84a582ef7319b.png)
+![image.png](DesignMode/2014caaf469649d1a3c84a582ef7319b.png)
 
 3.创建型模式：都是用来帮助我们创建对象的！
 
-![image.png](https://fynotefile.oss-cn-zhangjiakou.aliyuncs.com/fynote/1462/1648123011000/c6b87746e9884c22b56ca99bc265c496.png)
+![image.png](DesignMode/c6b87746e9884c22b56ca99bc265c496.png)
 
 4.结构性模式:关注对象和类的组织
 
-![image.png](https://fynotefile.oss-cn-zhangjiakou.aliyuncs.com/fynote/1462/1648123011000/6b8dffa88b924af6ba3664386d6a9f0a.png)
+![image.png](DesignMode/6b8dffa88b924af6ba3664386d6a9f0a.png)
 
 5.行为型模式:关注系统中对象之间的相互交换，研究系统在运行时对象之间的相互通信和协作，进一步明确对象的职责，共有11中模式
 
-![image.png](https://fynotefile.oss-cn-zhangjiakou.aliyuncs.com/fynote/1462/1648123011000/9bfe35ab4a494cc4ae84a20ee9e30a5c.png)
+![image.png](DesignMode/9bfe35ab4a494cc4ae84a20ee9e30a5c.png)
 
 
 
@@ -331,7 +331,7 @@ public class SingletonInstance2 implements Serializable{
 
 &emsp;&emsp;工厂模式的作用是帮助我们创建对象，我们不用自己来创建，根据需要创建的对象的复杂度我们可以把工厂模式分为简单工厂，工厂方法和抽象工厂。
 
-![image.png](https://fynotefile.oss-cn-zhangjiakou.aliyuncs.com/fynote/1462/1648123011000/95f501de57d3451faf9228414dc6f75f.png)
+![image.png](DesignMode/95f501de57d3451faf9228414dc6f75f.png)
 
 ### 4.1 简单工厂
 
@@ -339,11 +339,11 @@ public class SingletonInstance2 implements Serializable{
 
 JDK中的简单工厂应用：DataFormat
 
-![image.png](https://fynotefile.oss-cn-zhangjiakou.aliyuncs.com/fynote/1462/1648123011000/4fdddcfbf8784080a3706158f6945e9a.png)
+![image.png](DesignMode/4fdddcfbf8784080a3706158f6945e9a.png)
 
 自己写一个简单工厂的案例
 
-![image.png](https://fynotefile.oss-cn-zhangjiakou.aliyuncs.com/fynote/1462/1648123011000/de2237eb14fe491fbd38c5a815fa7c27.png)
+![image.png](DesignMode/de2237eb14fe491fbd38c5a815fa7c27.png)
 
 ```java
 /**
@@ -397,7 +397,7 @@ class CarFactory{
 
 &emsp;&emsp;针对于简单工厂的短板，引出了工厂方法模式，定义一个用户创建对象的接口，让子类决定实例化哪个类，工厂方法使一个类的实例化延迟到了其子类中。
 
-![image.png](https://fynotefile.oss-cn-zhangjiakou.aliyuncs.com/fynote/1462/1648123011000/cedbded5fc4543eb80dd3663bbe814c7.png)
+![image.png](DesignMode/cedbded5fc4543eb80dd3663bbe814c7.png)
 
 代码实现：
 
@@ -463,7 +463,7 @@ public class FactoryMethod {
 
 &emsp;&emsp;上面的两种方式实现的工厂都是生产同一大类的产品，如果要实现生产不同类型的产品这时我们就可以用抽象工厂模式来实现。
 
-![image.png](https://fynotefile.oss-cn-zhangjiakou.aliyuncs.com/fynote/1462/1648123011000/185ba2bc37394c47ae8f62390d019829.png)
+![image.png](DesignMode/185ba2bc37394c47ae8f62390d019829.png)
 
 代码实现：
 
@@ -598,11 +598,11 @@ public class AbstractFactory {
 
 &emsp;&emsp;实际开发中，我们所需要的对象构建时非常复杂，且有很多步骤需要处理时，这时建造者模式就很适合。比如MyBatis中的SqlSessionFactory对象的创建，我们不光要创建SqlSessionFactory本身的对象，还有完成MyBatis的全局配置文件和映射文件的加载解析操作，之后把解析出来的信息绑定在SqlSessionFactory对象中，
 
-![image.png](https://fynotefile.oss-cn-zhangjiakou.aliyuncs.com/fynote/1462/1648123011000/21221aa599f9428083bc92d81ac151d2.png)
+![image.png](DesignMode/21221aa599f9428083bc92d81ac151d2.png)
 
 直接参考MyBatis的代码即可
 
-![image.png](https://fynotefile.oss-cn-zhangjiakou.aliyuncs.com/fynote/1462/1648123011000/6d7aec1477204d9397cf5b59a1f2ad65.png)
+![image.png](DesignMode/6d7aec1477204d9397cf5b59a1f2ad65.png)
 
 所以建造者模式的作用就是帮助我们解决了复杂对象的创建
 
@@ -713,16 +713,16 @@ public class User implements Cloneable, Serializable {
 
 输出结果
 
-![image.png](https://fynotefile.oss-cn-zhangjiakou.aliyuncs.com/fynote/1462/1648123011000/6443e2d851514225a9253ca8d26de73f.png)
+![image.png](DesignMode/6443e2d851514225a9253ca8d26de73f.png)
 
-浅克隆的问题:虽然产生了两个完全不同的对象，但是被复制的对象的所有变量都含有与原来的对象相同的值，而所有的对其他对象的引用都仍然指向原来的对象。![image.png](https://fynotefile.oss-cn-zhangjiakou.aliyuncs.com/fynote/1462/1648123011000/05ad80babac04b43956010b8244cd85b.png)
+浅克隆的问题:虽然产生了两个完全不同的对象，但是被复制的对象的所有变量都含有与原来的对象相同的值，而所有的对其他对象的引用都仍然指向原来的对象。![image.png](DesignMode/05ad80babac04b43956010b8244cd85b.png)
 
 ### 6.2 深度克隆
 
 &emsp;&emsp;被复制对象的所有变量都含有与原来的对象相同的值，除去那些引用其他对象的变量。那些引用其他对象的变量将指向被复制过的新对象，而不再是原有的那些被引用的对象。换言之，深复制把要复制的对象所引用的对象都复制了一遍。
 实现的效果是:
 
-![image.png](https://fynotefile.oss-cn-zhangjiakou.aliyuncs.com/fynote/1462/1648123011000/6fdf967a6fc74e8690b75e3bb3640b7c.png)
+![image.png](DesignMode/6fdf967a6fc74e8690b75e3bb3640b7c.png)
 
 深度克隆(deep clone)有两种实现方式，第一种是在浅克隆的基础上实现，第二种是通过序列化和反序列化实现，我们分别来介绍
 
@@ -743,7 +743,7 @@ public class User implements Cloneable, Serializable {
     }
 ```
 
-![image.png](https://fynotefile.oss-cn-zhangjiakou.aliyuncs.com/fynote/1462/1648123011000/1ba148deb0244a4dbfef33a8f1b3bcbd.png)
+![image.png](DesignMode/1ba148deb0244a4dbfef33a8f1b3bcbd.png)
 
 方式二：序列化和反序列化
 
@@ -792,15 +792,15 @@ public static void main(String[] args) throws CloneNotSupportedException, Except
 
 &emsp;&emsp;Java的23种设计模式分为3类，分别是
 
-![image.png](https://fynotefile.oss-cn-zhangjiakou.aliyuncs.com/fynote/fyfile/1462/1651200196055/e7bfebaff043483eae41837038342d60.png)
+![image.png](DesignMode/e7bfebaff043483eae41837038342d60.png)
 
 而创建型模式中有包含的如下的相关模式：
 
-![image.png](https://fynotefile.oss-cn-zhangjiakou.aliyuncs.com/fynote/fyfile/1462/1651200196055/370c67f33136431c8c3b4ab9f9e46445.png)
+![image.png](DesignMode/370c67f33136431c8c3b4ab9f9e46445.png)
 
 而每个设计模式的作用如下：
 
-![image.png](https://fynotefile.oss-cn-zhangjiakou.aliyuncs.com/fynote/fyfile/1462/1651200196055/19e2c33ad56e4b2cb22b3447fcf0e6a5.png)
+![image.png](DesignMode/19e2c33ad56e4b2cb22b3447fcf0e6a5.png)
 
 
 
@@ -820,7 +820,7 @@ public static void main(String[] args) throws CloneNotSupportedException, Except
 
 &emsp;&emsp;代理模式的实现方式有三种：静态代理，动态代理(JDK动态代理和CGLIB动态代理)
 
-![image.png](https://fynotefile.oss-cn-zhangjiakou.aliyuncs.com/fynote/fyfile/1462/1651200196055/ff3031b921b948338282ee57ee510c84.png)
+![image.png](DesignMode/ff3031b921b948338282ee57ee510c84.png)
 
 #### 1.2.1 静态代理
 
@@ -1007,7 +1007,7 @@ proxy.doSome() = HELLO ...
 
 &emsp;&emsp;适配器模式的作用是把两个不兼容的对象通过适配器能够连接起来工作。
 
-![image.png](https://fynotefile.oss-cn-zhangjiakou.aliyuncs.com/fynote/fyfile/1462/1651200196055/4f1b8160dfaf4de6816c2d7bc7c79ed3.png)
+![image.png](DesignMode/4f1b8160dfaf4de6816c2d7bc7c79ed3.png)
 
 ### 2.2 具体案例分析
 
@@ -1015,23 +1015,23 @@ proxy.doSome() = HELLO ...
 
 log4j2的接口：
 
-![image.png](https://fynotefile.oss-cn-zhangjiakou.aliyuncs.com/fynote/fyfile/1462/1651200196055/97882ce34e7c45b38a242335fee35136.png)
+![image.png](DesignMode/97882ce34e7c45b38a242335fee35136.png)
 
 slf4j的接口
 
-![image.png](https://fynotefile.oss-cn-zhangjiakou.aliyuncs.com/fynote/fyfile/1462/1651200196055/2e0b96e4f72b4d4cb1da9ef190e06f7e.png)
+![image.png](DesignMode/2e0b96e4f72b4d4cb1da9ef190e06f7e.png)
 
 也就是可以看到不同的日志框架里面所定义的日志级别和对应的方法都有区别，那么我们的框架怎么来统一使用这些日志框架呢？在MyBatis中通过定义了一个日志接口，定义了日志具有的级别和方法。
 
-![image.png](https://fynotefile.oss-cn-zhangjiakou.aliyuncs.com/fynote/fyfile/1462/1651200196055/13b885d6a2e742c8902a41cca65a77f3.png)
+![image.png](DesignMode/13b885d6a2e742c8902a41cca65a77f3.png)
 
 那这时候我们就发现具体的日志框架和这个接口其实是没有办法直接来使用的。
 
-![image.png](https://fynotefile.oss-cn-zhangjiakou.aliyuncs.com/fynote/fyfile/1462/1651200196055/5394d7aab0b9407bb44e7a43b5a46c35.png)
+![image.png](DesignMode/5394d7aab0b9407bb44e7a43b5a46c35.png)
 
 这时我们就需要通过对应的适配器来处理这种情况，以Slf4J为例。
 
-![image.png](https://fynotefile.oss-cn-zhangjiakou.aliyuncs.com/fynote/fyfile/1462/1651200196055/cc1a1999be144995bbdfd0d52af15aa1.png)
+![image.png](DesignMode/cc1a1999be144995bbdfd0d52af15aa1.png)
 
 ## 3.装饰者模式
 
@@ -1039,7 +1039,7 @@ slf4j的接口
 
 &emsp;&emsp;装饰者模式又称为包装模式([Wrapper](https://so.csdn.net/so/search?q=Wrapper&spm=1001.2101.3001.7020)),作用是用来动态的为一个对象增加新的功能。装饰模式是一种用于代替继承的技术， 无须通过继承增加子类就能扩展对象的新功能 。使用对象的关联关系代替继承关系，更加灵活，同时避免类型体系的快速膨胀。
 
-![image.png](https://fynotefile.oss-cn-zhangjiakou.aliyuncs.com/fynote/fyfile/1462/1651200196055/3d6542b45adc4fc1954b5a32e0cefe0b.png)
+![image.png](DesignMode/3d6542b45adc4fc1954b5a32e0cefe0b.png)
 
 ### 3.2 装饰者模式的应用
 
@@ -1053,15 +1053,15 @@ slf4j的接口
 
 首先是Cache接口
 
-![image.png](https://fynotefile.oss-cn-zhangjiakou.aliyuncs.com/fynote/fyfile/1462/1651200196055/4fd123c411d44b9b9be4b6fc042cd1a0.png)
+![image.png](DesignMode/4fd123c411d44b9b9be4b6fc042cd1a0.png)
 
 然后是PerpetualCache实现：仅仅实现了数据基于内存的读写操作。功能单一。
 
-![image.png](https://fynotefile.oss-cn-zhangjiakou.aliyuncs.com/fynote/fyfile/1462/1651200196055/64a1d022065f46d5ad8f05fa0a884130.png)
+![image.png](DesignMode/64a1d022065f46d5ad8f05fa0a884130.png)
 
 装饰类：然后在MyBatis中给我们提供了很多的装饰类。
 
-![image.png](https://fynotefile.oss-cn-zhangjiakou.aliyuncs.com/fynote/fyfile/1462/1651200196055/b6a6d87b24bb40d08c86267957622a18.png)
+![image.png](DesignMode/b6a6d87b24bb40d08c86267957622a18.png)
 
 每个装饰类都有自己的作用
 
@@ -1072,9 +1072,9 @@ slf4j的接口
 
 源码中的装饰：
 
-![image.png](https://fynotefile.oss-cn-zhangjiakou.aliyuncs.com/fynote/fyfile/1462/1651200196055/15cfb22ba61c4fc9a3c0ee7db595d8b7.png)
+![image.png](DesignMode/15cfb22ba61c4fc9a3c0ee7db595d8b7.png)
 
-![image.png](https://fynotefile.oss-cn-zhangjiakou.aliyuncs.com/fynote/fyfile/1462/1651200196055/7379277ae49d422cbfe571f0852af446.png)
+![image.png](DesignMode/7379277ae49d422cbfe571f0852af446.png)
 
 | 比较 | 说明                                                         |
 | ---- | :----------------------------------------------------------- |
@@ -1091,21 +1091,21 @@ slf4j的接口
 
 &emsp;&emsp;组合模式在配置文件的加载解析中其实会用的相对比较多。以SpringSecurity的配置文件为例
 
-![image.png](https://fynotefile.oss-cn-zhangjiakou.aliyuncs.com/fynote/fyfile/1462/1651200196055/451caf5510724dbdb8781edc504a3108.png)
+![image.png](DesignMode/451caf5510724dbdb8781edc504a3108.png)
 
 上面是具体的定义
 
-![image.png](https://fynotefile.oss-cn-zhangjiakou.aliyuncs.com/fynote/fyfile/1462/1651200196055/225305de9e79499b9858fdf0954bee43.png)
+![image.png](DesignMode/225305de9e79499b9858fdf0954bee43.png)
 
 应用
 
-![image.png](https://fynotefile.oss-cn-zhangjiakou.aliyuncs.com/fynote/fyfile/1462/1651200196055/f27879a6ed534ecda344e3c8033e8b66.png)
+![image.png](DesignMode/f27879a6ed534ecda344e3c8033e8b66.png)
 
 ## 5.门面模式
 
 &emsp;&emsp;门面模式也称为外观模式，他隐藏了系统的复杂性，并向客户端提供了一个可以访问系统的接口。这种类型的设计模式属于结构性模式。为子系统中的一组接口提供了一个统一的访问接口，这个接口使得子系统更容易被访问或者使用。
 
-![image.png](https://fynotefile.oss-cn-zhangjiakou.aliyuncs.com/fynote/fyfile/1462/1651200196055/d7cbb356c586445cbae588a9c6944c48.png)
+![image.png](DesignMode/d7cbb356c586445cbae588a9c6944c48.png)
 
 &emsp;&emsp;具体的例子比如：MyBatis中的SqlSession接口，对外提供了数据库操作的相关功能，具体的实现细节对调用者是隐藏的，这种模式在实际项目和框架中很频繁
 
@@ -1113,7 +1113,7 @@ slf4j的接口
 
 &emsp;&emsp;桥接模式的出现是替代掉多层继承的问题。提高了系统的扩展性。
 
-![image.png](https://fynotefile.oss-cn-zhangjiakou.aliyuncs.com/fynote/fyfile/1462/1651200196055/689902586ed3400e808b3cdaf88a93de.png)
+![image.png](DesignMode/689902586ed3400e808b3cdaf88a93de.png)
 
 具体的应用比如JDBC中的DriverManager其实有用到桥接模式，不同的数据库厂商对应不同的驱动和连接
 
@@ -1129,9 +1129,9 @@ slf4j的接口
 
 比如以围棋为例:
 
-![image.png](https://fynotefile.oss-cn-zhangjiakou.aliyuncs.com/fynote/fyfile/1462/1651200196055/ed27059ad63b4d408568033cd3d18998.png)
+![image.png](DesignMode/ed27059ad63b4d408568033cd3d18998.png)
 
-![image.png](https://fynotefile.oss-cn-zhangjiakou.aliyuncs.com/fynote/fyfile/1462/1651200196055/d2cd6a9f545e4f09af78a4e4f3c09677.png)
+![image.png](DesignMode/d2cd6a9f545e4f09af78a4e4f3c09677.png)
 
 
 
@@ -1144,7 +1144,7 @@ slf4j的接口
 * 类行为模式： 通过继承机制来在类间分派行为。 主要是通过多态来分配父类和子类的职责
 * 对象行为模式： 通过组合或聚合，在对象间分派行为。通过对象关联等方式来分配类的职责。
 
-![image.png](https://fynotefile.oss-cn-zhangjiakou.aliyuncs.com/fynote/fyfile/1462/1651992608037/44e5adf5c4a2487584f3b072b4a19d8a.png)
+![image.png](DesignMode/44e5adf5c4a2487584f3b072b4a19d8a.png)
 
 ## 1.解释器模式
 
@@ -1199,14 +1199,14 @@ slf4j的接口
 
 &emsp;&emsp;将能够处理同一类请求的对象连成一条链，所提交的请求沿着链传递，链上的对象逐个判断是否有能力处理该请求，如果能则处理，如果不能则传递给链上的下一个对象处理。
 
-![image.png](https://fynotefile.oss-cn-zhangjiakou.aliyuncs.com/fynote/fyfile/1462/1651992608037/4c895e3c35f0466b8832bfaf6d4aa9f2.png)
+![image.png](DesignMode/4c895e3c35f0466b8832bfaf6d4aa9f2.png)
 
 
 ### 3.2 责任链模式的应用
 
 &emsp;&emsp;责任链模式的应用场景比较多，对大家来说印象比较深刻的应该是SpringSecurity中的处理请求的过滤器链了。
 
-![image.png](https://fynotefile.oss-cn-zhangjiakou.aliyuncs.com/fynote/fyfile/1462/1651992608037/627ec42ef657483289810bcd60d202d4.png)
+![image.png](DesignMode/627ec42ef657483289810bcd60d202d4.png)
 
 &emsp;&emsp;可以和面试官具体聊下SpringSecurity中的这块设计。当然还有一些其他的也可聊比如：
 
@@ -1222,7 +1222,7 @@ slf4j的接口
 
 &emsp;&emsp;建立对象与对象之间的依赖关系，一个对象发生改变时，会自动通知其他对象。这个场景中，发生改变的对象被称为观察目标，被通知的对象称为观察者。一个观察目标可以有多个观察者，而这些观察者之间可以没有联系，可以根据需要增加或删除观察者。
 
-![image.png](https://fynotefile.oss-cn-zhangjiakou.aliyuncs.com/fynote/fyfile/1462/1651992608037/28ad3ed5e28f41a69a490ee02fa0bb25.png)
+![image.png](DesignMode/28ad3ed5e28f41a69a490ee02fa0bb25.png)
 
 
 ### 4.2 观察者模式的应用
@@ -1239,7 +1239,7 @@ https://blog.csdn.net/qq_38526573/article/details/122143258 单独通过一篇�
 
 &emsp;&emsp;策略模式的作用就是我们想要实现某个目的，实现的方式可以有很多种，那么这里的每一种实现方式都可以称为一种策略。比如：
 
-![image.png](https://fynotefile.oss-cn-zhangjiakou.aliyuncs.com/fynote/fyfile/1462/1651992608037/22ad4a07e93c4074ac60ae1c7924452a.png)
+![image.png](DesignMode/22ad4a07e93c4074ac60ae1c7924452a.png)
 
 
 &emsp;&emsp;我们可以将每一种交通方式都封装为一个独立的类，这就是一种策略。为了保证策略的一致性，还可以用一个抽象的交通方式类 来 做交通方式的定义。
@@ -1265,7 +1265,7 @@ https://blog.csdn.net/qq_38526573/article/details/122143258 单独通过一篇�
 
 迭代器模式就是在客户访问和聚合类之间插入一个迭代器，这样就将**聚合对象** 和 **遍历方法**解耦了，并且对外隐藏其实现细节。
 
-![image.png](https://fynotefile.oss-cn-zhangjiakou.aliyuncs.com/fynote/fyfile/1462/1651992608037/8a9095d4fbe04245b476ca16250ab2eb.png)
+![image.png](DesignMode/8a9095d4fbe04245b476ca16250ab2eb.png)
 
 
 ### 6.2 迭代器模式的应用
@@ -1281,11 +1281,11 @@ https://blog.csdn.net/qq_38526573/article/details/122143258 单独通过一篇�
 
 &emsp;&emsp;对象之间具有很强的关联性，而且有大量的相互调用，这种情况下，如果一个对象发生了变化，就需要追踪该对象关联的其他对象，并进行相应的处理，这就变得很复杂。而中介者模式，就是用一个中介者对象来封装一系列的对象交互，中介者使各对象不需要显式的相互引用，这就使得系统变得低耦合。比如：
 
-![image.png](https://fynotefile.oss-cn-zhangjiakou.aliyuncs.com/fynote/fyfile/1462/1651992608037/bfe0f0f3fbff44e7ad83bc64c9637758.png)
+![image.png](DesignMode/bfe0f0f3fbff44e7ad83bc64c9637758.png)
 
 假如没有总经理。下面三个部门：财务部、市场部、研发部。财务部要发工资，让大家核对公司需要跟市场部和研发部都通气；市场部要接个新项目，需要研发部处理技术、需要财务部出资金。市场部跟各个部门打交道。 虽然只有三个部门，但是关系非常乱。
 
-![image.png](https://fynotefile.oss-cn-zhangjiakou.aliyuncs.com/fynote/fyfile/1462/1651992608037/af819fcb665d4aacacc4af386c9b3f8e.png)
+![image.png](DesignMode/af819fcb665d4aacacc4af386c9b3f8e.png)
 
 
 实际上，公司都有总经理。各个部门有什么事情都通报到总经理这里，总经理再通知各个相关部门。
