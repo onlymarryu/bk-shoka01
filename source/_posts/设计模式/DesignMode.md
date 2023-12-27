@@ -1001,6 +1001,8 @@ cglib -- end
 proxy.doSome() = HELLO ...
 ```
 
+
+
 ## 2.适配器模式
 
 ### 2.1 适配器的作用
@@ -1033,53 +1035,13 @@ slf4j的接口
 
 ![image.png](DesignMode/cc1a1999be144995bbdfd0d52af15aa1.png)
 
+
+
 ## 3.装饰者模式
 
 ### 3.1 装饰者模式的作用
 
-&emsp;&emsp;装饰者模式又称为包装模式([Wrapper](https://so.csdn.net/so/search?q=Wrapper&spm=1001.2101.3001.7020)),作用是用来动态的为一个对象增加新的功能。装饰模式是一种用于代替继承的技术， 无须通过继承增加子类就能扩展对象的新功能 。使用对象的关联关系代替继承关系，更加灵活，同时避免类型体系的快速膨胀。
-
-![image.png](DesignMode/3d6542b45adc4fc1954b5a32e0cefe0b.png)
-
-### 3.2 装饰者模式的应用
-
-&emsp;&emsp;装饰者模式的应用场景还是非常多的，比如
-
-* IO流中的FileInputStream，FileOutputStream等
-* Spring中的各种Wrapper
-* MyBatis中的缓存设计
-
-我们以MyBatis中的缓存实例为例来看看其具体的实现。
-
-首先是Cache接口
-
-![image.png](DesignMode/4fd123c411d44b9b9be4b6fc042cd1a0.png)
-
-然后是PerpetualCache实现：仅仅实现了数据基于内存的读写操作。功能单一。
-
-![image.png](DesignMode/64a1d022065f46d5ad8f05fa0a884130.png)
-
-装饰类：然后在MyBatis中给我们提供了很多的装饰类。
-
-![image.png](DesignMode/b6a6d87b24bb40d08c86267957622a18.png)
-
-每个装饰类都有自己的作用
-
-* BlockingCache：阻塞的
-* LruCache:根据Lru规则来淘汰缓存数据
-* FifoCache：根据FIFO规则来淘汰缓存数据
-* ....
-
-源码中的装饰：
-
-![image.png](DesignMode/15cfb22ba61c4fc9a3c0ee7db595d8b7.png)
-
-![image.png](DesignMode/7379277ae49d422cbfe571f0852af446.png)
-
-| 比较 | 说明                                                         |
-| ---- | :----------------------------------------------------------- |
-| 优点 | 1. 扩展对象功能，比继承灵活，不会导致类个数急剧增加<br />2. 可以对一个对象进行多次装饰,创造出不同行为的组合,得到功能更加强大的对象<br />3. 具体构建类和具体装饰类可以独立变化,&#x3c;br />用户可以根据需要自己增加新的具体构件子类和具体装饰子类。 |
-| 缺点 | 1.  产生很多小对象。大量小对象占据内存，一定程度上影响性能。<br />2. 装饰模式易于出错，调试排查比较麻烦。 |
+&emsp;&emsp;装饰者模式又称为包装模式([Wrapper](https://so.csdn.net/so/search?q=Wrapper&spm=1001.2101.3001.7020)),作用是用来动态的为一个对象增加新的功能。装饰模式是一种用于代替继承的技术， 无须通过继承增加子类就能扩展对象的新功能 。使用对象的关联关系代替继承关系，更加灵活，同时避免类型体系的快速膨胀。	
 
 ## 4.组合模式
 
@@ -1157,12 +1119,12 @@ slf4j的接口
 &emsp;&emsp;比较常见的应用比如Spring中的针对SPEL表达式做的解析处理
 
 ```java
-    public static void main(String[] args) {
-        SpelExpressionParser parser = new SpelExpressionParser();
-        Expression expression = parser.parseExpression("500-100*2+60");
-        Object value = expression.getValue();
-        System.out.println("value = " + value);
-    }
+public static void main(String[] args) {
+    SpelExpressionParser parser = new SpelExpressionParser();
+    Expression expression = parser.parseExpression("500-100*2+60");
+    Object value = expression.getValue();
+    System.out.println("value = " + value);
+}
 ```
 
 

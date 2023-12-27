@@ -114,7 +114,8 @@ post:
 
 # 随机图床Api 百度
 # image_server: "https://api.ixiaowai.cn/api/api.php"
-image_server: "https://api.yimian.xyz/img"
+# image_server: "https://api.yimian.xyz/img"
+image_server: "https://img.paulzzh.com/touhou/random"
 
 # bgm
 audio:
