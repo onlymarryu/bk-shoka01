@@ -113,9 +113,8 @@ post:
 #       - deea5a8d259d17182a53be1772e4c182
 
 # 随机图床Api 百度
-# image_server: "https://api.ixiaowai.cn/api/api.php"
-# image_server: "https://api.yimian.xyz/img"
-image_server: "https://img.paulzzh.com/touhou/random"
+# image_server: "https://img.paulzzh.com/touhou/random"
+image_server: "https://api.r10086.com/%E5%9B%BE%E5%8C%85webp/%E5%8E%9F%E7%A5%9E%E6%A8%AA%E5%B1%8F%E7%B3%BB%E5%88%971/wallhaven-x82y7d.webp"
 
 # bgm
 audio:
